@@ -1,0 +1,52 @@
+<script is:inline>
+  // [PENDIENTE] Analytics de RemodelaT Coruña: añadir el ID de medición de
+  // Google (GA4) cuando se contrate el dominio y el perfil de Google Business.
+  (() => {
+    const trackingId = ''; // p. ej. 'G-XXXXXXXXXX'
+    if (!trackingId) return;
+    let analyticsLoaded = false;
+
+    const loadAnalytics = () => {
+      if (analyticsLoaded) return;
+      analyticsLoaded = true;
+      removeListeners();
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', trackingId, {
+        anonymize_ip: true,
+        transport_type: 'beacon'
+      });
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
+    };
+
+    const scheduleAnalyticsLoad = () => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(loadAnalytics, { timeout: 2000 });
+      } else {
+        window.setTimeout(loadAnalytics, 1500);
+      }
+    };
+
+    const interactionEvents = ['pointerdown', 'touchstart', 'scroll', 'keydown'];
+    const onFirstInteraction = () => scheduleAnalyticsLoad();
+    const removeListeners = () => {
+      interactionEvents.forEach((eventName) => {
+        window.removeEventListener(eventName, onFirstInteraction);
+      });
+    };
+
+    interactionEvents.forEach((eventName) => {
+      window.addEventListener(eventName, onFirstInteraction, { once: true, passive: true });
+    });
+
+    window.addEventListener('load', () => {
+      window.setTimeout(scheduleAnalyticsLoad, 8000);
+    }, { once: true });
+  })();
+</script>

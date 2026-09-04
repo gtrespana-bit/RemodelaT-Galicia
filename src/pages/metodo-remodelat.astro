@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GodHero from '../components/GodHero.astro';
+import GodMarquee from '../components/GodMarquee.astro';
+import MethodComparison from '../components/MethodComparison.astro';
+import GuaranteeMatrix from '../components/GuaranteeMatrix.astro';
+import { waLink } from '../data/brand';
+
+const whatsappText = 'Hola, quiero hablar sobre una reforma en A Coruña';
+
+const methodSteps = [
+  { number: '01', title: 'Diagnóstico técnico real', text: 'Medidas, instalaciones, humedades y soportes. Sabemos el estado real antes de proponer nada.' },
+  { number: '02', title: 'Definición de alcance', text: 'Qué se incluye y qué queda fuera, por escrito y sin ambigüedades.' },
+  { number: '03', title: 'Especificación de materiales', text: 'Según el uso de cada estancia: adhesivos, impermeabilizantes, grifería, iluminación y acabados.' },
+  { number: '04', title: 'Presupuesto por partidas', text: 'Desglosado y cerrado, sin sorpresas. Sabes exactamente qué pagas.' },
+  { number: '05', title: 'Planificación', text: 'Compras, permisos, protección del inmueble y gestión de escombros.' },
+  { number: '06', title: 'Protección del inmueble', text: 'Antes de empezar a tocar nada: accesos, zonas comunes y elementos que se conservan.' },
+  { number: '07', title: 'Ejecución supervisada', text: 'Con el responsable técnico presente en obra, coordinando oficios y plazos.' },
+  { number: '08', title: 'Pruebas antes de cerrar', text: 'Tuberías, desagües y electricidad se comprueban antes de tapar paredes o suelos.' },
+  { number: '09', title: 'Control de acabados', text: 'Revisión final de calidad: juntas, cortes, encuentros y limpieza.' },
+  { number: '10', title: 'Entrega documentada', text: 'Con garantía por partidas, por escrito, y registro de lo ejecutado.' }
+];
+
+const technicalChecks = [
+  { area: 'Baños y zonas húmedas', items: ['Impermeabilización antes de revestir', 'Pendientes hacia desagüe', 'Prueba de estanqueidad', 'Sellados revisados'] },
+  { area: 'Cocinas', items: ['Puntos eléctricos y de agua coordinados', 'Nivelación para mobiliario', 'Herrajes y cantos verificados', 'Iluminación funcional y ambiental'] },
+  { area: 'Suelos y revestimientos', items: ['Soporte limpio y estable', 'Adhesivo compatible', 'Juntas, cortes y plomos', 'Técnica adecuada para gran formato'] },
+  { area: 'Instalaciones ocultas', items: ['Tuberías probadas antes de cerrar', 'Circuitos protegidos', 'Accesos de mantenimiento', 'Registro fotográfico de fases críticas'] }
+];
+
+const comparisonRows = [
+  ['Decisiones improvisadas durante la obra', 'Plan de ejecución definido antes de empezar'],
+  ['Material seleccionado solo por precio', 'Material elegido por compatibilidad y durabilidad'],
+  ['Se cierra una pared sin pruebas previas', 'Se prueba y documenta antes de cubrir'],
+  ['Acabados revisados solo al final', 'Control de remates durante todo el proceso'],
+  ['Garantía ambigua o verbal', 'Garantía por escrito, vinculada a partidas concretas']
+];
+
+const paymentRows = [
+  { part: 'Firma', coverage: 'Entrada acordada', evidence: 'Se fija por escrito al firmar el contrato.' },
+  { part: 'Durante la obra', coverage: 'Pagos parciales por fases', evidence: 'Ligados a hitos verificables, no a fechas arbitrarias.' },
+  { part: 'Final', coverage: 'Pago final', evidence: 'Tras la entrega y el checklist de acabados.' },
+  { part: 'Imprevistos', coverage: 'Modificaciones documentadas', evidence: 'Si aparece algo oculto o cambias de idea, se presupuesta antes de ejecutar.' }
+];
+---
+
+<BaseLayout
+  title="Método de Trabajo | RemodelaT Coruña"
+  description="Método RemodelaT en 10 etapas: diagnóstico, presupuesto por partidas, ejecución supervisada, pruebas antes de cerrar y garantía por escrito."
+  image="/images/integrales-proyecto-completo.webp"
+  activePage="metodo"
+>
+
+  <GodHero
+    eyebrow="Método RemodelaT"
+    title="Reformas"
+    titleGold="sin improvisación"
+    lead="Un protocolo de trabajo en 10 etapas para propietarios que valoran la precisión técnica, los materiales adecuados y la garantía documentada."
+    image="/images/integrales-proyecto-completo.webp"
+    imageAlt="Reforma ejecutada con el método RemodelaT"
+    badges={["10 etapas", "Pruebas antes de cerrar", "Garantía por partidas"]}
+    watermark="MÉTODO"
+  >
+    <div class="god-hero-actions">
+      <a href="/contacto/" class="btn-premium btn-primary-premium"><span class="btn-content">Solicitar valoración técnica</span><span class="btn-arrow">→</span></a>
+    </div>
+  </GodHero>
+
+  <GodMarquee />
+
+  <section class="method-intro-god section">
+    <div class="container intro-grid-god" data-reveal>
+      <div>
+        <span class="eyebrow-god on-light">El estándar</span>
+        <h2>No basta con que una obra se vea bien. Tiene que estar bien hecha.</h2>
+      </div>
+      <div class="intro-copy-god">
+        <p>El acabado final importa, pero en una reforma la diferencia real está en lo que ocurre antes: diagnóstico, preparación del soporte, especificación de materiales, pruebas técnicas y supervisión.</p>
+        <p>El Método RemodelaT existe para evitar los errores que se normalizan cuando una obra se ejecuta sin planificación.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="method-steps-god section bg-light">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow-god on-light">Protocolo de trabajo</span>
+        <h2>10 etapas para controlar una reforma exigente</h2>
+        <p>Cada fase reduce riesgo, mejora el resultado final y te permite entender qué se está haciendo y por qué.</p>
+      </div>
+      <div class="method-steps-grid-god">
+        {methodSteps.map((step) => (
+          <article class="method-step-card-god" data-reveal>
+            <span>{step.number}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="technical-checks-god section">
+    <div class="container checks-grid-god">
+      <div class="checks-heading-god" data-reveal>
+        <span class="eyebrow-god on-light">Control técnico</span>
+        <h2>Lo que revisamos antes de que el acabado lo oculte</h2>
+        <p>Un porcelánico o una cocina a medida pueden verse espectaculares. Pero si detrás hay humedad, mala nivelación o una instalación sin prueba, el resultado no es calidad: es riesgo.</p>
+      </div>
+      <div class="checks-list-god">
+        {technicalChecks.map((check) => (
+          <article class="check-card-god" data-reveal>
+            <h3>{check.area}</h3>
+            <ul>{check.items.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="comparison-god section">
+    <div class="container">
+      <div class="section-header on-dark" data-reveal>
+        <span class="eyebrow-god">La diferencia</span>
+        <h2>Obra improvisada vs. obra con método</h2>
+        <p>Qué cambia cuando una reforma se ejecuta con criterio técnico.</p>
+      </div>
+      <MethodComparison rows={comparisonRows} leftLabel="Sin método" rightLabel="Método RemodelaT" />
+    </div>
+  </section>
+
+  <GuaranteeMatrix variant="light" />
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow-god on-light">Forma de pago</span>
+        <h2>Pago por hitos e imprevistos con transparencia</h2>
+      </div>
+      <div class="payment-grid">
+        {paymentRows.map((row) => (
+          <article class="check-card-god" data-reveal>
+            <h3>{row.part}</h3>
+            <p><strong>{row.coverage}</strong> — {row.evidence}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="god-cta">
+    <div class="container method-cta-inner">
+      <span class="eyebrow-god">Siguiente paso</span>
+      <h2>Si buscas precio mínimo, probablemente no somos tu opción. Si buscas hacerlo bien, conversemos.</h2>
+      <p>Cuéntanos zona, tipo de vivienda, alcance y nivel de acabado. Revisamos si el proyecto encaja con nuestro estándar.</p>
+      <a href={waLink(whatsappText)} class="btn-premium btn-primary-premium" target="_blank" rel="noopener">
+        <span class="btn-content">Hablar por WhatsApp</span><span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .container{max-width:1160px;margin:0 auto;padding:0 24px}.section{padding:clamp(72px,10vw,112px) 0}.bg-light{background:var(--bone)}
+  .section-header{text-align:center;max-width:720px;margin:0 auto clamp(36px,6vw,64px)}.section-header h2{font-family:var(--font-serif);font-size:clamp(2rem,4vw,2.9rem);line-height:1.08;letter-spacing:-.02em;font-weight:500;margin:12px 0 14px}.section-header p{color:var(--text-muted);line-height:1.7;font-size:1.05rem}
+  .on-dark .section-header h2{color:var(--white)}.on-dark .section-header p{color:rgba(255,255,255,.72)}
+  .god-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+  .intro-grid-god{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}.intro-grid-god h2{font-family:var(--font-serif);font-size:clamp(2.1rem,4.4vw,3.3rem);line-height:1.08;letter-spacing:-.02em;font-weight:500}.intro-copy-god p{color:var(--text-muted);font-size:1.06rem;line-height:1.8;margin-bottom:16px}
+  .method-steps-grid-god{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .method-step-card-god{padding:28px 22px;border-radius:var(--r-md);border:var(--hairline-ink);background:var(--white);box-shadow:var(--e-1);transition:all .32s var(--ease-out)}.method-step-card-god:hover{transform:translateY(-4px);box-shadow:var(--e-3);border-color:rgba(201,169,97,.35)}.method-step-card-god span{font-family:var(--font-serif);font-size:2.1rem;color:rgba(201,169,97,.56);line-height:1;display:block;margin-bottom:14px}.method-step-card-god h3{font-family:var(--font-serif);font-size:1.22rem;line-height:1.15;margin-bottom:8px;color:var(--ink)}.method-step-card-god p{color:var(--text-muted);font-size:.9rem;line-height:1.62}
+  .checks-grid-god{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}.checks-heading-god{position:sticky;top:120px}.checks-heading-god h2{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.02em;font-weight:500;margin:12px 0 14px}.checks-heading-god p{color:var(--text-muted);line-height:1.75}.checks-list-god{display:grid;gap:16px}
+  .check-card-god{padding:28px;border-radius:var(--r-md);background:linear-gradient(180deg,var(--white),var(--bone));border:var(--hairline-ink);box-shadow:var(--e-1)}.check-card-god h3{font-family:var(--font-serif);font-size:1.35rem;margin-bottom:14px}.check-card-god ul{list-style:none;display:grid;gap:10px;padding:0}.check-card-god li{position:relative;padding-left:26px;color:var(--text-muted);line-height:1.6}.check-card-god li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold-ink);box-shadow:0 0 0 5px rgba(201,169,97,.12)}
+  .payment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:0 auto}
+  .comparison-god{background:var(--ink);border-top:var(--hairline);border-bottom:var(--hairline)}
+  .method-cta-inner{max-width:900px;margin:0 auto;text-align:center}
+  .method-cta-inner h2{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.08;letter-spacing:-.02em;font-weight:500;color:var(--white);margin:14px 0 16px}
+  .method-cta-inner p{color:rgba(255,255,255,.72);font-size:1.08rem;line-height:1.7;max-width:720px;margin:0 auto 28px}
+  @media(max-width:1100px){.method-steps-grid-god{grid-template-columns:repeat(2,1fr)}.intro-grid-god,.checks-grid-god{grid-template-columns:1fr;gap:32px}.checks-heading-god{position:static}.payment-grid{grid-template-columns:1fr}}
+  @media(max-width:680px){.method-steps-grid-god{grid-template-columns:1fr}.god-hero-actions{flex-direction:column}}
+</style>
+
+<script>
+  (() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const targets = document.querySelectorAll('[data-reveal]');
+    if (reduce || !('IntersectionObserver' in window)) { targets.forEach(el => el.classList.add('is-revealed')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (!entry.isIntersecting) return; entry.target.classList.add('is-revealed','god-reveal'); io.unobserve(entry.target); });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+    targets.forEach(el => { el.classList.add('god-reveal'); io.observe(el); });
+  })();
+</script>

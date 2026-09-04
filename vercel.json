@@ -1,0 +1,59 @@
+{
+  "redirects": [
+    { "source": "/contact/", "destination": "/contacto/", "permanent": true },
+    { "source": "/contact", "destination": "/contacto/", "permanent": true },
+    { "source": "/remodelacion-integral-de-viviendas/", "destination": "/servicios/reforma-integral/", "permanent": true },
+    { "source": "/remodelacion-integral-de-viviendas", "destination": "/servicios/reforma-integral/", "permanent": true },
+    { "source": "/servicios/integrales/", "destination": "/servicios/reforma-integral/", "permanent": true },
+    { "source": "/servicios/integrales", "destination": "/servicios/reforma-integral/", "permanent": true },
+    { "source": "/servicios/remodelacion-integral/", "destination": "/servicios/reforma-integral/", "permanent": true },
+    { "source": "/servicios/remodelacion-cocina/", "destination": "/servicios/reforma-cocina/", "permanent": true },
+    { "source": "/servicios/remodelacion-bano/", "destination": "/servicios/reforma-bano/", "permanent": true },
+    { "source": "/servicios/remodelacion-vivienda/", "destination": "/servicios/reforma-vivienda/", "permanent": true },
+    { "source": "/servicios/remodelacion-apartamentos/", "destination": "/servicios/reforma-vivienda/", "permanent": true },
+    { "source": "/servicios/remodelacion-casas/", "destination": "/servicios/reforma-vivienda/", "permanent": true },
+    { "source": "/servicios/fontaneria-plomeria/", "destination": "/servicios/fontaneria/", "permanent": true },
+    { "source": "/servicios/instalacion-pisos/", "destination": "/servicios/suelos-revestimientos/", "permanent": true },
+    { "source": "/servicios/piscinas-mantenimiento/", "destination": "/servicios/", "permanent": true },
+    { "source": "/servicios/pintura/", "destination": "/servicios/pintura-acabados/", "permanent": true },
+    { "source": "/servicios/pintura", "destination": "/servicios/pintura-acabados/", "permanent": true },
+    { "source": "/cgi-sys/suspendedpage.cgi", "destination": "/", "permanent": true },
+    { "source": "/metodo-reformat/", "destination": "/metodo-remodelat/", "permanent": true },
+    { "source": "/metodo-reformat", "destination": "/metodo-remodelat/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/icons/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/manifest.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/manifest+json; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    }
+  ],
+  "trailingSlash": true
+}

@@ -1,0 +1,32 @@
+---
+import { SITE_URL } from '../data/brand';
+
+interface Props {
+  name: string;
+  description: string;
+  serviceType: string;
+  areaServed?: string[];
+  image?: string;
+}
+
+const { name, description, serviceType, areaServed = ['A Coruña', 'Arteixo', 'Oleiros', 'Culleredo', 'Cambre', 'Sada', 'Bergondo', 'Betanzos', 'Carral', 'Abegondo'], image } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": serviceType,
+  "name": name,
+  "description": description,
+  "provider": {
+    "@id": `${SITE_URL}/#organization`
+  },
+  "areaServed": areaServed.map(city => ({
+    "@type": "City",
+    "name": city
+  })),
+  "url": `${SITE_URL}${Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`}`,
+  ...(image && { "image": `${SITE_URL}${image}` })
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

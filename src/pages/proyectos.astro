@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GodHero from '../components/GodHero.astro';
+import GodMarquee from '../components/GodMarquee.astro';
+
+const projects = [
+  {
+    title: "Cocina reubicada a la zona día",
+    category: "Cocinas de alto estándar",
+    image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp",
+    desc: "Reubicación integral paso a paso: cocina cerrada trasladada a la zona día, acceso condenado con bloque de 20 cm, suelo epóxico blanco continuo, estantería flotante con luz oculta y equipos Siemens.",
+    slug: "cocina-reubicada-zona-dia",
+    duration: "2 semanas y media",
+    specs: ["Suelo epóxico blanco", "Estantería flotante LED", "Siemens y solar térmica"]
+  },
+  {
+    title: "Reforma integral de cocina en chalet",
+    category: "Cocinas de alto estándar",
+    image: "/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp",
+    desc: "Reforma completa en una semana: desmontaje, demolición de cerámica existente, actualización eléctrica con cable ignífugo, revestimiento rectificado, muebles MDF lacado alto brillo con polímero PVC termoformado y encimera de cuarzo oscuro.",
+    slug: "cocina-en-chalet",
+    duration: "1 semana",
+    specs: ["MDF 19 mm alto brillo", "PVC termoformado", "Cuarzo oscuro y TEKA"]
+  },
+  {
+    title: "Baño secundario compacto",
+    category: "Baños compactos y redistribución",
+    image: "/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp",
+    desc: "Baño secundario pequeño con tabique mal posicionado: demolición, nuevo tabique de ladrillo, fontanería reubicada, porcelánico 30x90 rectificado, plato de ducha ROCA y mampara templada.",
+    slug: "bano-secundario-compacto",
+    duration: "2 semanas",
+    specs: ["Porcelánico 30x90 rectificado", "Plato ROCA polvo de mármol", "Espejo LED antivaho"]
+  },
+  {
+    title: "Baño principal y aseo adaptado",
+    category: "Baños y accesibilidad",
+    image: "/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp",
+    desc: "Reforma integral con fontanería multicapa PEX-Al-PEX, porcelánico 60x60 y transformación de un armario empotrado en un aseo accesible con puerta corredera flotante.",
+    slug: "bano-principal-y-aseo-adaptado",
+    duration: "2 semanas",
+    specs: ["Porcelánico 60x60", "Multicapa PEX-Al-PEX", "Puerta flotante"]
+  },
+  {
+    title: "Baño en adosado",
+    category: "Baños de alta gama",
+    image: "/images/proyectos/bano-en-adosado/bano-final-1.webp",
+    desc: "Demolición de tabiques divisorios para duplicar la amplitud, fontanería multicapa PEX-Al-PEX y revestimiento en porcelánico rectificado 60x120 con sanitarios TEKA.",
+    slug: "bano-en-adosado",
+    duration: "1 semana",
+    specs: ["Porcelánico rectificado 60x120", "Sanitarios TEKA", "Planta abierta"]
+  },
+  {
+    title: "Baño con inodoro suspendido",
+    category: "Baños y sanitarios suspendidos",
+    image: "/images/proyectos/bano-inodoro-suspendido/bano-finalizado-1.webp",
+    desc: "Albañilería especializada en ladrillo rasillón para inodoro suspendido TEKA Manacor, fontanería multicapa PEX-Al-PEX y porcelánico rectificado de gran formato 120x60 en paredes y 60x60 en suelo, en tono beige.",
+    slug: "bano-inodoro-suspendido",
+    duration: "1 semana",
+    specs: ["Inodoro suspendido TEKA", "Pared 120x60 · suelo 60x60", "Multicapa PEX-Al-PEX"]
+  },
+  {
+    title: "Baño de lujo en dos ambientes",
+    category: "Baños de alta gama y arquitectura",
+    image: "/images/proyectos/bano-de-lujo-doble-ambiente/bano-zona-1-completado-2.webp",
+    desc: "Reforma monumental con división en dos estancias independientes, ventanal panorámico con rotura térmica, piedra volcánica, microcemento blanco y porcelánico metro verde.",
+    slug: "bano-de-lujo-doble-ambiente",
+    duration: "2 semanas y media",
+    specs: ["Microcemento y piedra volcánica", "Ventanal con rotura térmica", "Sanitarios italianos"]
+  }
+];
+---
+
+<BaseLayout
+  title="Proyectos | Obras Previas en España | RemodelaT Coruña"
+  description="Portfolio de RemodelaT Coruña: obras propias ejecutadas por nuestro fundador con su anterior empresa en España. Baños y cocinas reales, con método técnico y garantía."
+  activePage="proyectos"
+>
+
+  <GodHero
+    eyebrow="Portafolio de obras propias"
+    title="Proyectos"
+    titleGold="realizados"
+    lead="Cocinas y baños reales ejecutados por nuestro fundador con su anterior empresa en España. Rigor técnico, ingeniería de detalle y acabados de especificación."
+    image="/images/integrales-proyecto-completo.webp"
+    imageAlt="Obra previa de reforma ejecutada por el fundador de RemodelaT Coruña en España"
+    badges={["Obras reales", "Alta gama", "Método técnico"]}
+    watermark="PROYECTOS"
+  />
+
+  <GodMarquee />
+
+  <section class="disclosure-banner">
+    <div class="container">
+      <p><strong>Nota de transparencia:</strong> estas obras fueron ejecutadas por nuestro fundador con su <strong>anterior empresa en España</strong>. No son reformas realizadas en A Coruña. Las mostramos como evidencia del método y de los acabados, no como proyectos de la ciudad.</p>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+      <div class="premium-header" data-reveal>
+        <span class="eyebrow-god on-light">Galería editorial</span>
+        <h2>Documentamos cada obra con la precisión que después exigimos al acabado</h2>
+        <p>Cocinas y baños fotografiados tras la entrega. Sin renders, sin stock: obra real supervisada.</p>
+      </div>
+
+      <div class="projects-list">
+        {projects.map((p, idx) => (
+          <article class="project-card" data-reveal data-reveal-delay={(idx % 3 + 1).toString()}>
+            <a href={`/proyectos/${p.slug}/`} class="project-card-image-link" aria-label={`Ver caso de estudio de ${p.title}`}>
+              <div class="project-card-image">
+                <span class="project-card-badge">{p.category}</span>
+                <img src={p.image} alt={`${p.title} — obra previa en España`} loading="lazy" decoding="async" />
+              </div>
+            </a>
+            <div class="project-card-content">
+              <div class="project-card-meta">
+                <span class="project-card-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold-ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  España · obra previa
+                </span>
+                <span class="project-card-duration">{p.duration}</span>
+              </div>
+              <h2 class="project-card-title">
+                <a href={`/proyectos/${p.slug}/`}>{p.title}</a>
+              </h2>
+              <p class="project-card-desc">{p.desc}</p>
+
+              <ul class="project-card-specs">
+                {p.specs.map(spec => (
+                  <li class="spec-tag">{spec}</li>
+                ))}
+              </ul>
+
+              <div class="project-card-footer">
+                <a href={`/proyectos/${p.slug}/`} class="project-card-cta">
+                  <span>Explorar caso de estudio</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="premium-divider"><i></i></div>
+
+  <section class="god-cta">
+    <div class="cta-wrapper">
+      <span class="eyebrow-god">Ingeniería y diseño para tu hogar</span>
+      <h2 class="cta-title">¿Tienes un proyecto en mente en <span class="gold">A Coruña</span>?</h2>
+      <p class="cta-text">Cuéntanos tu visión y revisaremos el alcance técnico, materiales, tiempos y nivel de acabado necesario para ejecutar una obra a la altura de tu vivienda.</p>
+      <a href="/contacto/" class="btn-premium btn-primary-premium">
+        <span class="btn-content">Solicitar valoración técnica</span>
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .disclosure-banner { background: var(--bone); padding: 26px 0 0; }
+  .disclosure-banner .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .disclosure-banner p {
+    background: var(--white); border: 1px solid rgba(201,169,97,.35); border-left: 3px solid var(--gold);
+    border-radius: var(--r-md); padding: 18px 22px; color: var(--text-muted); font-size: .95rem; line-height: 1.65; margin: 0;
+  }
+  .disclosure-banner strong { color: var(--ink); }
+  .projects-section { padding: 80px 0 100px; background: var(--bone); }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .premium-header { max-width: 720px; margin: 0 auto 64px; text-align: center; }
+  .premium-header h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1.1; letter-spacing: -0.02em; margin: 14px 0 16px; color: var(--ink); font-weight: 500; }
+  .premium-header p { color: var(--text-muted); line-height: 1.7; font-size: 1.05rem; }
+  .projects-list { display: flex; flex-direction: column; gap: 36px; }
+
+  .project-card {
+    display: grid; grid-template-columns: 420px 1fr; gap: 42px; padding: 32px;
+    background: var(--white); border-radius: var(--r-md); border: var(--hairline);
+    box-shadow: var(--e-1); transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+  }
+  .project-card:hover { box-shadow: var(--e-3); transform: translateY(-4px); border-color: rgba(201,169,97,0.38); }
+  .project-card-image-link { display: block; border-radius: var(--r-sm); overflow: hidden; }
+  .project-card-image { position: relative; border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 4 / 3; background: var(--ink); display: flex; align-items: center; justify-content: center; }
+  .project-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-god) var(--ease-god); }
+  .project-card:hover .project-card-image img { transform: scale(1.05); }
+  .project-card-badge { position: absolute; top: 14px; left: 14px; z-index: 2; padding: 6px 12px; font-size: 0.70rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: rgba(201,169,97,0.94); border-radius: var(--r-full); box-shadow: var(--e-1); backdrop-filter: blur(6px); }
+
+  .project-card-content { display: flex; flex-direction: column; justify-content: center; }
+  .project-card-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+  .project-card-location { display: inline-flex; align-items: center; gap: 6px; font-size: 0.86rem; font-weight: 600; color: var(--text-muted); }
+  .project-card-duration { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; color: var(--gold-ink); padding: 4px 10px; background: var(--bone); border: var(--hairline-ink); border-radius: var(--r-sm); }
+  .project-card-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 600; line-height: 1.22; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .project-card-title a { color: var(--ink); text-decoration: none; transition: color 0.2s; }
+  .project-card-title a:hover { color: var(--gold-ink); }
+  .project-card-desc { font-size: 1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px; }
+  .project-card-specs { list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .spec-tag { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); background: var(--bone); border: var(--hairline-ink); padding: 5px 12px; border-radius: var(--r-full); }
+  .project-card-footer { margin-top: auto; padding-top: 18px; border-top: var(--hairline-ink); }
+  .project-card-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 700; color: var(--gold-ink); text-decoration: none; transition: gap 0.3s var(--ease-out), color 0.2s; }
+  .project-card:hover .project-card-cta { gap: 12px; color: var(--ink); }
+
+  .god-cta { padding: 110px 24px; }
+
+  @media (max-width: 900px) {
+    .project-card { grid-template-columns: 1fr; gap: 22px; padding: 22px; }
+    .project-card-image { aspect-ratio: 16 / 10; }
+    .project-card-title { font-size: 1.45rem; }
+    .projects-section { padding: 64px 0 80px; }
+  }
+  @media (max-width: 600px) {
+    .project-card-image { aspect-ratio: 4 / 3; }
+    .project-card-meta { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+</style>
+
+<script>
+  (() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const targets = document.querySelectorAll('[data-reveal]');
+    if (reduce || !('IntersectionObserver' in window)) { targets.forEach(el => el.classList.add('is-revealed')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (!entry.isIntersecting) return; entry.target.classList.add('is-revealed','god-reveal'); io.unobserve(entry.target); });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+    targets.forEach(el => { el.classList.add('god-reveal'); io.observe(el); });
+  })();
+</script>

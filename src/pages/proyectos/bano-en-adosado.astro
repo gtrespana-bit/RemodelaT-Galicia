@@ -1,0 +1,403 @@
+---
+import ProjectCaseStudy from '../../components/ProjectCaseStudy.astro';
+import { waLink } from '../../data/brand';
+
+const whatsappText =
+  'Hola, quiero una valoración técnica para un proyecto similar al baño en un adosado en España.';
+const whatsappHref = waLink(whatsappText);
+
+const quickNavItems = [
+  { href: '#resumen', label: 'Resumen' },
+  { href: '#resultado', label: 'Resultado' },
+  { href: '#paso-a-paso', label: 'Paso a paso' },
+  { href: '#comparativa', label: 'Antes y después' },
+  { href: '#especificaciones', label: 'Especificaciones' },
+  { href: '#galeria', label: 'Galería' },
+];
+---
+
+<ProjectCaseStudy
+  seoTitle="Reforma Integral de Baño en Adosado | RemodelaT"
+  seoDescription="Demolición de tabiques para ampliar el espacio, fontanería multicapa PEX-Al-PEX y porcelánico rectificado 60x120 con sanitarios TEKA."
+  heroImage="/images/proyectos/bano-en-adosado/bano-final-1.webp"
+  heroImageAlt="Baño renovado en España con porcelánico rectificado 60x120 efecto mármol y suelo efecto madera"
+  kicker="Obra previa en España · Baños de alta gama · Diario de obra"
+  heroTitle="Reforma Integral de Baño en Adosado"
+  lead="Demolición de tabiques divisorios, fontanería multicapa PEX-Al-PEX y revestimiento en porcelánico rectificado de gran formato 60x120, con sanitarios y grifería de alta gama TEKA."
+  heroFacts={[
+    { label: 'Ubicación', value: 'España' },
+    { label: 'Duración', value: '1 semana' },
+    { label: 'Intervención', value: 'Planta abierta integral' },
+    { label: 'Paredes', value: 'Porcelánico 60x120 mármol' },
+    { label: 'Suelo', value: 'Efecto madera antideslizante' },
+    { label: 'Equipos', value: 'Sanitarios TEKA' },
+  ]}
+  quickNavItems={quickNavItems}
+  whatsappHref={whatsappHref}
+  breadcrumbCurrent="Baño en Adosado"
+  summaryTag="En síntesis"
+  summaryTitle="De espacio fragmentado a oasis de gran formato"
+  summaryDesc="Al eliminar dos antiguos tabiques que cortaban la circulación visual y sustituir la fontanería por tecnología multicapa, el baño del adosado recuperó toda su amplitud arquitectónica en perfecta continuidad estético-funcional."
+  summaryCards={[
+    {
+      index: 'El reto',
+      title: 'Una planta generosa que se percibía pequeña y cerrada',
+      body: 'El baño original poseía un área generosa en planta, pero dos tabiques divisorios (muretes de albañilería) fragmentaban innecesariamente la zona del lavabo, el inodoro y la ducha, acompañados de una mampara convencional que bloqueaba la profundidad visual.',
+      dropcap: true,
+    },
+    {
+      index: 'La solución',
+      title: 'Demolición estratégica, red multicapa y porcelánico rectificado',
+      body: 'Se ejecutó una demolición total hasta el soporte: fuera muretes, mobiliario, inodoro y fontanería galvanizada. Sobre la nueva planta abierta se tendió una red multicapa PEX-Al-PEX y se revistió con porcelánico rectificado 60x120 efecto mármol con microjuntas de 1 mm.',
+    },
+  ]}
+  stats={[
+    { value: '06', label: 'Fases documentadas' },
+    { value: '12', label: 'Fotografías reales' },
+    { value: '01', label: 'Semana de ejecución' },
+    { value: '02', label: 'Tabiques eliminados' },
+    { value: '01', label: 'mm de microjuntas' },
+  ]}
+  resultadoTag="Resultado final"
+  resultadoTitle="Primero, el destino; después, el camino"
+  resultadoDesc="Antes de explicar cada fase, mostramos el resultado: un baño de planta abierta donde el gran formato 60x120 y el equipamiento TEKA trabajan en una sola lectura."
+  resultadoShowcase={[
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-final-1.webp',
+      alt: 'Baño renovado en España con porcelánico rectificado 60x120 efecto mármol y suelo madera',
+      badge: 'Planta abierta',
+      title: 'Amplitud sin barreras arquitectónicas',
+      caption:
+        'Al demoler los dos tabiques divisorios antiguos, la percepción espacial se duplicó. Revestimiento en porcelánico rectificado gran formato 60x120 cm efecto mármol y pavimento efecto madera antideslizante.',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-final-2.webp',
+      alt: 'Detalle de zona de ducha con plato de polvo de mármol e inodoro TEKA modelo Manacor',
+      badge: 'Ducha y sanitarios',
+      title: 'Plato de polvo de mármol e inodoro TEKA Manacor',
+      caption:
+        'Zona de ducha equipada con plato sólido de polvo de mármol antideslizante, grifería TEKA efecto lluvia e inodoro TEKA modelo Manacor de líneas minimalistas europeas.',
+    },
+  ]}
+  quote={{
+    text: 'Donde antes había muretes, ahora hay una sola lectura: continuidad, luz y gran formato.',
+    cite: 'Diario de obra · Baño en un adosado en España',
+  }}
+  timelineTag="La obra, en orden"
+  timelineTitle="El proyecto paso a paso: seis fases, cero improvisación"
+  timelineDesc="Cada fase está numerada y documentada con sus trabajos ejecutados y <strong>todas</strong> sus fotografías reales, para que el recorrido se lea tan claro como se ejecutó."
+  phases={[
+    {
+      number: '01',
+      kicker: 'Fase 01 · Diagnóstico',
+      title: 'El punto de partida: dos muretes que robaban continuidad',
+      body: 'El baño original se percibía pequeño, cerrado y poco luminoso. La causa primordial era la existencia de dos pequeños tabiques divisorios que fragmentaban la estancia, acompañados de una mampara convencional que bloqueaba la profundidad visual.',
+      checks: [
+        'Diagnóstico de la planta y de los tabiques divisorios',
+        'Definición de la demolición estratégica hasta el soporte',
+        'Plan de nueva red hidráulica multicapa PEX-Al-PEX',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-antes-1.webp',
+          alt: 'Estado original del baño en España con tabiques divisorios que reducían el espacio',
+          caption: 'Estado previo del baño residencial: los tabiques de obra fragmentaban la estancia y generaban una sensación de encierro.',
+          badge: 'Estado Original',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-antes-2.webp',
+          alt: 'Zona original de ducha y sanitarios en baño antes de la reforma integral',
+          caption: 'Vista del área de ducha original con mampara convencional y alicatado antiguo, previa a su completa demolición y sustitución hidráulica.',
+          badge: 'Estado Original',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-antes-3.webp',
+          alt: 'Perspectiva original del baño de Adosado en España antes de la intervención',
+          caption: 'Perspectiva del baño anterior donde la ubicación de los muretes y la antigua fontanería requerían una intervención integral desde la estructura.',
+          badge: 'Estado Original',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '02',
+      kicker: 'Fase 02 · Instalaciones',
+      title: 'Red multicapa PEX-Al-PEX y soporte regularizado',
+      body: 'Al demoler hasta el soporte de obra, se retiró por completo la red de fontanería galvanizada obsoleta y se construyó un nuevo circuito hidráulico con tubería multicapa PEX-Al-PEX para agua fría y caliente: cero corrosión, estanqueidad absoluta y durabilidad estructural.',
+      checks: [
+        'Retirada total de la fontanería galvanizada existente',
+        'Nuevo circuito con tubería multicapa PEX-Al-PEX',
+        'Regularización del soporte para el nuevo pavimento',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-cambio-de-suelo.webp',
+          alt: 'Proceso de colocación de porcelánico efecto madera tras la demolición total',
+          caption: 'Fase de instalación del pavimento de porcelánico efecto madera tras regularizar el soporte y tender las nuevas tuberías multicapa PEX-Al-PEX.',
+          badge: 'Proceso de Obra',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '03',
+      kicker: 'Fase 03 · Revestimiento',
+      title: 'Gran formato rectificado 60x120: microjuntas de 1 mm',
+      body: 'Las paredes se revistieron con porcelánico 60x120 cm efecto mármol y acabado rectificado, cortado en fábrica con diamante computarizado: cantos a 90° y juntas de dilatación casi imperceptibles para una lectura de bloque continuo de mármol arquitectónico.',
+      checks: [
+        'Colocación con doble encolado y cuñas niveladoras',
+        'Cantos rectificados a 90° con microjuntas de 1 mm',
+        'Suelo en porcelánico efecto madera antideslizante',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-porcelanico-instalando.webp',
+          alt: 'Instalación de porcelánico efecto mármol 60x120 con cuñas niveladoras',
+          caption: 'Colocación de piezas de gran formato 60x120 cm con sistema de doble encolado y cuñas niveladoras para asegurar una superficie 100% plana.',
+          badge: 'Gran Formato 60x120',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-porcelanico-instalando-2.webp',
+          alt: 'Detalle apaisado del acabado rectificado en paredes de ducha del baño en España',
+          caption: 'Vista apaisada del proceso de instalación en la zona de ducha: el corte rectificado permite juntar las piezas con separación milimétrica para un acabado superior.',
+          badge: 'Acabado Rectificado',
+          orientation: 'landscape',
+        },
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-porcelanico-instalando-3.webp',
+          alt: 'Continuidad visual y microjuntas en el porcelánico 60x120 cm durante la instalación',
+          caption: 'Vista horizontal en detalle de la continuidad en la veta marmórea sin la interferencia visual de juntas anchas, propia del porcelánico rectificado.',
+          badge: 'Microjuntas 1 mm',
+          orientation: 'landscape',
+        },
+      ],
+    },
+    {
+      number: '04',
+      kicker: 'Fase 04 · Sanitarios y mobiliario',
+      title: 'Inodoro TEKA Manacor y mueble suspendido de 80 cm',
+      body: 'Se instaló el inodoro TEKA modelo Manacor, de líneas limpias y doble descarga ecológica, junto a un mueble suspendido blanco de 80 cm con lavabo integrado de porcelana y grifería monomando TEKA.',
+      checks: [
+        'Inodoro TEKA Manacor con doble descarga ecológica',
+        'Mueble suspendido blanco de 80 cm con encimera integrada',
+        'Grifería monomando TEKA instalada y probada',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-inodoro-instalado.webp',
+          alt: 'Inodoro TEKA modelo Manacor instalado sobre suelo de porcelánico efecto madera',
+          caption: 'Instalación impecable del inodoro marca TEKA modelo Manacor, cuyo perfil moderno de descarga ecológica contrasta sobre el pavimento cálido efecto madera.',
+          badge: 'TEKA Manacor',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-mueble-instalado.webp',
+          alt: 'Mueble de baño en color blanco de 80 cm con grifería monomando TEKA instalada',
+          caption: 'Mueble lavabo de 80 cm en acabado blanco pulido con encimera integrada y grifería monomando TEKA, aportando luminosidad y funcionalidad sin sobrecargar la vista.',
+          badge: 'Mueble 80 cm',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '05',
+      kicker: 'Fase 05 · Entrega',
+      title: 'Ducha, luminaria y revisión final de cada encuentro',
+      body: 'Se completó la zona de ducha con plato sólido de polvo de mármol, grifería TEKA efecto lluvia y mampara fija de cristal templado, y se instalaron los focos Spot Light de luz blanca. Revisión final de juntas, encuentros y funcionamiento.',
+      checks: [
+        'Plato de ducha en resina mineral y polvo de mármol',
+        'Mampara fija de cristal templado con perfil de aluminio',
+        'Focos Spot Light y revisión final de acabados',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-final-3.webp',
+          alt: 'Perspectiva integral del baño renovado iluminado con focos Spot Light blancos',
+          caption: 'Vista general donde resalta el veteado continuo del mármol 60x120 gracias a las microjuntas del acabado rectificado y la iluminación estratégica por focos Spot Light blancos.',
+          badge: 'Luminotecnia LED',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '06',
+      kicker: 'Fase 06 · Resultado',
+      title: 'Una planta abierta, serena y con presencia arquitectónica',
+      body: 'Con la nueva planta abierta, el porcelánico rectificado 60x120 y el equipamiento TEKA, el adosado pasa a tener un baño más amplio, más actual y mejor resuelto en cada encuentro: la amplitud ya no se percibe, se habita.',
+      checks: [
+        'Lectura visual continua de extremo a extremo',
+        'Microjuntas y cantos rectificados en perfecto estado',
+        'Conjunto sanitario y luminotécnico en funcionamiento',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-final-1.webp',
+          alt: 'Baño renovado en España con porcelánico rectificado 60x120 efecto mármol y suelo madera',
+          caption: 'Al demoler los dos tabiques divisorios antiguos, la percepción espacial se duplicó. Revestimiento en porcelánico rectificado gran formato 60x120 cm efecto mármol y pavimento efecto madera antideslizante.',
+          badge: 'Amplitud 60x120',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-en-adosado/bano-final-2.webp',
+          alt: 'Detalle de zona de ducha con plato de polvo de mármol e inodoro TEKA modelo Manacor',
+          caption: 'Zona de ducha equipada con plato sólido de polvo de mármol antideslizante, grifería TEKA efecto lluvia e inodoro TEKA modelo Manacor de líneas minimalistas europeas.',
+          badge: 'Sanitarios TEKA',
+          orientation: 'portrait',
+        },
+      ],
+    },
+  ]}
+  compareTag="La misma zona, otra vida"
+  compareTitle="Desliza y compruébalo con tus propios ojos"
+  compareDesc="Aquí se entiende muy bien el impacto de eliminar tabiques divisorios y construir una escena más abierta y más limpia."
+  compare={{
+    beforeSrc: '/images/proyectos/bano-en-adosado/bano-antes-1.webp',
+    beforeAlt: 'Baño original con tabiques divisorios antes de la reforma en España',
+    afterSrc: '/images/proyectos/bano-en-adosado/bano-final-1.webp',
+    afterAlt: 'Baño finalizado sin tabiques divisorios con porcelánico 60x120 en España',
+    beforeCaption: 'Los muretes fragmentaban el baño y le quitaban continuidad visual.',
+    afterCaption: 'La nueva planta abierta hace que el espacio se sienta mucho más amplio, sereno y sofisticado.',
+  }}
+  specsTag="Detalle técnico"
+  specsTitle="Especificaciones de la intervención"
+  specsDesc="Lo que se ve —y lo que no se ve— de esta obra, documentado partida por partida."
+  highlights={[
+    {
+      icon: 'ruler',
+      title: 'Planta abierta sin muretes',
+      text: 'Demolición de los dos tabiques divisorios y de la mampara convencional: la percepción espacial del baño se duplicó de extremo a extremo.',
+    },
+    {
+      icon: 'sparkle',
+      title: 'Porcelánico rectificado 60x120',
+      text: 'Cantos cortados a 90° en fábrica y microjuntas de 1 mm: el efecto mármol se lee como un bloque continuo, higiénico y fácil de limpiar.',
+    },
+    {
+      icon: 'droplet',
+      title: 'Red multicapa PEX-Al-PEX',
+      text: 'Circuito hidráulico nuevo para agua fría y caliente: cero corrosión, conexiones prensadas estancas y durabilidad frente a expansiones térmicas.',
+    },
+    {
+      icon: 'shield',
+      title: 'Sanitarios TEKA de alta gama',
+      text: 'Inodoro Manacor de doble descarga ecológica, mueble suspendido de 80 cm con grifería monomando y plato de ducha en polvo de mármol.',
+    },
+  ]}
+  specs={[
+    { label: 'Ubicación', value: 'Adosado en España' },
+    { label: 'Duración de obra', value: '1 semana de ejecución' },
+    { label: 'Revestimiento paredes', value: 'Porcelánico 60x120 cm (efecto mármol rectificado)' },
+    { label: 'Revestimiento suelo', value: 'Porcelánico rectificado efecto madera antideslizante' },
+    { label: 'Acabado y juntas', value: 'Cantos rectificados a 90° con microjuntas de 1 mm' },
+    { label: 'Red de fontanería', value: 'Tubería multicapa PEX-Al-PEX para agua fría y caliente' },
+    { label: 'Intervención espacial', value: 'Demolición de 2 tabiques divisorios para máxima amplitud' },
+    { label: 'Inodoro sanitario', value: 'TEKA modelo Manacor con doble descarga ecológica' },
+    { label: 'Mueble de lavabo', value: 'Mueble suspendido blanco de 80 cm con grifería TEKA' },
+    { label: 'Plato de ducha', value: 'Sólido en resina mineral y polvo de mármol antideslizante' },
+    { label: 'Grifería de ducha', value: 'TEKA superficial con rociador efecto lluvia + teléfono mural' },
+    { label: 'Mampara de baño', value: 'Hoja fija de cristal templado de seguridad + perfil aluminio' },
+    { label: 'Sistema de iluminación', value: 'Focos empotrables tipo Spot Light de luz blanca pura' },
+  ]}
+  galleryTitle={`Galería ordenada del proyecto (12 fotos reales)`}
+  galleryIntro="Las imágenes se agrupan por bloques para que el cambio espacial, los sanitarios y el proceso de obra se entiendan con mucha más claridad."
+  gallery={[
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-final-1.webp',
+      alt: 'Baño renovado en España con porcelánico rectificado 60x120 efecto mármol y suelo madera',
+      title: 'Vista Principal: Amplitud Sin Tabiques Divisorios',
+      caption: 'Al demoler los dos tabiques divisorios antiguos, la percepción espacial se duplicó. Revestimiento en porcelánico rectificado gran formato 60x120 cm efecto mármol y pavimento efecto madera antideslizante.',
+      category: 'final', categoryLabel: 'Resultado Final', badge: 'Amplitud 60x120', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-final-2.webp',
+      alt: 'Detalle de zona de ducha con plato de polvo de mármol e inodoro TEKA modelo Manacor',
+      title: 'Ducha con Plato de Polvo de Mármol e Inodoro TEKA',
+      caption: 'Zona de ducha equipada con plato sólido de polvo de mármol antideslizante, grifería TEKA efecto lluvia e inodoro TEKA modelo Manacor de líneas minimalistas europeas.',
+      category: 'final', categoryLabel: 'Resultado Final', badge: 'Sanitarios TEKA', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-final-3.webp',
+      alt: 'Perspectiva integral del baño renovado iluminado con focos Spot Light blancos',
+      title: 'Perspectiva Integral: Iluminación Spot Light Blanca',
+      caption: 'Vista general donde resalta el veteado continuo del mármol 60x120 gracias a las microjuntas del acabado rectificado y la iluminación estratégica por focos Spot Light blancos.',
+      category: 'final', categoryLabel: 'Resultado Final', badge: 'Luminotecnia LED', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-inodoro-instalado.webp',
+      alt: 'Inodoro TEKA modelo Manacor instalado sobre suelo de porcelánico efecto madera',
+      title: 'Inodoro TEKA Modelo Manacor de Alta Eficiencia',
+      caption: 'Instalación impecable del inodoro marca TEKA modelo Manacor, cuyo perfil moderno de descarga ecológica contrasta sobre el pavimento cálido efecto madera.',
+      category: 'teka', categoryLabel: 'Sanitarios TEKA', badge: 'TEKA Manacor', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-mueble-instalado.webp',
+      alt: 'Mueble de baño en color blanco de 80 cm con grifería monomando TEKA instalada',
+      title: 'Mueble Blanco de 80 cm con Grifería TEKA',
+      caption: 'Mueble lavabo de 80 cm en acabado blanco pulido con encimera integrada y grifería monomando TEKA, aportando luminosidad y funcionalidad sin sobrecargar la vista.',
+      category: 'teka', categoryLabel: 'Mobiliario TEKA', badge: 'Mueble 80 cm', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-antes-1.webp',
+      alt: 'Estado original del baño en España con tabiques divisorios que reducían el espacio',
+      title: 'Estado Original: Tabiques Divisorios y Muretes',
+      caption: 'Estado previo del baño residencial: los tabiques de obra fragmentaban la estancia y generaban una sensación de encierro pese al buen tamaño del adosado.',
+      category: 'proceso', categoryLabel: 'Antes y Proceso', badge: 'Estado Original', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-antes-2.webp',
+      alt: 'Zona original de ducha y sanitarios en baño antes de la reforma integral',
+      title: 'Estado Original: Ducha Fragmentada Previa',
+      caption: 'Vista del área de ducha original con mampara convencional y alicatado antiguo, previa a su completa demolición y sustitución hidráulica.',
+      category: 'proceso', categoryLabel: 'Antes y Proceso', badge: 'Estado Original', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-antes-3.webp',
+      alt: 'Perspectiva original del baño de Adosado en España antes de la intervención',
+      title: 'Estado Original: Distribución y Fontanería Antigua',
+      caption: 'Perspectiva del baño anterior donde la ubicación de los muretes y la antigua fontanería requerían una intervención integral desde la estructura.',
+      category: 'proceso', categoryLabel: 'Antes y Proceso', badge: 'Estado Original', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-cambio-de-suelo.webp',
+      alt: 'Proceso de colocación de porcelánico efecto madera tras la demolición total',
+      title: 'Proceso de Obra: Pavimento Porcelánico Madera',
+      caption: 'Fase de instalación del pavimento de porcelánico efecto madera tras regularizar el soporte y tender las nuevas tuberías multicapa PEX-Al-PEX.',
+      category: 'proceso', categoryLabel: 'Antes y Proceso', badge: 'Proceso de Obra', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-porcelanico-instalando.webp',
+      alt: 'Instalación de porcelánico efecto mármol 60x120 con cuñas niveladoras',
+      title: 'Revestimiento: Instalación de Mármol 60x120',
+      caption: 'Colocación de piezas de gran formato 60x120 cm con sistema de doble encolado y cuñas niveladoras para asegurar una superficie 100% plana.',
+      category: 'proceso', categoryLabel: 'Antes y Proceso', badge: 'Gran Formato 60x120', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-porcelanico-instalando-2.webp',
+      alt: 'Detalle apaisado del acabado rectificado en paredes de ducha del baño en España',
+      title: 'Acabado Rectificado: Precisión de Cantos a 90°',
+      caption: 'Vista apaisada del proceso de instalación en la zona de ducha: el corte rectificado permite juntar las piezas con separación milimétrica para un acabado superior.',
+      category: 'proceso', categoryLabel: 'Antes y Proceso', badge: 'Acabado Rectificado', orientation: 'landscape',
+    },
+    {
+      src: '/images/proyectos/bano-en-adosado/bano-porcelanico-instalando-3.webp',
+      alt: 'Continuidad visual y microjuntas en el porcelánico 60x120 cm durante la instalación',
+      title: 'Continuidad Visual y Microjuntas Milimétricas',
+      caption: 'Vista horizontal en detalle de la continuidad en la veta marmórea sin la interferencia visual de juntas anchas, propia del porcelánico rectificado.',
+      category: 'proceso', categoryLabel: 'Antes y Proceso', badge: 'Microjuntas 1 mm', orientation: 'landscape',
+    },
+  ]}
+  galleryPhases={[
+    { id: 'final', label: 'Resultado final', description: 'Las fotos finales resumen la nueva amplitud espacial y el acabado rectificado del proyecto.' },
+    { id: 'teka', label: 'Sanitarios y muebles', description: 'Aquí se concentran las piezas TEKA, el mobiliario y los detalles que elevan la calidad percibida.' },
+    { id: 'proceso', label: 'Antes y proceso', description: 'La secuencia previa permite entender la demolición, el replanteo y la instalación del nuevo sistema.' },
+  ]}
+  ctaTag="Valoración técnica"
+  ctaTitle="Porcelánico rectificado, diseño e ingeniería para tu baño"
+  ctaText="Diseñamos y ejecutamos reformas integrales eliminando barreras arquitectónicas, con fontanería multicapa PEX-Al-PEX y acabados de alta gama respaldados por contrato en España."
+  ctaPrimaryLabel="Solicitar valoración técnica"
+  ctaSecondaryHref="/servicios/reforma-bano/"
+  ctaSecondaryLabel="Ver reforma de baños en España →"
+/>

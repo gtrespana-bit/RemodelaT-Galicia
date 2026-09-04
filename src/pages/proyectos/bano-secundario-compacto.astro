@@ -1,0 +1,429 @@
+---
+import ProjectCaseStudy from '../../components/ProjectCaseStudy.astro';
+import { waLink } from '../../data/brand';
+
+const whatsappText =
+  'Hola, quiero una valoración técnica para reformar un baño pequeño como el proyecto en España.';
+const whatsappHref = waLink(whatsappText);
+
+const quickNavItems = [
+  { href: '#resumen', label: 'Resumen' },
+  { href: '#resultado', label: 'Resultado' },
+  { href: '#paso-a-paso', label: 'Paso a paso' },
+  { href: '#comparativa', label: 'Antes y después' },
+  { href: '#especificaciones', label: 'Especificaciones' },
+  { href: '#galeria', label: 'Galería' },
+];
+---
+
+<ProjectCaseStudy
+  seoTitle="Baño Secundario Compacto | RemodelaT"
+  seoDescription="Reforma de baño en España: nueva distribución, porcelánico 30x90, ducha ROCA, mueble roble, espejo LED y mampara. Con garantía escrita."
+  heroImage="/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp"
+  heroImageAlt="Baño secundario finalizado con mueble roble, porcelánico blanco y espejo LED en España"
+  kicker="Obra previa en España · Baños compactos de alto estándar · Diario de obra"
+  heroTitle="Reforma de Baño Secundario en un Piso"
+  lead="Reforma completa de un baño secundario pequeño en un piso en España: eliminación de un tabique mal posicionado, nueva distribución, fontanería renovada, porcelánico 30x90 rectificado, plato de ducha ROCA de polvo de mármol, suelo imitación madera roble, mueble roble, espejo LED antivaho y mampara templada."
+  heroFacts={[
+    { label: 'Ubicación', value: 'España' },
+    { label: 'Duración', value: '2 semanas' },
+    { label: 'Intervención', value: 'Redistribución integral' },
+    { label: 'Paredes', value: 'Porcelánico 30x90 blanco mate' },
+    { label: 'Ducha', value: 'Plato ROCA · relieve 3D' },
+    { label: 'Archivo', value: '14 fotos reales' },
+  ]}
+  quickNavItems={quickNavItems}
+  whatsappHref={whatsappHref}
+  breadcrumbCurrent="Baño Secundario Compacto"
+  summaryTag="En síntesis"
+  summaryTitle="De baño limitado a espacio ordenado, luminoso y funcional"
+  summaryDesc="El proyecto no se limitó a cambiar acabados: corrigió la geometría del baño para devolverle centímetros útiles y una lectura visual mucho más amplia."
+  summaryCards={[
+    {
+      index: 'El reto',
+      title: 'Ganar espacio en un baño secundario muy limitado',
+      body: 'El baño era muy pequeño y el tabique original estaba mal posicionado, reduciendo todavía más la circulación. Para resolverlo, se eliminó por completo el tabique que separaba el baño del pasillo y se reconstruyó en una nueva posición, corrigiendo también la ubicación de la puerta.',
+      dropcap: true,
+    },
+    {
+      index: 'La solución',
+      title: 'Redistribución, fontanería nueva y acabados claros con textura',
+      body: 'Se ejecutó un nuevo tabique de ladrillo, enfoscado con mortero especial para zonas húmedas. Después se rehizo toda la fontanería, reposicionando elementos para aprovechar mejor el espacio, y se instalaron porcelánicos rectificados, plato ROCA, mueble roble, espejo LED y mampara templada.',
+    },
+  ]}
+  stats={[
+    { value: '06', label: 'Fases documentadas' },
+    { value: '14', label: 'Fotografías reales' },
+    { value: '02', label: 'Semanas de ejecución' },
+    { value: '30x90', label: 'Porcelánico rectificado' },
+    { value: '3D', label: 'Relieve en la ducha' },
+  ]}
+  resultadoTag="Resultado final"
+  resultadoTitle="Un baño pequeño que ahora se siente mejor distribuido"
+  resultadoDesc="Mostramos primero el resultado final: mueble roble, porcelánico blanco mate, relieve 3D en la ducha, plato ROCA, mampara templada y suelo imitación madera roble."
+  resultadoShowcase={[
+    {
+      src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp',
+      alt: 'Baño secundario finalizado con mueble roble, inodoro y espejo LED en España',
+      badge: 'Frente de lavabo',
+      title: 'Mueble roble, inodoro y espejo LED antivaho',
+      caption:
+        'El conjunto resuelto: mueble en tono roble, espejo con LED táctil y antivaho, porcelánico blanco rectificado y suelo imitación madera que aporta calidez visual.',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-zona-ducha.webp',
+      alt: 'Zona de ducha finalizada con porcelánico 3D, plato ROCA y mampara templada',
+      badge: 'Zona de ducha',
+      title: 'L de ducha con relieve 3D y plato ROCA',
+      caption:
+        'El porcelánico blanco mate con relieve 3D, el plato ROCA de polvo de mármol y la columna tipo lluvia construyen una ducha segura, limpia y con textura.',
+    },
+  ]}
+  quote={{
+    text: 'Cuando la base espacial se corrige, el acabado deja de ser cosmética: el baño vuelve a respirar.',
+    cite: 'Diario de obra · Baño secundario en España',
+  }}
+  timelineTag="La obra, en orden"
+  timelineTitle="El proyecto paso a paso: seis fases, cero improvisación"
+  timelineDesc="Cada fase está numerada y documentada con sus trabajos ejecutados y <strong>todas</strong> sus fotografías reales, para que el recorrido se lea tan claro como se ejecutó."
+  phases={[
+    {
+      number: '01',
+      kicker: 'Fase 01 · Diagnóstico',
+      title: 'El punto de partida: un tabique que restaba amplitud útil',
+      body: 'El espacio original era pequeño y estaba penalizado por un tabique mal posicionado y una puerta que no ayudaba a la circulación. Antes de pensar en acabados, el proyecto exigía resolver la geometría del baño: cada centímetro contaba.',
+      checks: [
+        'Diagnóstico de la distribución y del tabique mal posicionado',
+        'Replanteo del nuevo cerramiento y de la posición de la puerta',
+        'Definición de la nueva base de fontanería para aprovechar el espacio',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-secundario-compacto/bano-antes-2.webp',
+          alt: 'Estado inicial de baño pequeño antes de cambiar tabique y puerta',
+          caption: 'La distribución original y el tabique mal posicionado reducían el espacio útil y la sensación de amplitud.',
+          badge: 'Antes',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/bano-antes-1.webp',
+          alt: 'Baño secundario antes de la reforma en un piso en España',
+          caption: 'El estado inicial del baño secundario antes de desmontaje, demolición y redistribución.',
+          badge: 'Antes',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '02',
+      kicker: 'Fase 02 · Demolición',
+      title: 'Vaciar el baño para poder reconstruirlo con otra lógica',
+      body: 'Se eliminó por completo el tabique que separaba el baño del pasillo y se retiró la instalación de fontanería existente. El baño quedó en su esqueleto, listo para recibir la nueva distribución.',
+      checks: [
+        'Demolición completa del tabique original mal posicionado',
+        'Retiro de la fontanería existente en su totalidad',
+        'Preparación del soporte para la nueva base hidráulica',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-secundario-compacto/demolicion-tabique-1.webp',
+          alt: 'Demolición del tabique mal posicionado en baño pequeño',
+          caption: 'Eliminación del tabique que limitaba el baño y reducía todavía más la superficie útil.',
+          badge: 'Demolición',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/demolicion-tabique-2.webp',
+          alt: 'Proceso de demolición de tabique para nueva distribución de baño',
+          caption: 'Proceso de demolición y apertura para reposicionar el cerramiento y mejorar la distribución.',
+          badge: 'Demolición',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/demolicion-3.webp',
+          alt: 'Demolición y preparación de baño secundario antes de nueva fontanería',
+          caption: 'Preparación del espacio antes de rehacer fontanería, revestimientos y nueva posición de los elementos.',
+          badge: 'Proceso',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '03',
+      kicker: 'Fase 03 · Estructura',
+      title: 'Un tabique nuevo, en la posición correcta y para zona húmeda',
+      body: 'Se reconstruyó el cerramiento en la posición replanteada, ejecutado con ladrillo y enfoscado con mortero de cemento especial para zonas húmedas. La puerta pasó a una ubicación que libera la circulación.',
+      checks: [
+        'Nuevo tabique de ladrillo en la posición replanteada',
+        'Enfoscado con mortero especial para zonas húmedas',
+        'Corrección de la ubicación de la puerta de acceso',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-secundario-compacto/tabique-ladrillo-realizado.webp',
+          alt: 'Nuevo tabique de ladrillo realizado para ampliar baño pequeño',
+          caption: 'Tabique reconstruido en la posición correcta, posteriormente enfoscado con mortero especial para zonas húmedas.',
+          badge: 'Tabique',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '04',
+      kicker: 'Fase 04 · Revestimientos',
+      title: 'Porcelánico rectificado: blanco mate y relieve 3D en la ducha',
+      body: 'Las paredes se revistieron con porcelánico 30x90 rectificado en blanco mate liso y blanco mate con relieve 3D en la L de ducha; el suelo, con porcelánico rectificado imitación madera roble.',
+      checks: [
+        'Porcelánico 30x90 rectificado en paredes',
+        'Relieve 3D en la L de ducha para textura y agarre visual',
+        'Suelo rectificado imitación madera roble',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-secundario-compacto/ceramica-paredes-suelo-listos.webp',
+          alt: 'Porcelánico de paredes y suelo listo antes de montaje final',
+          caption: 'Fase de revestimiento terminada antes del montaje de mueble, mampara y accesorios.',
+          badge: 'Porcelánico',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '05',
+      kicker: 'Fase 05 · Montaje',
+      title: 'Plato ROCA, mampara templada, mueble y espejo LED',
+      body: 'Con los revestimientos terminados llegó el montaje: plato de ducha ROCA sólido de polvo de mármol, columna con cabezal tipo lluvia y teléfono extraíble, mampara de cristal templado, mueble roble y espejo LED con antivaho.',
+      checks: [
+        'Plato de ducha ROCA de polvo de mármol instalado',
+        'Mampara de cristal de seguridad templado',
+        'Mueble roble y espejo LED táctil con antivaho',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-secundario-compacto/plato-ducha-instalado-1.webp',
+          alt: 'Plato de ducha ROCA instalado antes de finalizar mampara y columna',
+          caption: 'Plato sólido de polvo de mármol marca ROCA, instalado para optimizar seguridad, limpieza y resistencia en zona húmeda.',
+          badge: 'ROCA',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/plato-ducha-instalado-2.webp',
+          alt: 'Detalle de plato de ducha instalado en baño pequeño en España',
+          caption: 'Detalle del encuentro entre plato de ducha, porcelánico rectificado y revestimiento blanco mate.',
+          badge: 'Ducha',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/puerta-corredera-interior.webp',
+          alt: 'Puerta corredera vista desde el interior del baño remodelado',
+          caption: 'Vista desde el interior del baño hacia la nueva posición de acceso, ya con revestimientos y acabados terminados.',
+          badge: 'Acceso',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '06',
+      kicker: 'Fase 06 · Entrega',
+      title: 'El baño terminado: compacto, luminoso y sin sensación de límite',
+      body: 'El resultado final combina el porcelánico blanco, el relieve de la ducha, el plato ROCA, la mampara templada y el mueble roble. El espacio sigue siendo compacto, pero ya no se percibe limitado: cada elemento está donde debe estar.',
+      checks: [
+        'Revisión final de encuentros, juntas y funcionamiento',
+        'Prueba de fontanería, desagüe y ventilación',
+        'Entrega con accesorios, iluminación y acabados en orden',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp',
+          alt: 'Baño secundario finalizado con mueble roble, inodoro y espejo LED en España',
+          caption: 'Vista final del baño secundario: mueble en tono roble, espejo LED táctil con antivaho, porcelánico blanco y suelo imitación madera roble.',
+          badge: 'Finalizado',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-zona-ducha.webp',
+          alt: 'Zona de ducha finalizada con porcelánico 3D, plato ROCA y mampara templada',
+          caption: 'L de ducha con porcelánico blanco mate relieve 3D, plato ROCA de polvo de mármol y columna tipo lluvia.',
+          badge: 'Ducha ROCA',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-suelo.webp',
+          alt: 'Suelo finalizado en porcelánico imitación madera roble en baño pequeño',
+          caption: 'Porcelánico rectificado imitación madera roble, elegido para aportar calidez visual y continuidad con el mueble.',
+          badge: 'Suelo Roble',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-secundario-compacto/puerta-corredera-exterior.webp',
+          alt: 'Puerta corredera exterior finalizada en baño de un piso en España',
+          caption: 'La nueva posición de puerta y la solución corredera mejoran el acceso y ayudan a aprovechar mejor el espacio disponible.',
+          badge: 'Acceso',
+          orientation: 'portrait',
+        },
+      ],
+    },
+  ]}
+  compareTag="La misma zona, otra vida"
+  compareTitle="Desliza y compruébalo con tus propios ojos"
+  compareDesc="El valor de este proyecto no está solo en el acabado final. El verdadero salto se produce cuando se corrige el tabique, se replantea el acceso y se libera visualmente el espacio."
+  compare={{
+    beforeSrc: '/images/proyectos/bano-secundario-compacto/bano-antes-2.webp',
+    beforeAlt: 'Baño pequeño antes de la reforma con distribución limitada en España',
+    afterSrc: '/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp',
+    afterAlt: 'Baño remodelado con mueble roble y espejo LED en España',
+    beforeCaption: 'La distribución original hacía que el baño se sintiera más estrecho y torpe de usar.',
+    afterCaption: 'Tras la redistribución y los acabados claros, el espacio gana orden, amplitud visual y confort.',
+  }}
+  specsTag="Detalle técnico"
+  specsTitle="Especificaciones de la intervención"
+  specsDesc="Lo que se ve —y lo que no se ve— de esta obra, documentado partida por partida."
+  highlights={[
+    {
+      icon: 'ruler',
+      title: 'Redistribución milimétrica',
+      text: 'Demolición del tabique mal posicionado, nueva posición del cerramiento y corrección del acceso: cada centímetro recuperado cuenta en un baño compacto.',
+    },
+    {
+      icon: 'droplet',
+      title: 'Fontanería nueva',
+      text: 'Retiro completo de la instalación existente y nueva base hidráulica, reposicionando cada punto para aprovechar el espacio y ordenar el uso diario.',
+    },
+    {
+      icon: 'sparkle',
+      title: 'Acabados claros con textura',
+      text: 'Porcelánico 30x90 rectificado en blanco mate, relieve 3D en la ducha y suelo imitación madera roble que amplía visualmente el baño.',
+    },
+    {
+      icon: 'shield',
+      title: 'Ducha y accesorios ROCA',
+      text: 'Plato de ducha sólido de polvo de mármol, columna tipo lluvia con teléfono extraíble, mampara templada y espejo LED con antivaho.',
+    },
+  ]}
+  specs={[
+    { label: 'Ubicación', value: 'Piso en España' },
+    { label: 'Tipo de baño', value: 'Baño secundario compacto' },
+    { label: 'Duración de obra', value: '2 semanas de ejecución' },
+    { label: 'Alcance', value: 'Demolición, redistribución, tabique nuevo, fontanería, revestimientos, plato de ducha, mampara, mueble y accesorios' },
+    { label: 'Tabiquería', value: 'Tabique de ladrillo enfoscado con mortero de cemento especial para zonas húmedas' },
+    { label: 'Fontanería', value: 'Instalación nueva con reubicación y ajuste de puntos para aprovechar el espacio' },
+    { label: 'Paredes', value: 'Porcelánico rectificado 30x90 blanco mate liso y blanco mate relieve 3D' },
+    { label: 'Suelo', value: 'Porcelánico rectificado imitación madera roble' },
+    { label: 'Plato de ducha', value: 'ROCA, sólido de polvo de mármol' },
+    { label: 'Ducha', value: 'Columna ROCA con cabezal tipo lluvia y teléfono extraíble' },
+    { label: 'Mampara', value: 'Cristal de seguridad templado' },
+    { label: 'Mueble y espejo', value: 'Mueble tono roble, espejo LED táctil con antivaho' },
+  ]}
+  galleryTitle={`Galería ordenada por fases (14 fotos reales)`}
+  galleryIntro="La documentación final queda separada por bloques para que el visitante pueda revisar el resultado, los detalles y la obra previa sin saltos visuales ni composiciones raras."
+  gallery={[
+    {
+      src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp',
+      alt: 'Baño secundario finalizado con mueble roble, inodoro y espejo LED en España',
+      title: 'Baño Finalizado: Mueble Roble, Inodoro y Espejo LED',
+      caption: 'Vista final del baño secundario: mueble en tono roble, espejo LED táctil con antivaho, porcelánico blanco y suelo imitación madera roble.',
+      category: 'resultado', categoryLabel: 'Resultado Final', badge: 'Finalizado', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-zona-ducha.webp',
+      alt: 'Zona de ducha finalizada con porcelánico 3D, plato ROCA y mampara templada',
+      title: 'Zona de Ducha: Porcelánico 3D y Plato ROCA',
+      caption: 'L de ducha con porcelánico blanco mate relieve 3D, plato de ducha ROCA de polvo de mármol y columna ROCA tipo lluvia.',
+      category: 'resultado', categoryLabel: 'Resultado Final', badge: 'Ducha ROCA', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/bano-finalizado-suelo.webp',
+      alt: 'Suelo finalizado en porcelánico imitación madera roble en baño pequeño',
+      title: 'Suelo Imitación Madera Roble',
+      caption: 'Porcelánico rectificado imitación madera roble, elegido para aportar calidez visual y continuidad con el mueble.',
+      category: 'resultado', categoryLabel: 'Resultado Final', badge: 'Suelo Roble', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/puerta-corredera-exterior.webp',
+      alt: 'Puerta corredera exterior finalizada en baño de un piso en España',
+      title: 'Puerta Corredera Exterior',
+      caption: 'La nueva posición de puerta y la solución corredera mejoran el acceso y ayudan a aprovechar mejor el espacio disponible.',
+      category: 'resultado', categoryLabel: 'Resultado Final', badge: 'Acceso', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/puerta-corredera-interior.webp',
+      alt: 'Puerta corredera vista desde el interior del baño remodelado',
+      title: 'Vista Interior de la Puerta Corredera',
+      caption: 'Vista desde el interior del baño hacia la nueva posición de acceso, ya con revestimientos y acabados terminados.',
+      category: 'detalles', categoryLabel: 'Detalles Técnicos', badge: 'Acceso', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/plato-ducha-instalado-1.webp',
+      alt: 'Plato de ducha ROCA instalado antes de finalizar mampara y columna',
+      title: 'Plato de Ducha ROCA Instalado',
+      caption: 'Plato sólido de polvo de mármol marca ROCA, instalado para optimizar seguridad, limpieza y resistencia en zona húmeda.',
+      category: 'detalles', categoryLabel: 'Detalles Técnicos', badge: 'ROCA', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/plato-ducha-instalado-2.webp',
+      alt: 'Detalle de plato de ducha instalado en baño pequeño en España',
+      title: 'Detalle de Plato de Ducha y Revestimiento',
+      caption: 'Detalle del encuentro entre plato de ducha, porcelánico rectificado y revestimiento blanco mate.',
+      category: 'detalles', categoryLabel: 'Detalles Técnicos', badge: 'Ducha', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/ceramica-paredes-suelo-listos.webp',
+      alt: 'Porcelánico de paredes y suelo listo antes de montaje final',
+      title: 'Porcelánico de Paredes y Suelo Listo',
+      caption: 'Fase de revestimiento terminada antes del montaje de mueble, mampara y accesorios.',
+      category: 'detalles', categoryLabel: 'Detalles Técnicos', badge: 'Porcelánico', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/tabique-ladrillo-realizado.webp',
+      alt: 'Nuevo tabique de ladrillo realizado para ampliar baño pequeño',
+      title: 'Nuevo Tabique de Ladrillo',
+      caption: 'Tabique reconstruido en la posición correcta, posteriormente enfoscado con mortero especial para zonas húmedas.',
+      category: 'obra', categoryLabel: 'Redistribución y Obra', badge: 'Tabique', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/demolicion-tabique-1.webp',
+      alt: 'Demolición del tabique mal posicionado en baño pequeño',
+      title: 'Demolición del Tabique Original',
+      caption: 'Eliminación del tabique que limitaba el baño y reducía todavía más la superficie útil.',
+      category: 'obra', categoryLabel: 'Redistribución y Obra', badge: 'Demolición', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/demolicion-tabique-2.webp',
+      alt: 'Proceso de demolición de tabique para nueva distribución de baño',
+      title: 'Apertura para Nueva Distribución',
+      caption: 'Proceso de demolición y apertura para reposicionar el cerramiento y mejorar la distribución del baño.',
+      category: 'obra', categoryLabel: 'Redistribución y Obra', badge: 'Demolición', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/demolicion-3.webp',
+      alt: 'Demolición y preparación de baño secundario antes de nueva fontanería',
+      title: 'Demolición y Preparación General',
+      caption: 'Preparación del espacio antes de rehacer fontanería, revestimientos y nueva posición de los elementos.',
+      category: 'obra', categoryLabel: 'Redistribución y Obra', badge: 'Proceso', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/bano-antes-1.webp',
+      alt: 'Baño secundario antes de la reforma en un piso en España',
+      title: 'Baño Antes de la Reforma',
+      caption: 'Estado inicial del baño secundario antes de desmontaje, demolición y redistribución.',
+      category: 'antes', categoryLabel: 'Antes de Obra', badge: 'Antes', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-secundario-compacto/bano-antes-2.webp',
+      alt: 'Estado inicial de baño pequeño antes de cambiar tabique y puerta',
+      title: 'Distribución Original Limitada',
+      caption: 'La distribución original y el tabique mal posicionado reducían el espacio útil y la sensación de amplitud.',
+      category: 'antes', categoryLabel: 'Antes de Obra', badge: 'Antes', orientation: 'portrait',
+    },
+  ]}
+  galleryPhases={[
+    { id: 'resultado', label: 'Resultado final', description: 'Las imágenes finales muestran cómo cambia la percepción del espacio cuando la distribución, la luz y los materiales trabajan juntos.' },
+    { id: 'detalles', label: 'Detalles técnicos', description: 'Plato de ducha, encuentros de revestimiento, acceso y piezas clave ejecutadas con más precisión.' },
+    { id: 'obra', label: 'Redistribución y obra', description: 'La fase estructural explica dónde se ganó el espacio y por qué el baño dejó de sentirse limitado.' },
+    { id: 'antes', label: 'Estado previo', description: 'Las fotos iniciales dejan claro el problema de partida y el valor real de la intervención.' },
+  ]}
+  ctaTag="Valoración técnica"
+  ctaTitle="¿Quieres aprovechar mejor un baño pequeño?"
+  ctaText="Cuéntanos ubicación, dimensiones aproximadas, estado actual y nivel de acabado deseado. Revisamos si el proyecto encaja con nuestro estándar y te orientamos con una valoración técnica."
+  ctaPrimaryLabel="Solicitar valoración técnica"
+/>

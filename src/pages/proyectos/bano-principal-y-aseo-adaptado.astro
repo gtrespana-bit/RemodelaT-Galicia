@@ -1,0 +1,418 @@
+---
+import ProjectCaseStudy from '../../components/ProjectCaseStudy.astro';
+import { waLink } from '../../data/brand';
+
+const whatsappText =
+  'Hola, quiero una valoración técnica para un proyecto similar al baño principal y aseo adaptado en España.';
+const whatsappHref = waLink(whatsappText);
+
+const quickNavItems = [
+  { href: '#resumen', label: 'Resumen' },
+  { href: '#resultado', label: 'Resultado' },
+  { href: '#paso-a-paso', label: 'Paso a paso' },
+  { href: '#comparativa', label: 'Antes y después' },
+  { href: '#especificaciones', label: 'Especificaciones' },
+  { href: '#galeria', label: 'Galería' },
+];
+---
+
+<ProjectCaseStudy
+  seoTitle="Reforma de Baño Principal y Aseo Adaptado | RemodelaT"
+  seoDescription="Reforma de baño principal con fontanería PEX-Al-PEX y conversión de armario en aseo accesible con puerta corredera flotante para movilidad reducida."
+  heroImage="/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp"
+  heroImageAlt="Baño principal finalizado con porcelánico gris cemento 60x60 y suelo efecto madera"
+  kicker="Obra previa en España · Baños y accesibilidad · Diario de obra"
+  heroTitle="Reforma de Baño Principal y Aseo Adaptado"
+  lead="Transformación integral con fontanería multicapa PEX-Al-PEX y reconversión inteligente de un armario empotrado en un aseo accesible con puerta corredera flotante para movilidad reducida."
+  heroFacts={[
+    { label: 'Ubicación', value: 'España' },
+    { label: 'Duración', value: '2 semanas' },
+    { label: 'Intervención', value: 'Baño principal + aseo adaptado' },
+    { label: 'Revestimiento', value: 'Porcelánico español 60x60' },
+    { label: 'Fontanería', value: 'Multicapa PEX-Al-PEX' },
+    { label: 'Archivo', value: '13 fotos reales' },
+  ]}
+  quickNavItems={quickNavItems}
+  whatsappHref={whatsappHref}
+  breadcrumbCurrent="Baño Principal y Aseo Adaptado"
+  summaryTag="En síntesis"
+  summaryTitle="Dos espacios, una misma intervención: modernizar y acercar el baño a la vida diaria"
+  summaryDesc="El proyecto resolvió dos necesidades en paralelo: la modernización total de un baño principal de residencia y la creación de un nuevo aseo accesible en el dormitorio para garantizar proximidad a una persona mayor con movilidad reducida."
+  summaryCards={[
+    {
+      index: 'El reto',
+      title: 'Modernizar el baño y ganar un aseo accesible en el dormitorio',
+      body: 'El baño original y el antiguo armario no resolvían bien ni la accesibilidad ni la calidad del conjunto. Para evitar desplazamientos largos, se decidió transformar un armario empotrado del dormitorio en un aseo privado equipado con inodoro y lavabo, aprovechando cada centímetro sin comprometer la ergonomía.',
+      dropcap: true,
+    },
+    {
+      index: 'La solución',
+      title: 'Un lenguaje de materiales común y una hazaña de fontanería subterránea',
+      body: 'Se implementó el mismo lenguaje de materiales en ambos espacios —porcelánico español gris cemento 60x60 y suelo efecto madera— y se canalizaron bajo el suelo todas las acometidas hacia el nuevo aseo: desagües de 110 y 40 mm y alimentación en multicapa PEX-Al-PEX.',
+    },
+  ]}
+  stats={[
+    { value: '02', label: 'Espacios intervenidos' },
+    { value: '13', label: 'Fotografías reales' },
+    { value: '02', label: 'Semanas de ejecución' },
+    { value: '110', label: 'mm en desagüe principal' },
+    { value: '6500', label: 'K de iluminación LED' },
+  ]}
+  resultadoTag="Resultado final"
+  resultadoTitle="Primero, el destino; después, el camino"
+  resultadoDesc="Antes de explicar cada fase, mostramos el resultado de los dos espacios: el baño principal renovado de suelo a techo y el aseo adaptado ganado al antiguo armario."
+  resultadoShowcase={[
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp',
+      alt: 'Baño principal finalizado con porcelánico gris cemento 60x60 y suelo efecto madera',
+      badge: 'Baño principal',
+      title: 'Reforma integral de suelo a techo en tono gris cemento',
+      caption:
+        'Porcelánico español gris cemento en 60x60, suelo efecto madera cálido, mueble de 100 cm con grifería ROCA e iluminación LED 6500K: una lectura sobria, luminosa y contemporánea.',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-finalizado-1.webp',
+      alt: 'Nuevo aseo adaptado en antiguo armario con lavabo compacto de 45 cm y espejo LED',
+      badge: 'Aseo adaptado',
+      title: 'Un aseo completo donde antes solo había un armario',
+      caption:
+        'Aprovechamiento milimétrico del antiguo armario empotrado: mueble lavabo compacto de 45 cm, inodoro de doble descarga, espejo LED y acceso sin obstáculos de giro.',
+    },
+  ]}
+  quote={{
+    text: 'Convertir un armario en un aseo no fue demoler: fue devolver autonomía a quien vive la casa.',
+    cite: 'Diario de obra · Baño principal y aseo adaptado en España',
+  }}
+  timelineTag="La obra, en orden"
+  timelineTitle="El proyecto paso a paso: seis fases, cero improvisación"
+  timelineDesc="Cada fase está numerada y documentada con sus trabajos ejecutados y <strong>todas</strong> sus fotografías reales, para que el recorrido se lea tan claro como se ejecutó."
+  phases={[
+    {
+      number: '01',
+      kicker: 'Fase 01 · Diagnóstico',
+      title: 'El punto de partida: modernizar y adaptar con una prioridad clara',
+      body: 'La prioridad absoluta del cliente era garantizar autonomía y comodidad para una persona mayor con movilidad reducida que residía en la vivienda. El estudio milimétrico de la planta definió la estrategia: reformar el baño principal y convertir el armario empotrado del dormitorio en un aseo privado.',
+      checks: [
+        'Estudio milimétrico de la planta y del armario empotrado',
+        'Definición del lenguaje de materiales común a ambos espacios',
+        'Plan de canalización subterránea hacia el nuevo aseo',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-antes-1.webp',
+          alt: 'Baño principal en su estado original antes de la reforma integral',
+          caption: 'Estado original del baño principal antes de la intervención: cerámica antigua y distribución convencional que requería una demolición total hasta el soporte.',
+          badge: 'Estado Original',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-princiapal-antes-2.webp',
+          alt: 'Estado original del área de ducha y sanitarios en el baño principal',
+          caption: 'Perspectiva anterior del área de ducha y lavabo, con antiguas tuberías galvanizadas y alicatado para reemplazar por red multicapa PEX-Al-PEX.',
+          badge: 'Estado Original',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '02',
+      kicker: 'Fase 02 · Obra civil',
+      title: 'De armario a aseo: la estructura de yeso laminado RH toma forma',
+      body: 'Tras demoler la carpintería del antiguo armario, se montó un cerramiento técnico con perfiles, montantes y canales de acero galvanizado de 60 mm y placas de yeso laminado hidrófugo de 13 mm (RH), especiales para resistir vapor, agua y condiciones prolongadas de humedad.',
+      checks: [
+        'Demolición de la carpintería del antiguo armario',
+        'Cerramiento con montantes y canales de acero galvanizado de 60 mm',
+        'Placas de yeso laminado hidrófugo RH de 13 mm en zona húmeda',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-armario-convertido-a-bano.webp',
+          alt: 'Construcción de estructura de yeso laminado RH 13 mm en antiguo armario empotrado para nuevo aseo',
+          caption: 'Construcción de los cerramientos de yeso laminado con montantes y canales de 60 mm y placas hidrófugas (RH) de 13 mm sobre el espacio del antiguo armario empotrado del dormitorio.',
+          badge: 'Estructura de yeso laminado RH',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '03',
+      kicker: 'Fase 03 · Revestimientos',
+      title: 'Doble encolado y cuñas niveladoras: juntas milimétricas',
+      body: 'Toda la cerámica se colocó con la técnica de doble encolado sobre soporte regularizado, incorporando un sistema de cuñas niveladoras que elimina cualquier desnivel entre piezas. Paredes en porcelánico español gris cemento 60x60 y suelos en efecto madera antideslizante.',
+      checks: [
+        'Técnica de doble encolado sobre soporte regularizado',
+        'Sistema de cuñas niveladoras pieza a pieza',
+        'Porcelánico español 60x60 en paredes y efecto madera en suelo',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-porcelanico-instalacion.webp',
+          alt: 'Proceso de instalación de porcelánico 60x60 con cuñas niveladoras y doble encolado',
+          caption: 'Fase de revestimiento utilizando técnica de doble encolado y sistema de cuñas niveladoras para garantizar planitud absoluta en porcelánico gris cemento (paredes) y efecto madera (suelo).',
+          badge: 'Proceso de Obra',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '04',
+      kicker: 'Fase 04 · Baño principal',
+      title: 'Ducha walk-in, sanitarios ROCA y espejo LED 6500K',
+      body: 'En el baño principal se instaló un inodoro de doble descarga, un mueble de lavabo de 100 cm con grifería ROCA y una zona de ducha con rociador de lluvia y teléfono mural en negro mate, separada por una mampara de cristal de seguridad templado con perfilería negra.',
+      checks: [
+        'Ducha walk-in con grifería ROCA negro mate efecto lluvia',
+        'Inodoro ecológico de doble descarga y mueble de 100 cm',
+        'Mampara de cristal templado y espejo LED perimetral 6500K',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-mampara-mas-ducha-instalada.webp',
+          alt: 'Ducha walk-in instalada con grifería ROCA efecto lluvia negro mate y mampara de cristal templado',
+          caption: 'Zona de ducha con rociador efecto lluvia y teléfono mural en negro mate marca ROCA, separada con mampara de cristal de seguridad templado y perfilería minimalista en aluminio negro.',
+          badge: 'Ducha Walk-In',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-inodoro-instalado.webp',
+          alt: 'Inodoro ecológico de doble descarga instalado sobre suelo porcelánico efecto madera',
+          caption: 'Instalación del inodoro ecológico de doble descarga en el baño principal, contrastando sobre el porcelánico efecto madera en suelo y gris cemento 60x60 en paredes.',
+          badge: 'Sanitarios ROCA',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-espejo-instalado.webp',
+          alt: 'Mueble ROCA de 100 cm y espejo retroiluminado con luz LED blanca 6500K en baño principal',
+          caption: 'Vista apaisada del frente de lavabo en el baño principal: mueble de 100 cm con grifería ROCA negra y espejo LED con temperatura de color blanca pura 6500K.',
+          badge: 'Iluminación LED 6500K',
+          orientation: 'landscape',
+        },
+      ],
+    },
+    {
+      number: '05',
+      kicker: 'Fase 05 · Aseo adaptado',
+      title: 'Puerta corredera flotante y sanitarios en continuidad estética',
+      body: 'Para garantizar un acceso sin barreras y no invadir la circulación del dormitorio con el barrido de una puerta abatible, se diseñó un sistema de puerta corredera flotante superior. Se instaló un mueble lavabo compacto de 45 cm y un inodoro ergonómico, con el mismo diseño de porcelánico que el baño principal.',
+      checks: [
+        'Puerta corredera flotante sin obstáculos de giro',
+        'Mueble lavabo compacto de 45 cm e inodoro ergonómico',
+        'Continuidad estética con el baño principal',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-armario-convertido-a-bano-con-puerta.webp',
+          alt: 'Puerta corredera flotante en aseo adaptado para facilitar el acceso en el dormitorio',
+          caption: 'Solución de accesibilidad para persona mayor con movilidad reducida: puerta corredera flotante que elimina el radio de giro y maximiza la facilidad de acceso en el dormitorio.',
+          badge: 'Accesibilidad',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-finalizado-2.webp',
+          alt: 'Revestimiento en porcelánico gris cemento 60x60 y suelo efecto madera en aseo adaptado',
+          caption: 'Mismo diseño que el baño principal: paredes en porcelánico gris cemento 60x60 y suelo efecto madera, con canalizaciones subterráneas de 110 mm para inodoro y 40 mm para lavabo.',
+          badge: 'Revestimiento Integral',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '06',
+      kicker: 'Fase 06 · Entrega',
+      title: 'Dos espacios que comparten un lenguaje limpio, luminoso y sólido',
+      body: 'El cierre: revisión de cada luz, cada junta y cada encuentro en los dos espacios. La combinación de porcelánico gris cemento, suelo efecto madera, iluminación LED y la nueva organización deja un conjunto coherente, sereno y claramente más premium, con la accesibilidad resuelta como parte del diseño.',
+      checks: [
+        'Revisión final de acabados, iluminación y funcionamiento',
+        'Pruebas de desagües y red multicapa en ambos espacios',
+        'Entrega con accesibilidad y estética en equilibrio',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp',
+          alt: 'Baño principal finalizado con porcelánico gris cemento 60x60 y suelo efecto madera',
+          caption: 'Vista principal del baño terminado: porcelánico español gris cemento en 60x60, suelo cálido efecto madera antideslizante y luminarias LED 6500K.',
+          badge: 'Resultado Final',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-2.webp',
+          alt: 'Detalle de acabados premium en baño principal: mueble ROCA, inodoro e iluminación LED',
+          caption: 'Detalle de acabados en la confluencia entre la zona de lavabo con mueble ROCA de 100 cm, el inodoro de doble descarga y el panel fijo de ducha en cristal templado.',
+          badge: 'Resultado Final',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-3.webp',
+          alt: 'Perspectiva integral del baño principal renovado con luces LED 6500K',
+          caption: 'Vista general que muestra la amplitud visual, la iluminación por capas con tono blanco 6500K y la elegancia del revestimiento cerámico español con juntas milimétricas.',
+          badge: 'Resultado Final',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-finalizado-1.webp',
+          alt: 'Nuevo aseo adaptado en antiguo armario con lavabo compacto de 45 cm y espejo LED',
+          caption: 'Aprovechamiento milimétrico del antiguo armario empotrado: mueble lavabo compacto de 45 cm, inodoro de doble descarga, espejo LED y luz de techo 6500K.',
+          badge: 'Espacio Optimizado',
+          orientation: 'portrait',
+        },
+      ],
+    },
+  ]}
+  compareTag="La misma zona, otra vida"
+  compareTitle="Desliza y compruébalo con tus propios ojos"
+  compareDesc="Compara el estado original con el resultado final para entender de inmediato cómo cambian la percepción del baño, la luz y la calidad del conjunto."
+  compare={{
+    beforeSrc: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-antes-1.webp',
+    beforeAlt: 'Baño principal original antes de la reforma en España',
+    afterSrc: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-2.webp',
+    afterAlt: 'Baño principal renovado con porcelánico gris cemento y mueble ROCA',
+    beforeCaption: 'Estado previo con cerámica envejecida y una lectura visual mucho más pesada.',
+    afterCaption: 'Nuevo lenguaje de materiales, mejor iluminación y una ejecución claramente más limpia y elegante.',
+  }}
+  specsTag="Detalle técnico"
+  specsTitle="Especificaciones de la intervención"
+  specsDesc="Lo que se ve —y lo que no se ve— de esta obra, documentado partida por partida."
+  highlights={[
+    {
+      icon: 'droplet',
+      title: 'Fontanería multicapa PEX-Al-PEX',
+      text: 'Red completa de agua fría y caliente en tubería multicapa: previene corrosiones, fugas e incrustaciones, con décadas de funcionamiento ininterrumpido.',
+    },
+    {
+      icon: 'ruler',
+      title: 'Ingeniería del aseo adaptado',
+      text: 'Canalización subterránea de desagües de 110 mm (inodoro) y 40 mm (lavabo) y cerramiento de yeso laminado hidrófugo RH de 13 mm con perfiles de acero de 60 mm.',
+    },
+    {
+      icon: 'sparkle',
+      title: 'Porcelánico español 60x60',
+      text: 'Técnica premium de doble encolado con cuñas niveladoras: juntas milimétricas, planitud absoluta y tono gris cemento en ambos espacios.',
+    },
+    {
+      icon: 'shield',
+      title: 'Accesibilidad real',
+      text: 'Puerta corredera flotante que elimina el radio de giro y facilita el ingreso autónomo de la persona con movilidad reducida, sin barreras ni escalones.',
+    },
+  ]}
+  specs={[
+    { label: 'Ubicación', value: 'Residencia en España' },
+    { label: 'Duración de obra', value: '2 semanas de ejecución' },
+    { label: 'Revestimiento paredes', value: 'Porcelánico español 60x60 cm (gris cemento)' },
+    { label: 'Revestimiento suelos', value: 'Porcelánico efecto madera antideslizante' },
+    { label: 'Técnica de instalación', value: 'Doble encolado + sistema de cuñas niveladoras' },
+    { label: 'Red de fontanería', value: 'Multicapa PEX-Al-PEX para agua fría y caliente' },
+    { label: 'Red de desagües', value: 'PVC de alta capacidad (110 mm inodoro / 40 mm lavabo)' },
+    { label: 'Estructura aseo adaptado', value: 'yeso laminado hidrófugo RH 13 mm + perfiles acero 60 mm' },
+    { label: 'Mobiliario y sanitarios', value: 'Mueble 100 cm (baño) y 45 cm (aseo) con grifería ROCA' },
+    { label: 'Zona de ducha', value: 'Rociador lluvia + teléfono mural en negro mate ROCA' },
+    { label: 'Mampara de baño', value: 'Cristal templado de seguridad + perfilería aluminio negro' },
+    { label: 'Iluminación', value: 'Espejos LED perimetrales + downlights LED tono 6500K' },
+    { label: 'Accesibilidad', value: 'Puerta corredera flotante sin obstáculos de giro' },
+  ]}
+  galleryTitle={`Galería ordenada del proyecto (13 fotos reales)`}
+  galleryIntro="Toda la documentación visual queda agrupada por ambientes y fases para que el usuario pueda seguir el proyecto sin saltos ni desorden visual."
+  gallery={[
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp',
+      alt: 'Baño principal finalizado con porcelánico gris cemento 60x60 y suelo efecto madera',
+      title: 'Baño Principal Finalizado: Armonía Arquitectónica',
+      caption: 'Vista principal del baño terminado: porcelánico español gris cemento en 60x60, suelo cálido efecto madera antideslizante y luminarias LED 6500K.',
+      category: 'principal', categoryLabel: 'Baño Principal', badge: 'Resultado Final', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-2.webp',
+      alt: 'Detalle de acabados premium en baño principal: mueble ROCA, inodoro e iluminación LED',
+      title: 'Detalle de Acabados Premium y Perfilería Negra',
+      caption: 'Detalle de acabados en la confluencia entre la zona de lavabo con mueble ROCA de 100 cm, el inodoro de doble descarga y el panel fijo de ducha en cristal templado.',
+      category: 'principal', categoryLabel: 'Baño Principal', badge: 'Resultado Final', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-3.webp',
+      alt: 'Perspectiva integral del baño principal renovado con luces LED 6500K',
+      title: 'Perspectiva Integral del Baño Principal Renovado',
+      caption: 'Vista general que muestra la amplitud visual, la iluminación por capas con tono blanco 6500K y la elegancia del revestimiento cerámico español con juntas milimétricas.',
+      category: 'principal', categoryLabel: 'Baño Principal', badge: 'Resultado Final', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-mampara-mas-ducha-instalada.webp',
+      alt: 'Ducha walk-in instalada con grifería ROCA efecto lluvia negro mate y mampara de cristal templado',
+      title: 'Ducha con Grifería ROCA Negro Mate y Mampara Templada',
+      caption: 'Zona de ducha con rociador efecto lluvia y teléfono mural en negro mate marca ROCA, separada con mampara de cristal de seguridad templado y perfilería minimalista en aluminio negro.',
+      category: 'principal', categoryLabel: 'Baño Principal', badge: 'Ducha Walk-In', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-inodoro-instalado.webp',
+      alt: 'Inodoro ecológico de doble descarga instalado sobre suelo porcelánico efecto madera',
+      title: 'Inodoro de Doble Descarga y Revestimiento Gris Cemento',
+      caption: 'Instalación del inodoro ecológico de doble descarga en el baño principal, contrastando sobre el porcelánico efecto madera en suelo y gris cemento 60x60 en paredes.',
+      category: 'principal', categoryLabel: 'Baño Principal', badge: 'Sanitarios ROCA', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-espejo-instalado.webp',
+      alt: 'Mueble ROCA de 100 cm y espejo retroiluminado con luz LED blanca 6500K en baño principal',
+      title: 'Mueble ROCA de 100 cm y Espejo LED Retroiluminado',
+      caption: 'Vista apaisada del frente de lavabo en el baño principal: mueble de 100 cm con grifería ROCA negra y espejo LED con temperatura de color blanca pura 6500K.',
+      category: 'principal', categoryLabel: 'Baño Principal', badge: 'Iluminación LED 6500K', orientation: 'landscape',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-finalizado-1.webp',
+      alt: 'Nuevo aseo adaptado en antiguo armario con lavabo compacto de 45 cm y espejo LED',
+      title: 'Aseo Adaptado Finalizado: Lavabo de 45 cm e Inodoro',
+      caption: 'Aprovechamiento milimétrico del antiguo armario empotrado: mueble lavabo compacto de 45 cm, inodoro de doble descarga, espejo LED y luz de techo 6500K.',
+      category: 'aseo', categoryLabel: 'Aseo Adaptado', badge: 'Espacio Optimizado', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-finalizado-2.webp',
+      alt: 'Revestimiento en porcelánico gris cemento 60x60 y suelo efecto madera en aseo adaptado',
+      title: 'Aseo Adaptado: Continuidad Estética en Porcelánico',
+      caption: 'Mismo diseño que el baño principal: paredes en porcelánico gris cemento 60x60 y suelo efecto madera, con canalizaciones subterráneas de 110 mm para inodoro y 40 mm para lavabo.',
+      category: 'aseo', categoryLabel: 'Aseo Adaptado', badge: 'Revestimiento Integral', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-armario-convertido-a-bano-con-puerta.webp',
+      alt: 'Puerta corredera flotante en aseo adaptado para facilitar el acceso en el dormitorio',
+      title: 'Aseo Adaptado: Instalación de Puerta Corredera Flotante',
+      caption: 'Solución de accesibilidad para persona mayor con movilidad reducida: puerta corredera flotante que elimina el radio de giro y maximiza la facilidad de acceso en el dormitorio.',
+      category: 'aseo', categoryLabel: 'Aseo Adaptado', badge: 'Accesibilidad', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-antes-1.webp',
+      alt: 'Baño principal en su estado original antes de la reforma integral',
+      title: 'Baño Principal Original: Vista General',
+      caption: 'Estado original del baño principal antes de la intervención: cerámica antigua y distribución convencional que requería una demolición total hasta el soporte.',
+      category: 'antes', categoryLabel: 'Estado Original', badge: 'Estado Original', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-princiapal-antes-2.webp',
+      alt: 'Estado original del área de ducha y sanitarios en el baño principal',
+      title: 'Baño Principal Original: Zona de Ducha',
+      caption: 'Perspectiva anterior del área de ducha y lavabo, con antiguas tuberías galvanizadas y alicatado para reemplazar por red multicapa PEX-Al-PEX.',
+      category: 'antes', categoryLabel: 'Estado Original', badge: 'Estado Original', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-porcelanico-instalacion.webp',
+      alt: 'Proceso de instalación de porcelánico 60x60 con cuñas niveladoras y doble encolado',
+      title: 'Instalación de Porcelánico 60x60 con Cuñas Niveladoras',
+      caption: 'Fase de revestimiento utilizando técnica de doble encolado y sistema de cuñas niveladoras para garantizar planitud absoluta en porcelánico gris cemento (paredes) y efecto madera (suelo).',
+      category: 'obra', categoryLabel: 'Proceso de Obra', badge: 'Proceso de Obra', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-principal-y-aseo-adaptado/bano-2-armario-convertido-a-bano.webp',
+      alt: 'Construcción de estructura de yeso laminado RH 13 mm en antiguo armario empotrado para nuevo aseo',
+      title: 'Estructura de yeso laminado RH: De Armario a Aseo',
+      caption: 'Construcción de los cerramientos de yeso laminado con montantes y canales de 60 mm y placas hidrófugas (RH) de 13 mm sobre el espacio del antiguo armario empotrado del dormitorio.',
+      category: 'obra', categoryLabel: 'Proceso de Obra', badge: 'Estructura de yeso laminado RH', orientation: 'portrait',
+    },
+  ]}
+  galleryPhases={[
+    { id: 'principal', label: 'Baño principal', description: 'El espacio principal terminado muestra la nueva lectura de materiales, iluminación y fontanería resuelta.' },
+    { id: 'aseo', label: 'Aseo adaptado', description: 'La segunda estancia documenta la adaptación del antiguo armario a un nuevo baño de apoyo.' },
+    { id: 'antes', label: 'Estado previo', description: 'Las imágenes iniciales permiten entender el punto de partida antes de la transformación.' },
+    { id: 'obra', label: 'Proceso de obra', description: 'Fotos de ejecución donde se aprecia la estructura, las instalaciones y la colocación de materiales.' },
+  ]}
+  ctaTag="Valoración técnica"
+  ctaTitle="Diseño, precisión e ingeniería para tu baño"
+  ctaText="Sea una reforma de baño principal de alta gama o una adaptación especializada para accesibilidad y movilidad reducida, nuestro equipo técnico planifica y ejecuta cada obra bajo contrato formal en España."
+  ctaPrimaryLabel="Solicitar valoración técnica"
+  ctaSecondaryHref="/servicios/reforma-bano/"
+  ctaSecondaryLabel="Ver reforma de baños en España →"
+/>

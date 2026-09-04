@@ -1,0 +1,385 @@
+---
+import ProjectCaseStudy from '../../components/ProjectCaseStudy.astro';
+import { waLink } from '../../data/brand';
+
+const whatsappText = 'Hola, quiero una valoración técnica para una cocina similar al chalet en España.';
+const whatsappHref = waLink(whatsappText);
+
+const quickNavItems = [
+  { href: '#resumen', label: 'Resumen' },
+  { href: '#resultado', label: 'Resultado' },
+  { href: '#paso-a-paso', label: 'Paso a paso' },
+  { href: '#comparativa', label: 'Antes y después' },
+  { href: '#especificaciones', label: 'Especificaciones' },
+  { href: '#galeria', label: 'Galería' },
+];
+---
+
+<ProjectCaseStudy
+  seoTitle="Reforma Integral de Cocina en Chalet | RemodelaT"
+  seoDescription="Reforma de cocina en un chalet en España: desmontaje, electricidad ignífuga, revestimiento rectificado, MDF lacado alto brillo y cuarzo."
+  heroImage="/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp"
+  heroImageAlt="Cocina finalizada en un chalet en España con muebles blancos de alto brillo y encimera de cuarzo oscuro"
+  kicker="Obra previa en España · Cocinas de alto estándar · Diario de obra"
+  heroTitle="Reforma Integral de Cocina en Chalet"
+  lead="Reforma completa de cocina en un chalet en España: desmontaje total, demolición de cerámica existente, actualización eléctrica con cable ignífugo, revestimiento rectificado, mobiliario en MDF lacado alto brillo con polímero PVC termoformado, encimera de cuarzo oscuro, inducción y electrodomésticos TEKA."
+  heroFacts={[
+    { label: 'Ubicación', value: 'España' },
+    { label: 'Duración', value: '1 semana' },
+    { label: 'Intervención', value: 'Reforma integral' },
+    { label: 'Acabado', value: 'Lacado alto brillo' },
+    { label: 'Encimera', value: 'Cuarzo oscuro' },
+    { label: 'Equipos', value: 'TEKA · Inducción' },
+  ]}
+  quickNavItems={quickNavItems}
+  whatsappHref={whatsappHref}
+  breadcrumbCurrent="Cocina en Chalet"
+  summaryTag="En síntesis"
+  summaryTitle="De cocina obsoleta a composición blanca de alto brillo con contraste en cuarzo"
+  summaryDesc="Una intervención que no se limitó a un cambio estético: renovó la base técnica de la cocina para que el acabado nuevo se sostuviera sobre electricidad segura, superficies resistentes y montaje medido."
+  summaryCards={[
+    {
+      index: 'El reto',
+      title: 'Actualizar una cocina de chalet sin limitarse a un cambio estético',
+      body: 'La cocina existente requería una intervención completa: desmontaje de muebles, demolición del material cerámico anterior, actualización eléctrica, nuevo revestimiento y montaje de mobiliario moderno con mayor resistencia a humedad, golpes y uso diario.',
+      dropcap: true,
+    },
+    {
+      index: 'La solución',
+      title: 'Una cocina blanca de alto brillo con contraste técnico en cuarzo oscuro',
+      body: 'Se renovó la base técnica de la cocina, se instaló cerámica rectificada y se montó mobiliario con frentes en MDF de 19 mm y polímero PVC termoformado. La encimera de cuarzo oscuro aporta contraste, resistencia y una lectura más elegante del conjunto.',
+    },
+  ]}
+  stats={[
+    { value: '06', label: 'Fases documentadas' },
+    { value: '11', label: 'Fotografías reales' },
+    { value: '01', label: 'Semana de ejecución' },
+    { value: '25', label: 'Años de garantía en muebles' },
+    { value: '10', label: 'Años de garantía TEKA' },
+  ]}
+  resultadoTag="Resultado final"
+  resultadoTitle="La cocina terminada, visible desde el inicio"
+  resultadoDesc="Antes de entrar en el detalle técnico, mostramos el resultado final: muebles blancos alto brillo, encimera de cuarzo oscuro, columna TEKA y una lectura moderna para un chalet en España."
+  resultadoShowcase={[
+    {
+      src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp',
+      alt: 'Cocina finalizada en un chalet en España con muebles blancos y encimera oscura',
+      badge: 'Vista final',
+      title: 'Alto brillo y cuarzo oscuro: la composición completa',
+      caption:
+        'Mobiliario blanco de alto brillo, encimera de cuarzo oscuro y electrodomésticos integrados: una lectura moderna, limpia y de alto contraste para uso diario intensivo.',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-1.webp',
+      alt: 'Cocina finalizada con muebles altos y bajos lacados en blanco brillo',
+      badge: 'Mobiliario',
+      title: 'Frentes lacados con continuidad total',
+      caption:
+        'Muebles terminados con frentes de MDF de 19 mm, acabado lacado alto brillo y foliado PVC termoformado: sin juntas visibles y resistente a la humedad en los cantos.',
+    },
+  ]}
+  quote={{
+    text: 'El contraste entre el blanco brillo y el cuarzo oscuro convierte una reforma en una composición arquitectónica.',
+    cite: 'Diario de obra · Cocina en un chalet en España',
+  }}
+  timelineTag="La obra, en orden"
+  timelineTitle="El proyecto paso a paso: seis fases, cero improvisación"
+  timelineDesc="Cada fase está numerada y documentada con sus trabajos ejecutados y <strong>todas</strong> sus fotografías reales, para que el recorrido se lea tan claro como se ejecutó."
+  phases={[
+    {
+      number: '01',
+      kicker: 'Fase 01 · Diagnóstico',
+      title: 'El punto de partida: una base técnica que pedía intervención completa',
+      body: 'El punto de partida era una cocina con acabados y mobiliario que ya no respondían al estándar de uso, limpieza y lectura visual que pedía la vivienda. No había maquillaje posible: había que intervenir de raíz.',
+      checks: [
+        'Inspección del estado de mobiliario, cerámica e instalaciones',
+        'Definición del alcance: desmontaje total y demolición controlada',
+        'Plan de actualización eléctrica y de nuevo revestimiento',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/cocina-en-chalet/cocina-antes-1.webp',
+          alt: 'Cocina antes de la reforma completa en un chalet en España',
+          caption: 'Estado inicial antes del desmontaje completo de muebles y demolición del revestimiento cerámico existente.',
+          badge: 'Antes',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/cocina-en-chalet/cocina-antes-2.webp',
+          alt: 'Estado inicial de cocina antes de reforma en España',
+          caption: 'Condición previa de la cocina: mobiliario y cerámica existentes antes de la intervención integral.',
+          badge: 'Antes',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '02',
+      kicker: 'Fase 02 · Montaje de módulos',
+      title: 'Módulos en su sitio: la composición empieza a tomar forma',
+      body: 'Con la base preparada —desmontaje total, electricidad con cable ignífugo y cerámica rectificada instalada— llegó el mobiliario. Se montaron los módulos bajos y altos con control de plomos, niveles y encuentros, y los frentes empezaron a alinearse.',
+      checks: [
+        'Montaje de estructura y módulos sobre la base preparada',
+        'Frentes de MDF de 19 mm con acabado lacado alto brillo',
+        'Casco en aglomerado hidrófugo de 16 mm protegido a dos caras',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-1.webp',
+          alt: 'Proceso de montaje de muebles de cocina en un chalet en España',
+          caption: 'Montaje de estructura y módulos de cocina tras la actualización de instalaciones y revestimiento.',
+          badge: 'Proceso',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-2.webp',
+          alt: 'Instalación de módulos y frentes de cocina durante el proceso',
+          caption: 'Proceso de instalación de módulos, ajustes y alineación de frentes para lograr una lectura limpia.',
+          badge: 'Proceso',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '03',
+      kicker: 'Fase 03 · Alineación y remates',
+      title: 'Plomos, niveles y encuentros: donde se construye la limpieza visual',
+      body: 'La sensación de cocina bien ejecutada se decide aquí: cada módulo alineado, cada frente en su plano y cada encuentro revisado. La instalación de muebles altos y bajos se cerró con ajustes milimétricos antes de la encimera.',
+      checks: [
+        'Instalación de muebles altos y bajos con control de plomos y niveles',
+        'Alineación de frentes para una lectura continua',
+        'Revisión de encuentros y preparación para la encimera',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-3.webp',
+          alt: 'Montaje de muebles altos y bajos en cocina en España',
+          caption: 'Instalación de muebles altos y bajos con control de plomos, niveles y encuentros.',
+          badge: 'Proceso',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-4.webp',
+          alt: 'Proceso final de montaje de mobiliario de cocina',
+          caption: 'Ajustes finales de mobiliario antes de instalar electrodomésticos, encimera y remates.',
+          badge: 'Proceso',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '04',
+      kicker: 'Fase 04 · Encimera y equipos',
+      title: 'Cuarzo adaptado al fregadero en L y columna TEKA integrada',
+      body: 'Se instaló la encimera de cuarzo oscuro con adaptación técnica para el fregadero en forma de L, y se integró la columna para horno y microondas TEKA junto a la placa de inducción y el lavavajillas empotrado.',
+      checks: [
+        'Encimera de cuarzo oscuro adaptada para fregadero en L',
+        'Placa de inducción, lavavajillas empotrado y columna TEKA',
+        'Integración de equipos con garantía de hasta 10 años según fabricante',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/cocina-en-chalet/adaptacion-encimera-fregadero-l.webp',
+          alt: 'Adaptación de encimera de cuarzo para fregadero en forma de L',
+          caption: 'Adaptación técnica de encimera de cuarzo oscuro para la instalación de un fregadero en forma de L.',
+          badge: 'Cuarzo',
+          orientation: 'landscape',
+        },
+      ],
+    },
+    {
+      number: '05',
+      kicker: 'Fase 05 · Entrega',
+      title: 'Últimos retoques, revisión final y puesta en servicio',
+      body: 'Se revisaron ajustes, se hicieron las pruebas de funcionamiento de equipos e iluminación y se completó la limpieza visual de la obra. La cocina quedó lista para la entrega y el uso diario.',
+      checks: [
+        'Últimos retoques y revisión de ajustes',
+        'Prueba de funcionamiento de equipos e iluminación',
+        'Limpieza final y preparación de entrega',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/cocina-en-chalet/ultimos-retoques.webp',
+          alt: 'Últimos retoques en cocina remodelada de chalet en España',
+          caption: 'Últimos retoques de obra, revisión de ajustes, limpieza visual y preparación para entrega.',
+          badge: 'Entrega',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '06',
+      kicker: 'Fase 06 · Resultado',
+      title: 'La cocina entregada: blanco brillo, cuarzo oscuro y equipos integrados',
+      body: 'El resultado final combina frentes blancos continuos, electrodomésticos integrados y una encimera oscura que ordena la composición. La cocina gana presencia, claridad y una percepción claramente más premium desde cualquier ángulo.',
+      checks: [
+        'Composición completa entregada sin pendientes visibles',
+        'Contraste blanco brillo / cuarzo oscuro en equilibrio',
+        'Revisión final de integración de equipos y acabados',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-1.webp',
+          alt: 'Cocina finalizada con muebles altos y bajos lacados en blanco brillo',
+          caption: 'Muebles terminados con frentes de MDF de 19 mm, acabado lacado alto brillo y foliado PVC termoformado.',
+          badge: 'Mobiliario',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-2.webp',
+          alt: 'Detalle de cocina terminada con electrodomésticos empotrados',
+          caption: 'Integración de electrodomésticos, columna para horno y microondas TEKA, y distribución funcional para uso diario.',
+          badge: 'TEKA',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp',
+          alt: 'Cocina finalizada en un chalet en España con muebles blancos y encimera oscura',
+          caption: 'Vista final de la cocina: mobiliario blanco alto brillo, encimera de cuarzo oscuro y composición moderna de alto contraste.',
+          badge: 'Finalizado',
+          orientation: 'landscape',
+        },
+      ],
+    },
+  ]}
+  compareTag="La misma zona, otra vida"
+  compareTitle="Desliza y compruébalo con tus propios ojos"
+  compareDesc="La mejora no se limita al color o al mobiliario nuevo. El cambio real está en la limpieza visual, la integración técnica y la calidad percibida de toda la composición."
+  compare={{
+    beforeSrc: '/images/proyectos/cocina-en-chalet/cocina-antes-1.webp',
+    beforeAlt: 'Cocina original antes de la reforma integral en el chalet en España',
+    afterSrc: '/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp',
+    afterAlt: 'Cocina finalizada con mobiliario blanco de alto brillo y cuarzo oscuro en España',
+    beforeCaption: 'Estado previo con acabados y mobiliario que ya no daban la presencia ni la funcionalidad que pedía la vivienda.',
+    afterCaption: 'La nueva composición gana limpieza visual, mejor integración y una lectura mucho más premium.',
+  }}
+  specsTag="Detalle técnico"
+  specsTitle="Especificaciones de la intervención"
+  specsDesc="Lo que se ve —y lo que no se ve— de esta obra, documentado partida por partida."
+  highlights={[
+    {
+      icon: 'sparkle',
+      title: 'Frentes lacados con PVC termoformado',
+      text: 'MDF de 19 mm lacado alto brillo con foliado de polímero PVC termoformado: acabado continuo, sin juntas visibles y resistente a la humedad en los cantos.',
+    },
+    {
+      icon: 'appliance',
+      title: 'Equipamiento TEKA',
+      text: 'Placa de inducción, lavavajillas empotrado, columna para horno y microondas TEKA con garantía de hasta 10 años según fabricante.',
+    },
+    {
+      icon: 'shield',
+      title: 'Garantías de 10 y 25 años',
+      text: 'Mobiliario con garantía de hasta 25 años y equipos TEKA con hasta 10 años, según condiciones de fabricante y uso adecuado.',
+    },
+    {
+      icon: 'ruler',
+      title: 'Encimera de cuarzo adaptada',
+      text: 'Cuarzo oscuro en contraste con el mobiliario blanco, con adaptación técnica de precisión para el fregadero en forma de L.',
+    },
+  ]}
+  specs={[
+    { label: 'Ubicación', value: 'Chalet residencial en España' },
+    { label: 'Duración de obra', value: '1 semana de ejecución' },
+    { label: 'Alcance', value: 'Desmontaje, demolición, electricidad, revestimiento, muebles, encimera y electrodomésticos' },
+    { label: 'Sistema eléctrico', value: 'Actualización con cable ignífugo de alta calidad' },
+    { label: 'Revestimiento', value: 'Cerámica de gama alta, tipo rectificado' },
+    { label: 'Puertas y frentes', value: 'MDF de 19 mm con acabado lacado alto brillo y polímero PVC termoformado' },
+    { label: 'Casco del mueble', value: 'Aglomerado hidrófugo de 16 mm protegido a dos caras' },
+    { label: 'Trasera del mueble', value: 'Tablero de 6 mm en color blanco por ambas caras' },
+    { label: 'Encimera', value: 'Cuarzo oscuro, adaptado para fregadero en forma de L' },
+    { label: 'Electrodomésticos', value: 'Placa de inducción, lavavajillas empotrado, horno y microondas TEKA' },
+    { label: 'Garantías', value: 'Hasta 25 años en muebles y hasta 10 años en equipos TEKA según fabricante' },
+  ]}
+  galleryTitle={`Galería ordenada por fases (11 fotos reales)`}
+  galleryIntro="La galería ya no mezcla todo en una sola rejilla: cada fase se presenta como un bloque propio para que el proyecto se lea mejor y las fotos respiren más."
+  gallery={[
+    {
+      src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp',
+      alt: 'Cocina finalizada en un chalet en España con muebles blancos y encimera oscura',
+      title: 'Vista Final: Alto Brillo y Cuarzo Oscuro',
+      caption: 'Vista final de la cocina: mobiliario blanco alto brillo, encimera de cuarzo oscuro y composición moderna de alto contraste.',
+      category: 'resultado', categoryLabel: 'Resultado Final', badge: 'Finalizado', orientation: 'landscape',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-1.webp',
+      alt: 'Cocina finalizada con muebles altos y bajos lacados en blanco brillo',
+      title: 'Mobiliario Blanco Alto Brillo Instalado',
+      caption: 'Muebles terminados con frentes de MDF de 19 mm, acabado lacado alto brillo y foliado PVC termoformado.',
+      category: 'resultado', categoryLabel: 'Resultado Final', badge: 'Mobiliario', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/cocina-finalizada-2.webp',
+      alt: 'Detalle de cocina terminada con electrodomésticos empotrados',
+      title: 'Columna TEKA y Electrodomésticos Integrados',
+      caption: 'Integración de electrodomésticos, columna para horno y microondas TEKA, y distribución funcional para uso diario.',
+      category: 'resultado', categoryLabel: 'Resultado Final', badge: 'TEKA', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/adaptacion-encimera-fregadero-l.webp',
+      alt: 'Adaptación de encimera de cuarzo para fregadero en forma de L',
+      title: 'Adaptación de Encimera para Fregadero en L',
+      caption: 'Adaptación técnica de encimera de cuarzo oscuro para la instalación de un fregadero en forma de L.',
+      category: 'detalles', categoryLabel: 'Detalles Técnicos', badge: 'Cuarzo', orientation: 'landscape',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/ultimos-retoques.webp',
+      alt: 'Últimos retoques en cocina remodelada de chalet en España',
+      title: 'Últimos Retoques y Revisión de Entrega',
+      caption: 'Últimos retoques de obra, revisión de ajustes, limpieza visual y preparación para entrega.',
+      category: 'detalles', categoryLabel: 'Detalles Técnicos', badge: 'Entrega', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-1.webp',
+      alt: 'Proceso de montaje de muebles de cocina en un chalet en España',
+      title: 'Montaje Inicial de Módulos de Cocina',
+      caption: 'Montaje de estructura y módulos de cocina tras actualización de instalaciones y revestimiento.',
+      category: 'montaje', categoryLabel: 'Montaje de Muebles', badge: 'Proceso', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-2.webp',
+      alt: 'Instalación de módulos y frentes de cocina durante el proceso',
+      title: 'Alineación de Módulos y Frentes',
+      caption: 'Proceso de instalación de módulos, ajustes y alineación de frentes para lograr una lectura limpia.',
+      category: 'montaje', categoryLabel: 'Montaje de Muebles', badge: 'Proceso', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-3.webp',
+      alt: 'Montaje de muebles altos y bajos en cocina en España',
+      title: 'Muebles Altos y Bajos en Instalación',
+      caption: 'Instalación de muebles altos y bajos con control de plomos, niveles y encuentros.',
+      category: 'montaje', categoryLabel: 'Montaje de Muebles', badge: 'Proceso', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/proceso-montaje-muebles-4.webp',
+      alt: 'Proceso final de montaje de mobiliario de cocina',
+      title: 'Ajustes Finales del Mobiliario',
+      caption: 'Ajustes finales de mobiliario antes de instalar electrodomésticos, encimera y remates.',
+      category: 'montaje', categoryLabel: 'Montaje de Muebles', badge: 'Proceso', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/cocina-antes-1.webp',
+      alt: 'Cocina antes de la reforma completa en un chalet en España',
+      title: 'Estado Inicial Antes del Desmontaje',
+      caption: 'Estado inicial antes del desmontaje completo de muebles y demolición del revestimiento cerámico existente.',
+      category: 'antes', categoryLabel: 'Antes de Obra', badge: 'Antes', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/cocina-en-chalet/cocina-antes-2.webp',
+      alt: 'Estado inicial de cocina antes de reforma en España',
+      title: 'Cocina Original: Cerámica y Mobiliario Existente',
+      caption: 'Condición previa de la cocina: mobiliario y cerámica existentes antes de la intervención integral.',
+      category: 'antes', categoryLabel: 'Antes de Obra', badge: 'Antes', orientation: 'portrait',
+    },
+  ]}
+  galleryPhases={[
+    { id: 'resultado', label: 'Resultado final', description: 'Las vistas ya terminadas muestran la composición completa, la integración de equipos y el contraste entre frentes blancos y cuarzo oscuro.' },
+    { id: 'detalles', label: 'Detalles técnicos', description: 'Aquí se aprecian los remates, la adaptación de la encimera y las decisiones que elevan el acabado.' },
+    { id: 'montaje', label: 'Montaje de muebles', description: 'Fase intermedia donde se ve la alineación de módulos, ajustes y control de encuentros.' },
+    { id: 'antes', label: 'Estado previo', description: 'Punto de partida real de la cocina antes del desmontaje y la reforma integral.' },
+  ]}
+  ctaTag="Valoración técnica"
+  ctaTitle="¿Quieres una cocina ejecutada con este nivel de control?"
+  ctaText="Cuéntanos ubicación, tipo de vivienda, alcance, nivel de acabado y fecha estimada. Revisamos si el proyecto encaja con nuestro estándar y te orientamos con una valoración técnica."
+  ctaPrimaryLabel="Solicitar valoración técnica"
+/>

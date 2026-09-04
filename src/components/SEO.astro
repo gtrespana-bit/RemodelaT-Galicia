@@ -1,0 +1,303 @@
+---
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { BRAND, SITE_URL } from '../data/brand';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  articleSection?: string;
+  tags?: string[];
+  activePage?: string;
+  noindex?: boolean;
+}
+
+const siteUrl = SITE_URL;
+const siteName = BRAND.name;
+const organizationId = `${siteUrl}/#organization`;
+
+// Lee las dimensiones reales de un WebP en /public (para og:image:width/height correctos)
+function getWebpSize(publicPath: string): { width: number; height: number } | null {
+  try {
+    const buf = readFileSync(join(process.cwd(), 'public', publicPath));
+    if (buf.length < 30 || buf.toString('ascii', 0, 4) !== 'RIFF' || buf.toString('ascii', 8, 12) !== 'WEBP') return null;
+    const fmt = buf.toString('ascii', 12, 16);
+    if (fmt === 'VP8X') {
+      return { width: 1 + buf.readUIntLE(24, 3), height: 1 + buf.readUIntLE(27, 3) };
+    }
+    if (fmt === 'VP8 ') {
+      return { width: buf.readUInt16LE(26) & 0x3fff, height: buf.readUInt16LE(28) & 0x3fff };
+    }
+    if (fmt === 'VP8L') {
+      const b0 = buf[21], b1 = buf[22], b2 = buf[23], b3 = buf[24];
+      return {
+        width: 1 + (((b1 & 0x3f) << 8) | b0),
+        height: 1 + (((b3 & 0x0f) << 10) | (b2 << 2) | ((b1 & 0xc0) >> 6))
+      };
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+const ensureTrailingSlash = (path: string): string => {
+  if (!path) return '/';
+  if (path === '/') return '/';
+  return path.endsWith('/') ? path : `${path}/`;
+};
+
+const rawPath = Astro.url.pathname || '/';
+const currentPath = rawPath.replace(/\/$/, '') || '/';
+const isHomePage = currentPath === '/';
+
+const {
+  title,
+  description,
+  image = '',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = BRAND.name,
+  articleSection,
+  tags = [],
+  activePage = '',
+  noindex = false
+} = Astro.props;
+
+const ogImage = image && image.startsWith('http')
+  ? image
+  : `${siteUrl}${image || '/images/og-default.webp'}`;
+
+const ogImageLocalPath = ogImage.startsWith(siteUrl) ? ogImage.slice(siteUrl.length) : null;
+const ogImageSize = ogImageLocalPath ? getWebpSize(ogImageLocalPath) : null;
+const ogImageType = ogImage.endsWith('.webp') ? 'image/webp'
+  : ogImage.endsWith('.png') ? 'image/png'
+  : ogImage.endsWith('.gif') ? 'image/gif'
+  : 'image/jpeg';
+
+const canonicalUrl = `${siteUrl}${ensureTrailingSlash(rawPath)}`;
+
+// Breadcrumbs para Schema
+const breadcrumbItems = [];
+breadcrumbItems.push({ name: 'Inicio', url: '/' });
+
+if (currentPath === '/blog') {
+  breadcrumbItems.push({ name: 'Blog', url: '/blog/' });
+} else if (currentPath.startsWith('/blog/')) {
+  breadcrumbItems.push({ name: 'Blog', url: '/blog/' });
+  breadcrumbItems.push({ name: title.split('|')[0].trim(), url: ensureTrailingSlash(currentPath) });
+} else if (currentPath === '/servicios') {
+  breadcrumbItems.push({ name: 'Servicios', url: '/servicios/' });
+} else if (currentPath.startsWith('/servicios/')) {
+  breadcrumbItems.push({ name: 'Servicios', url: '/servicios/' });
+  breadcrumbItems.push({ name: title.split('|')[0].trim(), url: ensureTrailingSlash(currentPath) });
+} else if (currentPath === '/metodo-remodelat') {
+  breadcrumbItems.push({ name: 'Método', url: '/metodo-remodelat/' });
+} else if (currentPath === '/proyectos') {
+  breadcrumbItems.push({ name: 'Proyectos', url: '/proyectos/' });
+} else if (currentPath.startsWith('/proyectos/')) {
+  breadcrumbItems.push({ name: 'Proyectos', url: '/proyectos/' });
+  breadcrumbItems.push({ name: title.split('|')[0].trim(), url: ensureTrailingSlash(currentPath) });
+} else if (currentPath === '/contacto') {
+  breadcrumbItems.push({ name: 'Contacto', url: '/contacto/' });
+} else if (currentPath === '/zonas') {
+  breadcrumbItems.push({ name: 'Zonas de trabajo', url: '/zonas/' });
+}
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteName,
+  "url": siteUrl,
+  "inLanguage": "es"
+};
+
+const areasServed = [
+  { "@type": "City", "name": "A Coruña" },
+  { "@type": "AdministrativeArea", "name": "Arteixo" },
+  { "@type": "AdministrativeArea", "name": "Oleiros" },
+  { "@type": "AdministrativeArea", "name": "Culleredo" },
+  { "@type": "AdministrativeArea", "name": "Cambre" },
+  { "@type": "AdministrativeArea", "name": "Sada" },
+  { "@type": "AdministrativeArea", "name": "Bergondo" },
+  { "@type": "AdministrativeArea", "name": "Betanzos" },
+  { "@type": "AdministrativeArea", "name": "Carral" },
+  { "@type": "AdministrativeArea", "name": "Abegondo" },
+  { "@type": "AdministrativeArea", "name": "A Coruña" },
+  { "@type": "Country", "name": "España" }
+];
+
+// Entidad de negocio. Dirección y teléfono [PENDIENTE] de confirmar (brief-web.md §4).
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": organizationId,
+  "name": siteName,
+  "image": `${siteUrl}/images/logo-header.webp`,
+  "logo": `${siteUrl}/images/logo-header.webp`,
+  "url": `${siteUrl}/`,
+  "telephone": BRAND.phone,
+  "email": BRAND.email,
+  "priceRange": "€€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[PENDIENTE: dirección]",
+    "addressLocality": "A Coruña",
+    "addressRegion": "A Coruña",
+    "postalCode": "15001",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.3623,
+    "longitude": -8.4115
+  },
+  "areaServed": areasServed,
+  "availableLanguage": [
+    { "@type": "Language", "name": "Spanish" }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  // Misma identidad en la web y en perfiles oficiales controlados por la empresa.
+  // Añadir aquí el Perfil de Google Business y las redes cuando se confirmen.
+  "sameAs": []
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbItems.map((item, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": item.name,
+    "item": `${siteUrl}${ensureTrailingSlash(item.url)}`
+  }))
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title.split('|')[0].trim(),
+  "description": description,
+  "image": ogImage,
+  "datePublished": publishedTime,
+  "dateModified": modifiedTime || publishedTime,
+  "author": {
+    "@type": "Organization",
+    "name": siteName,
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": siteName,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/images/logo-header.webp`
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  },
+  "inLanguage": "es",
+  "articleSection": articleSection,
+  "keywords": tags.join(', ')
+};
+---
+
+<!-- BASIC META -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<meta name="author" content={siteName} />
+<meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+<meta name="googlebot" content={noindex ? "noindex, follow" : "index, follow"} />
+
+<!-- LANGUAGE META -->
+<meta http-equiv="content-language" content="es" />
+<meta name="language" content="es" />
+<meta name="geo.region" content="ES-GA" />
+<meta name="geo.placename" content="A Coruña" />
+<meta name="geo.position" content="43.3623;-8.4115" />
+<meta name="ICBM" content="43.3623, -8.4115" />
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
+<meta property="og:image:type" content={ogImageType} />
+{ogImageSize ? (
+  <>
+    <meta property="og:image:width" content={String(ogImageSize.width)} />
+    <meta property="og:image:height" content={String(ogImageSize.height)} />
+  </>
+) : (
+  <>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+  </>
+)}
+<meta property="og:image:alt" content={title} />
+
+{type === 'article' && publishedTime && (
+  <>
+    <meta property="article:published_time" content={publishedTime} />
+    <meta property="article:modified_time" content={modifiedTime || publishedTime} />
+    <meta property="article:author" content={siteName} />
+    <meta property="article:section" content={articleSection} />
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
+  </>
+)}
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={title} />
+
+<!-- RSS autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="RemodelaT Coruña · Blog" href="/rss.xml" />
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png" />
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#0f2233" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="RemodelaT" />
+<meta name="format-detection" content="telephone=no" />
+
+<!-- SCHEMA: WEBSITE -->
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+<!-- SCHEMA: entidad de negocio una sola vez, en las páginas de inicio. -->
+{isHomePage && <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />}
+
+<!-- SCHEMA: BREADCRUMBS -->
+{breadcrumbItems.length > 1 && (
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+)}
+
+<!-- SCHEMA: ARTICLE (solo para posts del blog) -->
+{type === 'article' && (
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+)}

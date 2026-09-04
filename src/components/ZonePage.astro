@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GodHero from './GodHero.astro';
+import GodMarquee from './GodMarquee.astro';
+import FAQ from './FAQ.astro';
+import ServiceSchema from './ServiceSchema.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import ZoneCrossLinks from './ZoneCrossLinks.astro';
+import ZoneGallery from './ZoneGallery.astro';
+import ZoneAside from './ZoneAside.astro';
+import { waLink } from '../data/brand';
+import { zoneNames } from '../data/zone-slugs';
+import { zoneLocal } from '../data/zone-local';
+
+interface Props {
+  zone: string;   // slug: 'a-coruna'
+  service: 'bano' | 'cocina' | 'integral';
+}
+
+const { zone, service } = Astro.props;
+
+const zoneName = zoneNames[zone] || zone;
+const local = zoneLocal[zone] || zoneLocal['a-coruna'];
+
+// Configuración por servicio (precios €, sin IVA — mercado 2026).
+const serviceConfig = {
+  bano: {
+    crumb: 'Reforma de Baños',
+    title: 'Reforma de Baños en',
+    lead: `Reformamos baños completos en ${zoneName}: demolición, impermeabilización, alicatado, sanitarios, grifería y mampara, con prueba de estanqueidad y garantía por escrito.`,
+    image: '/images/bano-800.webp',
+    watermark: 'BAÑOS',
+    includes: [
+      'Demolición y retirada de revestimientos y sanitarios.',
+      'Impermeabilización total con prueba de estanqueidad.',
+      'Redistribución del baño (según alcance).',
+      'Alicatado y revestimientos.',
+      'Sanitarios, grifería y mampara.',
+      'Fontanería y electricidad de la zona, con pruebas.'
+    ],
+    priceRows: [['Reforma de baño completa', '5.800 – 6.400 €']],
+    faqs: [
+      { question: `¿Cuánto cuesta reformar un baño en ${zoneName}?`, answer: `Como referencia de mercado 2026, un baño completo ronda los 5.800 – 6.400 € (sin IVA). El precio final depende del metraje, los materiales y la complejidad de las instalaciones; lo confirmamos en la visita técnica.` },
+      { question: `¿Garantizáis la impermeabilización en ${zoneName}?`, answer: 'Sí. Realizamos prueba de estanqueidad antes de cerrar paredes y la impermeabilización queda garantizada por escrito.' },
+      { question: `¿Cuánto tarda una reforma de baño en ${zoneName}?`, answer: 'Un baño estándar suele tomar unas 2–4 semanas. Con redistribución o ducha de obra puede alargarse; entregamos cronograma antes de empezar.' }
+    ],
+    schemaType: 'Bathroom Remodeling',
+  },
+  cocina: {
+    crumb: 'Reforma de Cocinas',
+    title: 'Reforma de Cocinas en',
+    lead: `Reformamos cocinas completas en ${zoneName}: desmontaje, instalaciones, revestimiento, mobiliario a medida, encimera y electrodomésticos, con garantía por escrito.`,
+    image: '/images/cocina-800.webp',
+    watermark: 'COCINAS',
+    includes: [
+      'Desmontaje y retirada de la cocina existente.',
+      'Instalaciones: fontanería, electricidad e iluminación de la zona.',
+      'Revestimiento de suelo y paredes.',
+      'Mobiliario a medida y herrajes duraderos.',
+      'Encimera (cuarzo, gran formato, etc.) según uso.',
+      'Electrodomésticos (según alcance pactado).'
+    ],
+    priceRows: [['Reforma de cocina (según alcance)', '5.000 – 6.000 €']],
+    faqs: [
+      { question: `¿Cuánto cuesta reformar una cocina en ${zoneName}?`, answer: 'Como referencia de mercado 2026, una reforma de cocina ronda los 5.000 – 6.000 € (sin IVA), según alcance y materiales. El precio final sale de la visita técnica.' },
+      { question: '¿Incluye los electrodomésticos?', answer: 'Depende del alcance pactado. Lo definimos por escrito en el presupuesto para que sepas qué entra y qué no.' },
+      { question: `¿Cómo empezamos una cocina en ${zoneName}?`, answer: 'Con una visita técnica: medimos, revisamos instalaciones y definimos alcance y materiales. Después te enviamos el presupuesto por partidas.' }
+    ],
+    schemaType: 'Kitchen Remodeling',
+  },
+  integral: {
+    crumb: 'Reforma Integral',
+    title: 'Reforma Integral en',
+    lead: `Reformas integrales de vivienda en ${zoneName}: distribución, instalaciones, revestimientos, carpintería y acabados, con presupuesto por partidas y garantía por escrito.`,
+    image: '/images/integrales-800.webp',
+    watermark: 'INTEGRAL',
+    includes: [
+      'Redistribución de espacios (tabiquería, apertura de zonas, nuevos usos).',
+      'Instalaciones completas: fontanería, electricidad e iluminación.',
+      'Revestimientos: suelos, paredes y acabados.',
+      'Carpintería interior y exterior, puertas y armarios.',
+      'Cocina y baños con acabados de calidad.',
+      'Pruebas antes de cerrar y entrega documentada con garantía por partidas.'
+    ],
+    priceRows: [
+      ['Reforma integral · piso ~80 m²', '29.000 – 32.000 €'],
+      ['Obra grande · piso ~100 m² (suelo + 2 baños + cocina + puertas)', '36.000 – 39.000 €']
+    ],
+    faqs: [
+      { question: `¿Qué incluye una reforma integral en ${zoneName}?`, answer: 'Distribución, instalaciones, revestimientos, carpintería y acabados. Definimos el alcance por escrito antes de empezar, para que sepas exactamente qué incluye cada partida.' },
+      { question: `¿Cuánto tarda una reforma integral en ${zoneName}?`, answer: 'Depende del metraje y del alcance. Tras la visita técnica entregamos un cronograma por fases con plazos realistas.' },
+      { question: `¿Dais el precio sin visitar la vivienda en ${zoneName}?`, answer: 'No. Para dar un presupuesto real necesitamos mediciones y diagnóstico. Las bandas de esta página son orientativas.' }
+    ],
+    schemaType: 'Home Remodeling',
+  }
+}[service];
+
+const whatsappMessage = `Hola, quiero solicitar presupuesto para la ${service === 'cocina' ? 'reforma de cocina' : service === 'bano' ? 'reforma de baño' : 'reforma integral'} en ${zoneName}`;
+
+const schemaName = `${serviceConfig.crumb} en ${zoneName}`;
+const schemaDescription = `${serviceConfig.lead}`;
+const pageTitle = `${serviceConfig.crumb} en ${zoneName} | RemodelaT Coruña`;
+const description = `${serviceConfig.lead} Precios orientativos, sin IVA, y presupuesto por partidas.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={description}
+  image={serviceConfig.image}
+  activePage="servicios"
+>
+
+  <GodHero
+    eyebrow="A Coruña · Servicio local"
+    title={serviceConfig.title}
+    titleGold={zoneName}
+    lead={serviceConfig.lead}
+    image={serviceConfig.image}
+    imageAlt={`${serviceConfig.crumb} en ${zoneName} | RemodelaT Coruña`}
+    badges={["Servicio local", "Método técnico", "Garantía por escrito"]}
+    watermark={serviceConfig.watermark}
+  />
+
+  <GodMarquee />
+
+  <Breadcrumb items={[
+    { name: 'Inicio', url: '/' },
+    { name: 'Servicios', url: '/servicios/' },
+    { name: serviceConfig.crumb, url: '/servicios/' },
+    { name: zoneName, url: `/reforma-${service}-${zone}/` }
+  ]} />
+
+  <section class="article-section">
+    <div class="container article-layout">
+      <div class="article-body">
+        <p>Realizamos <strong>{serviceConfig.crumb.toLowerCase()} en {zoneName}</strong>. {serviceConfig.lead}</p>
+
+        <div class="local-box">
+          <h3>{local.localBoxTitle}</h3>
+          <p>{local.localBoxText}</p>
+        </div>
+
+        <ZoneGallery zone={zone} service={service} />
+
+        <h2>Qué incluye nuestra {serviceConfig.crumb.toLowerCase()} en {zoneName}</h2>
+        <ul>
+          {serviceConfig.includes.map((item) => <li>{item}</li>)}
+        </ul>
+
+        <h2>Precios orientativos (sin IVA)</h2>
+        <p>Los precios son bandas de referencia de mercado 2026. El presupuesto final depende del metraje, los materiales y la complejidad de las instalaciones. Siempre entregamos presupuesto cerrado por partidas, sin sorpresas.</p>
+        <table>
+          <thead><tr><th>Alcance</th><th>Precio orientativo</th></tr></thead>
+          <tbody>
+            {serviceConfig.priceRows.map(([label, price]) => (
+              <tr><td>{label}</td><td>{price}</td></tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="price-note">* Orientativos, sin IVA (10 % o 21 % según tipo de obra). Se confirman con visita técnica y mediciones reales.</p>
+
+        <h2>Cómo trabajamos en {zoneName}</h2>
+        <p>Seguimos el <a href="/metodo-remodelat/">Método RemodelaT</a> en 10 etapas: diagnóstico técnico, presupuesto por partidas, ejecución supervisada con equipo propio, pruebas antes de cerrar y entrega documentada con garantía por escrito.</p>
+
+        <h2>Servicio en A Coruña y área metropolitana</h2>
+        <p>Además de {zoneName}, trabajamos en A Coruña ciudad y en los municipios de su área metropolitana: Arteixo, Oleiros, Culleredo, Cambre, Sada, Bergondo, Betanzos, Carral y Abegondo. Consulta nuestra página de <a href="/zonas/">zonas de trabajo</a> para ver todos los servicios disponibles.</p>
+      </div>
+
+      <ZoneAside zone={zone} service={service} />
+    </div>
+  </section>
+
+  <FAQ items={serviceConfig.faqs} />
+
+  <ServiceSchema
+    name={schemaName}
+    description={schemaDescription}
+    serviceType={serviceConfig.schemaType}
+    areaServed={[zoneName, 'A Coruña']}
+    image={serviceConfig.image}
+  />
+
+  <ZoneCrossLinks zone={zone} service={service} />
+
+  <section class="god-cta">
+    <div class="cta-wrapper">
+      <span class="eyebrow-god">Visita técnica sin compromiso</span>
+      <h2 class="cta-title">¿Listo para reformar en <span class="gold">{zoneName}</span>?</h2>
+      <p class="cta-text">Valoración técnica inicial, mediciones reales y presupuesto por partidas, claro y cerrado.</p>
+      <a href={waLink(whatsappMessage)} class="btn-premium btn-primary-premium" target="_blank" rel="noopener">
+        <span class="btn-content">Solicitar valoración técnica</span><span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .article-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 56px; align-items: start; }
+  .article-body h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 2.6rem 0 1rem; color: var(--ink); line-height: 1.15; }
+  .article-body p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.78; margin-bottom: 1.1rem; }
+  .article-body ul { margin: 1rem 0 1.5rem 1.4rem; display: grid; gap: 8px; }
+  .article-body li { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
+  .article-body a { color: var(--gold-ink-strong); }
+  .local-box { margin: 1.6rem 0; padding: 22px 26px; border-left: 3px solid var(--gold); background: var(--bone); border-radius: 0 var(--r-md) var(--r-md) 0; }
+  .local-box h3 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px; color: var(--ink); }
+  .local-box p { margin-bottom: 0; }
+  table { width: 100%; max-width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 1rem; box-shadow: var(--e-1); border-radius: var(--r-md); overflow: hidden; }
+  thead { background: var(--ink); color: var(--gold-light); }
+  th { padding: 1rem 1.5rem; text-align: left; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  tbody tr { border-bottom: 1px solid rgba(0,0,0,0.08); }
+  tbody tr:last-child { border-bottom: none; }
+  td { padding: 1rem 1.5rem; color: var(--text); font-size: 0.95rem; line-height: 1.5; }
+  tbody tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+  .price-note { font-size: .85rem; color: var(--text-muted); margin-top: 10px; }
+  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; gap: 32px; } }
+</style>
