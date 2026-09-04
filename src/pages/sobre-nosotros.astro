@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GodHero from '../components/GodHero.astro';
+import GodMarquee from '../components/GodMarquee.astro';
+import GuaranteeMatrix from '../components/GuaranteeMatrix.astro';
+---
+
+<BaseLayout
+  title="Sobre Nosotros | RemodelaT Coruña"
+  description="RemodelaT Coruña: empresa de reformas en A Coruña. Método técnico, presupuesto por partidas y garantía por escrito."
+  activePage="nosotros"
+>
+
+  <GodHero
+    eyebrow="Sobre nosotros"
+    title="Reformas con método,"
+    titleGold="presupuesto y garantía"
+    lead="En un sector donde la confianza es la barrera decisiva, apostamos por la reforma documentada: todo medido, todo pactado y todo comprobado antes de entregar."
+    image="/images/arquitectura-600.webp"
+    imageAlt="Proyecto de reforma de vivienda en A Coruña"
+    badges={["Empresa de A Coruña", "Equipo propio", "Garantía por escrito"]}
+    watermark="NOSOTROS"
+  />
+
+  <GodMarquee />
+
+  <section class="section">
+    <div class="container intro-grid">
+      <div class="intro-media">
+        <img src="/images/integrales-equipo-trabajando.webp" alt="Equipo de obra trabajando en una reforma" loading="lazy" width="800" height="600" />
+      </div>
+      <div class="intro-body">
+        <span class="eyebrow-god on-light">La empresa</span>
+        <h2>Reforma documentada, no promesas vagas</h2>
+        <p>RemodelaT Coruña es una empresa de <strong>reformas de viviendas</strong> con sede en A Coruña, que nace con un compromiso claro: ejecutar cada obra con método técnico, presupuesto por partidas y garantía por escrito.</p>
+        <ul class="intro-checks">
+          <li>Plantilla propia, sin subcontratación: el equipo se dimensiona según la cartera firmada.</li>
+          <li>Presupuesto cerrado por partidas: sabes exactamente qué pagas y qué incluye cada partida.</li>
+          <li>Pruebas antes de entregar + garantía por partidas, por escrito.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="premium-divider"><i></i></div>
+
+  <section class="section bg-light">
+    <div class="container intro-grid">
+      <div class="intro-body">
+        <span class="eyebrow-god on-light">El fundador</span>
+        <h2>Rubén, ingeniero y responsable técnico</h2>
+        <p>Fundador y responsable técnico de RemodelaT Coruña, dirige y supervisa personalmente cada obra. Su trayectoria en reformas y construcción en España (Las Palmas y Madrid) y su experiencia internacional reciente son la garantía de método y calidad de la empresa.</p>
+        <ul class="intro-checks">
+          <li>Formación de ingeniero, con criterio técnico en cada partida.</li>
+          <li>Experiencia en empresa propia de reformas y construcción en España.</li>
+          <li>Experiencia internacional en reforma de propiedades.</li>
+        </ul>
+        <p>Parte de esos trabajos se muestran en nuestro <a href="/proyectos/" class="text-link">portfolio de proyectos</a>, claramente identificados como obras previas realizadas en España.</p>
+      </div>
+      <div class="intro-media">
+        <img src="/images/equipo-600.webp" alt="RemodelaT Coruña - trabajo de reforma supervisado" loading="lazy" width="800" height="600" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow-god on-light">Transparencia</span>
+        <h2 class="section-title">Una empresa nueva, con nombre nuevo</h2>
+        <p class="section-desc">RemodelaT Coruña es una empresa abierta desde cero en A Coruña. La experiencia previa del fundador se presenta como garantía de calidad y método, siendo claros en que la empresa coruñesa es de nueva creación.</p>
+      </div>
+    </div>
+  </section>
+
+  <GuaranteeMatrix variant="dark" />
+
+  <section class="god-cta">
+    <div class="cta-wrapper">
+      <span class="eyebrow-god">Hablemos de tu proyecto</span>
+      <h2 class="cta-title">¿Tienes una reforma en mente en <span class="gold">A Coruña</span>?</h2>
+      <p class="cta-text">Cuéntanos tu proyecto y te enviamos un presupuesto por partidas, claro y cerrado.</p>
+      <a href="/contacto/" class="btn-premium btn-primary-premium"><span class="btn-content">Solicitar presupuesto</span><span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 84px); align-items: center; }
+  .intro-media img { width: 100%; border-radius: var(--r-md); box-shadow: var(--e-3); border: var(--hairline); }
+  .intro-body h2 { font-family: var(--font-serif); font-size: clamp(1.9rem, 3.5vw, 2.6rem); line-height: 1.12; letter-spacing: -0.02em; margin: 12px 0 18px; color: var(--ink); }
+  .intro-body p { color: var(--text-muted); line-height: 1.78; margin-bottom: 14px; }
+  .intro-checks { list-style: none; padding: 0; margin: 22px 0 28px; display: grid; gap: 10px; }
+  .intro-checks li { position: relative; padding-left: 28px; font-size: .95rem; color: var(--ink); line-height: 1.5; }
+  .intro-checks li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold-ink); box-shadow: 0 0 0 5px rgba(201,169,97,.12); }
+  .intro-body .text-link { color: var(--gold-ink-strong); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); }
+  .intro-body .text-link:hover { opacity: .8; }
+  @media (max-width: 900px) { .intro-grid { grid-template-columns: 1fr; gap: 40px; } }
+</style>
+
+<script>
+  (() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const targets = document.querySelectorAll('[data-reveal]');
+    if (reduce || !('IntersectionObserver' in window)) { targets.forEach(el => el.classList.add('is-revealed')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (!entry.isIntersecting) return; entry.target.classList.add('is-revealed'); io.unobserve(entry.target); });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    targets.forEach(el => io.observe(el));
+  })();
+</script>

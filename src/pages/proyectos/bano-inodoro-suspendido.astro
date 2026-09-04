@@ -1,0 +1,346 @@
+---
+import ProjectCaseStudy from '../../components/ProjectCaseStudy.astro';
+import { waLink } from '../../data/brand';
+
+const whatsappText =
+  'Hola, quiero una valoración técnica para un proyecto similar al baño con inodoro suspendido en España.';
+const whatsappHref = waLink(whatsappText);
+
+const quickNavItems = [
+  { href: '#resumen', label: 'Resumen' },
+  { href: '#resultado', label: 'Resultado' },
+  { href: '#paso-a-paso', label: 'Paso a paso' },
+  { href: '#comparativa', label: 'Antes y después' },
+  { href: '#especificaciones', label: 'Especificaciones' },
+  { href: '#galeria', label: 'Galería' },
+];
+---
+
+<ProjectCaseStudy
+  seoTitle="Reforma de Baño con Inodoro Suspendido TEKA | RemodelaT"
+  seoDescription="Obra previa en España: inodoro suspendido TEKA, fontanería PEX-Al-PEX y porcelánico rectificado 120x60 con entrega documentada en una semana."
+  heroImage="/images/proyectos/bano-inodoro-suspendido/bano-finalizado-1.webp"
+  heroImageAlt="Baño finalizado en España con inodoro suspendido TEKA Manacor y porcelánico de gran formato 120x60 en paredes"
+  kicker="Obra previa en España · Baños y sanitarios suspendidos · Diario de obra"
+  heroTitle="Reforma de Baño con Inodoro Suspendido TEKA"
+  lead="Demolición total de cerámica original, anclaje estructural para inodoro suspendido TEKA Manacor y revestimiento en porcelánico rectificado de gran formato 120x60 en paredes y 60x60 en suelo, en tono beige."
+  heroFacts={[
+    { label: 'Ubicación', value: 'España' },
+    { label: 'Duración', value: '1 semana' },
+    { label: 'Intervención', value: 'Inodoro suspendido TEKA' },
+    { label: 'Paredes', value: 'Porcelánico 120x60 beige' },
+    { label: 'Suelo', value: '60x60 antideslizante' },
+    { label: 'Ducha', value: 'Walk-in · mampara 80 cm' },
+  ]}
+  quickNavItems={quickNavItems}
+  whatsappHref={whatsappHref}
+  breadcrumbCurrent="Baño con Inodoro Suspendido"
+  summaryTag="En síntesis"
+  summaryTitle="Cuando el sistema desaparece, solo queda la lectura limpia"
+  summaryDesc="El valor premium de este proyecto aparece cuando todo el sistema queda oculto: bastidor empotrado, fontanería nueva y gran formato beige, y solo se percibe una ejecución limpia, sólida y bien resuelta."
+  summaryCards={[
+    {
+      index: 'El reto',
+      title: 'Resolver la estructura antes de pensar en el acabado',
+      body: 'El corazón técnico del proyecto estaba en el bastidor del inodoro suspendido: replanteo, anclaje estructural a muro portante y una nueva base hidráulica. Solo con esa base bien resuelta el acabado final podía leerse limpio.',
+      dropcap: true,
+    },
+    {
+      index: 'La solución',
+      title: 'Bastidor TEKA empotrado y gran formato beige monolítico',
+      body: 'Se demolió por completo la cerámica original, se sustituyó la red hidráulica por multicapa PEX-Al-PEX y se ancló el bastidor autoportante TEKA Manacor. Sobre esa base, porcelánico rectificado 120x60 en paredes y 60x60 antideslizante en suelo, en un mismo tono beige continuo.',
+    },
+  ]}
+  stats={[
+    { value: '06', label: 'Fases documentadas' },
+    { value: '08', label: 'Fotografías reales' },
+    { value: '01', label: 'Semana de ejecución' },
+    { value: '120x60', label: 'Gran formato en paredes' },
+    { value: '80', label: 'cm de mampara fija' },
+  ]}
+  resultadoTag="Resultado final"
+  resultadoTitle="Primero, el destino; después, el camino"
+  resultadoDesc="Antes de explicar cada fase, mostramos el resultado: el inodoro suspendido TEKA, el gran formato beige y una escena mucho más serena."
+  resultadoShowcase={[
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-1.webp',
+      alt: 'Baño finalizado en España con inodoro suspendido TEKA Manacor y porcelánico de gran formato 120x60 en paredes',
+      badge: 'Inodoro suspendido',
+      title: 'TEKA Manacor suspendido: ligereza visual total',
+      caption:
+        'El inodoro suspendido TEKA Manacor aporta ligereza visual, integrada en paredes de porcelánico rectificado de gran formato 120x60 y suelo porcelánico 60x60 cm.',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-4.webp',
+      alt: 'Perspectiva completa del baño residencial en España en porcelánico beige rectificado',
+      badge: 'Monolitismo beige',
+      title: 'Una sola lectura: beige continuo de suelo a techo',
+      caption:
+        'El uso de porcelánico rectificado en suelo y paredes elimina las juntas anchas y genera amplitud, luminosidad y facilidad de limpieza en toda la estancia.',
+    },
+  ]}
+  quote={{
+    text: 'El lujo se percibe cuando el sistema desaparece y solo queda la lectura limpia.',
+    cite: 'Diario de obra · Baño con inodoro suspendido en España',
+  }}
+  timelineTag="La obra, en orden"
+  timelineTitle="El proyecto paso a paso: seis fases, cero improvisación"
+  timelineDesc="Cada fase está numerada y documentada con sus trabajos ejecutados y <strong>todas</strong> sus fotografías reales, para que el recorrido se lea tan claro como se ejecutó."
+  phases={[
+    {
+      number: '01',
+      kicker: 'Fase 01 · El sistema',
+      title: 'El corazón técnico: bastidor autoportante TEKA Manacor',
+      body: 'Antes de percibir el acabado final, lo importante era resolver bien la estructura del inodoro suspendido: el kit TEKA Manacor con bastidor autoportante empotrable, cisterna oculta de doble descarga e inodoro suspendido, anclado a muro portante y maestreado.',
+      checks: [
+        'Selección del kit TEKA Manacor con cisterna oculta',
+        'Replanteo del bastidor y del punto de descarga',
+        'Anclaje estructural del bastidor a muro portante',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/teka-manacor-flotante-kit.webp',
+          alt: 'Kit oficial TEKA Manacor de inodoro suspendido con cisterna empotrada y pulsador',
+          caption: 'Producto oficial instalado en el proyecto: kit marca TEKA modelo Manacor que incluye bastidor autoportante empotrable, cisterna oculta de doble descarga e inodoro suspendido.',
+          badge: 'Kit TEKA Manacor',
+          orientation: 'landscape',
+        },
+      ],
+    },
+    {
+      number: '02',
+      kicker: 'Fase 02 · Instalaciones',
+      title: 'Fontanería multicapa y soporte listo para el gran formato',
+      body: 'Se sustituyó la red hidráulica por tubería multicapa PEX-Al-PEX para agua fría y caliente, y se preparó el soporte sobre la nueva estructura del bastidor para recibir el revestimiento de gran formato.',
+      checks: [
+        'Sustitución de la red hidráulica por multicapa PEX-Al-PEX',
+        'Maestreado del soporte sobre la estructura del bastidor',
+        'Preparación de planos y niveles para el revestimiento',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/bano-en-proceso.webp',
+          alt: 'Instalación de porcelánico rectificado de gran formato 120x60 sobre soporte y fontanería multicapa PEX-Al-PEX',
+          caption: 'Fase técnica donde se ejecutaron las nuevas instalaciones hidráulicas en multicapa PEX-Al-PEX y se inició el revestimiento de paredes con porcelánico rectificado de gran formato 120x60 cm tono beige.',
+          badge: 'Gran Formato 120x60',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '03',
+      kicker: 'Fase 03 · Revestimiento',
+      title: 'Paredes 120x60 con doble encolado y cuñas niveladoras',
+      body: 'Se revistieron las paredes con porcelánico rectificado de gran formato 120x60 cm en tono beige monolítico, utilizando técnica de doble encolado y cuñas niveladoras para asegurar planitud absoluta sobre la nueva estructura del bastidor.',
+      checks: [
+        'Revestimiento 120x60 con cantos cortados a 90°',
+        'Doble encolado y cuñas niveladoras pieza a pieza',
+        'Microjuntas milimétricas en todo el paño',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/bano-en-proceso-2.webp',
+          alt: 'Proceso de instalación de porcelánico rectificado beige de gran formato 120x60 en paredes del baño',
+          caption: 'Fase de revestimiento en paredes utilizando técnica de doble encolado y cuñas niveladoras para asegurar planitud absoluta sobre la nueva estructura del bastidor.',
+          badge: 'Gran Formato 120x60',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '04',
+      kicker: 'Fase 04 · Pavimento',
+      title: 'Suelo 60x60 beige con textura antideslizante',
+      body: 'El pavimento se ejecutó en porcelánico rectificado 60x60 cm con textura antideslizante, garantizando seguridad en zonas húmedas y coherencia visual con las paredes de gran formato.',
+      checks: [
+        'Pavimento 60x60 rectificado en tono beige',
+        'Textura antideslizante para zonas húmedas',
+        'Continuidad visual con el revestimiento de paredes',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/bano-en-proceso-3.webp',
+          alt: 'Pavimento de porcelánico beige 60x60 con grado antideslizante en ejecución',
+          caption: 'Colocación del pavimento rectificado en formato 60x60 cm con textura antideslizante, garantizando seguridad en zonas húmedas y coherencia visual en todo el baño.',
+          badge: 'Suelo Antideslizante',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '05',
+      kicker: 'Fase 05 · Montaje',
+      title: 'Mueble de 80 cm, grifería cromada y ducha walk-in',
+      body: 'Se instaló el mueble suspendido blanco de 80 cm con grifería TEKA cromada, la columna de ducha con cabezal efecto lluvia y teléfono de mano, y la mampara fija de 80 cm en cristal templado con perfil cromado.',
+      checks: [
+        'Mueble suspendido blanco de 80 cm con grifería TEKA cromada',
+        'Columna efecto lluvia con teléfono en cromo pulido',
+        'Mampara fija de 80 cm con cristal templado de seguridad',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-3.webp',
+          alt: 'Mueble de lavabo blanco de 80 cm con grifería TEKA cromada y espejo LED integrado',
+          caption: 'Zona del lavabo con mueble suspendido en tamaño 80 cm acabado en blanco pulido, grifería monomando TEKA cromada y espejo con iluminación LED integrada en el perímetro.',
+          badge: 'Mueble 80 cm Blanco',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-2.webp',
+          alt: 'Zona de ducha walk-in con mampara fija de 80 cm, perfil cromado y columna efecto lluvia',
+          caption: 'Espacio de ducha con mampara fija de 80 cm en cristal templado de seguridad y perfilería cromada, equipada con columna de ducha de rociador efecto lluvia y teléfono de mano.',
+          badge: 'Mampara Fija 80 cm',
+          orientation: 'portrait',
+        },
+      ],
+    },
+    {
+      number: '06',
+      kicker: 'Fase 06 · Resultado',
+      title: 'El baño terminado: limpieza, ligereza y calidad percibida',
+      body: 'Con el inodoro suspendido, el gran formato y el tono beige continuo, el espacio se siente más sofisticado, más cómodo de limpiar y mucho más actual en su lectura. El sistema técnico quedó oculto: solo se percibe la ejecución depurada.',
+      checks: [
+        'Inodoro suspendido en funcionamiento con descarga correcta',
+        'Juntas, encuentros y perfilería revisados',
+        'Espejo LED, grifería y ducha probados en entrega',
+      ],
+      images: [
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-1.webp',
+          alt: 'Baño finalizado en España con inodoro suspendido TEKA Manacor y porcelánico de gran formato 120x60 en paredes',
+          caption: 'Vista principal de la reforma concluida: inodoro suspendido TEKA Manacor, paredes de porcelánico rectificado de gran formato 120x60 y suelo porcelánico 60x60 cm.',
+          badge: 'Inodoro Suspendido TEKA',
+          orientation: 'portrait',
+        },
+        {
+          src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-4.webp',
+          alt: 'Perspectiva completa del baño residencial en España en porcelánico beige rectificado',
+          caption: 'Vista general del espacio renovado: el porcelánico rectificado en suelo y paredes elimina las juntas anchas y genera amplitud, luminosidad y fácil limpieza.',
+          badge: 'Monolitismo Beige',
+          orientation: 'portrait',
+        },
+      ],
+    },
+  ]}
+  compareTag="La misma zona, otra vida"
+  compareTitle="Desliza y compruébalo con tus propios ojos"
+  compareDesc="El valor premium aparece cuando todo el sistema queda oculto y solo se percibe una ejecución limpia, sólida y bien resuelta."
+  compare={{
+    beforeSrc: '/images/proyectos/bano-inodoro-suspendido/bano-en-proceso.webp',
+    beforeAlt: 'Baño en proceso con instalación de porcelánico y fontanería en España',
+    afterSrc: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-1.webp',
+    afterAlt: 'Baño finalizado con inodoro suspendido TEKA en España',
+    beforeCaption: 'Fase técnica con bastidor, revestimiento y replanteo todavía visibles.',
+    afterCaption: 'Resultado final con inodoro suspendido, gran formato beige y una lectura mucho más depurada.',
+  }}
+  specsTag="Detalle técnico"
+  specsTitle="Especificaciones de la intervención"
+  specsDesc="Lo que se ve —y lo que no se ve— de esta obra, documentado partida por partida."
+  highlights={[
+    {
+      icon: 'shield',
+      title: 'Inodoro suspendido TEKA Manacor',
+      text: 'Kit oficial con bastidor autoportante empotrable anclado a muro portante, cisterna oculta de doble descarga e inodoro suspendido de líneas minimalistas.',
+    },
+    {
+      icon: 'ruler',
+      title: 'Gran formato 120x60 rectificado',
+      text: 'Cantos cortados a 90° con microjuntas milimétricas, doble encolado y cuñas niveladoras: planitud absoluta y una lectura monolítica en tono beige.',
+    },
+    {
+      icon: 'droplet',
+      title: 'Fontanería multicapa PEX-Al-PEX',
+      text: 'Red hidráulica nueva para agua fría y caliente sobre la base del bastidor: estanqueidad, durabilidad y presión constante en todo el circuito.',
+    },
+    {
+      icon: 'sparkle',
+      title: 'Monolitismo beige antideslizante',
+      text: 'Paredes 120x60 y suelo 60x60 en un mismo tono beige con textura antideslizante: seguridad en zona húmeda y continuidad visual total.',
+    },
+  ]}
+  specs={[
+    { label: 'Ubicación', value: 'Residencia en España' },
+    { label: 'Duración de obra', value: '1 semana de ejecución' },
+    { label: 'Revestimiento paredes', value: 'Porcelánico rectificado de gran formato 120x60 cm (tono beige monolítico)' },
+    { label: 'Revestimiento suelo', value: 'Porcelánico rectificado 60x60 cm beige con textura antideslizante' },
+    { label: 'Técnica y juntas', value: 'Cantos cortados a 90° con microjuntas milimétricas' },
+    { label: 'Red de fontanería', value: 'Tubería multicapa PEX-Al-PEX para agua fría y caliente' },
+    { label: 'Inodoro suspendido', value: 'Kit TEKA Manacor con bastidor metálico y cisterna oculta' },
+    { label: 'Estructura y bastidor', value: 'Bastidor autoportante anclado a muro portante y maestreado' },
+    { label: 'Mueble de lavabo', value: 'Mueble suspendido color blanco en tamaño 80 cm' },
+    { label: 'Grifería de lavabo', value: 'Monomando marca TEKA en acabado cromado de alto brillo' },
+    { label: 'Columna de ducha', value: 'Cabezal efecto lluvia + teléfono de ducha en cromo pulido' },
+    { label: 'Mampara de ducha', value: 'Hoja fija de 80 cm, perfil cromado y cristal templado seguridad' },
+    { label: 'Iluminación', value: 'Espejo sobre lavabo con iluminación LED perimetral integrada' },
+  ]}
+  galleryTitle={`Galería ordenada del proyecto (8 fotos reales)`}
+  galleryIntro="La documentación se agrupa en dos bloques: el baño terminado y el sistema TEKA con la obra que lo sostiene."
+  gallery={[
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-1.webp',
+      alt: 'Baño finalizado en España con inodoro suspendido TEKA Manacor y porcelánico de gran formato 120x60 en paredes',
+      title: 'Baño Terminado: Inodoro Suspendido TEKA Manacor',
+      caption: 'Vista principal de la reforma concluida. El inodoro suspendido TEKA Manacor aporta ligereza visual, integrada en paredes de porcelánico rectificado de gran formato 120x60 y suelo porcelánico 60x60 cm.',
+      category: 'final', categoryLabel: 'Baño Terminado', badge: 'Inodoro Suspendido TEKA', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-2.webp',
+      alt: 'Zona de ducha walk-in con mampara fija de 80 cm, perfil cromado y columna efecto lluvia',
+      title: 'Ducha Walk-In: Mampara Fija 80 cm y Columna Lluvia',
+      caption: 'Espacio de ducha con mampara fija de 80 cm en cristal templado de seguridad y perfilería cromada, equipada con columna de ducha de rociador efecto lluvia y teléfono de mano.',
+      category: 'final', categoryLabel: 'Baño Terminado', badge: 'Mampara Fija 80 cm', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-3.webp',
+      alt: 'Mueble de lavabo blanco de 80 cm con grifería TEKA cromada y espejo LED integrado',
+      title: 'Mueble Blanco de 80 cm y Grifería TEKA Cromada',
+      caption: 'Zona del lavabo con mueble suspendido en tamaño 80 cm acabado en blanco pulido, grifería monomando TEKA cromada y espejo con iluminación LED integrada en el perímetro.',
+      category: 'final', categoryLabel: 'Baño Terminado', badge: 'Mueble 80 cm Blanco', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-finalizado-4.webp',
+      alt: 'Perspectiva completa del baño residencial en España en porcelánico beige rectificado',
+      title: 'Perspectiva Integral: Armonía Monolítica Beige',
+      caption: 'Vista general del espacio renovado. El uso de porcelánico rectificado en suelo y paredes elimina las juntas anchas y genera amplitud, luminosidad y fácil limpieza.',
+      category: 'final', categoryLabel: 'Baño Terminado', badge: 'Monolitismo Beige', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/teka-manacor-flotante-kit.webp',
+      alt: 'Kit oficial TEKA Manacor de inodoro suspendido con cisterna empotrada y pulsador',
+      title: 'Kit Técnico TEKA Manacor: Bastidor y Inodoro Suspendido',
+      caption: 'Producto oficial instalado en el proyecto: kit marca TEKA modelo Manacor que incluye bastidor autoportante empotrable, cisterna oculta de doble descarga e inodoro suspendido.',
+      category: 'teka', categoryLabel: 'Sistema TEKA y Obra', badge: 'Kit TEKA Manacor', orientation: 'landscape',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-en-proceso.webp',
+      alt: 'Instalación de porcelánico rectificado de gran formato 120x60 sobre soporte y fontanería multicapa PEX-Al-PEX',
+      title: 'Instalación de Porcelánico 120x60 y Fontanería Multicapa',
+      caption: 'Fase técnica donde se ejecutaron las nuevas instalaciones hidráulicas en multicapa PEX-Al-PEX y se inició el revestimiento de paredes con porcelánico rectificado de gran formato 120x60 cm tono beige.',
+      category: 'teka', categoryLabel: 'Sistema TEKA y Obra', badge: 'Gran Formato 120x60', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-en-proceso-2.webp',
+      alt: 'Proceso de instalación de porcelánico rectificado beige de gran formato 120x60 en paredes del baño',
+      title: 'Colocación de Porcelánico Rectificado 120x60 Beige',
+      caption: 'Fase de revestimiento en paredes utilizando técnica de doble encolado y cuñas niveladoras para asegurar planitud absoluta sobre la nueva estructura del bastidor.',
+      category: 'teka', categoryLabel: 'Sistema TEKA y Obra', badge: 'Gran Formato 120x60', orientation: 'portrait',
+    },
+    {
+      src: '/images/proyectos/bano-inodoro-suspendido/bano-en-proceso-3.webp',
+      alt: 'Pavimento de porcelánico beige 60x60 con grado antideslizante en ejecución',
+      title: 'Pavimento Porcelánico Beige Antideslizante',
+      caption: 'Colocación del pavimento rectificado en formato 60x60 cm con textura antideslizante, garantizando seguridad en zonas húmedas y coherencia visual en todo el baño.',
+      category: 'teka', categoryLabel: 'Sistema TEKA y Obra', badge: 'Suelo Antideslizante', orientation: 'portrait',
+    },
+  ]}
+  galleryPhases={[
+    { id: 'final', label: 'Baño terminado', description: 'Las imágenes finales recogen la limpieza visual del gran formato beige y el inodoro suspendido.' },
+    { id: 'teka', label: 'Sistema TEKA y obra', description: 'Se documentan el bastidor, la instalación y la ejecución técnica que sostienen el resultado.' },
+  ]}
+  ctaTag="Valoración técnica"
+  ctaTitle="Sanitarios suspendidos, albañilería e ingeniería"
+  ctaText="Instalamos bastidores empotrados TEKA y revestimientos rectificados bajo contrato formal en residencias en España."
+  ctaPrimaryLabel="Solicitar valoración técnica"
+  ctaSecondaryHref="/servicios/reforma-bano/"
+  ctaSecondaryLabel="Ver reforma de baños en España →"
+/>

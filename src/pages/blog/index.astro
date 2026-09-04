@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { esBlogSlugs } from '../../data/blog-slugs';
+
+// Mapeo de slugs a imágenes locales -400/800 para las cards.
+const cardImages: Record<string, string> = {
+  'cuanto-cuesta-reformar-piso-a-coruna': '/images/integrales-800.webp',
+  'cuanto-cuesta-reformar-bano-a-coruna': '/images/bano-800.webp',
+  'cuanto-cuesta-reformar-cocina-a-coruna': '/images/cocina-800.webp',
+  'licencias-y-permisos-reforma-a-coruna': '/images/arquitectura-600.webp',
+  'iva-reformas-10-21-a-coruna': '/images/suelo-porcelanico-800.webp',
+};
+
+const posts = await getCollection('blog');
+const spanishPosts = posts
+  .filter((post) => esBlogSlugs.includes(post.id))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  title="Blog de Reformas en A Coruña | RemodelaT Coruña"
+  description="Guías prácticas y precios orientativos para tu reforma en A Coruña: cuánto cuesta reformar un piso, un baño o una cocina, licencias y permisos, e IVA."
+  activePage="blog"
+>
+  <header class="page-hero">
+    <img
+      src="/images/arquitectura-600.webp"
+      alt="Guías y consejos para reformas del hogar en A Coruña"
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+      width="600"
+      height="400"
+      class="hero-lcp-img"
+    />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Blog y Guías</span>
+      <h1 class="page-title">Guías para <span class="gold">Tu Reforma</span></h1>
+      <p class="page-subtitle">Precios orientativos, licencias y consejos prácticos para reformar en A Coruña y su área metropolitana.</p>
+    </div>
+  </header>
+
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-grid">
+        {spanishPosts.map(article => (
+          <a href={`/blog/${article.id}/`} class="blog-card">
+            <div class="blog-img">
+              <img
+                src={cardImages[article.id] || article.data.image}
+                alt={article.data.title}
+                loading="lazy"
+                width="400"
+                height="267"
+                decoding="async"
+              />
+              <span class="blog-category">{article.data.category}</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span>{article.data.date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <span>• {article.data.readTime} de lectura</span>
+              </div>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.excerpt}</p>
+              <span class="blog-link">Leer artículo →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-wrapper">
+      <h2 class="cta-title">¿Listo para empezar tu reforma?</h2>
+      <p class="cta-text">Solicita una visita técnica sin compromiso y recibe una propuesta detallada según el alcance y nivel de acabado.</p>
+      <a href="/contacto/" class="btn-premium btn-primary-premium">
+        <span class="btn-content">Solicitar presupuesto</span>
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%); z-index: 2; }
+  .hero-content { position: relative; z-index: 3; max-width: 900px; padding: 0 20px; }
+  .hero-tag { display: inline-block; background: rgba(201,169,97,0.2); border: 1px solid var(--gold); color: var(--gold); padding: 8px 20px; border-radius: var(--r-full); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; backdrop-filter: blur(10px); }
+  .page-title { font-family: var(--font-serif); font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; margin-bottom: 20px; line-height: 1; }
+  .gold { color: var(--gold); }
+  .page-subtitle { font-size: 1.4rem; color: rgba(255,255,255,0.85); max-width: 650px; margin: 0 auto; line-height: 1.6; font-weight: 300; }
+  .blog-section { padding: 80px 0; background: var(--gray); }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .blog-card { display: block; background: var(--white); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--e-1); transition: 0.4s; text-decoration: none; color: inherit; }
+  .blog-card:hover { transform: translateY(-8px); box-shadow: var(--e-3); }
+  .blog-img { position: relative; height: 220px; overflow: hidden; }
+  .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+  .blog-card:hover .blog-img img { transform: scale(1.05); }
+  .blog-category { position: absolute; top: 15px; left: 15px; background: var(--gold); color: var(--bg); padding: 5px 12px; border-radius: var(--r-lg); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .blog-content { padding: 25px; }
+  .blog-meta { font-size: 0.8rem; color: var(--gray-text); margin-bottom: 12px; display: flex; gap: 10px; }
+  .blog-content h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 12px; line-height: 1.3; color: var(--text); }
+  .blog-content p { color: var(--gray-text); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+  .blog-link { color: var(--gold); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; }
+  @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+</style>

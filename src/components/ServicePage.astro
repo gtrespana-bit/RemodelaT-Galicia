@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GodHero from './GodHero.astro';
+import GodMarquee from './GodMarquee.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import FAQ from './FAQ.astro';
+import ServiceSchema from './ServiceSchema.astro';
+
+interface FaqItem { question: string; answer: string; }
+
+interface Props {
+  slug: string;
+  title: string;
+  titleGold: string;
+  description: string;
+  eyebrow: string;
+  lead: string;
+  image: string;
+  imageAlt: string;
+  badges?: string[];
+  watermark: string;
+  crumb: string;
+  intro: string[];
+  includesTitle?: string;
+  includes: string[];
+  priceTitle?: string;
+  priceIntro?: string;
+  priceRows: [string, string][];
+  priceNote: string;
+  faqs: FaqItem[];
+  schemaName: string;
+  schemaType: string;
+}
+
+const {
+  slug, title, titleGold, description, eyebrow, lead, image, imageAlt,
+  badges = [], watermark, crumb, intro, includesTitle = 'Qué incluye', includes,
+  priceTitle = 'Precios orientativos', priceIntro, priceRows, priceNote, faqs,
+  schemaName, schemaType,
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  activePage="servicios"
+>
+  <GodHero
+    eyebrow={eyebrow}
+    title={title}
+    titleGold={titleGold}
+    lead={lead}
+    image={image}
+    imageAlt={imageAlt}
+    badges={badges}
+    watermark={watermark}
+  />
+
+  <GodMarquee />
+
+  <Breadcrumb items={[
+    { name: 'Inicio', url: '/' },
+    { name: 'Servicios', url: '/servicios/' },
+    { name: crumb, url: `/servicios/${slug}/` }
+  ]} />
+
+  <section class="article-section">
+    <div class="container article-layout">
+      <div class="article-body">
+        {intro.map((p) => <p>{p}</p>)}
+
+        <h2>{includesTitle}</h2>
+        <ul>
+          {includes.map((i) => <li>{i}</li>)}
+        </ul>
+
+        {priceRows.length > 0 && (
+          <>
+            <h2>{priceTitle}</h2>
+            {priceIntro && <p>{priceIntro}</p>}
+            <table>
+              <thead><tr><th>Alcance</th><th>Precio orientativo</th></tr></thead>
+              <tbody>
+                {priceRows.map(([label, price]) => (
+                  <tr><td>{label}</td><td>{price}</td></tr>
+                ))}
+              </tbody>
+            </table>
+            <p class="price-note">{priceNote}</p>
+          </>
+        )}
+
+        <h2>Cómo trabajamos</h2>
+        <p>Seguimos el <a href="/metodo-remodelat/">Método RemodelaT</a> en 10 etapas: diagnóstico técnico, presupuesto por partidas, ejecución supervisada, pruebas antes de cerrar y entrega documentada con garantía por escrito.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="premium-divider"><i></i></div>
+
+  <section class="section bg-light">
+    <div class="container container-narrow">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow-god on-light">FAQ</span>
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <FAQ items={faqs} />
+    </div>
+  </section>
+
+  <ServiceSchema
+    name={schemaName}
+    description={description}
+    serviceType={schemaType}
+    image={image}
+  />
+
+  <section class="god-cta">
+    <div class="cta-wrapper">
+      <span class="eyebrow-god">Presupuesto por partidas</span>
+      <h2 class="cta-title">¿Empezamos con tu {crumb.toLowerCase()}?</h2>
+      <p class="cta-text">Cuéntanos tu proyecto en A Coruña y te enviamos un presupuesto por partidas, claro y cerrado.</p>
+      <a href="/contacto/" class="btn-premium btn-primary-premium"><span class="btn-content">Solicitar presupuesto</span><span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .price-note { font-size: .85rem; color: var(--text-muted); margin-top: 10px; }
+  table { width: 100%; max-width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 1rem; box-shadow: var(--e-1); border-radius: var(--r-md); overflow: hidden; }
+  thead { background: var(--ink); color: var(--gold-light); }
+  th { padding: 1rem 1.5rem; text-align: left; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  tbody tr { border-bottom: 1px solid rgba(0,0,0,0.08); }
+  tbody tr:last-child { border-bottom: none; }
+  td { padding: 1rem 1.5rem; color: var(--text); font-size: 0.95rem; line-height: 1.5; }
+  tbody tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+</style>

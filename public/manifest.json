@@ -1,0 +1,53 @@
+{
+  "id": "/",
+  "name": "RemodelaT Coruña",
+  "short_name": "RemodelaT",
+  "description": "Reformas y remodelación de viviendas en A Coruña: reforma integral, cocinas y baños con método técnico y garantía por escrito.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0f2233",
+  "theme_color": "#0f2233",
+  "lang": "es-ES",
+  "dir": "ltr",
+  "categories": ["business", "lifestyle", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Solicitar presupuesto",
+      "short_name": "Presupuesto",
+      "description": "Contactar con RemodelaT Coruña para solicitar una valoración técnica.",
+      "url": "/contacto/",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ver servicios",
+      "short_name": "Servicios",
+      "description": "Consultar los servicios de reforma disponibles.",
+      "url": "/servicios/",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

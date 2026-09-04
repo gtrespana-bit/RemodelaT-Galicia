@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GodHero from '../components/GodHero.astro';
+import GodMarquee from '../components/GodMarquee.astro';
+import { corunaZones, zoneNames } from '../data/zone-slugs';
+---
+
+<BaseLayout
+  title="Zonas de Trabajo | Reformas en A Coruña y Área Metropolitana"
+  description="RemodelaT Coruña trabaja en A Coruña y su área metropolitana: Arteixo, Oleiros, Culleredo, Cambre, Sada, Bergondo, Betanzos, Carral y Abegondo."
+  activePage="servicios"
+>
+
+  <GodHero
+    eyebrow="Zona de trabajo"
+    title="Reformas en A Coruña"
+    titleGold="y área metropolitana"
+    lead="Atendemos la ciudad de A Coruña y los municipios de su área metropolitana con el mismo método: diagnóstico, presupuesto por partidas y garantía por escrito."
+    image="/images/arquitectura-600.webp"
+    imageAlt="Viviendas en A Coruña y su área metropolitana"
+    badges={["A Coruña ciudad", "Área metropolitana", "Visita técnica sin compromiso"]}
+    watermark="ZONAS"
+  />
+
+  <GodMarquee />
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow-god on-light">Cobertura</span>
+        <h2 class="section-title">Elige tu municipio</h2>
+        <p class="section-desc">Página por municipio con los servicios disponibles y los precios orientativos de referencia (sin IVA).</p>
+      </div>
+      <div class="zones-grid" data-reveal>
+        {corunaZones.map((slug) => (
+          <a href={`/reforma-integral-${slug}/`} class="zone-card">
+            <div>
+              <h3>{zoneNames[slug]}</h3>
+              <p>Reforma integral, cocinas y baños en {zoneNames[slug]}.</p>
+            </div>
+            <span class="card-link">Ver reformas <span class="arrow">→</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="god-cta">
+    <div class="cta-wrapper">
+      <span class="eyebrow-god">¿Dudas sobre tu zona?</span>
+      <h2 class="cta-title">Cuéntanos dónde está tu vivienda</h2>
+      <p class="cta-text">Te confirmamos si trabajamos en tu municipio y te enviamos un presupuesto por partidas, claro y cerrado.</p>
+      <a href="/contacto/" class="btn-premium btn-primary-premium"><span class="btn-content">Solicitar presupuesto</span><span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .zones-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .zone-card {
+    display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+    background: var(--white); border: var(--hairline-ink); border-radius: var(--r-md);
+    padding: 24px 26px; text-decoration: none; color: inherit;
+    transition: transform .28s var(--ease-out), box-shadow .28s var(--ease-out), border-color .28s var(--ease-out);
+  }
+  .zone-card:hover { transform: translateY(-4px); box-shadow: var(--e-2); border-color: rgba(201,169,97,.4); }
+  .zone-card h3 { font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink); margin-bottom: 6px; }
+  .zone-card p { color: var(--text-muted); font-size: .92rem; line-height: 1.6; }
+  @media (max-width: 700px) { .zones-grid { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  (() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const targets = document.querySelectorAll('[data-reveal]');
+    if (reduce || !('IntersectionObserver' in window)) { targets.forEach(el => el.classList.add('is-revealed')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (!entry.isIntersecting) return; entry.target.classList.add('is-revealed'); io.unobserve(entry.target); });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    targets.forEach(el => io.observe(el));
+  })();
+</script>

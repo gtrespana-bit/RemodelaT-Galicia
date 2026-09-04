@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { BRAND } from '../data/brand';
+---
+
+<BaseLayout title="Política de Cookies | RemodelaT Coruña" description="Política de cookies de RemodelaT Coruña. Qué cookies utiliza esta web y cómo gestionarlas." activePage="contacto">
+  <section class="legal-page">
+    <div class="container">
+      <h1 class="legal-title">Política de <span class="gold">Cookies</span></h1>
+      <p class="legal-updated">Última actualización: Septiembre 2026</p>
+
+      <div class="legal-content">
+        <h2>1. Qué son las cookies</h2>
+        <p>Las cookies son pequeños archivos que se almacenan en tu dispositivo al visitar una web. Permiten que el sitio recuerde información sobre tu visita (idioma, preferencias, análisis de uso).</p>
+
+        <h2>2. Cookies que utiliza esta web</h2>
+        <p>Esta web utiliza únicamente:</p>
+        <ul>
+          <li><strong>Cookies técnicas o estrictamente necesarias:</strong> imprescindibles para el funcionamiento del sitio y para recordar preferencias básicas de navegación. No requieren consentimiento.</li>
+          <li><strong>Cookies de análisis (opcionales):</strong> cuando se active la medición de visitas <span class="muted">[pendiente]</span>, se usará un sistema de análisis anónimo para entender el uso del sitio. Se solicitará el consentimiento correspondiente.</li>
+        </ul>
+
+        <h2>3. Gestión y desactivación</h2>
+        <p>Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración del navegador. La desactivación de las cookies técnicas puede afectar al correcto funcionamiento de la web.</p>
+
+        <h2>4. Contacto</h2>
+        <p>Si tienes dudas sobre esta política, escríbenos a <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page { padding: 180px 0 100px; background: var(--white); min-height: 100vh; }
+  .legal-title { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 400; color: var(--text); margin-bottom: 16px; text-align: center; }
+  .gold { color: var(--gold); }
+  .muted { color: var(--text-muted); font-weight: 400; }
+  .legal-updated { text-align: center; color: var(--gray-text); font-size: 0.95rem; margin-bottom: 60px; }
+  .legal-content { max-width: 800px; margin: 0 auto; }
+  .legal-content h2 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--text); margin: 3rem 0 1.2rem; font-weight: 500; }
+  .legal-content h2:first-child { margin-top: 0; }
+  .legal-content p { font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-bottom: 1.2rem; }
+  .legal-content ul { margin: 1rem 0 1.5rem 2rem; }
+  .legal-content li { font-size: 1.1rem; line-height: 1.7; color: var(--text); margin-bottom: 0.6rem; }
+  .legal-content a { color: var(--gold-ink-strong); text-decoration: none; border-bottom: 1px solid var(--gold); transition: 0.3s; }
+  .legal-content a:hover { opacity: 0.8; }
+  @media (max-width: 768px) { .legal-page { padding: 140px 0 60px; } .legal-content h2 { font-size: 1.5rem; } .legal-content p, .legal-content li { font-size: 1rem; } }
+</style>

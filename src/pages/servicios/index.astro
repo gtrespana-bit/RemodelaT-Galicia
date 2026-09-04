@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GodHero from '../../components/GodHero.astro';
+import GodMarquee from '../../components/GodMarquee.astro';
+
+const services = [
+  { slug: "reforma-integral", title: "Reforma Integral de Vivienda", desc: "Distribución, instalaciones, revestimientos, carpintería y acabados con planificación técnica y coordinación de oficios.", image: "/images/integrales-800.webp", srcset: "/images/integrales-400.webp 400w, /images/integrales-800.webp 800w", price: "desde 29.000 €", features: ["Piso 80 m² de referencia", "Presupuesto por partidas", "Garantía por escrito"] },
+  { slug: "reforma-cocina", title: "Reforma de Cocina", desc: "Desmontaje, instalaciones, revestimiento, mobiliario a medida, encimera y electrodomésticos según alcance.", image: "/images/cocina-800.webp", srcset: "/images/cocina-400.webp 400w, /images/cocina-800.webp 800w", price: "desde 5.000 €", features: ["Mobiliario a medida", "Encimeras e iluminación", "Garantía por escrito"] },
+  { slug: "reforma-bano", title: "Reforma de Baño", desc: "Demolición, impermeabilización, alicatado, sanitarios, grifería y mampara con prueba de estanqueidad.", image: "/images/bano-800.webp", srcset: "/images/bano-400.webp 400w, /images/bano-800.webp 800w", price: "desde 5.800 €", features: ["Impermeabilización comprobada", "Prueba de estanqueidad", "Garantía por escrito"] },
+  { slug: "reforma-vivienda", title: "Reforma de Vivienda (obra grande)", desc: "Suelo + dos baños + cocina + puertas para pisos completos de ~100 m², con cronograma por fases.", image: "/images/integrales-proyecto-completo.webp", srcset: "/images/integrales-400.webp 400w, /images/integrales-800.webp 800w", price: "desde 36.000 €", features: ["Piso ~100 m² de referencia", "Equipo propio", "Garantía por escrito"] },
+  { slug: "reforma-accesibilidad", title: "Adaptación y Accesibilidad", desc: "Baños adaptados, eliminación de barreras y puertas correderas para ganar comodidad y seguridad.", image: "/images/bano-ducha-walkin.webp", srcset: "/images/bano-ducha-walkin.webp 800w", price: "a valorar", features: ["Ducha a ras de suelo", "Sin barreras", "A valorar en visita"] },
+  { slug: "suelos-revestimientos", title: "Suelos y Revestimientos", desc: "Porcelánico gran formato, microcemento, parquet y tarima instalados con soporte y adhesivo adecuados.", image: "/images/suelo-porcelanico-800.webp", srcset: "/images/suelo-porcelanico-400.webp 400w, /images/suelo-porcelanico-800.webp 800w", price: "a valorar", features: ["Nivelación del soporte", "Gran formato", "Acabado fino"] },
+  { slug: "revestimientos-pared", title: "Revestimientos de Pared", desc: "Paneles, piedra, madera y microcemento con cortes limpios y encuentros cuidados.", image: "/images/revestimientos-800.webp", srcset: "/images/revestimientos-400.webp 400w, /images/revestimientos-800.webp 800w", price: "a valorar", features: ["Paneles decorativos", "Estucado", "Cortes precisos"] },
+  { slug: "instalacion-electrica", title: "Instalación Eléctrica e Iluminación", desc: "Cuadros, cableado, iluminación LED y protecciones dimensionadas dentro de proyectos de reforma.", image: "/images/electricidad-800.webp", srcset: "/images/electricidad-400.webp 400w, /images/electricidad-800.webp 800w", price: "a valorar", features: ["Protecciones", "Iluminación técnica", "Preparación domótica"] },
+  { slug: "fontaneria", title: "Fontanería", desc: "Renovación de tuberías, puntos de agua, desagües y grifería con pruebas de presión y funcionamiento.", image: "/images/fontaneria-800.webp", srcset: "/images/fontaneria-400.webp 400w, /images/fontaneria-800.webp 800w", price: "a valorar", features: ["Pruebas de presión", "Sin fugas", "Registros accesibles"] },
+  { slug: "pintura-acabados", title: "Pintura y Acabados", desc: "Preparación profesional de superficies, corrección de imperfecciones y terminaciones limpias.", image: "/images/pintura-800.webp", srcset: "/images/pintura-400.webp 400w, /images/pintura-800.webp 800w", price: "a valorar", features: ["Preparación de superficie", "Microcemento", "Acabado fino"] },
+  { slug: "domotica-automatizacion", title: "Domótica y Automatización", desc: "Control inteligente de iluminación, climatización y seguridad integrado desde la obra.", image: "/images/electricidad-domotica.webp", srcset: "/images/electricidad-400.webp 400w, /images/electricidad-800.webp 800w", price: "a valorar", features: ["Integrada en obra", "Control centralizado", "Bajo demanda"] },
+];
+---
+
+<BaseLayout
+  title="Servicios de Reforma en A Coruña | RemodelaT Coruña"
+  description="Servicios de reforma en A Coruña: reforma integral, cocinas, baños, obra grande, adaptación y accesibilidad, suelos, revestimientos, electricidad y fontanería."
+  activePage="servicios"
+>
+
+  <GodHero
+    eyebrow="Servicios de reforma"
+    title="Reformas"
+    titleGold="bien ejecutadas"
+    lead="Especialistas en reformas integrales, cocinas y baños: diagnóstico, presupuesto por partidas, ejecución supervisada y garantía por escrito."
+    image="/images/integrales-800.webp"
+    imageAlt="Interior moderno después de una reforma integral en A Coruña"
+    badges={["Método técnico", "Presupuesto por partidas", "Garantía por escrito"]}
+    watermark="SERVICIOS"
+  />
+
+  <GodMarquee />
+
+  <section class="services-page god-services">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow-god on-light">Especialidades RemodelaT</span>
+        <h2 class="section-title">Controlamos todas las partidas de tu reforma</h2>
+        <p class="section-desc">Proyectos de reforma completos, no arreglos puntuales, coordinados por un único responsable técnico con equipo propio.</p>
+      </div>
+      <div class="services-vertical-grid">
+        {services.map((svc) => (
+          <a href={`/servicios/${svc.slug}/`} class="service-vertical-card" data-reveal>
+            <div class="card-img-wrap">
+              <img
+                src={svc.image}
+                srcset={svc.srcset}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                alt={svc.title}
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="533"
+              />
+              <div class="card-overlay"></div>
+              <span class="home-service-kicker">{svc.price}</span>
+            </div>
+            <div class="card-body">
+              <h3>{svc.title}</h3>
+              <p>{svc.desc}</p>
+              <ul class="card-features">{svc.features.map(f => <li>{f}</li>)}</ul>
+              <span class="card-link">Ver más detalles <span class="arrow">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="premium-divider"><i></i></div>
+
+  <section class="god-cta">
+    <div class="cta-wrapper">
+      <span class="eyebrow-god">Visita técnica sin compromiso</span>
+      <h2 class="cta-title">¿Tienes una reforma en mente en <span class="gold">A Coruña</span>?</h2>
+      <p class="cta-text">Revisamos alcance, ubicación, nivel de acabado y condiciones reales antes de preparar una propuesta detallada.</p>
+      <a href="/contacto/" class="btn-premium btn-primary-premium">
+        <span class="btn-content">Solicitar presupuesto</span><span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .god-services { padding: 96px 0; background: var(--bone); }
+  .services-vertical-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
+  .service-vertical-card { background: var(--white); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--e-1); border: var(--hairline); transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+  .service-vertical-card:hover { transform: translateY(-8px); box-shadow: var(--e-3); border-color: rgba(201,169,97,.42); }
+  .card-img-wrap { position: relative; height: 260px; overflow: hidden; background: var(--ink); }
+  .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-god) var(--ease-god); }
+  .service-vertical-card:hover .card-img-wrap img { transform: scale(1.06); }
+  .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%); }
+  .home-service-kicker { position: absolute; left: 18px; bottom: 16px; z-index: 2; background: rgba(201,169,97,.94); color: var(--ink); border-radius: var(--r-full); padding: 6px 12px; font-size: .71rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+  .card-body { padding: 28px 24px; flex: 1; display: flex; flex-direction: column; }
+  .card-body h3 { font-family: var(--font-serif); font-size: 1.45rem; margin-bottom: 10px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+  .card-body p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 18px; }
+  .card-features { list-style: none; padding: 0; margin: 0 0 20px 0; }
+  .card-features li { color: var(--text-muted); font-size: 0.88rem; padding: 5px 0 5px 20px; position: relative; }
+  .card-features li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-ink-strong); }
+  .card-link { color: var(--gold-ink-strong); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; margin-top: auto; }
+  .card-link .arrow { transition: transform .2s; display: inline-block; }
+  .service-vertical-card:hover .card-link .arrow { transform: translateX(4px); }
+  @media (max-width: 1100px) { .services-vertical-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px) { .services-vertical-grid { grid-template-columns: 1fr; } }
+</style>

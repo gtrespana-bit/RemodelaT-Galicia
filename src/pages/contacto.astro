@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GodHero from '../components/GodHero.astro';
+import GodMarquee from '../components/GodMarquee.astro';
+import { BRAND, waLink } from '../data/brand';
+
+const brandPhone = BRAND.phone;
+const waPhone = BRAND.phone.replace('+', '');
+---
+
+<BaseLayout
+  title="Contacto y Presupuesto | RemodelaT Coruña"
+  description="Solicita presupuesto de reforma en A Coruña. Visita técnica sin compromiso, mediciones reales y presupuesto por partidas, claro y cerrado."
+  activePage="contacto"
+>
+
+  <GodHero
+    eyebrow="Contacto"
+    title="Pide tu presupuesto"
+    titleGold="por partidas"
+    lead="Cuéntanos tu proyecto. Te hacemos una visita técnica sin compromiso, tomamos medidas y te enviamos un presupuesto por partidas, claro y cerrado."
+    image="/images/integrales-plano-diseno.webp"
+    imageAlt="Plano y mediciones de un proyecto de reforma en A Coruña"
+    badges={["Visita técnica sin compromiso", "Mediciones reales", "Presupuesto cerrado"]}
+    watermark="CONTACTO"
+  />
+
+  <GodMarquee />
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow-god on-light">Datos de contacto</span>
+        <h2>Hablemos de tu reforma</h2>
+        <div class="info-item">
+          <h3>Teléfono / WhatsApp</h3>
+          <p><a href={`tel:${BRAND.phone}`}>{BRAND.phoneDisplay}</a> <span class="muted">[pendiente de confirmar]</span></p>
+        </div>
+        <div class="info-item">
+          <h3>Email</h3>
+          <p><a href={`mailto:${BRAND.email}`}>{BRAND.email}</a></p>
+        </div>
+        <div class="info-item">
+          <h3>Zona de trabajo</h3>
+          <p>{BRAND.areas}.</p>
+        </div>
+        <div class="info-item">
+          <h3>Base operativa</h3>
+          <p>Centro de negocios en A Coruña <span class="muted">[pendiente: dirección]</span>.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+            </div>
+            <div class="form-field">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="600 000 000" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="tipo">Tipo de obra</label>
+              <select id="tipo" name="tipo" required>
+                <option value="">Selecciona…</option>
+                <option>Reforma integral</option>
+                <option>Reforma de cocina</option>
+                <option>Reforma de baño</option>
+                <option>Adaptación / accesibilidad</option>
+                <option>Otra</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="ubicacion">Ubicación aproximada</label>
+              <input type="text" id="ubicacion" name="ubicacion" placeholder="A Coruña ciudad o municipio del área" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="mensaje">Breve descripción del proyecto <span class="muted">(opcional)</span></label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué quieres conseguir y hasta dónde…"></textarea>
+          </div>
+          <button type="submit" class="btn-premium btn-primary-premium full-width">
+            <span class="btn-content">Solicitar presupuesto</span><span class="btn-arrow">→</span>
+          </button>
+          <p class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje preparado. Los datos se tratan conforme a nuestra <a href="/privacidad/">política de privacidad</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="god-cta">
+    <div class="cta-wrapper">
+      <span class="eyebrow-god">También puedes llamarnos</span>
+      <h2 class="cta-title">Respuesta con orientación técnica</h2>
+      <p class="cta-text">Preferimos una llamada corta con preguntas concretas a un formulario sin contexto. Estamos aquí para orientarte.</p>
+      <div class="cta-actions-home">
+        <a href={`tel:${BRAND.phone}`} class="btn-premium btn-primary-premium"><span class="btn-content">Llamar ahora</span><span class="btn-arrow">→</span></a>
+        <a href={waLink('Hola, quiero solicitar presupuesto de reforma')} class="btn-premium btn-outline-premium" target="_blank" rel="noopener"><span class="btn-content">WhatsApp</span><span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--s-5); align-items: start; }
+  .contact-info h2 { font-family: var(--font-serif); font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin: 12px 0 24px; color: var(--ink); }
+  .info-item { margin-bottom: 22px; }
+  .info-item h3 { font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700; color: var(--gold-ink-strong); }
+  .info-item p { color: var(--text-muted); }
+  .info-item a { color: var(--ink); font-weight: 600; }
+  .muted { color: var(--text-muted); font-weight: 400; }
+  .contact-form {
+    background: var(--white); padding: 40px; border-radius: var(--r-md);
+    box-shadow: var(--e-2); border: 1px solid var(--sand);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-field { margin-bottom: 20px; }
+  .form-field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 6px; color: var(--ink); }
+  .contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%; padding: 14px; border: 1px solid var(--sand); background: var(--bone);
+    border-radius: var(--r-sm); font-family: inherit; font-size: 1rem;
+    transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+    outline: none; border-color: var(--gold); background: var(--white);
+  }
+  .full-width { width: 100%; justify-content: center; }
+  .form-note { margin-top: 16px; font-size: .82rem; color: var(--text-muted); text-align: center; }
+  .form-note a { color: var(--gold-ink-strong); }
+  .cta-actions-home { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .contact-form { padding: 26px 20px; }
+  }
+</style>
+
+<script>
+  function initContactForm() {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    if (!form || form.dataset.bound === 'true') return;
+    form.dataset.bound = 'true';
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const nombre = String(data.get('nombre') || '');
+      const telefono = String(data.get('telefono') || '');
+      const email = String(data.get('email') || '');
+      const tipo = String(data.get('tipo') || '');
+      const ubicacion = String(data.get('ubicacion') || '');
+      const mensaje = String(data.get('mensaje') || '');
+      const text = [
+        'Hola, quiero solicitar un presupuesto de reforma.',
+        `Nombre: ${nombre}`,
+        `Teléfono: ${telefono}`,
+        `Email: ${email}`,
+        `Tipo de obra: ${tipo}`,
+        ubicacion ? `Ubicación: ${ubicacion}` : '',
+        mensaje ? `Proyecto: ${mensaje}` : '',
+      ].filter(Boolean).join('\n');
+      const phone = '{waPhone}';
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
+    });
+  }
+  initContactForm();
+  document.addEventListener('astro:page-load', initContactForm);
+</script>
