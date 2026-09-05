@@ -22,7 +22,7 @@ const { zone, service } = Astro.props;
 const zoneName = zoneNames[zone] || zone;
 const local = zoneLocal[zone] || zoneLocal['a-coruna'];
 
-// Configuración por servicio (precios €, sin IVA — mercado 2026).
+// Configuración por servicio (sin cifras de precio: presupuesto por partidas tras visita).
 const serviceConfig = {
   bano: {
     crumb: 'Reforma de Baños',
@@ -38,11 +38,17 @@ const serviceConfig = {
       'Sanitarios, grifería y mampara.',
       'Fontanería y electricidad de la zona, con pruebas.'
     ],
-    priceRows: [['Reforma de baño completa', '5.800 – 6.400 €']],
+    priceFactors: [
+      'Tamaño del baño y si se mantiene o no la posición de sanitarios.',
+      'Alcance: renovar acabados o reforma completa con demolición hasta el ladrillo.',
+      'Estado de fontanería y electricidad: si están bien, se aprovechan.',
+      'Cerámica (formato y gama), plato de ducha o ducha de obra, mampara.',
+      'Sanitarios, grifería, mueble y espejo elegidos.'
+    ],
     faqs: [
-      { question: `¿Cuánto cuesta reformar un baño en ${zoneName}?`, answer: `Como referencia de mercado 2026, un baño completo ronda los 5.800 – 6.400 € (sin IVA). El precio final depende del metraje, los materiales y la complejidad de las instalaciones; lo confirmamos en la visita técnica.` },
+      { question: `¿Cuánto cuesta reformar un baño en ${zoneName}?`, answer: 'Depende del tamaño del baño, de si hay que renovar fontanería y electricidad, de la cerámica y los sanitarios elegidos y de si se mantiene la distribución. Por eso no damos un precio genérico: tras la visita técnica entregamos un presupuesto cerrado por partidas en 2–3 días.' },
       { question: `¿Garantizáis la impermeabilización en ${zoneName}?`, answer: 'Sí. Realizamos prueba de estanqueidad antes de cerrar paredes y la impermeabilización queda garantizada por escrito.' },
-      { question: `¿Cuánto tarda una reforma de baño en ${zoneName}?`, answer: 'Un baño estándar suele tomar unas 2–4 semanas. Con redistribución o ducha de obra puede alargarse; entregamos cronograma antes de empezar.' }
+      { question: `¿Cuánto tarda una reforma de baño en ${zoneName}?`, answer: 'Un baño estándar, manteniendo la distribución, se ejecuta en 5–6 días laborables. Con redistribución o ducha de obra puede necesitar algunos días más; entregamos el cronograma antes de empezar.' }
     ],
     schemaType: 'Bathroom Remodeling',
   },
@@ -60,9 +66,15 @@ const serviceConfig = {
       'Encimera (cuarzo, gran formato, etc.) según uso.',
       'Electrodomésticos (según alcance pactado).'
     ],
-    priceRows: [['Reforma de cocina (según alcance)', '5.000 – 6.000 €']],
+    priceFactors: [
+      'Alcance: solo mobiliario y encimera, cocina completa o cocina abierta al salón.',
+      'Metros lineales de mueble y tipo de distribución (lineal, L, U, isla).',
+      'Estado de fontanería, electricidad y extracción.',
+      'Mobiliario (frentes, herrajes, columnas) y encimera (laminado, cuarzo, porcelánico).',
+      'Electrodomésticos: gama, integrables o no, aportados por nosotros o por ti.'
+    ],
     faqs: [
-      { question: `¿Cuánto cuesta reformar una cocina en ${zoneName}?`, answer: 'Como referencia de mercado 2026, una reforma de cocina ronda los 5.000 – 6.000 € (sin IVA), según alcance y materiales. El precio final sale de la visita técnica.' },
+      { question: `¿Cuánto cuesta reformar una cocina en ${zoneName}?`, answer: 'Depende del alcance (solo mobiliario y encimera, cocina completa o cocina abierta al salón), de los metros, del estado de las instalaciones y del mobiliario, encimera y electrodomésticos elegidos. Tras la visita técnica entregamos diseño sobre plano y presupuesto cerrado por partidas.' },
       { question: '¿Incluye los electrodomésticos?', answer: 'Depende del alcance pactado. Lo definimos por escrito en el presupuesto para que sepas qué entra y qué no.' },
       { question: `¿Cómo empezamos una cocina en ${zoneName}?`, answer: 'Con una visita técnica: medimos, revisamos instalaciones y definimos alcance y materiales. Después te enviamos el presupuesto por partidas.' }
     ],
@@ -82,14 +94,17 @@ const serviceConfig = {
       'Cocina y baños con acabados de calidad.',
       'Pruebas antes de cerrar y entrega documentada con garantía por partidas.'
     ],
-    priceRows: [
-      ['Reforma integral · piso ~80 m²', '29.000 – 32.000 €'],
-      ['Obra grande · piso ~100 m² (suelo + 2 baños + cocina + puertas)', '36.000 – 39.000 €']
+    priceFactors: [
+      'Superficie y estado de partida de la vivienda.',
+      'Alcance: qué se renueva y qué se conserva.',
+      'Número de baños y tamaño de la cocina.',
+      'Cambios estructurales y carpintería exterior.',
+      'Gama de materiales en suelos, puertas, cocina y baños.'
     ],
     faqs: [
       { question: `¿Qué incluye una reforma integral en ${zoneName}?`, answer: 'Distribución, instalaciones, revestimientos, carpintería y acabados. Definimos el alcance por escrito antes de empezar, para que sepas exactamente qué incluye cada partida.' },
       { question: `¿Cuánto tarda una reforma integral en ${zoneName}?`, answer: 'Depende del metraje y del alcance. Tras la visita técnica entregamos un cronograma por fases con plazos realistas.' },
-      { question: `¿Dais el precio sin visitar la vivienda en ${zoneName}?`, answer: 'No. Para dar un presupuesto real necesitamos mediciones y diagnóstico. Las bandas de esta página son orientativas.' }
+      { question: `¿Dais el precio sin visitar la vivienda en ${zoneName}?`, answer: 'No. Para dar un presupuesto real necesitamos mediciones y diagnóstico. Tras la visita entregamos un presupuesto cerrado por partidas y un cronograma con fechas.' }
     ],
     schemaType: 'Home Remodeling',
   }
@@ -100,7 +115,7 @@ const whatsappMessage = `Hola, quiero solicitar presupuesto para la ${service ==
 const schemaName = `${serviceConfig.crumb} en ${zoneName}`;
 const schemaDescription = `${serviceConfig.lead}`;
 const pageTitle = `${serviceConfig.crumb} en ${zoneName} | RemodelaT Coruña`;
-const description = `${serviceConfig.lead} Precios orientativos, sin IVA, y presupuesto por partidas.`;
+const description = `${serviceConfig.lead} Visita técnica sin compromiso y presupuesto cerrado por partidas.`;
 ---
 
 <BaseLayout
@@ -147,17 +162,12 @@ const description = `${serviceConfig.lead} Precios orientativos, sin IVA, y pres
           {serviceConfig.includes.map((item) => <li>{item}</li>)}
         </ul>
 
-        <h2>Precios orientativos (sin IVA)</h2>
-        <p>Los precios son bandas de referencia de mercado 2026. El presupuesto final depende del metraje, los materiales y la complejidad de las instalaciones. Siempre entregamos presupuesto cerrado por partidas, sin sorpresas.</p>
-        <table>
-          <thead><tr><th>Alcance</th><th>Precio orientativo</th></tr></thead>
-          <tbody>
-            {serviceConfig.priceRows.map(([label, price]) => (
-              <tr><td>{label}</td><td>{price}</td></tr>
-            ))}
-          </tbody>
-        </table>
-        <p class="price-note">* Orientativos, sin IVA (10 % o 21 % según tipo de obra). Se confirman con visita técnica y mediciones reales.</p>
+        <h2>Cuánto cuesta: de qué depende el precio</h2>
+        <p>No publicamos precios genéricos porque no hay dos obras iguales: el precio depende del tamaño, de si hay que renovar fontanería y electricidad, de la cerámica, sanitarios y mobiliario elegidos y de si se mantiene o no la distribución. Lo que sí garantizamos es un <strong>presupuesto cerrado por partidas</strong>, con materiales especificados e IVA desglosado, entregado en pocos días tras la visita técnica sin compromiso en {zoneName}.</p>
+        <ul>
+          {serviceConfig.priceFactors.map((item) => <li>{item}</li>)}
+        </ul>
+        <p class="price-note">* IVA del 10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto y en materiales aportados por el cliente. Se confirma con visita técnica y mediciones reales.</p>
 
         <h2>Cómo trabajamos en {zoneName}</h2>
         <p>Seguimos el <a href="/metodo-remodelat/">Método RemodelaT</a> en 10 etapas: diagnóstico técnico, presupuesto por partidas, ejecución supervisada con equipo propio, pruebas antes de cerrar y entrega documentada con garantía por escrito.</p>

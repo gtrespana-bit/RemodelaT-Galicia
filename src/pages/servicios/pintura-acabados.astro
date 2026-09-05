@@ -4,35 +4,189 @@ import ServicePage from '../../components/ServicePage.astro';
 
 <ServicePage
   slug="pintura-acabados"
-  title="Pintura"
-  titleGold="y Acabados"
-  description="Pintura y acabados en A Coruña: preparación profesional de superficies, microcemento y terminaciones limpias."
-  eyebrow="Servicios · Acabados"
-  lead="Preparación profesional de superficies, corrección de imperfecciones y terminaciones limpias."
+  title="Pintura y Acabados"
+  titleGold="en A Coruña"
+  seoTitle="Pintura y Acabados Decorativos en A Coruña | RemodelaT"
+  description="Pintura de interiores en A Coruña: preparación de superficies, pintura lavable y antihumedad, estucos, microcemento y papel pintado. Con garantía."
+  eyebrow="Servicios · Pintura"
+  lead="Paredes lisas de verdad, esquinas rectas, pintura que se puede limpiar y acabados decorativos bien ejecutados. El 80 % del resultado está en la preparación."
   image="/images/pintura-800.webp"
-  imageAlt="Pintura y acabados profesionales en una vivienda de A Coruña"
-  badges={["Preparación de superficie", "Microcemento", "Acabado fino"]}
-  watermark="ACABADOS"
+  imageAlt="Pintor aplicando pintura con rodillo en una pared de una vivienda en A Coruña"
+  badges={["Preparación de superficies", "Pintura lavable y antihumedad", "Estucos y microcemento"]}
+  watermark="PINTURA"
   crumb="Pintura y Acabados"
+  highlights={[
+    { value: "80 %", label: "Del resultado está en la preparación" },
+    { value: "3–6", label: "Días para pintar un piso" },
+    { value: "2", label: "Manos mínimas de acabado" },
+    { value: "5", label: "Acabados decorativos" },
+  ]}
+  introTitle="Pintar bien no es dar dos manos: es preparar la pared para que duren diez años"
   intro={[
-    "Un buen acabado empieza en la preparación: superficies limpias, soportes estables e imperfecciones corregidas antes de aplicar el producto.",
-    "Aplicamos por capas, con sellados y remates cuidados, para que el resultado se vea bien y aguante el uso diario."
+    "La pintura es el acabado que más superficie cubre en una vivienda y el que más se juzga a simple vista. Y sin embargo, es donde más se improvisa. La diferencia entre una pared que a los dos años tiene grietas, manchas y desconchones y una que sigue impecable no está en la pintura: está en las horas de preparación que nadie ve.",
+    "En A Coruña la pintura tiene un enemigo añadido: la <strong>humedad</strong>. Condensaciones en dormitorios orientados al norte, moho en baños sin ventilación, salitre en fachadas y galerías cerca del mar, capilaridad en bajos. Pintar encima de una humedad sin tratar es garantizar que vuelva en meses. Por eso siempre empezamos con un diagnóstico y, cuando hace falta, tratamos la causa antes de abrir el primer bote.",
+    "Ofrecemos desde la pintura lisa de toda una vivienda hasta los acabados decorativos (estuco veneciano, efectos, microcemento, papel pintado), con la misma exigencia: <strong>superficies preparadas, materiales de primera marca y una ejecución limpia</strong>, con presupuesto por partidas y <a href=\"/metodo-remodelat/\">garantía por escrito</a>.",
   ]}
+  introFigure={{
+    src: "/images/pintura-interior-terminada.webp",
+    alt: "Salón recién pintado en tono claro con acabado liso, luz natural y mobiliario contemporáneo",
+    caption: "Pintura lisa mate lavable en salón: paredes uniformes, esquinas rectas, sin marcas de rodillo.",
+  }}
+  galleryTitle="Acabados que van más allá de la pintura lisa"
+  galleryText="Estucos, efectos, microcemento y papel pintado: cinco formas de dar carácter a una pared. En la visita te enseñamos muestras aplicadas."
+  gallery={[
+    { src: "/images/pintura-estuco-veneciano.webp", alt: "Pared con estuco veneciano pulido en tono claro con reflejos de mármol", caption: "Estuco veneciano pulido" },
+    { src: "/images/pintura-microcemento-suelo.webp", alt: "Estancia con suelo y pared en microcemento gris continuo", caption: "Microcemento en suelo y pared" },
+    { src: "/images/pintura-papel-pintado.webp", alt: "Dormitorio con cabecero de papel pintado de motivo botánico", caption: "Papel pintado en cabecero" },
+  ]}
+  topics={[
+    {
+      title: "La preparación: lo que diferencia una pared profesional",
+      paragraphs: [
+        "Antes de pintar, la pared tiene que estar sana, lisa, limpia y sellada. Es la fase más larga y la que nadie ve, pero es la que determina si la pintura dura dos años o diez. Nuestro protocolo en cada estancia:",
+      ],
+      bullets: [
+        "<strong>Protección</strong> de suelos, mobiliario, carpinterías y mecanismos con plástico, papel y cinta de pintor de baja adherencia.",
+        "<strong>Diagnóstico y tratamiento</strong> de humedades, moho (con fungicida) y salitre antes de nada.",
+        "<strong>Rascado y lijado</strong> de pintura suelta, gotelé o texturas antiguas cuando se quiere pared lisa.",
+        "<strong>Reparación</strong> de grietas con malla, fisuras con masilla elástica, agujeros y golpes con plaste.",
+        "<strong>Plastecido general o emplastecido a llana</strong> en paredes irregulares, lijado fino y limpieza de polvo.",
+        "<strong>Imprimación selladora</strong> o fijadora según el soporte: yeso nuevo, pintura antigua, placa de cartón yeso, madera o metal.",
+      ],
+      figure: {
+        src: "/images/pintura-preparacion-superficie.webp",
+        alt: "Pintor lijando y preparando una pared antes de pintar, con superficies protegidas",
+        caption: "Lijado, plastecido e imprimación: la fase invisible que decide la calidad del acabado.",
+      },
+      quote: "Cualquiera puede pasar un rodillo. Lo difícil es que a los cinco años la pared siga pareciendo recién pintada.",
+    },
+    {
+      title: "Pintura de interiores: qué pintura para cada estancia",
+      paragraphs: [
+        "No todas las pinturas sirven para todo. Elegimos el producto según el uso de la estancia, la luz que recibe y el mantenimiento que quieres darle. Trabajamos con fabricantes de primera línea (Jotun, Sikkens, Bruguer, Titan, Valentine) y aplicamos siempre dos manos de acabado sobre la imprimación.",
+      ],
+      bullets: [
+        "<strong>Salones y dormitorios:</strong> pintura plástica mate lavable de alta calidad, sin brillos ni marcas, con buen poder cubriente y resistencia al frote.",
+        "<strong>Cocinas y baños:</strong> pintura antimoho satinada o mate lavable, con aditivo fungicida y resistencia a la condensación y a la grasa.",
+        "<strong>Pasillos, escaleras y habitaciones infantiles:</strong> acabados lavables de alta resistencia que soportan roces y limpieza frecuente.",
+        "<strong>Techos:</strong> mate profundo que disimula irregularidades y no refleja la luz.",
+        "<strong>Carpintería y radiadores:</strong> esmaltes al agua de secado rápido, sin olor y sin amarilleamiento.",
+        "<strong>Zonas con humedad tratada:</strong> pinturas antihumedad y antisalitre de poro abierto o impermeabilizantes según el diagnóstico.",
+      ],
+      figure: {
+        src: "/images/pintura-proyecto-terminado.webp",
+        alt: "Dormitorio pintado en dos tonos con acabado mate y cabecero en color de contraste",
+        caption: "Dos tonos y un cabecero en contraste: color bien aplicado, sin filos ni salpicaduras.",
+      },
+    },
+    {
+      title: "Estuco veneciano y efectos decorativos",
+      paragraphs: [
+        "Cuando una pared merece protagonismo, los acabados a la cal y los efectos decorativos aportan profundidad y textura que ninguna pintura plana consigue. El <strong>estuco veneciano</strong>, aplicado en capas finas con llana y pulido, reproduce el aspecto del mármol con sus vetas y brillos; el <strong>estuco mate a la cal</strong> ofrece un acabado mineral, transpirable, ideal para paredes antiguas con algo de humedad.",
+        "Entre los <strong>efectos decorativos</strong> más solicitados están el efecto cemento o hormigón, el tierra florentina, el metalizado y el arena, todos aplicados con técnicas específicas de espátula, guante o rodillo. Se usan en paredes puntuales (cabeceros, pared del sofá, recibidor, techo de un baño) para no saturar el espacio.",
+      ],
+      bullets: [
+        "Estuco veneciano pulido o encerado, en cualquier color, para paredes protagonistas.",
+        "Estucos a la cal transpirables para muros antiguos y estancias con condensación.",
+        "Efecto cemento y óxido para ambientes industriales y contemporáneos.",
+        "Efectos metalizados y perlados para recibidores y zonas de baja luz natural.",
+      ],
+      figure: {
+        src: "/images/pintura-efectos-decorativos.webp",
+        alt: "Pared con efecto decorativo de espátula en tonos tierra y textura mineral",
+        caption: "Efecto decorativo a espátula en pared de salón: textura y profundidad sin recargar.",
+      },
+    },
+    {
+      title: "Microcemento y papel pintado",
+      paragraphs: [
+        "El <strong>microcemento</strong> se ha convertido en el acabado continuo por excelencia: 2–3 mm de espesor sobre casi cualquier soporte, sin juntas, en paredes, suelos, escaleras, encimeras y baños completos. Aplicado con el sistema completo (imprimación, malla, base, acabado y sellado poliuretánico) es resistente al agua y al desgaste. Es una forma de renovar un baño sin picar el azulejo o de unificar suelo y paredes en una única superficie mineral.",
+        "El <strong>papel pintado</strong> vive un momento excelente: vinílicos lavables para cocinas y baños, textiles y no tejidos de instalación sencilla, murales panorámicos y diseños de autor. Colocado sobre una pared bien preparada, con juntas invisibles y casado de motivo perfecto, transforma un dormitorio o un recibidor en un día.",
+      ],
+      bullets: [
+        "Microcemento en baños completos (paredes, suelo y plato de obra), cocinas y salones.",
+        "Microcemento en escaleras y encimeras con sellado de alta resistencia.",
+        "Papel pintado vinílico, no tejido y textil, con casado de motivo y juntas a testa.",
+        "Murales panorámicos a medida para paredes protagonistas.",
+      ],
+      figure: {
+        src: "/images/pintura-microcemento-bano.webp",
+        alt: "Baño completo revestido en microcemento gris claro con ducha de obra y lavabo de superficie",
+        caption: "Baño en microcemento sobre el azulejo existente: sin juntas, sin obra de demolición.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye nuestro servicio de pintura"
+  includesIntro="Desde una estancia hasta la vivienda completa. Estas son las partidas que definimos por escrito antes de empezar:"
   includes={[
-    "Preparación y reparación de superficies.",
-    "Pintura interior y exterior.",
-    "Microcemento en suelos y paredes.",
-    "Acabados decorativos.",
-    "Remates, encuentros y limpieza final."
+    "<strong>Visita y diagnóstico</strong> de superficies: humedades, grietas, texturas, estado de la pintura existente.",
+    "<strong>Protección completa</strong> de suelos, mobiliario, carpinterías, mecanismos y luminarias.",
+    "<strong>Preparación</strong>: rascado, lijado, reparación de grietas, plastecido, alisado de gotelé si se solicita.",
+    "<strong>Tratamiento de humedades y moho</strong> cuando el diagnóstico lo requiere.",
+    "<strong>Imprimación</strong> adecuada al soporte y <strong>dos manos de acabado</strong> con pintura de primera marca.",
+    "<strong>Esmaltado</strong> de puertas, marcos, rodapiés, radiadores y ventanas si está incluido.",
+    "<strong>Acabados decorativos</strong>: estucos, efectos, microcemento, papel pintado.",
+    "<strong>Limpieza final</strong>, retirada de protecciones y entrega con revisión contigo y garantía por escrito.",
   ]}
+  processTitle="Cómo pintamos una vivienda"
+  processIntro="Un piso de 80–100 m² en pintura lisa se resuelve en 3–6 días. Alisar gotelé, esmaltar carpinterías o aplicar acabados decorativos suma días según el alcance."
+  phases={[
+    { title: "Visita, diagnóstico y muestras", duration: "Antes de la obra", text: "Revisamos cada estancia, detectamos humedades, grietas y texturas, y te asesoramos sobre colores y acabados. Podemos aplicar muestras en la pared para decidir con luz real." },
+    { title: "Presupuesto por partidas", duration: "2–3 días", text: "Superficies medidas, preparación necesaria en cada estancia, pinturas especificadas por marca y tipo, esmaltes y acabados decorativos si los hay." },
+    { title: "Protección y preparación", duration: "Día 1–2", text: "Protegemos suelos, muebles y carpinterías. Rascado, lijado, reparación de grietas, plastecido e imprimación. Es la fase más larga y la más importante." },
+    { title: "Tratamiento de humedades", duration: "Si procede", text: "Fungicida, sellado o pintura antihumedad según diagnóstico, respetando los tiempos de secado antes de continuar." },
+    { title: "Pintura de acabado", duration: "Día 2–5", text: "Techos primero, después paredes: dos manos con rodillo de calidad y recorte a brocha en esquinas y encuentros. Esmaltes y acabados decorativos en paralelo." },
+    { title: "Revisión, limpieza y entrega", duration: "Último día", text: "Repaso con luz rasante, retirada de protecciones, limpieza de la vivienda y entrega con los códigos de color y garantía por escrito." },
+  ]}
+  priceTitle="Cuánto cuesta pintar un piso en A Coruña"
+  priceIntro="El precio depende de los metros, del estado de las paredes (grietas, gotelé, humedades), del número de colores y de si se incluyen carpinterías o acabados decorativos. Se cierra por partidas tras la visita."
   priceRows={[
-    ["Pintura y acabados (según superficie y producto)", "A valorar en visita"]
+    ["Pintura lisa de vivienda completa (paredes y techos, dos manos, pintura lavable)", "A valorar en visita"],
+    ["Alisado de gotelé y pintura lisa", "A valorar en visita"],
+    ["Esmaltado de puertas, marcos y radiadores", "A valorar en visita"],
+    ["Estuco veneciano, microcemento o papel pintado (por pared o estancia)", "A valorar en visita"],
   ]}
-  priceNote="* Presupuesto por partidas tras la visita técnica (sin IVA)."
+  priceFactors={[
+    "<strong>Estado de las paredes.</strong> Una pared lisa en buen estado se repinta; una con gotelé, grietas o humedades exige preparación intensiva.",
+    "<strong>Superficie y altura.</strong> Metros de pared y techo; techos altos de pisos antiguos requieren andamio.",
+    "<strong>Número de colores y recortes.</strong> Cada color adicional y cada encuentro entre tonos suma tiempo.",
+    "<strong>Carpinterías.</strong> Puertas, marcos, rodapiés y ventanas esmaltadas son una partida independiente.",
+    "<strong>Acabados decorativos.</strong> Estucos, efectos, microcemento y papel se valoran por pared o estancia.",
+  ]}
+  priceNote="* Precios sin IVA (10 % en obra de renovación de vivienda que cumple los requisitos; 21 % en material suministrado por separado). Se confirman con visita técnica y mediciones reales."
+  problemsTitle="Los fallos de pintura más frecuentes y cómo los evitamos"
+  problemsIntro="Lo que nos encontramos cuando nos llaman para repintar algo pintado hace poco."
+  problems={[
+    { title: "Moho que vuelve tras pintar", problem: "Se pinta encima del moho con pintura normal. En el primer invierno húmedo de A Coruña, reaparece.", solution: "Tratamiento fungicida, corrección de la causa (ventilación, puente térmico) y pintura antimoho con aditivo fungicida." },
+    { title: "Grietas que reabren", problem: "Grieta tapada con masilla y pintada. A los meses vuelve a marcarse porque la pared sigue moviéndose.", solution: "Apertura de la grieta, malla de fibra, masilla elástica y plastecido. Si la grieta es estructural, lo decimos antes de pintar." },
+    { title: "Marcas de rodillo y cortes visibles", problem: "Pintura aplicada sin imprimación, con rodillo inadecuado o sin mantener el borde húmedo. Se ven solapes y diferencias de brillo.", solution: "Imprimación uniforme, rodillo de pelo adecuado al acabado, aplicación por paños completos y dos manos cruzadas." },
+    { title: "Desconchones en cocinas y baños", problem: "Pintura plástica estándar en zonas de vapor y grasa. Se ampolla y se levanta.", solution: "Pinturas específicas para cocinas y baños, satinadas o mate lavable con resistencia a la condensación." },
+    { title: "Esquinas y encuentros torcidos", problem: "Recortes a pulso entre pared y techo o entre dos colores que ondulan y ensucian el resultado.", solution: "Cinta de baja adherencia sobre superficie sellada, recorte con brocha angular y retirada de la cinta en fresco." },
+    { title: "Gotelé mal alisado", problem: "Plaste aplicado en una capa gruesa sin lijar: la pared queda ondulada y la textura se transparenta.", solution: "Alisado en dos o tres capas finas a llana, lijado entre capas con luz rasante e imprimación selladora antes de pintar." },
+  ]}
+  relatedProjects={[
+    { slug: "bano-de-lujo-doble-ambiente", title: "Baño de lujo en dos ambientes", image: "/images/proyectos/bano-de-lujo-doble-ambiente/bano-zona-1-completado-2.webp", tag: "Microcemento" },
+    { slug: "cocina-reubicada-zona-dia", title: "Cocina reubicada en la zona de día", image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp", tag: "Acabados de la zona de día" },
+    { slug: "bano-secundario-compacto", title: "Baño secundario compacto", image: "/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp", tag: "Acabados" },
+  ]}
+  relatedGuides={[
+    { title: "Revestimientos de pared", url: "/servicios/revestimientos-pared/" },
+    { title: "Cuánto cuesta reformar un piso en A Coruña", url: "/blog/cuanto-cuesta-reformar-piso-a-coruna/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Incluís la preparación de paredes?", answer: "Sí. Sin una buena preparación el acabado no dura. Corregimos imperfecciones antes de pintar o aplicar microcemento." },
-    { question: "¿Hacéis microcemento?", answer: "Sí, en suelos y paredes, con el soporte y el sellado adecuados para cada zona." }
+    { question: "¿Cuánto cuesta pintar un piso en A Coruña?", answer: "Depende de los metros, del estado de las paredes y de lo que se incluya (techos, carpinterías, alisado de gotelé, acabados decorativos). Lo valoramos en visita y te entregamos un presupuesto por partidas con las pinturas especificadas por marca y tipo." },
+    { question: "¿Cuánto tarda pintar un piso?", answer: "Un piso de 80–100 m² en pintura lisa, con paredes en buen estado, se pinta en 3–6 días incluyendo preparación y dos manos. Alisar gotelé, esmaltar carpinterías o aplicar estucos o microcemento añade días." },
+    { question: "¿Tengo que vaciar la casa para pintar?", answer: "No. Agrupamos el mobiliario en el centro de cada estancia y lo protegemos con plástico, junto con suelos y carpinterías. Trabajamos por estancias para que la vivienda siga siendo habitable." },
+    { question: "¿Quitáis el gotelé?", answer: "Sí. Alisamos el gotelé con plaste en varias capas finas, lijado con luz rasante e imprimación selladora. El resultado es una pared lisa lista para cualquier acabado. Es más laborioso que repintar, pero transforma la vivienda." },
+    { question: "¿Qué pintura usáis?", answer: "Pinturas de primera línea (Jotun, Sikkens, Bruguer, Titan, Valentine) elegidas según la estancia: mate lavable en salones y dormitorios, antimoho en baños y cocinas, esmaltes al agua en carpinterías. Te indicamos marca y referencia en el presupuesto y te entregamos los códigos de color al final." },
+    { question: "¿Ayudáis a elegir los colores?", answer: "Sí. Te asesoramos según la luz de cada estancia, la orientación y el estilo del mobiliario, y podemos aplicar muestras en la pared para que decidas con luz real. En A Coruña, con cielos a menudo cubiertos, los tonos cálidos y luminosos suelen funcionar mejor que los grises fríos." },
+    { question: "¿Pintáis fachadas y galerías?", answer: "Nuestro servicio se centra en interiores de viviendas y en galerías y terrazas privativas. Para fachadas completas, que requieren acuerdo de comunidad y medios de elevación, te podemos orientar." },
+    { question: "¿Qué garantía tiene la pintura?", answer: "Garantía por escrito sobre la ejecución (adherencia, uniformidad, ausencia de desconchones por defecto de aplicación) además de la garantía del fabricante. Te entregamos las referencias de color para futuros repasos." },
   ]}
+  ctaTitle="¿Quieres renovar la pintura de tu vivienda?"
+  ctaText="Cuéntanos qué estancias quieres pintar y qué acabado te gustaría. Visita sin compromiso en A Coruña y área metropolitana, con muestras aplicadas y presupuesto por partidas."
+  whatsappText="Hola, quiero presupuesto para pintar mi vivienda en A Coruña"
   schemaName="Pintura y Acabados en A Coruña"
   schemaType="Painting"
 />

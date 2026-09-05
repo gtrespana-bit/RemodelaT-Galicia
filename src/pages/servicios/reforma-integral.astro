@@ -4,41 +4,189 @@ import ServicePage from '../../components/ServicePage.astro';
 
 <ServicePage
   slug="reforma-integral"
-  title="Reforma Integral de Vivienda"
+  title="Reforma Integral"
   titleGold="en A Coruña"
-  description="Reforma integral de vivienda en A Coruña: distribución, instalaciones, revestimientos, carpintería y acabados con presupuesto por partidas y garantía por escrito."
-  eyebrow="Servicios · Reformas"
-  lead="Transformación completa de tu vivienda con planificación técnica, coordinación de oficios y acabados de alto estándar."
+  seoTitle="Reforma Integral en A Coruña | Pisos y Casas | RemodelaT"
+  description="Reforma integral de pisos y casas en A Coruña: un único interlocutor, presupuesto por partidas, instalaciones nuevas, cronograma por fases y entrega con garantía."
+  eyebrow="Servicios · Reforma integral"
+  lead="Un único interlocutor que coordina todos los oficios, un presupuesto cerrado por partidas y una entrega documentada. Así se reforma una vivienda entera sin sobresaltos."
   image="/images/integrales-800.webp"
-  imageAlt="Reforma integral de vivienda en A Coruña"
-  badges={["Piso 80 m² desde 29.000 €", "Método técnico", "Garantía por escrito"]}
+  imageAlt="Salón de una vivienda tras una reforma integral en A Coruña, con cocina abierta y suelo continuo"
+  badges={["Un único interlocutor", "Presupuesto por partidas", "Garantía por escrito"]}
   watermark="INTEGRAL"
   crumb="Reforma Integral"
+  highlights={[
+    { value: "100 %", label: "Instalaciones probadas antes de cerrar" },
+    { value: "1", label: "Cronograma por fases, entregado antes de empezar" },
+    { value: "1", label: "Único interlocutor" },
+    { value: "10", label: "Etapas del método" },
+  ]}
+  introTitle="Reformar una vivienda entera es coordinar diez oficios sin que se noten las costuras"
   intro={[
-    "La reforma integral aborda la vivienda como un conjunto: distribución, instalaciones, revestimientos, carpintería y acabados. No es una suma de arreglos sueltos, sino un proyecto coordinado con un único responsable técnico.",
-    "Trabajamos con presupuesto por partidas y sin subcontratación: nuestro equipo se dimensiona según la cartera firmada y el responsable técnico supervisa la obra en persona."
+    "Una reforma integral es la intervención más ambiciosa que puede hacerse en una vivienda: se renuevan instalaciones, distribución, suelos, carpinterías, baños y cocina de una sola vez. Bien planteada, convierte un piso antiguo en una casa nueva sin cambiar de dirección y multiplica su valor de mercado. Mal planteada, se convierte en meses de retrasos, sobrecostes y discusiones entre gremios que se echan la culpa unos a otros.",
+    "En A Coruña el parque de viviendas es mayoritariamente anterior a 1990: edificios de Cuatro Caminos, Os Mallos, Agra do Orzán, la Ciudad Vieja o la zona de Riazor con instalaciones eléctricas sin toma de tierra, tuberías de plomo o hierro, tabiquería que fragmenta la luz y carpinterías exteriores que dejan pasar el frío y la humedad del Atlántico. En Oleiros, Culleredo, Cambre o Sada abundan casas y adosados de los 80 y 90 con distribuciones que ya no se corresponden con la forma de vivir actual.",
+    "Nuestra propuesta es sencilla de explicar y difícil de cumplir: <strong>un único interlocutor</strong> responsable de todo, un <strong>presupuesto por partidas</strong> que no cambia si no cambia el alcance, un <strong>cronograma con fases e hitos</strong>, y una <strong>entrega documentada con garantía</strong>. Es el <a href=\"/metodo-remodelat/\">Método RemodelaT</a>, aplicado a la escala de una vivienda completa.",
   ]}
+  introFigure={{
+    src: "/images/integrales-despues.webp",
+    alt: "Salón comedor luminoso tras una reforma integral, con cocina abierta, suelo de madera y grandes ventanales",
+    caption: "Concepto abierto: salón, comedor y cocina en un solo espacio tras eliminar la tabiquería original.",
+  }}
+  galleryTitle="Del plano a la entrega"
+  galleryText="Una reforma integral pasa por fases muy distintas. Estas imágenes resumen el recorrido: diseño, obra y resultado."
+  gallery={[
+    { src: "/images/integrales-plano-diseno.webp", alt: "Planos de distribución y muestras de materiales sobre una mesa de trabajo", caption: "Diseño y especificación de materiales" },
+    { src: "/images/integrales-instalaciones.webp", alt: "Instalaciones de fontanería y electricidad nuevas vistas antes de cerrar tabiques", caption: "Instalaciones nuevas antes de cerrar" },
+    { src: "/images/integrales-proyecto-completo.webp", alt: "Vivienda terminada tras reforma integral, con salón y cocina abierta en tonos claros", caption: "Vivienda entregada" },
+  ]}
+  topics={[
+    {
+      title: "Qué es exactamente una reforma integral",
+      paragraphs: [
+        "Hablamos de reforma integral cuando la intervención afecta a la práctica totalidad de la vivienda: se vacía hasta la estructura, se renuevan todas las instalaciones y se vuelve a construir el interior con una distribución nueva o mejorada. No es una suma de reformas parciales, sino un proyecto único con una secuencia de trabajos que solo funciona si alguien la controla de principio a fin.",
+        "Los tres pilares de una integral bien hecha son:",
+      ],
+      bullets: [
+        "<strong>Instalaciones nuevas al 100 %.</strong> Electricidad con cuadro, circuitos y toma de tierra según el REBT; fontanería en multicapa o PEX con llaves por estancia; saneamiento en PVC; calefacción y agua caliente dimensionadas; preinstalación de aire acondicionado si se desea.",
+        "<strong>Distribución pensada para hoy.</strong> Menos pasillos, cocina abierta o semiabierta, baños que ganan metros, dormitorio principal con baño y vestidor cuando el programa lo permite, y luz natural que llega más lejos.",
+        "<strong>Envolvente y confort.</strong> Carpinterías exteriores con rotura de puente térmico y doble acristalamiento, aislamiento en fachadas y techos donde es posible, y ventilación resuelta. En un clima como el coruñés, esto marca la diferencia en la factura energética y en la ausencia de humedades.",
+      ],
+      figure: {
+        src: "/images/integrales-demolicion.webp",
+        alt: "Vivienda en fase de demolición durante una reforma integral, con tabiques retirados y protección de suelos",
+        caption: "Demolición controlada: se protege lo que se conserva y se retira lo que no aporta.",
+      },
+    },
+    {
+      title: "Los tipos de reforma integral más habituales en A Coruña",
+      paragraphs: [
+        "Cada vivienda es distinta, pero la mayoría de los encargos que recibimos encajan en uno de estos escenarios:",
+      ],
+      bullets: [
+        "<strong>Modernizar un piso antiguo para vivir en él.</strong> El caso más frecuente: vivienda heredada o comprada en el centro con instalaciones obsoletas. Prioridad: instalaciones, aislamiento, baños y cocina, y una distribución más abierta.",
+        "<strong>Concepto abierto.</strong> Eliminar la tabiquería entre cocina, comedor y salón para ganar luz y amplitud. Requiere estudiar qué muros son de carga y cómo resolver extracción, iluminación y continuidad de suelos.",
+        "<strong>Vivienda para alquiler o venta.</strong> Reforma orientada a la rentabilidad: materiales resistentes y de mantenimiento fácil, distribución que maximiza dormitorios útiles y acabados neutros que agradan a la mayoría.",
+        "<strong>Adaptar la casa a una nueva etapa.</strong> Familias que crecen, hijos que se van, teletrabajo o necesidades de accesibilidad. La reforma redistribuye lo que hay para que la casa vuelva a encajar con la vida de quien la habita.",
+      ],
+      figure: {
+        src: "/images/integrales-albanileria.webp",
+        alt: "Trabajos de albañilería durante una reforma integral, con tabiquería nueva y regularización de paramentos",
+        caption: "Nueva tabiquería: la distribución se construye sobre instalaciones ya probadas.",
+      },
+      quote: "En una integral no hay partidas pequeñas: cada decisión condiciona a la siguiente. Por eso el orden lo es todo.",
+    },
+    {
+      title: "Un único interlocutor: la diferencia entre coordinar y sufrir",
+      paragraphs: [
+        "El principal motivo de que una reforma integral se descontrole no es técnico, es organizativo. Cuando el propietario contrata por separado al albañil, al fontanero, al electricista, al carpintero y al pintor, se convierte sin quererlo en jefe de obra: decide el orden, resuelve las interferencias y asume cada retraso.",
+        "En RemodelaT asumimos esa responsabilidad completa. Tienes <strong>una sola persona de referencia</strong> que conoce el proyecto de principio a fin, coordina a todos los oficios, controla que cada fase se termine antes de empezar la siguiente y te informa de forma regular con fotografías y avances. Tú tomas las decisiones que importan (materiales, acabados, cambios de alcance); nosotros nos ocupamos de todo lo demás.",
+      ],
+      bullets: [
+        "Cronograma con fases e hitos entregado antes de empezar la obra.",
+        "Informe de avance con fotografías cada semana, o cuando hay algo relevante que decidir.",
+        "Cualquier cambio de alcance se valora y se aprueba por escrito antes de ejecutarse.",
+        "Pruebas de cada instalación antes de cerrar tabiques y falsos techos, documentadas.",
+      ],
+      figure: {
+        src: "/images/integrales-equipo-trabajando.webp",
+        alt: "Equipo de reforma trabajando de forma coordinada en una vivienda en obras",
+        caption: "Varios oficios a la vez, una sola dirección: ese es el trabajo del interlocutor único.",
+      },
+    },
+    {
+      title: "Permisos, comunidad y normativa: lo que hay que resolver antes de empezar",
+      paragraphs: [
+        "Una reforma integral casi siempre requiere trámites. Te orientamos desde el principio para que no haya sorpresas, y siempre recomendamos confirmar el caso concreto con el ayuntamiento y, cuando hace falta, con un técnico.",
+      ],
+      bullets: [
+        "<strong>Licencia de obra menor o comunicación previa</strong> cuando no se tocan elementos estructurales ni fachada: la mayoría de las integrales en pisos.",
+        "<strong>Licencia de obra mayor con proyecto técnico</strong> si se modifica estructura (abrir muros de carga), se cambia la fachada, se unen o dividen viviendas o se actúa en un edificio protegido, como ocurre en parte de la Ciudad Vieja y la Pescadería.",
+        "<strong>Comunicación a la comunidad de propietarios</strong>: horario de obra, uso del ascensor y protección de zonas comunes. Un vecino informado es un vecino tranquilo.",
+        "<strong>Gestión de residuos</strong> con contenedor autorizado y certificado de gestión cuando el ayuntamiento lo exige.",
+        "<strong>Boletines de las instalaciones</strong>: al renovar la electricidad, el instalador autorizado emite el certificado (CIE) que exigirá la compañía para actualizar la potencia.",
+      ],
+      figure: {
+        src: "/images/integrales-acabados.webp",
+        alt: "Detalle de acabados de una reforma integral: carpintería lacada, suelo de madera y pintura lisa",
+        caption: "Acabados: la fase final donde se juzga todo el trabajo anterior.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye una reforma integral"
+  includesIntro="Cada integral se define partida a partida en el presupuesto. Como referencia, una reforma integral completa suele incluir:"
   includes={[
-    "Redistribución de espacios (tabiquería, apertura de zonas, nuevos usos).",
-    "Instalaciones completas: fontanería, electricidad e iluminación.",
-    "Revestimientos: suelos, paredes y acabados (porcelánico, microcemento, parquet…).",
-    "Carpintería interior y exterior, puertas y armarios.",
-    "Cocina y baños con acabados de calidad.",
-    "Pruebas antes de cerrar y entrega documentada con garantía por partidas."
+    "<strong>Proyecto y diseño</strong>: levantamiento de planos, propuesta de distribución, especificación de materiales y, cuando hace falta, coordinación con arquitecto o aparejador.",
+    "<strong>Gestión de permisos</strong> y comunicación con la comunidad de propietarios.",
+    "<strong>Demolición</strong> completa de tabiquería, revestimientos, instalaciones y carpinterías, con protección de zonas comunes y gestión de residuos.",
+    "<strong>Instalación eléctrica nueva</strong> con cuadro, circuitos independientes, toma de tierra y certificado de instalador autorizado.",
+    "<strong>Fontanería y saneamiento nuevos</strong> en multicapa/PEX y PVC, con llaves de corte por estancia y pruebas de presión.",
+    "<strong>Tabiquería nueva</strong> en ladrillo o placa de yeso laminado con aislamiento acústico, falsos techos y enlucidos.",
+    "<strong>Baños y cocina</strong> completos: impermeabilización, revestimientos, sanitarios, mobiliario y encimera.",
+    "<strong>Carpintería interior</strong> (puertas, armarios, rodapiés) y <strong>exterior</strong> (ventanas con rotura de puente térmico) según alcance.",
+    "<strong>Suelos, pintura y acabados</strong>, limpieza final de obra y entrega documentada con garantía por partidas.",
   ]}
-  priceTitle="Precios orientativos (sin IVA)"
-  priceIntro="Bandas de referencia de mercado 2026. El presupuesto final sale de la visita técnica y las mediciones reales."
-  priceRows={[
-    ["Reforma integral · piso ~80 m²", "29.000 – 32.000 €"],
-    ["Obra grande · piso ~100 m² (suelo + 2 baños + cocina + puertas)", "36.000 – 39.000 €"]
+  processTitle="Las fases de una reforma integral"
+  processIntro="La duración depende de los metros, del alcance y de los plazos de suministro (ventanas, cocina, puertas). Por eso no damos un plazo genérico: tras la visita y el diseño entregamos un cronograma por fases con fechas, y lo cumplimos. Este es el recorrido:"
+  phases={[
+    { title: "Diagnóstico y levantamiento", duration: "Fase 1", text: "Visita técnica en profundidad: estado de instalaciones, muros de carga, humedades, carpinterías, altura libre. Levantamiento de planos del estado actual." },
+    { title: "Diseño, especificación y presupuesto", duration: "Fase 2", text: "Propuesta de distribución, selección de materiales con referencias concretas y presupuesto por partidas. Cronograma con hitos y fechas. Nada empieza sin tu aprobación por escrito." },
+    { title: "Permisos y preparación", duration: "Fase 3", text: "Tramitación de comunicación previa o licencia, aviso a la comunidad, pedido de materiales con plazo largo (ventanas, mobiliario de cocina, puertas) para que la obra no se detenga." },
+    { title: "Demolición", duration: "Fase 4", text: "Protección de portal, ascensor y escalera. Demolición controlada, retirada de instalaciones antiguas y escombros a contenedor autorizado." },
+    { title: "Instalaciones", duration: "Fase 5", text: "Saneamiento, fontanería, electricidad, calefacción y preinstalaciones. Prueba de presión y de continuidad documentadas antes de cerrar una sola roza." },
+    { title: "Albañilería y tabiquería", duration: "Fase 6", text: "Nueva distribución, falsos techos, impermeabilización de baños con prueba de estanqueidad, recrecidos y nivelación de suelos." },
+    { title: "Revestimientos y carpinterías", duration: "Fase 7", text: "Alicatados, solados, ventanas, puertas, armarios y mobiliario de cocina. Encimeras y sanitarios." },
+    { title: "Acabados, pintura y entrega", duration: "Fase 8", text: "Pintura, mecanismos, iluminación, remates. Revisión contigo punto por punto, limpieza final y entrega documentada con garantía por escrito." },
   ]}
-  priceNote="* Orientativos, sin IVA (10 % o 21 % según tipo de obra). Se confirman con visita técnica y mediciones reales."
+  priceTitle="Cuánto cuesta una reforma integral en A Coruña"
+  priceIntro="En una reforma integral cada vivienda es un proyecto distinto, y un precio por metro cuadrado o un 'desde' solo sirve para llevarse sorpresas después. Lo que te ofrecemos es un presupuesto cerrado y por partidas, elaborado sobre planos y mediciones reales, que puedas comparar partida a partida."
+  priceFactors={[
+    "<strong>Superficie y estado de partida.</strong> No es lo mismo actualizar un piso de los 90 que vaciar uno de los 60 con tuberías de plomo e instalación sin tierra.",
+    "<strong>Alcance.</strong> Qué se renueva y qué se conserva: instalaciones, distribución, carpintería exterior, suelos, baños, cocina.",
+    "<strong>Número de baños y tamaño de la cocina.</strong> Son las estancias con mayor coste por metro cuadrado.",
+    "<strong>Cambios estructurales.</strong> Abrir muros de carga exige proyecto, dirección de obra y refuerzos metálicos.",
+    "<strong>Carpintería exterior y aislamiento.</strong> Ventanas con rotura de puente térmico y aislamiento son partidas importantes que se amortizan en confort y energía.",
+    "<strong>Gama de materiales.</strong> Suelos, puertas, mobiliario de cocina, sanitarios y grifería marcan la diferencia entre calidades medias y altas.",
+  ]}
+  priceMethod={[
+    "<strong>Visita técnica sin compromiso</strong> con levantamiento del estado actual.",
+    "<strong>Diseño y presupuesto por partidas</strong> con mediciones, materiales especificados y precios unitarios, e IVA desglosado (10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto).",
+    "<strong>Cronograma por fases con fechas</strong>, entregado junto con el presupuesto.",
+    "<strong>Precio cerrado.</strong> Solo cambia si cambia el alcance; cualquier imprevisto se documenta, se valora y se aprueba por escrito antes de ejecutarse.",
+  ]}
+  problemsTitle="Lo que suele salir mal en una reforma integral (y cómo lo evitamos)"
+  problemsIntro="Los problemas de las integrales casi nunca son de materiales: son de planificación, de orden y de comunicación."
+  problems={[
+    { title: "Presupuesto que crece cada semana", problem: "Presupuestos por metro cuadrado o 'a ojo' que no definen materiales ni cantidades. Cada imprevisto se convierte en un extra.", solution: "Presupuesto por partidas con mediciones, materiales especificados y precios unitarios. Solo cambia si cambia el alcance, y siempre por escrito." },
+    { title: "Oficios que se pisan", problem: "El pintor llega antes que el electricista, el carpintero mide sin que el suelo esté puesto, y nadie sabe quién arregla el desperfecto.", solution: "Cronograma por fases con un único responsable que decide el orden y controla que cada fase esté cerrada antes de abrir la siguiente." },
+    { title: "Instalaciones cerradas sin probar", problem: "Se tabica y se alicata sin comprobar presión ni continuidad. La fuga aparece cuando el baño está terminado.", solution: "Prueba de presión de fontanería, prueba de continuidad eléctrica y prueba de estanqueidad de baños, todas documentadas antes de cerrar." },
+    { title: "Problemas con la comunidad", problem: "Escombros en el portal, ascensor dañado, ruido fuera de horario. Quejas que acaban en burofax y paralizaciones.", solution: "Aviso previo a la comunidad, protección de zonas comunes, horarios respetados y limpieza diaria de portal y escalera." },
+    { title: "Muros de carga descubiertos tarde", problem: "El diseño contempla abrir un muro que resulta ser estructural. Rediseño, proyecto y semanas de retraso.", solution: "Identificación de muros de carga en la visita técnica y, en caso de duda, cata o consulta con técnico antes de cerrar el diseño." },
+    { title: "Entrega sin documentación", problem: "La obra termina y no hay planos de las nuevas instalaciones, ni boletín eléctrico, ni garantías.", solution: "Entrega documentada: planos de instalaciones, certificado de instalador, garantías de fabricantes y nuestra garantía por partidas." },
+  ]}
+  relatedProjects={[
+    { slug: "cocina-reubicada-zona-dia", title: "Cocina reubicada en la zona de día", image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp", tag: "Redistribución" },
+    { slug: "bano-principal-y-aseo-adaptado", title: "Baño principal y aseo adaptado", image: "/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp", tag: "Dos baños" },
+    { slug: "bano-de-lujo-doble-ambiente", title: "Baño de lujo en dos ambientes", image: "/images/proyectos/bano-de-lujo-doble-ambiente/bano-zona-1-completado-2.webp", tag: "Alto estándar" },
+  ]}
+  relatedGuides={[
+    { title: "Cuánto cuesta reformar un piso en A Coruña", url: "/blog/cuanto-cuesta-reformar-piso-a-coruna/" },
+    { title: "Licencias y permisos para reformar en A Coruña", url: "/blog/licencias-y-permisos-reforma-a-coruna/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Qué incluye una reforma integral?", answer: "Distribución, instalaciones, revestimientos, carpintería y acabados. Definimos el alcance por escrito antes de empezar, para que sepas exactamente qué incluye cada partida." },
-    { question: "¿Cuánto tarda una reforma integral?", answer: "Depende del metraje y del alcance. Tras la visita técnica entregamos un cronograma por fases con plazos realistas." },
-    { question: "¿Dais el precio sin visita?", answer: "No. Para dar un presupuesto real necesitamos mediciones y diagnóstico. Las bandas de esta página son orientativas." },
-    { question: "¿Trabajáis en toda el área metropolitana?", answer: "Sí, en A Coruña ciudad y los municipios de su área metropolitana: Arteixo, Oleiros, Culleredo, Cambre, Sada, Bergondo, Betanzos, Carral y Abegondo." }
+    { question: "¿Cuánto cuesta una reforma integral en A Coruña?", answer: "Depende de la superficie, del estado de partida, del alcance (qué se renueva y qué se conserva), del número de baños, de si hay cambios estructurales y de la gama de materiales. Por eso no publicamos un precio por metro cuadrado ni un 'desde'. Tras la visita técnica y el diseño te entregamos un presupuesto cerrado por partidas, con mediciones y materiales especificados." },
+    { question: "¿Cuánto dura una reforma integral?", answer: "Depende de los metros, del alcance y de los plazos de suministro de elementos como ventanas, cocina o puertas. Tras la visita y el diseño entregamos un cronograma por fases con fechas, y lo cumplimos: cada fase se cierra y se comprueba antes de abrir la siguiente." },
+    { question: "¿Puedo vivir en la casa durante la obra?", answer: "En una reforma integral no lo recomendamos: se corta el agua y la luz por fases, hay polvo y ruido, y la obra avanza más despacio si hay que mantener habitable una parte. Si no hay alternativa, organizamos la obra por zonas, pero el plazo se alarga." },
+    { question: "¿Necesito arquitecto?", answer: "Si la reforma no toca estructura ni fachada, normalmente basta con una comunicación previa o licencia de obra menor y no hace falta proyecto de arquitecto. Si se abren muros de carga, se modifica la fachada o el edificio está protegido, es obligatorio proyecto técnico y dirección de obra. Te lo indicamos en la visita y coordinamos con el técnico si hace falta." },
+    { question: "¿Qué pasa si aparecen imprevistos?", answer: "En viviendas antiguas pueden aparecer: una bajante en mal estado, un forjado que hay que reforzar. Cuando ocurre, lo documentamos con fotografías, te presentamos la solución con su coste y solo se ejecuta con tu aprobación por escrito. Nunca un extra sin explicación previa." },
+    { question: "¿Cómo se paga una reforma integral?", answer: "Por hitos, vinculados al avance real de la obra: una cantidad a la firma para acopio de materiales y el resto en pagos asociados a fases terminadas. Nunca se paga por adelantado más de lo que la obra justifica." },
+    { question: "¿Trabajáis en toda el área metropolitana?", answer: "Sí: A Coruña ciudad y los municipios de Oleiros, Culleredo, Cambre, Arteixo, Sada, Bergondo, Betanzos, Carral y Abegondo. Si estás fuera de esa zona, consúltanos." },
+    { question: "¿Qué garantía tiene la obra?", answer: "Entregamos una garantía por escrito, detallada por partidas, junto con las garantías de fabricante de materiales y equipos y los certificados de las instalaciones. Además, la Ley de Ordenación de la Edificación establece plazos legales de garantía para acabados, instalaciones y estructura." },
   ]}
-  schemaName="Reforma Integral de Vivienda en A Coruña"
-  schemaType="Home Remodeling"
+  zoneService="integral"
+  ctaTitle="¿Pensando en una reforma integral?"
+  ctaText="Cuéntanos cómo es tu vivienda y qué quieres conseguir. Visita técnica sin compromiso en A Coruña y área metropolitana, y una propuesta clara con presupuesto por partidas."
+  whatsappText="Hola, quiero información sobre una reforma integral en A Coruña"
+  schemaName="Reforma Integral en A Coruña"
+  schemaType="Home Renovation"
 />

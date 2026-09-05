@@ -6,37 +6,212 @@ import ServicePage from '../../components/ServicePage.astro';
   slug="reforma-cocina"
   title="Reforma de Cocina"
   titleGold="en A Coruña"
-  description="Reforma de cocina en A Coruña: desmontaje, instalaciones, revestimiento, mobiliario a medida, encimera y electrodomésticos. Desde 5.000 € (sin IVA)."
+  seoTitle="Reforma de Cocina en A Coruña | Precios 2026 | RemodelaT"
+  description="Reforma de cocina en A Coruña: distribución eficiente, instalaciones nuevas, encimeras de cuarzo o porcelánico y luz por capas. Presupuesto por partidas."
   eyebrow="Servicios · Cocinas"
-  lead="Cocinas a medida con mobiliario, encimeras, iluminación técnica y materiales de alta durabilidad."
+  lead="Cocinas pensadas para cocinar de verdad: triángulo de trabajo, instalaciones nuevas, materiales que aguantan el uso diario y una ejecución que cumple plazos."
   image="/images/cocina-800.webp"
-  imageAlt="Reforma de cocina a medida en A Coruña"
-  badges={["Desde 5.000 €", "Mobiliario a medida", "Garantía por escrito"]}
+  imageAlt="Reforma de cocina en A Coruña con isla central, frentes lacados y encimera de cuarzo"
+  badges={["Obra en 5–8 días", "Cocina abierta al salón", "Garantía por escrito"]}
   watermark="COCINAS"
   crumb="Reforma de Cocina"
+  highlights={[
+    { value: "5–8", label: "Días de obra en una cocina estándar" },
+    { value: "1", label: "Único interlocutor para todos los oficios" },
+    { value: "4", label: "Capas de iluminación" },
+    { value: "3", label: "Distribuciones más eficientes" },
+  ]}
+  introTitle="La cocina es la estancia que más se usa y peor suele estar resuelta"
   intro={[
-    "La cocina es la zona de la vivienda con mayor exigencia técnica: agua, electricidad, ventilación, nivelación y materiales que soporten el uso diario.",
-    "Reformamos la cocina completa —del desmontaje al mobiliario terminado— coordinando instalaciones y acabados para que el resultado dure y sea cómodo de mantener."
+    "La cocina es el corazón de la casa. Es donde empieza el día, donde se reúne la familia y, cada vez más, donde se recibe a los amigos. Pero también es la estancia con más instalaciones por metro cuadrado: agua, desagües, gas o inducción, extracción, iluminación y una decena de electrodomésticos que exigen potencia y tomas bien situadas.",
+    "En A Coruña nos encontramos a diario con cocinas de pisos de los años 70 a 90 en el centro, Riazor, Os Castros o Elviña: estrechas, cerradas, con azulejo hasta el techo, campana insuficiente y una única línea de muebles que obliga a dar diez pasos entre la nevera y los fogones. En los chalets y adosados de Oleiros, Culleredo o Cambre el problema suele ser el contrario: metros de sobra mal aprovechados y una isla que nadie usa porque no cabe alrededor.",
+    "Una reforma de cocina bien planteada no consiste en cambiar los muebles. Consiste en <strong>replantear cómo cocinas</strong>: distribución, recorridos, almacenamiento, luz y ventilación; renovar las instalaciones que quedarán ocultas detrás del mobiliario, y elegir materiales que resistan calor, agua y golpes. Todo ello con <a href=\"/metodo-remodelat/\">presupuesto por partidas y garantía por escrito</a>.",
   ]}
+  introFigure={{
+    src: "/images/cocina-terminada-final.webp",
+    alt: "Cocina reformada con isla central, frentes sin tiradores en tono claro y encimera de cuarzo",
+    caption: "Cocina abierta con isla: la configuración más solicitada cuando se une la cocina al salón.",
+  }}
+  galleryTitle="Cocinas que inspiran"
+  galleryText="Distribuciones y acabados que usamos como referencia. La cocina definitiva se diseña sobre plano, con las medidas exactas de tu vivienda y tu forma de cocinar."
+  gallery={[
+    { src: "/images/cocina-isla-central.webp", alt: "Cocina abierta al salón con isla central, taburetes y campana decorativa", caption: "Isla central con zona de desayuno" },
+    { src: "/images/cocina-distribucion-L.webp", alt: "Cocina en L con frentes en madera clara y encimera blanca", caption: "Distribución en L, muy eficiente" },
+    { src: "/images/cocina-encimera-cuarzo.webp", alt: "Detalle de encimera de cuarzo blanco veteado con fregadero bajo encimera", caption: "Encimera de cuarzo con fregadero bajo encimera" },
+  ]}
+  topics={[
+    {
+      title: "El triángulo de trabajo: por qué unas cocinas funcionan y otras no",
+      paragraphs: [
+        "Toda cocina eficiente se organiza alrededor de tres puntos: <strong>frigorífico</strong> (almacenar), <strong>fregadero</strong> (preparar y limpiar) y <strong>placa</strong> (cocinar). Los recorridos entre ellos forman el llamado triángulo de trabajo, y su geometría determina si cocinar es cómodo o agotador.",
+        "La regla es sencilla: cada lado del triángulo debe medir entre 1,2 y 2,7 metros, y la suma de los tres entre 4 y 8 metros. Menos, y no hay espacio para trabajar; más, y pasas el día caminando. Además, ningún elemento de paso (puerta, isla, mesa) debe cortar esos recorridos.",
+        "Junto al triángulo, dimensionamos las <strong>zonas de apoyo</strong>: al menos 40 cm de encimera libre a cada lado de la placa, 60 cm junto al fregadero y una superficie de descarga al lado del frigorífico y del horno. Son detalles que no aparecen en un catálogo, pero que se notan cada día.",
+      ],
+      figure: {
+        src: "/images/cocina-triangulo-trabajo.webp",
+        alt: "Esquema del triángulo de trabajo en cocina entre frigorífico, fregadero y placa de cocción",
+        caption: "El triángulo frigorífico – fregadero – placa: entre 1,2 y 2,7 m por lado.",
+      },
+    },
+    {
+      title: "Qué distribución le conviene a tu cocina",
+      paragraphs: [
+        "No existe una distribución perfecta, sino la que mejor encaja con la forma de la estancia, el número de personas que cocinan a la vez y la relación con el salón. Estas son las cuatro que más usamos en A Coruña:",
+      ],
+      bullets: [
+        "<strong>En L.</strong> Dos paredes contiguas. Muy eficiente en cocinas de 8 a 12 m², deja libre una esquina para la mesa y permite un triángulo compacto sin interferencias.",
+        "<strong>En U.</strong> Tres paredes de mobiliario. Máxima superficie de encimera y almacenamiento; ideal para quien cocina mucho. Requiere al menos 1,2 m libres entre frentes enfrentados.",
+        "<strong>Con isla.</strong> La estrella de las cocinas abiertas. Necesita una estancia de al menos 3 × 3 m para dejar 90–100 cm de paso alrededor. Puede alojar placa, fregadero o simplemente zona de preparación y desayuno.",
+        "<strong>Lineal o en paralelo.</strong> Para cocinas estrechas o pasillo. Bien diseñada, con columnas de horno y frigorífico en un extremo, es sorprendentemente funcional.",
+      ],
+      figure: {
+        src: "/images/cocina-distribucion-U.webp",
+        alt: "Cocina en U con frentes oscuros, encimera clara y ventana sobre el fregadero",
+        caption: "Distribución en U: la que más metros de encimera y almacenamiento ofrece.",
+      },
+      quote: "Una cocina abierta no es tirar un tabique. Es diseñar dos estancias que ahora se ven la una a la otra.",
+    },
+    {
+      title: "Encimeras: cuarzo, porcelánico o granito",
+      paragraphs: [
+        "La encimera es la superficie que más trabaja de toda la casa: cortes, calor, agua, ácidos y golpes. Elegirla bien evita disgustos y define buena parte del presupuesto. Nuestras tres recomendaciones habituales:",
+      ],
+      bullets: [
+        "<strong>Cuarzo compacto</strong> (Silestone, Compac y similares). No poroso, muy resistente a manchas y arañazos, enorme variedad de colores. Evitar apoyar ollas muy calientes directamente. La opción más equilibrada en precio y prestaciones.",
+        "<strong>Porcelánico de gran formato</strong> (Dekton, Neolith). Soporta el calor directo, los rayos UV y prácticamente cualquier producto de limpieza. Permite espesores de 12 mm con aspecto ultrafino y continuar el mismo material en el frente.",
+        "<strong>Granito natural.</strong> Piedra real, cada pieza única, resistente al calor. Requiere sellado periódico para evitar manchas de aceite o vino.",
+      ],
+      figure: {
+        src: "/images/cocina-muebles-detalle.webp",
+        alt: "Detalle de mobiliario de cocina con frentes en madera, cajones abiertos y encimera de cuarzo",
+        caption: "Frentes sin tiradores con apertura push y cajones de extracción total.",
+      },
+    },
+    {
+      title: "Almacenamiento inteligente: cada cosa en su sitio",
+      paragraphs: [
+        "El almacenamiento es lo que diferencia una cocina bonita de una cocina que funciona. Un buen diseño permite guardar más en los mismos metros y, sobre todo, que todo esté a mano donde se usa: las ollas junto a la placa, los platos entre el lavavajillas y la mesa, la despensa junto al frigorífico.",
+      ],
+      bullets: [
+        "<strong>Cajones de extracción total</strong> en lugar de puertas con baldas en los muebles bajos: ves todo el contenido sin agacharte.",
+        "<strong>Columnas despensa</strong> extraíbles o con puertas y bandejas interiores: hasta cinco veces más capacidad que un armario convencional.",
+        "<strong>Herrajes de esquina</strong> (rincón mágico, bandejas giratorias) para aprovechar los muebles de rincón de las cocinas en L y en U.",
+        "<strong>Muebles altos hasta el techo</strong>: la balda superior guarda lo que se usa dos veces al año y elimina el rellano que acumula grasa.",
+        "<strong>Freno y cierre suave</strong> en todos los cajones y puertas: silencio, durabilidad y una sensación de calidad que se nota cada día.",
+      ],
+      figure: {
+        src: "/images/cocina-almacenamiento-inteligente.webp",
+        alt: "Cajones de cocina de extracción total con organizadores interiores para cubiertos y utensilios",
+        caption: "Cajones de extracción total con organizadores: todo visible, todo a mano.",
+      },
+    },
+    {
+      title: "Iluminación en cuatro capas",
+      paragraphs: [
+        "Una cocina con un solo plafón en el techo obliga a cocinar con la propia sombra encima de la tabla. Diseñamos la luz en cuatro capas independientes para que cada tarea tenga la iluminación que necesita y la cocina cambie de carácter entre el desayuno y la cena:",
+      ],
+      bullets: [
+        "<strong>General.</strong> Downlights LED empotrados o luminaria de superficie repartida en toda la estancia (300 lux), en temperatura neutra (3.500–4.000 K).",
+        "<strong>De tarea.</strong> Tira LED bajo los muebles altos, con perfil de aluminio y difusor, para iluminar la encimera sin sombras (500 lux sobre la zona de trabajo).",
+        "<strong>Ambiental.</strong> Luz cálida (2.700–3.000 K) en isla, zócalos o interior de vitrinas, con regulador de intensidad.",
+        "<strong>Decorativa.</strong> Colgantes sobre isla o mesa que aportan carácter y marcan la zona de estar cuando la cocina se abre al salón.",
+      ],
+      figure: {
+        src: "/images/cocina-iluminacion-capas.webp",
+        alt: "Cocina con iluminación en capas: tira LED bajo muebles altos, colgantes sobre la isla y luz general empotrada",
+        caption: "Luz de tarea bajo los altos, colgantes sobre la isla y general regulable.",
+      },
+    },
+    {
+      title: "Electrodomésticos integrables y extracción eficaz",
+      paragraphs: [
+        "Los electrodomésticos condicionan la distribución y las instalaciones, por eso los definimos al principio del proyecto, no al final. Recomendamos <strong>placa de inducción</strong> (más segura, rápida y limpia que el gas), horno y microondas en columna a la altura de los ojos, lavavajillas junto al fregadero y frigorífico integrable si la estética es prioritaria.",
+        "La extracción es el gran olvidado. Una <strong>campana bien dimensionada</strong> (mínimo 10 renovaciones por hora del volumen de la cocina) con salida al exterior evita que grasa y olores se instalen en el salón cuando la cocina se abre. Cuando no hay salida posible, planteamos campanas de recirculación con filtro de carbón o placas con extractor integrado.",
+        "Trabajamos con Bosch, Siemens, Balay, TEKA y AEG entre otras marcas, y dimensionamos la instalación eléctrica para la potencia real de cada aparato: circuito independiente para horno e inducción, tomas específicas para lavavajillas y frigorífico, y protección diferencial dedicada.",
+      ],
+      figure: {
+        src: "/images/cocina-electrodomesticos.webp",
+        alt: "Columna de electrodomésticos integrados con horno y microondas a la altura de los ojos junto a frigorífico panelado",
+        caption: "Horno y microondas en columna, frigorífico panelado: una línea continua.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye una reforma de cocina completa"
+  includesIntro="Antes de empezar, el alcance queda definido por escrito, partida a partida. Estas son las habituales en una cocina completa:"
   includes={[
-    "Desmontaje y retirada de la cocina existente.",
-    "Instalaciones: fontanería, electricidad e iluminación de la zona.",
-    "Revestimiento de suelo y paredes.",
-    "Mobiliario a medida y herrajes duraderos.",
-    "Encimera (cuarzo, gran formato, etc.) según uso.",
-    "Electrodomésticos (según alcance pactado)."
+    "<strong>Diseño sobre plano</strong> con distribución, alzados y selección de materiales y electrodomésticos.",
+    "<strong>Demolición</strong> de mobiliario, revestimientos y, si procede, tabique con el salón; retirada a contenedor autorizado.",
+    "<strong>Fontanería nueva</strong> para fregadero, lavavajillas y frigorífico con dispensador, con llaves de corte independientes.",
+    "<strong>Instalación eléctrica</strong> renovada: circuitos independientes para horno e inducción, tomas de encimera con USB, iluminación en capas.",
+    "<strong>Extracción</strong> con conducto al exterior o sistema de recirculación dimensionado.",
+    "<strong>Revestimientos</strong>: solado porcelánico o continuidad con el salón, frente entre encimera y altos, pintura de paredes y techo.",
+    "<strong>Mobiliario a medida</strong> con cajones de extracción total, herrajes con freno y columnas para electrodomésticos.",
+    "<strong>Encimera</strong> de cuarzo, porcelánico o granito con fregadero bajo encimera y grifería extraíble.",
+    "<strong>Montaje y conexión</strong> de electrodomésticos, pruebas de funcionamiento, limpieza final y entrega con garantía.",
   ]}
-  priceTitle="Precios orientativos (sin IVA)"
-  priceIntro="Bandas de referencia de mercado 2026. El presupuesto final depende del metraje, los materiales y el alcance."
-  priceRows={[
-    ["Reforma de cocina (según alcance)", "5.000 – 6.000 €"]
+  processTitle="Cómo reformamos tu cocina, paso a paso"
+  processIntro="El Método RemodelaT aplicado a una cocina estándar. La obra en sí dura 5–8 días laborables; lo que marca el calendario es el plazo de fabricación del mobiliario y la encimera, que coordinamos para que lleguen justo cuando la cocina está lista."
+  phases={[
+    { title: "Visita técnica y toma de datos", duration: "Antes de la obra", text: "Medimos la estancia, localizamos bajantes, ventilaciones y cuadro eléctrico, y hablamos de cómo cocinas: cuántas personas, con qué frecuencia, qué te falta hoy." },
+    { title: "Diseño y presupuesto por partidas", duration: "3–5 días", text: "Plano de distribución, alzados de mobiliario, selección de encimera, frentes y electrodomésticos. Presupuesto cerrado por partidas con IVA desglosado." },
+    { title: "Pedido de mobiliario y encimera", duration: "Según fabricante", text: "Los muebles a medida y la encimera tienen plazo de fabricación. Fijamos el inicio de la obra en función de ese plazo para que no haya días muertos con la cocina desmontada." },
+    { title: "Demolición e instalaciones", duration: "Día 1–2", text: "Protección de la vivienda y zonas comunes, desmontaje y demolición, retirada de escombros, nueva fontanería, electricidad y extracción. Pruebas de presión y continuidad antes de cerrar." },
+    { title: "Revestimientos", duration: "Día 2–4", text: "Solado, alicatado o frente porcelánico, enlucidos y pintura. Nivelación comprobada: sobre un suelo desnivelado no hay mueble que quede bien." },
+    { title: "Montaje de mobiliario y encimera", duration: "Día 5–7", text: "Montaje de muebles, plantilla y colocación de la encimera, fregadero y grifería. Conexión y prueba de cada electrodoméstico." },
+    { title: "Remates y entrega", duration: "Día 7–8", text: "Zócalos, siliconados, regulación de puertas y cajones, limpieza final y entrega documentada con garantías de fabricante y nuestra garantía por partidas." },
   ]}
-  priceNote="* Orientativos, sin IVA. Se confirman con visita técnica y mediciones reales."
+  priceTitle="Cuánto cuesta reformar una cocina en A Coruña"
+  priceIntro="No publicamos un precio 'desde' porque en una cocina la horquilla es enorme: cambiar mobiliario y encimera manteniendo instalaciones y suelo no tiene nada que ver con una cocina abierta al salón con instalaciones nuevas y electrodomésticos integrables. Lo que sí te garantizamos es un presupuesto cerrado por partidas, con cada elemento especificado."
+  priceFactors={[
+    "<strong>Alcance.</strong> Renovar mobiliario y encimera; reformar la cocina completa; o abrirla al salón con demolición de tabique y remates de suelo y techo.",
+    "<strong>Metros y distribución.</strong> Una cocina lineal de 6 m² frente a una en U o con isla de 15 m²: más metros de mueble, encimera y revestimiento.",
+    "<strong>Instalaciones.</strong> Si fontanería, electricidad y extracción están en buen estado se aprovechan; si hay que renovarlas o mover tomas, suma.",
+    "<strong>Mobiliario.</strong> La partida más variable: frentes laminados, lacados o de madera; herrajes de serie o premium; muebles hasta el techo; columnas y despensas.",
+    "<strong>Encimera.</strong> Laminado, cuarzo, porcelánico o granito; espesor, número de piezas y si el frente va en el mismo material.",
+    "<strong>Electrodomésticos.</strong> Gama, integrables o de libre instalación, suministrados por nosotros o aportados por ti (lo que también cambia el IVA).",
+    "<strong>Revestimientos.</strong> Mantener el suelo o cambiarlo; frente alicatado o porcelánico de gran formato.",
+  ]}
+  priceMethod={[
+    "<strong>Visita técnica sin compromiso</strong>: medimos, revisamos instalaciones y hablamos de cómo usas la cocina.",
+    "<strong>Diseño sobre plano y presupuesto por partidas en 3–5 días</strong>, con mobiliario, encimera y electrodomésticos identificados por marca y referencia, e IVA desglosado.",
+    "<strong>Alternativas de gama</strong> en las partidas que más pesan (mobiliario, encimera, electrodomésticos) para que decidas con datos.",
+    "<strong>Precio cerrado.</strong> Solo cambia si cambia el alcance, y siempre por escrito antes de ejecutar.",
+  ]}
+  priceNote="Si quieres una primera orientación antes de la visita, envíanos por WhatsApp unas fotos y las medidas aproximadas de la cocina."
+  problemsTitle="Los errores más comunes en reformas de cocina"
+  problemsIntro="Errores que vemos repetirse en cocinas mal planteadas y cómo los evitamos desde la fase de diseño."
+  problems={[
+    { title: "Elegir los muebles antes que la distribución", problem: "Se compra la cocina en una exposición y luego se intenta encajar. El resultado: tomas que no coinciden, campana descentrada y triángulo imposible.", solution: "Primero distribución sobre plano con medidas reales, después instalaciones y por último el mobiliario que encaja en ese diseño." },
+    { title: "Instalaciones antiguas detrás de muebles nuevos", problem: "Se cambia todo lo visible y se dejan tuberías de hierro y cables de 1,5 mm² detrás. La primera fuga o el primer salto del diferencial llegan con la cocina recién estrenada.", solution: "Renovamos fontanería y electricidad de la estancia siempre que la cocina se desmonta. Es el momento más barato de hacerlo." },
+    { title: "Campana insuficiente o sin salida", problem: "Cocina abierta al salón con una campana de 300 m³/h en recirculación. Olor a fritura en el sofá durante días.", solution: "Cálculo del caudal necesario, conducto al exterior siempre que sea posible y motor perimetral o placa con extractor integrado cuando no lo es." },
+    { title: "Un solo punto de luz", problem: "Plafón central que deja la encimera en sombra justo donde se corta y se cocina.", solution: "Cuatro capas de luz: general, de tarea bajo los altos, ambiental regulable y decorativa." },
+    { title: "Isla donde no cabe", problem: "Isla de 1,2 m de ancho en una cocina de 2,8 m: no se puede abrir el lavavajillas y la isla, en vez de sumar, estorba.", solution: "Isla solo con 90–100 cm de paso libre alrededor. Si no cabe, península o barra: mismas ventajas, menos metros." },
+    { title: "Encimera equivocada para el uso", problem: "Laminado junto a la placa que se hincha con el vapor, o mármol natural que se mancha con el primer limón.", solution: "Asesoramos según cómo cocinas: cuarzo para la mayoría, porcelánico si quieres olvidarte del calor, granito si buscas piedra natural." },
+  ]}
+  relatedProjects={[
+    { slug: "cocina-reubicada-zona-dia", title: "Cocina reubicada en la zona de día", image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp", tag: "Cocina abierta" },
+    { slug: "cocina-en-chalet", title: "Cocina en chalet, lacado alto brillo", image: "/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp", tag: "Cuarzo y TEKA" },
+    { slug: "bano-principal-y-aseo-adaptado", title: "Baño principal y aseo adaptado", image: "/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp", tag: "Baño + aseo" },
+  ]}
+  relatedGuides={[
+    { title: "Cuánto cuesta reformar una cocina en A Coruña", url: "/blog/cuanto-cuesta-reformar-cocina-a-coruna/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+    { title: "Licencias y permisos para reformar en A Coruña", url: "/blog/licencias-y-permisos-reforma-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Cuánto cuesta reformar una cocina en A Coruña?", answer: "Como referencia de mercado 2026, una reforma de cocina ronda los 5.000 – 6.000 € (sin IVA), según alcance y materiales. El precio final sale de la visita técnica." },
-    { question: "¿Incluye los electrodomésticos?", answer: "Depende del alcance pactado. Lo definimos por escrito en el presupuesto para que sepas qué entra y qué no." },
-    { question: "¿Puedo ver referencias antes de decidir?", answer: "Sí. Te enseñamos referencias visuales de distribuciones, materiales y acabados, y la propuesta final se define tras la visita y las mediciones." }
+    { question: "¿Cuánto cuesta reformar una cocina en A Coruña?", answer: "Depende del alcance (solo mobiliario y encimera, cocina completa o cocina abierta al salón), de los metros, del estado de las instalaciones y, sobre todo, del mobiliario, la encimera y los electrodomésticos que elijas. Por eso no publicamos un precio 'desde'. Tras una visita técnica sin compromiso te entregamos en 3–5 días un diseño sobre plano y un presupuesto cerrado por partidas, con cada elemento identificado." },
+    { question: "¿Cuánto tarda una reforma de cocina?", answer: "La obra dura 5–8 días laborables en una cocina estándar: demolición e instalaciones, revestimientos, montaje de mobiliario y encimera, y remates. Lo que marca el calendario es el plazo de fabricación del mobiliario a medida y la encimera, que depende del fabricante; fijamos el inicio de la obra en función de ese plazo para que la cocina esté desmontada el menor tiempo posible." },
+    { question: "¿Puedo abrir la cocina al salón?", answer: "En la mayoría de los pisos sí, siempre que el tabique no sea estructural. Lo comprobamos en la visita técnica. Abrir la cocina implica también resolver la extracción, la continuidad de suelos y techos y, normalmente, la iluminación de las dos estancias. Si el muro es de carga, se puede abrir con refuerzo, pero requiere proyecto técnico." },
+    { question: "¿Qué encimera me recomendáis?", answer: "Para la mayoría de las familias, cuarzo compacto: resistente, no poroso y con muchos acabados. Si cocinas mucho y quieres despreocuparte del calor, porcelánico (Dekton, Neolith). Si prefieres piedra natural, granito con sellado periódico. Te mostramos muestras reales en la visita." },
+    { question: "¿Necesito licencia para reformar la cocina?", answer: "Para una reforma sin tocar estructura basta normalmente con una comunicación previa o licencia de obra menor en el ayuntamiento. Si se derriba un muro de carga o se modifica la fachada, hace falta proyecto técnico y licencia de obra mayor. Te orientamos sobre el trámite." },
+    { question: "¿Puedo aportar yo los electrodomésticos o los muebles?", answer: "Sí. Te indicamos las medidas y especificaciones para que encajen en el diseño. Ten en cuenta que lo que compras por tu cuenta tributa al 21 % de IVA, mientras que la obra ejecutada por nosotros en vivienda suele ir al 10 %." },
+    { question: "¿Podré usar la cocina durante la obra?", answer: "Durante los días de obra, no. Recomendamos preparar una cocina provisional (microondas, placa portátil y frigorífico) en otra estancia. Al concentrar la obra en 5–8 días y arrancar solo cuando el mobiliario está fabricado, ese periodo es corto." },
+    { question: "¿Trabajáis con diseño 3D?", answer: "Trabajamos con planos de distribución y alzados de mobiliario acotados, que es lo que garantiza que todo encaje. Cuando el proyecto lo requiere, incorporamos vistas 3D para que visualices materiales y volúmenes antes de decidir." },
   ]}
+  zoneService="cocina"
+  ctaTitle="¿Empezamos con tu reforma de cocina?"
+  ctaText="Cuéntanos cómo es tu cocina y cómo te gustaría que fuera. Visita técnica sin compromiso en A Coruña y área metropolitana, y presupuesto por partidas en pocos días."
+  whatsappText="Hola, quiero presupuesto para reformar una cocina en A Coruña"
   schemaName="Reforma de Cocina en A Coruña"
   schemaType="Kitchen Remodeling"
 />

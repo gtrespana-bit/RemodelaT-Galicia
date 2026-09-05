@@ -5,35 +5,186 @@ import ServicePage from '../../components/ServicePage.astro';
 <ServicePage
   slug="fontaneria"
   title="Fontanería"
-  titleGold="en reformas"
-  description="Fontanería en reformas de A Coruña: renovación de tuberías, puntos de agua, desagües y pruebas de funcionamiento."
+  titleGold="en A Coruña"
+  seoTitle="Fontanería en A Coruña | Tuberías y Baños | RemodelaT"
+  description="Fontanería en A Coruña: renovación de tuberías en multicapa o PEX, agua caliente y desagües, con prueba de presión antes de cerrar y garantía."
   eyebrow="Servicios · Fontanería"
-  lead="Renovación de tuberías, puntos de agua, desagües y grifería de calidad, con pruebas antes de cerrar."
+  lead="Tuberías nuevas en multicapa o PEX, llaves de corte por estancia, agua caliente bien dimensionada y una prueba de presión antes de cerrar. Fontanería para no volver a pensar en ella."
   image="/images/fontaneria-800.webp"
-  imageAlt="Fontanería y saneamiento en una reforma de A Coruña"
-  badges={["Pruebas de presión", "Sin fugas", "Garantía por escrito"]}
-  watermark="FONTANERÍA"
+  imageAlt="Fontanero revisando planos e instalación de tuberías en una reforma en A Coruña"
+  badges={["Multicapa y PEX", "Prueba de presión", "Garantía por escrito"]}
+  watermark="AGUA"
   crumb="Fontanería"
+  highlights={[
+    { value: "24 h", label: "Prueba de presión antes de cerrar" }, 
+    { value: "10 bar", label: "Presión de prueba de la red nueva" },
+    { value: "1", label: "Llave de corte por estancia" },
+    { value: "50", label: "Años de vida útil del multicapa" },
+  ]}
+  introTitle="El agua es lo único de una casa que nunca debería dar problemas"
   intro={[
-    "La fontanería es una de las partidas que más problemas da cuando se improvisa: fugas ocultas, presiones mal resueltas o desagües sin pendiente.",
-    "Renovamos tuberías y desagües con materiales compatibles, probamos la instalación antes de cerrar y dejamos registros accesibles para mantenimiento."
+    "La fontanería es la instalación más silenciosa de una vivienda: cuando funciona, nadie se acuerda de ella. Cuando falla, lo hace de la peor manera: una fuga oculta que aparece en el techo del vecino, una tubería de hierro que revienta en enero, un termo que no da abasto o un desagüe que se atasca cada mes. Y casi siempre falla en el momento menos oportuno.",
+    "En A Coruña, la mayoría de las viviendas anteriores a 1990 conservan instalaciones de <strong>hierro galvanizado</strong> (que se obstruye por dentro con la cal y la corrosión hasta reducir el caudal a la mitad) o de <strong>cobre</strong> con soldaduras que ceden con los años. En edificios antiguos del centro aún aparecen tramos de <strong>plomo</strong>, un material prohibido para agua de consumo. A esto se suma la humedad ambiental, que agrava cualquier pequeña fuga hasta convertirla en moho y desconchones.",
+    "Nuestra fontanería sigue el mismo principio que el resto del <a href=\"/metodo-remodelat/\">Método RemodelaT</a>: <strong>materiales de larga vida útil</strong>, una instalación que se puede seccionar y reparar sin romper nada, y una <strong>prueba de presión documentada</strong> antes de cerrar rozas, para que el primer día que abras el grifo sea igual que el de dentro de veinte años.",
   ]}
+  introFigure={{
+    src: "/images/integrales-instalaciones.webp",
+    alt: "Tuberías nuevas de agua fría y caliente y desagües instalados en una vivienda antes de cerrar las paredes",
+    caption: "Instalación nueva antes de cerrar: cada punto de agua se prueba a presión antes de tapar una sola roza.",
+  }}
+  galleryTitle="Fontanería que se ve y que no se ve"
+  galleryText="Desde la tubería oculta hasta la grifería que tocas cada día. Todo cuenta para una instalación duradera."
+  gallery={[
+    { src: "/images/bano-griferia-negra.webp", alt: "Grifería empotrada de pared en negro mate sobre lavabo de piedra", caption: "Grifería empotrada de calidad" },
+    { src: "/images/bano-ducha-walkin.webp", alt: "Ducha de obra con rociador de techo y grifería termostática", caption: "Ducha con grifería termostática" },
+    { src: "/images/cocina-encimera-cuarzo.webp", alt: "Fregadero bajo encimera con grifo extraíble en cocina de cuarzo", caption: "Fregadero y grifo extraíble" },
+  ]}
+  topics={[
+    {
+      title: "Renovación completa de tuberías: multicapa o PEX",
+      paragraphs: [
+        "Cuando una instalación de hierro o cobre antiguo empieza a dar problemas, repararla por tramos es tirar el dinero: cada reparación desplaza el fallo al siguiente punto débil. La solución es renovar la red de agua fría y caliente completa desde la llave de entrada de la vivienda hasta cada punto de consumo.",
+        "Trabajamos con dos materiales según el caso: <strong>tubería multicapa</strong> (PEX-Al-PEX, con alma de aluminio que la hace rígida, estable y apta para agua caliente sin dilataciones visibles) y <strong>PEX</strong> con sistema de colectores, que permite llevar una tubería continua a cada punto sin ninguna unión oculta. Ambos tienen una vida útil superior a 50 años, no se corroen, no acumulan cal y son silenciosos.",
+      ],
+      bullets: [
+        "<strong>Llave general</strong> nueva a la entrada y <strong>llaves de corte independientes</strong> por estancia (cocina, cada baño, lavadero) para poder reparar sin cortar toda la casa.",
+        "<strong>Colector con llaves por circuito</strong> en instalaciones PEX: cada aparato aislable desde un solo punto.",
+        "<strong>Diámetros calculados</strong> para caudal simultáneo: dos duchas a la vez sin que baje la presión.",
+        "<strong>Aislamiento térmico</strong> de la tubería de agua caliente: menos pérdidas y agua caliente antes en el grifo.",
+        "<strong>Reductor de presión</strong> cuando la red llega por encima de 5 bar, muy habitual en plantas bajas de A Coruña.",
+      ],
+      figure: {
+        src: "/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-porcelanico-instalacion.webp",
+        alt: "Baño en obra con tomas de agua nuevas ya instaladas y porcelánico en colocación, en una obra previa en España",
+        caption: "Tomas de agua nuevas ya probadas y porcelánico en colocación: la fontanería siempre va antes que el acabado (obra documentada).",
+      },
+      quote: "Una fuga detrás de un azulejo cuesta diez veces más que la tubería que la habría evitado.",
+    },
+    {
+      title: "Agua caliente: termo, calentador o aerotermia",
+      paragraphs: [
+        "Que el agua caliente tarde en llegar, se acabe a mitad de la segunda ducha o fluctúe de temperatura no es normal: es un sistema mal dimensionado o mal ubicado. Al renovar la fontanería estudiamos el consumo real de la vivienda (personas, baños, simultaneidad) y proponemos la solución adecuada.",
+      ],
+      bullets: [
+        "<strong>Termo eléctrico</strong> de 80–150 litros bien ubicado y con programación: la opción más sencilla en pisos sin gas.",
+        "<strong>Calentador estanco de gas natural</strong> con modulación: agua caliente instantánea e ilimitada en viviendas con suministro de gas.",
+        "<strong>Aerotermia</strong> para agua caliente (y calefacción) en casas y adosados: el sistema más eficiente, con ahorros de hasta el 70 % frente a un termo eléctrico.",
+        "<strong>Recirculación de ACS</strong> en viviendas grandes: agua caliente inmediata en el baño más lejano sin desperdiciar litros.",
+        "<strong>Grifería termostática</strong> en duchas: temperatura constante aunque alguien abra otro grifo, y tope de seguridad a 38 °C.",
+      ],
+      figure: {
+        src: "/images/bano-ducha-walkin.webp",
+        alt: "Ducha de obra con grifería termostática empotrada y rociador de techo",
+        caption: "Termostática empotrada con rociador de techo: temperatura estable y caudal constante.",
+      },
+    },
+    {
+      title: "Desagües y saneamiento: lo que se atasca y lo que huele",
+      paragraphs: [
+        "La red de evacuación es tan importante como la de suministro y suele estar peor. Desagües de plomo o de fibrocemento aplastados, sifones inexistentes o mal ventilados, pendientes insuficientes y bajantes comunitarias con incrustaciones son la causa de atascos recurrentes, malos olores y ruidos.",
+        "Al reformar baño o cocina renovamos toda la red de desagües en <strong>PVC insonorizado</strong>, con pendientes mínimas del 2 %, sifones registrables en cada aparato y botes sifónicos accesibles. Revisamos el estado de la <strong>bajante comunitaria</strong> en el tramo de la vivienda y, si está en mal estado, te lo documentamos para trasladarlo a la comunidad antes de cerrar.",
+      ],
+      bullets: [
+        "Desagües de ducha con sifón de alta capacidad (mín. 50 mm) y registro para limpieza.",
+        "Válvulas de aireación donde la ventilación de la bajante es insuficiente: fin del glu-glu y los olores.",
+        "Tubería insonorizada en bajantes y colectores que pasan por dormitorios.",
+        "Conexión de lavavajillas y lavadora con sifón propio y válvula antirretorno.",
+      ],
+      figure: {
+        src: "/images/proyectos/bano-secundario-compacto/plato-ducha-instalado-1.webp",
+        alt: "Plato de ducha instalado con desagüe centrado, en una obra previa en España",
+        caption: "Plato de ducha instalado sobre desagüe nuevo con sifón registrable (obra documentada).",
+      },
+    },
+    {
+      title: "Humedades y fugas ocultas: localizar antes de romper",
+      paragraphs: [
+        "Una mancha de humedad no dice de dónde viene el agua. Puede ser una fuga de tubería, una junta de azulejo agotada, una condensación o una filtración de la fachada o del piso superior. Romper a ciegas es caro y a menudo inútil.",
+        "Antes de intervenir, hacemos un <strong>diagnóstico</strong>: prueba de presión por tramos para descartar la red de suministro, revisión de desagües y sifones, medición de humedad en paramentos y análisis de la ubicación respecto a bajantes y fachada. Solo cuando sabemos qué pasa, proponemos la reparación adecuada, que a menudo es mucho menor de lo que se temía.",
+      ],
+      bullets: [
+        "Prueba de presión por tramos para localizar fugas en la red de agua.",
+        "Prueba de estanqueidad de platos de ducha y bañeras.",
+        "Revisión de sellados perimetrales y juntas: la causa más frecuente y más barata.",
+        "Informe con fotografías para la comunidad o el seguro cuando el origen es ajeno a la vivienda.",
+      ],
+      figure: {
+        src: "/images/bano-suelo-antideslizante.webp",
+        alt: "Suelo de baño en porcelánico con juntas rejuntadas y sellado perimetral correcto",
+        caption: "Juntas y sellados perimetrales en buen estado: la primera barrera contra las humedades del vecino.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye nuestro servicio de fontanería"
+  includesIntro="Desde la renovación completa de una vivienda hasta la fontanería de un baño en reforma. Estas son las partidas habituales:"
   includes={[
-    "Renovación de tuberías de agua fría y caliente.",
-    "Desagües y saneamiento con pendientes correctas.",
-    "Puntos de agua para cocina, baños y electrodomésticos.",
-    "Grifería de calidad.",
-    "Prueba de presión y funcionamiento.",
-    "Registros accesibles para mantenimiento."
+    "<strong>Diagnóstico</strong> de la instalación existente: material, presión, caudal, estado de desagües y bajantes.",
+    "<strong>Renovación de la red de agua fría y caliente</strong> en multicapa o PEX, con llaves de corte por estancia.",
+    "<strong>Red de desagües</strong> nueva en PVC insonorizado con sifones registrables y pendientes correctas.",
+    "<strong>Producción de agua caliente</strong>: instalación o sustitución de termo, calentador o aerotermia.",
+    "<strong>Instalación de sanitarios y grifería</strong>: inodoros suspendidos, lavabos, platos de ducha, bañeras, fregaderos.",
+    "<strong>Tomas para electrodomésticos</strong>: lavadora, lavavajillas, frigorífico con dispensador, con llaves y sifones propios.",
+    "<strong>Prueba de presión documentada</strong> antes de cerrar rozas y prueba de estanqueidad de desagües.",
+    "<strong>Tapado de rozas</strong> o coordinación con el resto de la reforma, limpieza y entrega con garantía por escrito.",
   ]}
+  processTitle="Cómo renovamos la fontanería"
+  processIntro="En una reforma de baño o cocina, la fontanería ocupa los dos primeros días de obra. La renovación completa de una vivienda depende del número de puntos de agua y de los recorridos: te entregamos el cronograma tras la visita."
+  phases={[
+    { title: "Visita técnica y diagnóstico", duration: "Antes de la obra", text: "Comprobamos material y estado de tuberías, presión de red, caudal en los grifos, desagües y bajante. Detectamos plomo, hierro obstruido o soldaduras dudosas." },
+    { title: "Diseño de la instalación y presupuesto", duration: "2–3 días", text: "Trazado de recorridos, diámetros, ubicación de llaves y producción de agua caliente. Presupuesto por partidas con materiales especificados." },
+    { title: "Corte, desmontaje y rozas", duration: "Paso 1", text: "Corte de suministro, retirada de la instalación antigua, apertura de rozas con protección de la vivienda. Suministro provisional a un punto si sigues viviendo en casa." },
+    { title: "Instalación nueva", duration: "Paso 2", text: "Tendido de multicapa o PEX, colector y llaves, aislamiento de agua caliente, red de desagües en PVC insonorizado, tomas de aparatos." },
+    { title: "Prueba de presión y estanqueidad", duration: "Paso 3", text: "Red presurizada a 10 bar durante 24 horas y prueba de desagües con agua. Documentado con fotografías antes de tapar una sola roza." },
+    { title: "Cierre, aparatos y entrega", duration: "Paso 4", text: "Tapado de rozas, instalación de sanitarios, grifería y aparatos, comprobación de cada punto de agua y entrega con garantía y esquema de llaves de corte." },
+  ]}
+  priceTitle="Cuánto cuesta la fontanería en A Coruña"
+  priceIntro="El precio depende del alcance (vivienda completa, baño, cocina), del número de puntos de agua, de la producción de agua caliente y de si hay que tapar y pintar. Se cierra por partidas tras la visita."
   priceRows={[
-    ["Fontanería (según vivienda y alcance)", "A valorar en visita"]
+    ["Renovación completa de fontanería de vivienda (agua fría, caliente y desagües)", "A valorar en visita"],
+    ["Fontanería de baño o cocina dentro de su reforma", "Incluida en el presupuesto de la reforma"],
+    ["Sustitución de termo, calentador o instalación de aerotermia", "A valorar en visita"],
   ]}
-  priceNote="* Presupuesto por partidas tras la visita técnica (sin IVA)."
+  priceFactors={[
+    "<strong>Número de puntos de agua</strong> y de estancias húmedas.",
+    "<strong>Material y sistema.</strong> Multicapa con accesorios press-fitting o PEX con colector.",
+    "<strong>Producción de agua caliente.</strong> Termo, calentador o aerotermia, y su ubicación.",
+    "<strong>Estado de la bajante</strong> y necesidad de intervenir en el tramo de la vivienda.",
+    "<strong>Rozas, tapado y pintura</strong> si la fontanería no coincide con otra reforma.",
+  ]}
+  priceNote="* Precios sin IVA (10 % en obra de renovación de vivienda que cumple los requisitos; 21 % en material o aparatos suministrados por separado). Se confirman con visita técnica y mediciones reales."
+  problemsTitle="Los problemas de fontanería más habituales en A Coruña"
+  problemsIntro="Lo que más encontramos en las viviendas de la zona y cómo lo resolvemos de raíz."
+  problems={[
+    { title: "Poca presión y agua turbia al abrir", problem: "Tubería de hierro galvanizado obstruida por dentro con óxido y cal. El caudal baja año a año y el agua sale marrón tras unas horas sin uso.", solution: "Sustitución completa por multicapa o PEX, que no se corroe ni acumula cal. El caudal vuelve al de la red." },
+    { title: "Fuga oculta y humedad en el vecino", problem: "Soldadura de cobre o unión roscada de hierro que cede dentro de la pared. Se detecta por la mancha del piso de abajo.", solution: "Localización por prueba de presión por tramos, reparación puntual si la instalación es reciente o renovación completa si es antigua." },
+    { title: "Agua caliente que tarda o se acaba", problem: "Termo pequeño y mal situado, tubería sin aislar y recorrido de 15 metros hasta el baño más lejano.", solution: "Dimensionado del termo o calentador según uso real, reubicación cerca de los puntos de consumo, aislamiento de ACS y, si procede, recirculación." },
+    { title: "Atascos y malos olores recurrentes", problem: "Desagües con pendiente insuficiente, sifones sin registro y bajante sin ventilación.", solution: "Red de desagües nueva con pendientes del 2 %, sifones registrables, válvula de aireación y revisión del tramo de bajante." },
+    { title: "Sin llaves de corte", problem: "Una sola llave general para toda la casa: cualquier reparación deja la vivienda sin agua durante horas.", solution: "Llaves de corte independientes por estancia y por aparato, y esquema de llaves entregado al final de la obra." },
+    { title: "Presión excesiva y golpes de ariete", problem: "En bajos y primeras plantas la red llega a 6–7 bar: grifos que salpican, ruidos en las tuberías y desgaste prematuro de electrodomésticos.", solution: "Reductor de presión a la entrada ajustado a 3 bar y sistema antiariete en los puntos críticos." },
+  ]}
+  relatedProjects={[
+    { slug: "bano-principal-y-aseo-adaptado", title: "Baño principal y aseo adaptado", image: "/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp", tag: "Multicapa PEX-Al-PEX" },
+    { slug: "bano-secundario-compacto", title: "Baño secundario compacto", image: "/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp", tag: "Plato ROCA" },
+    { slug: "bano-inodoro-suspendido", title: "Baño con inodoro suspendido", image: "/images/proyectos/bano-inodoro-suspendido/bano-finalizado-1.webp", tag: "Cisterna empotrada" },
+  ]}
+  relatedGuides={[
+    { title: "Reforma de baño", url: "/servicios/reforma-bano/" },
+    { title: "Reforma de cocina", url: "/servicios/reforma-cocina/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Renováis toda la instalación?", answer: "Solo si la antigüedad o el estado lo exigen. Tras el diagnóstico te recomendamos qué renovar y qué se puede conservar." },
-    { question: "¿Probáis la instalación antes de cerrar?", answer: "Sí. Hacemos prueba de presión y revisión de desagües antes de cubrir paredes y suelos." }
+    { question: "¿Cuánto cuesta renovar la fontanería de un piso en A Coruña?", answer: "Depende del número de puntos de agua, del sistema elegido (multicapa o PEX con colector), de la producción de agua caliente y de si hay que tapar y pintar rozas. Lo valoramos en visita técnica y te entregamos un presupuesto por partidas con materiales especificados." },
+    { question: "¿Cuánto tarda renovar la fontanería completa?", answer: "Dentro de una reforma de baño o cocina, la fontanería ocupa los dos primeros días de obra. En una renovación completa de vivienda el plazo depende del número de puntos de agua y de los recorridos; siempre incluye la prueba de presión de 24 horas antes de cerrar, y te entregamos el cronograma tras la visita." },
+    { question: "¿Multicapa o PEX? ¿Cuál es mejor?", answer: "Ambos son excelentes y duran más de 50 años. El multicapa es rígido, se mantiene recto y va muy bien en recorridos vistos o con muchas derivaciones. El PEX con colector permite tuberías continuas sin uniones ocultas, ideal en reformas integrales. Elegimos según el trazado y el tipo de obra." },
+    { question: "¿Hay que abrir todas las paredes?", answer: "Se abren rozas por donde discurren las nuevas tuberías, normalmente en baños, cocina y el pasillo que los une. Cuando hay falso techo se aprovecha para reducir rozas. En una reforma integral todo queda integrado en la obra." },
+    { question: "¿Podré seguir viviendo en casa?", answer: "Sí, con cortes de agua programados. Dejamos cada día un punto de agua operativo y organizamos el trabajo por zonas. En una renovación completa, los días de rozas son los más molestos por el polvo." },
+    { question: "¿Qué es la prueba de presión y por qué importa?", answer: "Consiste en llenar la nueva red, presurizarla por encima de la presión de trabajo (10 bar) y mantenerla 24 horas comprobando que no baja. Es la única forma de garantizar que no hay fugas antes de tapar las tuberías. La hacemos siempre y la documentamos." },
+    { question: "¿Detectáis fugas sin romper?", answer: "Hacemos diagnóstico previo con prueba de presión por tramos, revisión de sifones y sellados y medición de humedad. En la mayoría de los casos localizamos el origen con precisión suficiente para intervenir solo donde hace falta." },
+    { question: "¿La bajante es responsabilidad mía o de la comunidad?", answer: "La bajante general es un elemento común: su mantenimiento y reparación corresponde a la comunidad. Los desagües desde tus aparatos hasta la bajante son privativos. Si al reformar detectamos la bajante en mal estado, te lo documentamos para que lo traslades a la comunidad antes de cerrar." },
   ]}
+  ctaTitle="¿Tu fontanería necesita una puesta al día?"
+  ctaText="Cuéntanos qué problema tienes o qué reforma planeas. Visita técnica sin compromiso en A Coruña y área metropolitana, y presupuesto por partidas con prueba de presión incluida."
+  whatsappText="Hola, quiero presupuesto de fontanería para mi vivienda en A Coruña"
   schemaName="Fontanería en A Coruña"
   schemaType="Plumbing"
 />

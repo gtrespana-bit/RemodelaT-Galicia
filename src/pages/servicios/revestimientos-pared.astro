@@ -4,36 +4,186 @@ import ServicePage from '../../components/ServicePage.astro';
 
 <ServicePage
   slug="revestimientos-pared"
-  title="Revestimientos"
-  titleGold="de Pared"
-  description="Revestimiento de paredes en A Coruña: paneles decorativos, estucado y soluciones para paredes con soporte estable y acabado fino."
-  eyebrow="Servicios · Paredes"
-  lead="Paneles decorativos, estucado y revestimientos verticales con soporte estable y acabado fino."
+  title="Revestimientos de Pared"
+  titleGold="en A Coruña"
+  seoTitle="Revestimientos de Pared en A Coruña | RemodelaT"
+  description="Revestimientos de pared en A Coruña: porcelánico gran formato, paneles de madera, piedra, ladrillo visto y microcemento. Colocación profesional."
+  eyebrow="Servicios · Revestimientos"
+  lead="Porcelánico de gran formato, paneles de madera, piedra natural, ladrillo visto o microcemento. Paredes que aportan carácter y aguantan el uso, sobre un soporte bien preparado."
   image="/images/revestimientos-800.webp"
-  imageAlt="Revestimiento de paredes en una vivienda de A Coruña"
-  badges={["Paneles decorativos", "Estucado", "Acabado fino"]}
+  imageAlt="Salón con pared revestida en porcelánico efecto mármol y panel de madera en A Coruña"
+  badges={["Gran formato", "Paneles y madera", "Microcemento"]}
   watermark="PAREDES"
-  crumb="Revestimiento de Pared"
+  crumb="Revestimientos de Pared"
+  highlights={[
+    { value: "5", label: "Familias de revestimiento" },
+    { value: "3 mm", label: "Espesor del microcemento" },
+    { value: "160×320", label: "Formato máximo en porcelánico" },
+    { value: "1–3", label: "Días para una pared protagonista" },
+  ]}
+  introTitle="Una pared bien revestida cambia una estancia entera"
   intro={[
-    "Las paredes marcan el carácter de la vivienda. El revestimiento correcto no solo decora: corrige imperfecciones, mejora la acústica y facilita el mantenimiento.",
-    "Preparamos el soporte y aplicamos paneles decorativos, estucado o revestimientos verticales con remates cuidados."
+    "Las paredes son la mayor superficie visible de una vivienda. Un revestimiento bien elegido convierte un salón anodino en un espacio con carácter, protege las zonas de más uso (cocina, baño, entrada, cabecero) y resuelve problemas prácticos: humedad, ruido, paredes irregulares. Pero también es un trabajo donde cada error se ve a la primera: juntas desalineadas, placas que se despegan, paneles que se abren en las esquinas.",
+    "En A Coruña las paredes tienen su propia historia. Los pisos antiguos del centro tienen muros de mampostería y tabiques de ladrillo con enlucidos de yeso agrietados o abombados; muchos baños y cocinas conservan azulejos de los años 70 en perfecto estado de adherencia sobre los que se puede revestir directamente; y en casas y bajos aparecen humedades por capilaridad que hay que tratar antes de tapar nada. Por eso <strong>el diagnóstico del soporte es siempre el primer paso</strong>.",
+    "Trabajamos cinco familias de revestimiento (porcelánico, paneles, piedra y ladrillo, microcemento y papel pintado) y te recomendamos la adecuada para cada pared según uso, estética y presupuesto, con <a href=\"/metodo-remodelat/\">presupuesto por partidas y garantía por escrito</a>.",
   ]}
+  introFigure={{
+    src: "/images/revestimiento-porcelanato.webp",
+    alt: "Salón con pared principal revestida en porcelánico de gran formato efecto mármol y mueble de televisión",
+    caption: "Porcelánico de gran formato en la pared del salón: pocas juntas, mucho impacto.",
+  }}
+  galleryTitle="Materiales que dan carácter"
+  galleryText="Referencias de los revestimientos que más instalamos. En la visita técnica te mostramos muestras reales."
+  gallery={[
+    { src: "/images/revestimiento-wall-panels.webp", alt: "Pared de dormitorio con paneles acústicos de listones de madera", caption: "Paneles de listones de madera" },
+    { src: "/images/revestimiento-microcemento.webp", alt: "Pared de baño en microcemento gris con acabado continuo", caption: "Microcemento continuo" },
+    { src: "/images/revestimiento-piedra.webp", alt: "Pared de ladrillo visto en un salón de estilo industrial", caption: "Ladrillo visto y piedra" },
+  ]}
+  topics={[
+    {
+      title: "Porcelánico de gran formato: paredes sin apenas juntas",
+      paragraphs: [
+        "Las placas de porcelánico de gran formato (120×120, 120×260 y hasta 160×320 cm, en 6 a 12 mm de espesor) permiten revestir una pared completa con dos o tres piezas. El resultado es una superficie casi continua con el aspecto de mármol, piedra, cemento o metal, resistente al agua, al calor y a los golpes, y de limpieza inmediata.",
+        "Es el revestimiento ideal para <strong>paredes de baño, frentes de cocina, paredes de salón</strong> (tras la televisión o la chimenea) y <strong>cabeceros</strong>. Su instalación es técnica: exige soporte plano, adhesivo específico, ventosas para el manejo, doble encolado y un equipo de dos o tres personas por placa.",
+      ],
+      bullets: [
+        "Frentes de cocina continuos, desde la encimera hasta los muebles altos, sin juntas donde se acumule grasa.",
+        "Paredes de ducha completas con una o dos piezas: sin juntas, sin moho.",
+        "Mismo material en encimera y frente para una cocina de aspecto monolítico.",
+        "Efectos libro (vetas simétricas) en mármoles para paredes protagonistas.",
+      ],
+      figure: {
+        src: "/images/bano-revestimiento-paredes.webp",
+        alt: "Paredes de baño revestidas con porcelánico de gran formato efecto piedra y nicho con iluminación",
+        caption: "Gran formato en baño: paredes de ducha sin juntas donde pueda aparecer moho.",
+      },
+    },
+    {
+      title: "Paneles decorativos: madera, acústicos y 3D",
+      paragraphs: [
+        "Los paneles de pared han evolucionado mucho. Los <strong>paneles de listones de madera</strong> sobre fieltro acústico aportan calidez y mejoran la acústica del salón o el dormitorio; los <strong>paneles ranurados y 3D</strong> crean texturas y relieves; y los <strong>paneles de PVC y SPC</strong> para zonas húmedas permiten renovar un baño sin obra, sobre el azulejo existente.",
+        "Se instalan sobre rastreles o directamente encolados, integran iluminación LED y permiten ocultar cableado y pequeñas irregularidades del soporte. Son la solución más rápida y limpia para dar carácter a una pared sin demolición.",
+      ],
+      bullets: [
+        "Listones de roble, nogal o lacados sobre fieltro negro o gris: cabeceros, salones y despachos.",
+        "Paneles acústicos que reducen la reverberación en salones con suelo duro y grandes ventanales.",
+        "Paneles hidrófugos para baños y cocinas, con juntas selladas y perfiles de remate.",
+        "Integración de tiras LED en el perímetro o entre listones.",
+      ],
+      figure: {
+        src: "/images/revestimiento-wall-panels.webp",
+        alt: "Cabecero de dormitorio revestido con paneles de listones de madera e iluminación LED integrada",
+        caption: "Listones de madera con LED integrado en el cabecero: calidez, textura y mejor acústica.",
+      },
+      quote: "Una pared es una oportunidad. Revestirla bien es la forma más rápida de dar personalidad a una casa.",
+    },
+    {
+      title: "Piedra natural y ladrillo visto",
+      paragraphs: [
+        "La piedra y el ladrillo aportan una textura y una autenticidad que ningún material sintético consigue del todo. En A Coruña, además, conectan con la tradición constructiva gallega: muros de granito y mampostería que, en muchos pisos antiguos y casas de aldea, están ahí debajo del enlucido esperando a ser recuperados.",
+        "Trabajamos tres opciones: <strong>recuperación del muro original</strong> (picado del enlucido, limpieza, rejuntado y sellado), <strong>chapado de piedra natural</strong> en plaquetas de pizarra, cuarcita o granito, y <strong>plaqueta de ladrillo</strong> manual o recuperado para paredes de estilo industrial. En los tres casos, el sellado final protege frente al polvo y las manchas y facilita la limpieza.",
+      ],
+      bullets: [
+        "Recuperación de muros de granito o mampostería en pisos de la Ciudad Vieja y casas de piedra.",
+        "Plaquetas de pizarra y cuarcita en paredes de salón, chimeneas y exteriores cubiertos.",
+        "Ladrillo visto en cocinas abiertas, salones y locales, con rejuntado a color.",
+        "Iluminación rasante que realza la textura de la piedra.",
+      ],
+      figure: {
+        src: "/images/revestimiento-piedra.webp",
+        alt: "Pared de ladrillo visto rejuntado en un salón con iluminación cálida",
+        caption: "Ladrillo visto rejuntado y sellado: textura industrial con limpieza sencilla.",
+      },
+    },
+    {
+      title: "Microcemento: continuidad total en paredes y suelos",
+      paragraphs: [
+        "El microcemento es un revestimiento continuo de 2–3 mm de espesor que se aplica a mano sobre casi cualquier soporte: azulejo antiguo, yeso, placa de cartón yeso, mortero. Sin juntas, impermeable una vez sellado y con una textura mineral única, permite <strong>renovar un baño completo sin quitar un solo azulejo</strong> y crear espacios donde suelo, paredes y ducha son una única superficie.",
+        "Su calidad depende por completo de la aplicación: preparación del soporte, malla de refuerzo, dos capas de base, dos de acabado y un sellado poliuretánico que es lo que le da la resistencia al agua y a las manchas. Lo hemos empleado en obras como el <a href=\"/proyectos/bano-de-lujo-doble-ambiente/\">baño de lujo en dos ambientes</a>, combinado con piedra volcánica.",
+      ],
+      bullets: [
+        "Baños completos sin obra de demolición: paredes, suelo y plato de ducha de obra.",
+        "Paredes de salón y cocina con acabado mineral en cualquier color.",
+        "Continuidad entre estancias sin juntas ni perfiles de transición.",
+        "Sellado mate, satinado o brillo según el efecto deseado.",
+      ],
+      figure: {
+        src: "/images/revestimiento-microcemento.webp",
+        alt: "Pared y lavabo de baño revestidos en microcemento gris con acabado continuo y grifería negra",
+        caption: "Microcemento en paredes y lavabo de obra: una única superficie continua.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye un revestimiento de pared"
+  includesIntro="Cada revestimiento tiene sus exigencias, pero todos comparten el mismo proceso: diagnosticar, preparar, instalar y rematar."
   includes={[
-    "Preparación del soporte.",
-    "Paneles decorativos.",
-    "Estucado y enlucidos finos.",
-    "Revestimientos verticales técnicos.",
-    "Remates y encuentros.",
-    "Sellado y limpieza final."
+    "<strong>Diagnóstico del soporte</strong>: adherencia, planimetría, humedad y compatibilidad con el nuevo revestimiento.",
+    "<strong>Preparación</strong>: picado o saneado de enlucidos, tratamiento de humedades, imprimación y regularización.",
+    "<strong>Suministro</strong> del material con mermas calculadas y muestras aprobadas por ti.",
+    "<strong>Instalación</strong> según el sistema de cada material: adhesivo específico, rastreles, malla, capas y sellados.",
+    "<strong>Integración de instalaciones</strong>: cajas eléctricas, tomas, iluminación LED y ocultación de cableado.",
+    "<strong>Remates</strong>: perfiles, esquinas, encuentros con techos, suelos y carpinterías.",
+    "<strong>Sellado y protección</strong> en piedra, ladrillo y microcemento.",
+    "<strong>Limpieza final y entrega</strong> con recomendaciones de mantenimiento y garantía por escrito.",
   ]}
+  processTitle="Cómo revestimos una pared"
+  processIntro="Una pared protagonista se resuelve en 1–3 días; un baño completo en microcemento necesita 5–8 días por los tiempos de secado entre capas. Para varias estancias te entregamos el cronograma con el presupuesto."
+  phases={[
+    { title: "Visita técnica y muestras", duration: "Antes de la obra", text: "Analizamos el soporte, medimos y te mostramos muestras reales del material. Definimos despieces y encuentros para que no haya cortes feos ni juntas desalineadas." },
+    { title: "Presupuesto por partidas", duration: "2–3 días", text: "Material, preparación del soporte, instalación, remates e integración de instalaciones, cada partida con su precio." },
+    { title: "Preparación del soporte", duration: "Paso 1", text: "Saneado, tratamiento de humedades si las hay, imprimación y regularización. En microcemento, malla de refuerzo; en paneles, rastrelado nivelado." },
+    { title: "Instalación", duration: "Paso 2", text: "Colocación según el sistema: gran formato con ventosas y doble encolado, paneles sobre rastreles, piedra con adhesivo específico, microcemento en capas con tiempos de secado." },
+    { title: "Sellado, remates y entrega", duration: "Paso 3", text: "Sellado protector, perfiles y encuentros, limpieza y revisión contigo. Entrega con garantía y recomendaciones de mantenimiento." },
+  ]}
+  priceTitle="Cuánto cuesta revestir una pared en A Coruña"
+  priceIntro="El precio depende del material, de la superficie, del estado del soporte y de los remates. Se cierra por partidas tras la visita técnica."
   priceRows={[
-    ["Revestimiento de paredes (según superficie y material)", "A valorar en visita"]
+    ["Pared protagonista en porcelánico de gran formato", "A valorar en visita"],
+    ["Paneles de listones de madera o acústicos (por pared)", "A valorar en visita"],
+    ["Piedra natural, plaqueta de ladrillo o recuperación de muro", "A valorar en visita"],
+    ["Baño completo en microcemento sobre azulejo existente", "A valorar en visita"],
   ]}
-  priceNote="* Presupuesto por partidas tras la visita técnica (sin IVA)."
+  priceFactors={[
+    "<strong>Material.</strong> Del panel de PVC al porcelánico de 160×320 o la piedra natural hay una horquilla amplia.",
+    "<strong>Superficie y despiece.</strong> Paredes grandes y limpias son más eficientes que muchas superficies pequeñas con recortes.",
+    "<strong>Estado del soporte.</strong> Sanear enlucidos o tratar humedades añade partidas necesarias.",
+    "<strong>Integración de instalaciones.</strong> Mover tomas, empotrar LED o cajas de mecanismos.",
+    "<strong>Remates.</strong> Perfiles, esquinas a inglete y encuentros con techos y carpinterías.",
+  ]}
+  priceNote="* Precios sin IVA (10 % en obra de renovación de vivienda; 21 % en material suministrado por separado). Se confirman con visita técnica y mediciones reales."
+  problemsTitle="Lo que suele fallar en un revestimiento de pared"
+  problemsIntro="Los problemas que más vemos en revestimientos mal ejecutados, y cómo los prevenimos."
+  problems={[
+    { title: "Placas de gran formato que se despegan", problem: "Placa de 120×260 colocada con adhesivo estándar y simple encolado sobre yeso sin imprimar. Un día suena hueca; otro, está en el suelo.", solution: "Imprimación del soporte, adhesivo C2 S2 deformable, doble encolado con llana y anclaje mecánico donde la altura lo requiere." },
+    { title: "Humedad que reaparece", problem: "Se reviste una pared con humedad por capilaridad o filtración. El nuevo revestimiento la oculta unos meses y luego la mancha vuelve, o el material se despega.", solution: "Diagnóstico del origen de la humedad y tratamiento (drenaje, inyección, impermeabilización) antes de revestir. Nunca tapar." },
+    { title: "Paneles que se abren en las esquinas", problem: "Paneles de madera instalados sin aclimatar ni junta de dilatación. Se contraen en invierno y se abren.", solution: "Aclimatación de 48 h, rastreles nivelados, juntas de dilatación previstas y perfiles de esquina." },
+    { title: "Microcemento que se fisura o mancha", problem: "Aplicado sin malla sobre un soporte con movimiento, o sellado con un producto inadecuado. Fisuras y manchas de agua y jabón.", solution: "Malla de fibra en la capa base, respeto de tiempos de secado y sellado poliuretánico bicomponente en zonas húmedas." },
+    { title: "Juntas y despieces improvisados", problem: "Piezas cortadas junto a la puerta, junta que no coincide con la del suelo, enchufe que cae en mitad de una veta.", solution: "Despiece planificado en la visita: ejes, arranques, posición de mecanismos y encuentros definidos antes de cortar nada." },
+    { title: "Piedra sin sellar", problem: "Plaqueta de pizarra o ladrillo visto sin sellador: acumula polvo, se mancha y no se puede limpiar.", solution: "Sellado protector transpirable tras la instalación, mate o efecto mojado según el resultado deseado." },
+  ]}
+  relatedProjects={[
+    { slug: "bano-de-lujo-doble-ambiente", title: "Baño de lujo en dos ambientes", image: "/images/proyectos/bano-de-lujo-doble-ambiente/bano-zona-1-completado-2.webp", tag: "Microcemento y piedra" },
+    { slug: "bano-en-adosado", title: "Baño en adosado, porcelánico 60×120", image: "/images/proyectos/bano-en-adosado/bano-final-1.webp", tag: "Gran formato" },
+    { slug: "cocina-en-chalet", title: "Cocina en chalet", image: "/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp", tag: "Frente de cocina" },
+  ]}
+  relatedGuides={[
+    { title: "Suelos y pavimentos", url: "/servicios/suelos-revestimientos/" },
+    { title: "Pintura y acabados", url: "/servicios/pintura-acabados/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Qué opciones de pared hay?", answer: "Paneles decorativos, estucado fino, revestimientos técnicos y microcemento, según la estancia y el uso." },
-    { question: "¿Corregís paredes con humedad?", answer: "Primero diagnosticamos el origen de la humedad. No revestimos sobre una pared que sigue respirando: se trata la causa y luego se remata." }
+    { question: "¿Se puede revestir sobre el azulejo existente?", answer: "En muchos casos sí. Si el azulejo está bien adherido, se puede aplicar microcemento, instalar paneles hidrófugos o incluso colocar porcelánico encima con imprimación y adhesivo adecuados. Comprobamos la adherencia pieza a pieza en la visita; si hay piezas sueltas o humedad, hay que sanear." },
+    { question: "¿Qué revestimiento es mejor para la pared de la ducha?", answer: "Porcelánico rectificado, preferiblemente de gran formato para minimizar juntas, o microcemento con sellado poliuretánico. Ambos son impermeables y fáciles de limpiar. Los paneles hidrófugos son una alternativa rápida sin obra, con un acabado más sencillo." },
+    { question: "¿Los paneles de madera sirven para el baño?", answer: "Los paneles de listones de madera natural no son adecuados para zonas de salpicadura directa. Para baños existen paneles hidrófugos de PVC, SPC o compactos fenólicos con aspecto de madera que sí aguantan la humedad." },
+    { question: "¿Cuánto tarda revestir una pared?", answer: "Una pared protagonista en porcelánico o paneles se resuelve en 1–3 días. Un baño completo en microcemento necesita 5–8 días por los tiempos de secado entre capas. Para varias estancias te entregamos el cronograma con el presupuesto." },
+    { question: "¿Puedo poner gran formato en un piso antiguo con paredes irregulares?", answer: "Sí, pero hay que regularizar primero. Las placas de gran formato exigen un soporte plano (±2 mm en 2 m); en paredes muy irregulares se enfosca o se traslada con placa de yeso antes de colocar." },
+    { question: "¿El microcemento es resistente al agua?", answer: "Una vez sellado correctamente con poliuretano bicomponente, sí: es apto para paredes y suelos de baño, platos de ducha de obra y frentes de cocina. El sellado es la clave, por eso solo lo aplicamos con el sistema completo del fabricante." },
+    { question: "¿Podéis recuperar un muro de piedra original?", answer: "Sí. En pisos antiguos de A Coruña y casas de piedra, picamos el enlucido, limpiamos, rejuntamos y sellamos el muro de granito o mampostería. Antes hacemos una cata para comprobar el estado y el aspecto real de la piedra." },
+    { question: "¿Qué mantenimiento necesita cada revestimiento?", answer: "El porcelánico, ninguno especial. Los paneles de madera, limpieza en seco. La piedra y el ladrillo, resellado cada varios años. El microcemento, limpieza con jabón neutro y renovación del sellado cada 5–8 años en zonas húmedas. Te entregamos las recomendaciones de cada material." },
   ]}
-  schemaName="Revestimiento de Pared en A Coruña"
+  ctaTitle="¿Quieres dar carácter a tus paredes?"
+  ctaText="Cuéntanos qué pared o estancia quieres transformar y qué material te atrae. Visita técnica sin compromiso en A Coruña y área metropolitana, con muestras reales y presupuesto por partidas."
+  whatsappText="Hola, quiero presupuesto para revestir paredes en mi vivienda en A Coruña"
+  schemaName="Revestimientos de Pared en A Coruña"
   schemaType="Wall Covering"
 />

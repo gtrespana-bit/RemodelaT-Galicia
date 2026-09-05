@@ -4,36 +4,187 @@ import ServicePage from '../../components/ServicePage.astro';
 
 <ServicePage
   slug="suelos-revestimientos"
-  title="Suelos"
-  titleGold="y Revestimientos"
-  description="Suelos y revestimientos en A Coruña: porcelánico, gran formato, tarima y microcemento con preparación profesional del soporte."
+  title="Suelos y Pavimentos"
+  titleGold="en A Coruña"
+  seoTitle="Instalación de Suelos en A Coruña | RemodelaT Coruña"
+  description="Instalación de suelos en A Coruña: porcelánico, laminado, vinílico SPC y madera. Nivelación del soporte, colocación profesional y remates."
   eyebrow="Servicios · Suelos"
-  lead="Porcelánico, gran formato, tarima y microcemento con preparación profesional del soporte."
+  lead="Porcelánico, laminado, vinílico o madera. El suelo adecuado para cada estancia, sobre un soporte nivelado y con una colocación que no suena hueca a los dos años."
   image="/images/suelo-porcelanico-800.webp"
-  imageAlt="Instalación de suelos y revestimientos en una vivienda de A Coruña"
-  badges={["Gran formato", "Soporte nivelado", "Acabado fino"]}
+  imageAlt="Instalación de suelo porcelánico de gran formato en una vivienda de A Coruña"
+  badges={["Porcelánico y gran formato", "Laminado y vinílico SPC", "Madera natural"]}
   watermark="SUELOS"
-  crumb="Suelos y Revestimientos"
+  crumb="Suelos y Pavimentos"
+  highlights={[
+    { value: "4", label: "Tipos de suelo que instalamos" },
+    { value: "±2 mm", label: "Planimetría del soporte en 2 m" },
+    { value: "2", label: "Comprobaciones previas: planimetría y humedad" },
+    { value: "48 h", label: "Aclimatación de laminado y madera" },
+  ]}
+  introTitle="El suelo es el 30 % de lo que ves en una casa y el 100 % de lo que pisas"
   intro={[
-    "El suelo es la superficie de mayor desgaste de la vivienda. La diferencia entre un resultado duradero y uno mediocre está en la preparación del soporte y en el adhesivo adecuado.",
-    "Instalamos porcelánico, gran formato, tarima y microcemento con nivelación previa y técnica correcta para cada formato y material."
+    "Cambiar el suelo transforma una vivienda más que cualquier otra intervención de superficie equivalente. Unifica estancias, aporta luz o calidez, y define el estilo de la casa. Pero es también uno de los trabajos donde más se nota la diferencia entre una colocación profesional y una improvisada: baldosas que suenan huecas, laminados que crujen o se levantan en las juntas, rodapiés con huecos y peldaños mal rematados.",
+    "En A Coruña la elección del suelo tiene además un componente climático. La humedad ambiental alta durante buena parte del año penaliza las maderas mal estabilizadas y los laminados de baja densidad; los bajos y primeras plantas de edificios antiguos pueden tener humedad por capilaridad que arruina cualquier suelo flotante colocado sin barrera de vapor. Y en casas y chalets del área metropolitana, los suelos de terrazas y galerías tienen que soportar lluvia y salitre.",
+    "Nuestro trabajo empieza por el <strong>diagnóstico del soporte</strong> (planimetría, humedad, estabilidad) y la <strong>elección del material adecuado para cada estancia</strong>, y termina con una colocación que respeta las juntas de dilatación, los encuentros y los remates. Con presupuesto por partidas y <a href=\"/metodo-remodelat/\">garantía por escrito</a>.",
   ]}
+  introFigure={{
+    src: "/images/suelo-porcelanico.webp",
+    alt: "Salón con suelo porcelánico de gran formato efecto piedra clara y luz natural",
+    caption: "Porcelánico rectificado de gran formato: junta mínima, continuidad y máxima resistencia.",
+  }}
+  galleryTitle="Cuatro materiales, cuatro caracteres"
+  galleryText="Cada material tiene su lugar. Te ayudamos a elegir según el uso de la estancia, el soporte existente y el presupuesto."
+  gallery={[
+    { src: "/images/suelo-madera.webp", alt: "Suelo de madera natural de roble instalado en un salón", caption: "Madera natural: calidez y nobleza" },
+    { src: "/images/suelo-laminado.webp", alt: "Suelo laminado efecto roble claro en un dormitorio", caption: "Laminado AC5: resistente y económico" },
+    { src: "/images/suelo-vinilico.webp", alt: "Suelo vinílico SPC efecto madera en una cocina", caption: "Vinílico SPC: 100 % resistente al agua" },
+  ]}
+  topics={[
+    {
+      title: "Porcelánico: el más resistente, ideal para zonas húmedas y de paso",
+      paragraphs: [
+        "El gres porcelánico es el pavimento más duradero que existe para una vivienda: no absorbe agua, no se raya con el uso normal, soporta el calor y se limpia con cualquier producto. Es la elección natural para <strong>baños, cocinas, entradas, terrazas y galerías</strong>, y cada vez más para toda la vivienda cuando se busca un suelo continuo de gran formato.",
+        "Los formatos actuales (60×60, 60×120, 120×120 y hasta 160×320 cm) y los acabados que imitan piedra, madera, cemento o mármol permiten prácticamente cualquier estética. La clave está en la colocación: el gran formato exige un soporte perfectamente plano, adhesivo flexible C2 TE S1, doble encolado y sistema de nivelación pieza a pieza. Sin eso, aparecen cejas, huecos y roturas.",
+      ],
+      bullets: [
+        "Rectificado para juntas de 1,5–2 mm; junta con mortero técnico antimanchas.",
+        "Antideslizante clase 2 en cocinas y baños, clase 3 en duchas y exteriores.",
+        "Efecto madera en lamas de 20×120 o 25×150 cm: aspecto de parqué, resistencia de porcelánico.",
+        "Compatible con suelo radiante, la mejor combinación térmica.",
+      ],
+      figure: {
+        src: "/images/suelo-porcelanico.webp",
+        alt: "Suelo porcelánico rectificado de gran formato instalado con junta mínima en un salón luminoso",
+        caption: "Gran formato rectificado con junta de 2 mm: la colocación exige nivelación y doble encolado.",
+      },
+    },
+    {
+      title: "Laminado: la opción equilibrada para dormitorios y salones",
+      paragraphs: [
+        "El suelo laminado es un tablero de fibra de alta densidad (HDF) con una capa decorativa y una capa de desgaste transparente. Bien elegido e instalado, ofrece un aspecto de madera muy logrado a un precio contenido y con una instalación rápida, flotante, sobre casi cualquier soporte existente.",
+        "No todos los laminados son iguales. Para una vivienda recomendamos <strong>clase AC4 o AC5</strong> (resistencia al desgaste), espesor de 8 a 12 mm, tablero hidrófugo si va cerca de la cocina y una <strong>lámina base con barrera de vapor</strong> siempre. Las juntas en V o los biseles marcan el realismo del efecto tabla; los formatos largos y anchos (1,3–2 m × 19–24 cm) dan un aspecto más noble.",
+      ],
+      bullets: [
+        "Aclimatación de 48 horas en la estancia antes de instalar: evita movimientos posteriores.",
+        "Junta perimetral de 8–10 mm cubierta por el rodapié; perfiles de dilatación cada 8–10 m lineales.",
+        "Lámina base acústica y barrera de vapor sobre soportes de mortero o sobre baldosa antigua.",
+        "Rodapié a juego o lacado blanco, con encuentros a inglete.",
+      ],
+      figure: {
+        src: "/images/suelo-laminado.webp",
+        alt: "Dormitorio con suelo laminado efecto roble claro en lamas largas y rodapié blanco",
+        caption: "Laminado AC5 en lamas largas con rodapié lacado: el estándar en dormitorios y salones.",
+      },
+      quote: "Un suelo flotante que cruje no es culpa del material: es del soporte que nadie niveló.",
+    },
+    {
+      title: "Vinílico SPC: resistente al agua, silencioso y cálido",
+      paragraphs: [
+        "El vinílico rígido de núcleo mineral (SPC) es el material que más ha crecido en los últimos años, y con razón: es <strong>100 % resistente al agua</strong>, dimensionalmente estable frente a cambios de temperatura y humedad, silencioso al pisar, cálido al tacto y muy fino (4–6 mm), lo que permite instalarlo sobre el suelo existente sin recortar puertas.",
+        "Es nuestra recomendación habitual para <strong>cocinas y baños cuando no se quiere obra</strong>, para bajos con algo de humedad ambiental, para viviendas de alquiler y para quien quiere un aspecto de madera o piedra sin las servidumbres del material natural. Los mejores fabricantes ofrecen capas de desgaste de 0,5–0,7 mm con garantías de 20 a 25 años en uso residencial.",
+      ],
+      bullets: [
+        "Instalación flotante con clic o encolada según el soporte y el uso.",
+        "Base integrada de IXPE o corcho para confort acústico.",
+        "Apto para suelo radiante y para estancias con grandes ventanales orientadas al sur.",
+        "Efectos madera, piedra y cemento con texturas en registro (relieve que sigue la veta).",
+      ],
+      figure: {
+        src: "/images/suelo-vinilico.webp",
+        alt: "Cocina con suelo vinílico SPC efecto madera gris instalado de forma continua",
+        caption: "Vinílico SPC efecto madera en cocina: resistente al agua y a los golpes.",
+      },
+    },
+    {
+      title: "Madera natural: el suelo que mejora con los años",
+      paragraphs: [
+        "Nada iguala la nobleza de un suelo de madera real. La <strong>tarima multicapa</strong> (capa noble de 3–4 mm de roble u otra especie sobre soporte contrachapado) combina la belleza de la madera con una estabilidad mucho mayor que la tarima maciza, y admite lijados y renovación cada 15–20 años. Es la elección para salones y dormitorios cuando el presupuesto lo permite y se quiere un suelo para toda la vida.",
+        "En el clima húmedo de A Coruña la madera exige más cuidado en la elección y la instalación: especies estables (roble sobre todo), acabados aceitados o barnizados de calidad, aclimatación previa, barrera de vapor y control de la humedad del soporte antes de instalar. Bien hecho, un suelo de madera en una casa coruñesa dura décadas.",
+      ],
+      bullets: [
+        "Tarima multicapa de roble en lamas anchas (18–26 cm), acabado natural, ahumado o blanqueado.",
+        "Instalación flotante sobre lámina acústica o encolada para máxima sensación de solidez.",
+        "Rodapiés de madera a juego o lacados, con encuentros a inglete y sin cordón visible.",
+        "Mantenimiento sencillo: limpieza con producto específico y reaceitado periódico en acabados aceitados.",
+      ],
+      figure: {
+        src: "/images/suelo-madera.webp",
+        alt: "Salón con suelo de tarima de roble natural en lamas anchas y luz lateral",
+        caption: "Tarima multicapa de roble: la única opción que se puede lijar y renovar décadas después.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye la instalación de un suelo"
+  includesIntro="Instalar un suelo es mucho más que colocar lamas o baldosas. Estas son las partidas que definimos en cada presupuesto:"
   includes={[
-    "Nivelación y preparación del soporte.",
-    "Porcelánico y gran formato.",
-    "Tarima y laminado.",
-    "Microcemento.",
-    "Juntas, cortes y remates.",
-    "Tratamiento y sellado final."
+    "<strong>Diagnóstico del soporte</strong>: planimetría, humedad, estabilidad y compatibilidad con el nuevo material.",
+    "<strong>Levantado y retirada</strong> del pavimento antiguo cuando es necesario, con gestión de escombros.",
+    "<strong>Nivelación</strong> con mortero autonivelante o recrecido, y barrera de vapor cuando el soporte lo requiere.",
+    "<strong>Suministro y aclimatación</strong> del material en la vivienda (48 h para laminado y madera).",
+    "<strong>Instalación</strong> con juntas de dilatación, perfiles de transición y encuentros resueltos.",
+    "<strong>Rodapiés</strong> nuevos a juego o lacados, con ingletes y sin cordones de silicona visibles.",
+    "<strong>Recorte de puertas</strong> y ajuste de umbrales si el nuevo suelo cambia la cota.",
+    "<strong>Limpieza final y entrega</strong> con recomendaciones de mantenimiento y garantía por escrito.",
   ]}
+  processTitle="Cómo instalamos tu suelo"
+  processIntro="El plazo depende de los metros, del material y de si hay que nivelar el soporte: un suelo vinílico con clic en un piso pequeño se instala en pocos días; el porcelánico de gran formato con nivelación necesita más. Te entregamos el cronograma con el presupuesto."
+  phases={[
+    { title: "Visita técnica y medición", duration: "Antes de la obra", text: "Medimos las estancias, comprobamos la planimetría con regla de 2 m y la humedad del soporte con higrómetro. Revisamos puertas, umbrales y encuentros con otros pavimentos." },
+    { title: "Selección de material y presupuesto", duration: "2–3 días", text: "Te mostramos muestras reales, recomendamos el material adecuado para cada estancia y cerramos presupuesto por partidas con mermas y rodapiés incluidos." },
+    { title: "Preparación del soporte", duration: "Paso 1", text: "Levantado del pavimento antiguo si procede, reparación de grietas, autonivelante o recrecido, barrera de vapor. Es la fase que decide la calidad final." },
+    { title: "Aclimatación", duration: "48 horas", text: "El laminado y la madera reposan en la vivienda, en sus paquetes, para equilibrarse con la temperatura y la humedad del ambiente." },
+    { title: "Instalación", duration: "Paso 2", text: "Colocación con juntas de dilatación, sistema de nivelación en porcelánico, perfiles de transición y encuentros con puertas y armarios." },
+    { title: "Rodapiés, remates y entrega", duration: "Paso 3", text: "Rodapiés, ajuste de puertas, limpieza y revisión contigo. Entrega con recomendaciones de mantenimiento y garantía." },
+  ]}
+  priceTitle="Cuánto cuesta cambiar el suelo en A Coruña"
+  priceIntro="El precio depende sobre todo del material, del estado del soporte y de si hay que levantar el pavimento existente. Se cierra por partidas tras la visita técnica."
   priceRows={[
-    ["Suelos y revestimientos (según superficie y material)", "A valorar en visita"]
+    ["Suelo laminado AC4/AC5 con lámina base y rodapié (por vivienda)", "A valorar en visita"],
+    ["Suelo vinílico SPC con clic (por vivienda)", "A valorar en visita"],
+    ["Suelo porcelánico gran formato con nivelación (por estancia o vivienda)", "A valorar en visita"],
+    ["Tarima multicapa de roble con rodapié a juego", "A valorar en visita"],
   ]}
-  priceNote="* Presupuesto por partidas tras la visita técnica (sin IVA)."
+  priceFactors={[
+    "<strong>Material y formato.</strong> Del laminado al roble natural la horquilla es amplia; el gran formato porcelánico suma mano de obra.",
+    "<strong>Estado del soporte.</strong> Nivelar con autonivelante o recrecer añade una partida, pero es lo que garantiza el resultado.",
+    "<strong>Levantar o cubrir.</strong> Instalar sobre el suelo existente ahorra demolición; no siempre es posible ni recomendable.",
+    "<strong>Geometría de la vivienda.</strong> Muchas estancias pequeñas, pasillos y recortes aumentan mermas y tiempo.",
+    "<strong>Rodapiés, perfiles y ajuste de puertas.</strong> Remates que suman poco al presupuesto y mucho al resultado.",
+  ]}
+  priceNote="* Precios sin IVA (10 % en obra de renovación de vivienda; 21 % en material suministrado por separado). Se confirman con visita técnica y mediciones reales."
+  problemsTitle="Los errores más frecuentes al cambiar un suelo"
+  problemsIntro="Lo que vemos cuando nos llaman para arreglar un suelo recién instalado, y cómo lo evitamos desde el principio."
+  problems={[
+    { title: "Laminado que cruje y se abre", problem: "Instalado sobre un soporte con desniveles de más de 3 mm o sin junta perimetral. A los meses crujen las juntas y se abren huecos.", solution: "Comprobación de planimetría con regla de 2 m, autonivelante donde hace falta, junta perimetral de 8–10 mm y perfiles de dilatación cada 8–10 m." },
+    { title: "Baldosas que suenan huecas", problem: "Porcelánico colocado con pegote o simple encolado sobre soporte irregular. Suenan huecas y acaban rompiendo.", solution: "Doble encolado con llana dentada, adhesivo C2 TE S1 y sistema de nivelación. Comprobación pieza a pieza antes de rejuntar." },
+    { title: "Madera que se abomba", problem: "Tarima instalada sin comprobar la humedad del soporte ni barrera de vapor, en un bajo o una primera planta de edificio antiguo.", solution: "Medición de humedad con higrómetro antes de instalar; barrera de vapor siempre; si hay capilaridad, se trata antes." },
+    { title: "Puertas que ya no cierran", problem: "El nuevo suelo sube la cota 12–15 mm y nadie recortó las puertas ni ajustó los umbrales.", solution: "Cálculo de la cota final en la visita y recorte de puertas y ajuste de marcos incluidos en el presupuesto." },
+    { title: "Encuentros mal resueltos", problem: "Perfiles metálicos vistos entre estancias, cortes irregulares junto a marcos y rodapiés con huecos de silicona.", solution: "Encuentros planificados: perfiles enrasados o del mismo material, cortes precisos y rodapiés a inglete." },
+    { title: "Material equivocado para el uso", problem: "Laminado estándar en una cocina o un baño, o madera maciza en un bajo húmedo. El daño aparece en meses.", solution: "Elección del material por estancia: porcelánico o SPC en zonas húmedas, laminado o madera en zonas secas." },
+  ]}
+  relatedProjects={[
+    { slug: "cocina-reubicada-zona-dia", title: "Cocina reubicada, suelo continuo", image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp", tag: "Suelo continuo" },
+    { slug: "bano-en-adosado", title: "Baño en adosado, porcelánico 60×120", image: "/images/proyectos/bano-en-adosado/bano-final-1.webp", tag: "Gran formato" },
+    { slug: "bano-secundario-compacto", title: "Baño secundario compacto", image: "/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp", tag: "Porcelánico 30×90" },
+  ]}
+  relatedGuides={[
+    { title: "Cuánto cuesta reformar un piso en A Coruña", url: "/blog/cuanto-cuesta-reformar-piso-a-coruna/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+    { title: "Revestimientos de pared", url: "/servicios/revestimientos-pared/" },
+  ]}
   faqs={[
-    { question: "¿Instaláis gran formato?", answer: "Sí, con nivelación previa del soporte y adhesivo de agarre adecuado. El gran formato mal preparado es la causa más común de placas sueltas." },
-    { question: "¿Qué suelo recomendáis para zonas húmedas?", answer: "Porcelánico antideslizante para baños y cocinas; para estancias secas, tarima o porcelánico según el uso." }
+    { question: "¿Qué suelo me recomendáis para toda la vivienda?", answer: "Depende de tu prioridad. Si quieres máxima resistencia y un solo material en todas las estancias, porcelánico (efecto madera o piedra). Si buscas calidez y confort acústico con buena resistencia al agua, vinílico SPC. Si prefieres madera real en zonas secas y porcelánico en baños y cocina, es la combinación más habitual. Te mostramos muestras en la visita." },
+    { question: "¿Se puede instalar el suelo nuevo sobre el antiguo?", answer: "Muchas veces sí: laminado y vinílico se instalan flotantes sobre baldosa, terrazo o madera si el soporte está firme y nivelado. El porcelánico también puede colocarse sobre baldosa antigua con imprimación y adhesivo adecuados. Lo comprobamos en la visita; si hay piezas sueltas o humedad, hay que levantar." },
+    { question: "¿Cuánto tarda cambiar el suelo de un piso?", answer: "Depende de los metros, del material y del estado del soporte. El vinílico con clic es lo más rápido (pocos días en un piso); el laminado y la madera necesitan 48 horas de aclimatación previa; el porcelánico de gran formato con nivelación es el proceso más largo. Te entregamos el cronograma con el presupuesto." },
+    { question: "¿Tengo que vaciar la casa?", answer: "Las estancias donde se trabaja tienen que estar despejadas de muebles. Podemos organizar la obra por zonas para que puedas mover el mobiliario de una a otra y seguir viviendo en casa." },
+    { question: "¿Es el laminado adecuado para la cocina?", answer: "Los laminados hidrófugos de calidad aguantan salpicaduras ocasionales, pero para cocinas recomendamos vinílico SPC o porcelánico, que son totalmente resistentes al agua. En baños, siempre porcelánico o SPC." },
+    { question: "¿Qué pasa con las puertas al subir el suelo?", answer: "Si la nueva cota es mayor, recortamos las hojas y ajustamos los marcos. Lo calculamos en la visita y lo incluimos en el presupuesto para que no haya sorpresas." },
+    { question: "¿Instaláis suelos en terrazas y galerías?", answer: "Sí, con porcelánico antideslizante para exterior (clase 3) sobre impermeabilización comprobada y con pendientes al desagüe. En A Coruña la impermeabilización previa es imprescindible." },
+    { question: "¿Qué garantía tiene el suelo?", answer: "Garantía de instalación por escrito, además de la garantía del fabricante del material (que en laminados y vinílicos de calidad va de 15 a 25 años en uso residencial). Te entregamos ambas junto con las recomendaciones de mantenimiento." },
   ]}
-  schemaName="Suelos y Revestimientos en A Coruña"
+  ctaTitle="¿Quieres cambiar el suelo de tu vivienda?"
+  ctaText="Cuéntanos qué estancias quieres renovar y qué material te gusta. Visita técnica sin compromiso en A Coruña y área metropolitana, con muestras reales y presupuesto por partidas."
+  whatsappText="Hola, quiero presupuesto para cambiar el suelo de mi vivienda en A Coruña"
+  schemaName="Instalación de Suelos en A Coruña"
   schemaType="Flooring Installation"
 />
