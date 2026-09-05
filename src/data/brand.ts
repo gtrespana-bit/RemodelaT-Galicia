@@ -6,7 +6,7 @@
  *
  * Cambios clave frente a la versión venezolana:
  *   - Marca: RemodelaT Coruña (empresa NUEVA, sin "23 años" ni "desde 2003").
- *   - Moneda: € (EUR). Sin cifras de precio públicas: presupuesto por partidas tras visita (IVA 10 % / 21 % según obra).
+ *   - Moneda: € (EUR). Horquillas orientativas de mercado 2026 (sin IVA) en blog, servicios y zonas; presupuesto cerrado por partidas tras visita (IVA 10 % / 21 % según obra).
  *   - Zona: A Coruña y área metropolitana (municipios de A Coruña).
  *   - Idioma: solo español.
  *   - Paleta: navy + oro.

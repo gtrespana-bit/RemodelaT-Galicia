@@ -466,7 +466,8 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
 
 <style>
   /* ---------- Sistema de lectura centrado ---------- */
-  .svc-reading { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  /* Ancho de página del sitio (--container: 1200px), igual que .container del resto de páginas. */
+  .svc-reading { max-width: var(--container); margin: 0 auto; padding: 0 20px; }
   .svc-section { padding: clamp(64px, 8vw, 110px) 0; }
   .svc-section + .svc-section { padding-top: 0; }
 
@@ -501,7 +502,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   }
 
   /* ---------- Prosa ---------- */
-  .svc-prose { font-size: 1.13rem; line-height: 1.85; color: var(--text); text-wrap: pretty; }
+  .svc-prose { font-size: 1.15rem; line-height: 1.8; color: var(--text); text-wrap: pretty; }
   .svc-prose p { margin-bottom: 1.35rem; }
   .svc-prose p:last-child { margin-bottom: 0; }
   .svc-prose :global(strong) { font-weight: 700; color: var(--ink-soft); }
@@ -526,7 +527,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   .svc-quote p { font-family: var(--font-serif); font-size: clamp(1.35rem, 2.4vw, 1.7rem); line-height: 1.4; color: var(--ink); font-style: italic; margin: 0; text-wrap: balance; }
 
   /* ---------- Figuras ---------- */
-  .svc-figure { max-width: 1080px; margin: 48px auto 0; padding: 0 24px; }
+  .svc-figure { max-width: var(--container); margin: 48px auto 0; padding: 0 20px; }
   .svc-figure img {
     width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
     border-radius: var(--r-god); box-shadow: var(--e-3);
@@ -535,7 +536,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   .svc-figure-wide { margin-top: 56px; }
 
   /* ---------- Índice ---------- */
-  .svc-toc { max-width: 1200px; margin: 6px auto 0; padding: 0 clamp(20px, 4vw, 48px); }
+  .svc-toc { max-width: var(--container); margin: 6px auto 0; padding: 0 20px; }
   .svc-toc-inner {
     display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 14px;
     padding: 14px 18px; border: 1px solid rgba(201,169,97,.25); border-radius: var(--r-god);
@@ -552,7 +553,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   .svc-toc a:hover { color: var(--gold-ink-strong); border-color: rgba(201,169,97,.55); transform: translateY(-1px); }
 
   /* ---------- Cifras clave ---------- */
-  .svc-highlights { max-width: 1080px; margin: 44px auto 0; padding: 0 24px; }
+  .svc-highlights { max-width: var(--container); margin: 44px auto 0; padding: 0 20px; }
   .svc-highlights-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin: 0;
     border: 1px solid rgba(201,169,97,.25); border-radius: var(--r-god); overflow: hidden;
@@ -569,7 +570,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   /* ---------- Galería ---------- */
   .svc-gallery-section { background: var(--white); }
   .svc-gallery {
-    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    max-width: var(--container); margin: 0 auto; padding: 0 20px;
     display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px;
   }
   .svc-gallery-item { position: relative; margin: 0; border-radius: var(--r-god); overflow: hidden; box-shadow: var(--e-1); background: var(--sand); aspect-ratio: 4 / 3; }
@@ -597,7 +598,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   /* ---------- Qué incluye ---------- */
   .svc-includes { background: var(--white); padding-top: clamp(64px, 8vw, 110px) !important; }
   .svc-includes-grid {
-    list-style: none; margin: 0 auto; padding: 0 24px; max-width: 1080px;
+    list-style: none; margin: 0 auto; padding: 0 20px; max-width: var(--container);
     display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
   }
   .svc-include {
@@ -623,8 +624,8 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
     border-top: var(--hairline); border-bottom: var(--hairline);
   }
   .svc-phases {
-    list-style: none; margin: 0 auto; padding: 0 24px; max-width: 900px;
-    display: grid; gap: 14px; counter-reset: phase;
+    list-style: none; margin: 0 auto; padding: 0 20px; max-width: var(--container);
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; counter-reset: phase;
   }
   .svc-phase {
     display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: start;
@@ -638,7 +639,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   .svc-phase-duration { display: inline-block; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 10px; }
   .svc-phase-body p { margin: 0; color: rgba(255,255,255,.76); font-size: 1rem; line-height: 1.72; }
   .svc-phase-body :global(strong) { color: var(--white); font-weight: 600; }
-  .svc-process-link { display: flex; justify-content: center; margin-top: 44px; padding: 0 24px; }
+  .svc-process-link { display: flex; justify-content: center; margin-top: 44px; padding: 0 20px; }
 
   /* ---------- Precios ---------- */
   .svc-prices { background: var(--white); padding-top: clamp(64px, 8vw, 110px) !important; }
@@ -661,7 +662,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   /* ---------- Problemas ---------- */
   .svc-problems { background: var(--bone); padding-top: clamp(64px, 8vw, 110px) !important; }
   .svc-problems-grid {
-    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    max-width: var(--container); margin: 0 auto; padding: 0 20px;
     display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;
   }
   .svc-problem { background: var(--white); border: 1px solid var(--sand); border-radius: var(--r-god); padding: 30px 30px 26px; box-shadow: var(--e-1); }
@@ -674,7 +675,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   /* ---------- Proyectos ---------- */
   .svc-projects { background: var(--white); padding-top: clamp(64px, 8vw, 110px) !important; }
   .svc-projects-grid {
-    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    max-width: var(--container); margin: 0 auto; padding: 0 20px;
     display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;
   }
   .svc-project-card {
@@ -729,7 +730,7 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
 
   /* ---------- Responsive ---------- */
   @media (max-width: 900px) {
-    .svc-includes-grid, .svc-problems-grid { grid-template-columns: 1fr; }
+    .svc-includes-grid, .svc-problems-grid, .svc-phases { grid-template-columns: 1fr; }
     .svc-projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .svc-gallery { grid-template-columns: 1fr; grid-template-rows: none; }
     .svc-gallery-item.large { grid-row: auto; aspect-ratio: 4 / 3; }

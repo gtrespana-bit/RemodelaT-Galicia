@@ -726,7 +726,8 @@ const icons: Record<string, string> = {
   .gu-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1080px;
+    width: 100%;
+    max-width: var(--container);
   }
   [data-hero] {
     opacity: 0;
@@ -787,7 +788,7 @@ const icons: Record<string, string> = {
     overflow: hidden;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(14px);
-    max-width: 1090px;
+    max-width: 100%;
   }
   .gu-fact {
     flex: 1 1 160px;
@@ -904,7 +905,6 @@ const icons: Record<string, string> = {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
-    max-width: 1080px;
     margin: 0 auto;
   }
   .gu-summary-card {
@@ -967,7 +967,6 @@ const icons: Record<string, string> = {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0;
-    max-width: 1080px;
     margin: 56px auto 0;
     border: 1px solid rgba(201, 169, 97, 0.25);
     border-radius: var(--r-lg);
@@ -1011,7 +1010,6 @@ const icons: Record<string, string> = {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 26px;
-    max-width: 1160px;
     margin: 0 auto;
   }
   .gu-showcase-card {
@@ -1182,7 +1180,6 @@ const icons: Record<string, string> = {
     display: grid;
     grid-template-columns: 200px minmax(0, 1fr);
     gap: 48px;
-    max-width: 1180px;
     margin: 0 auto;
     align-items: start;
   }
@@ -1471,7 +1468,6 @@ const icons: Record<string, string> = {
   }
   .gu-compare-section .section-header { max-width: 780px; }
   .gu-ba {
-    max-width: 1080px;
     margin: 0 auto;
   }
   .gu-ba-stage {
@@ -1594,7 +1590,6 @@ const icons: Record<string, string> = {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
-    max-width: 1160px;
     margin: 0 auto 34px;
   }
   .gu-highlight-card {
@@ -1647,7 +1642,6 @@ const icons: Record<string, string> = {
     line-height: 1.68;
   }
   .gu-spec-table {
-    max-width: 980px;
     margin: 0 auto;
     border: 1px solid var(--sand);
     border-radius: var(--r-lg);
