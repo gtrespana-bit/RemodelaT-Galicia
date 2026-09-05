@@ -1,10 +1,8 @@
 /**
  * Constantes de marca — FUENTE ÚNICA DE VERDAD.
  *
- * Adaptación de `reformat-venezuela` a RemodelaT Coruña (ver plan en
- * RINCOCARABOBO: 07-web-y-marketing/adaptacion-reformat-venezuela.md).
+ * Marca: RemodelaT Coruña (empresa de nueva creación en A Coruña).
  *
- * Cambios clave frente a la versión venezolana:
  *   - Marca: RemodelaT Coruña (empresa NUEVA, sin "23 años" ni "desde 2003").
  *   - Moneda: € (EUR). Horquillas orientativas de mercado 2026 (sin IVA) en blog, servicios y zonas; presupuesto cerrado por partidas tras visita (IVA 10 % / 21 % según obra).
  *   - Zona: A Coruña y área metropolitana (municipios de A Coruña).
