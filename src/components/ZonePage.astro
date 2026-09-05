@@ -22,7 +22,7 @@ const { zone, service } = Astro.props;
 const zoneName = zoneNames[zone] || zone;
 const local = zoneLocal[zone] || zoneLocal['a-coruna'];
 
-// Configuración por servicio (sin cifras de precio: presupuesto por partidas tras visita).
+// Configuración por servicio. Horquillas orientativas de mercado 2026 (sin IVA); presupuesto cerrado por partidas tras visita.
 const serviceConfig = {
   bano: {
     crumb: 'Reforma de Baños',
@@ -38,6 +38,7 @@ const serviceConfig = {
       'Sanitarios, grifería y mampara.',
       'Fontanería y electricidad de la zona, con pruebas.'
     ],
+    priceRange: 'Como referencia de mercado 2026, una reforma completa de un baño estándar de piso (4–5 m²) con materiales de gama media se mueve entre <strong>5.000 y 8.000 € sin IVA</strong>; un aseo pequeño entre 3.500 y 5.500 €, y un baño amplio entre 7.000 y 11.000 €. Cambiar la bañera por una ducha ronda los 1.800 – 3.500 €.',
     priceFactors: [
       'Tamaño del baño y si se mantiene o no la posición de sanitarios.',
       'Alcance: renovar acabados o reforma completa con demolición hasta el ladrillo.',
@@ -46,7 +47,7 @@ const serviceConfig = {
       'Sanitarios, grifería, mueble y espejo elegidos.'
     ],
     faqs: [
-      { question: `¿Cuánto cuesta reformar un baño en ${zoneName}?`, answer: 'Depende del tamaño del baño, de si hay que renovar fontanería y electricidad, de la cerámica y los sanitarios elegidos y de si se mantiene la distribución. Por eso no damos un precio genérico: tras la visita técnica entregamos un presupuesto cerrado por partidas en 2–3 días.' },
+      { question: `¿Cuánto cuesta reformar un baño en ${zoneName}?`, answer: `Como referencia de mercado 2026, una reforma completa de un baño estándar (4–5 m²) con materiales de gama media se mueve entre 5.000 y 8.000 € sin IVA; un aseo pequeño entre 3.500 y 5.500 € y un baño amplio entre 7.000 y 11.000 €. El punto exacto depende del tamaño, del estado de fontanería y electricidad, de la cerámica y los sanitarios y de si se mantiene la distribución. Tras la visita técnica en ${zoneName} entregamos un presupuesto cerrado por partidas en 2–3 días.` },
       { question: `¿Garantizáis la impermeabilización en ${zoneName}?`, answer: 'Sí. Realizamos prueba de estanqueidad antes de cerrar paredes y la impermeabilización queda garantizada por escrito.' },
       { question: `¿Cuánto tarda una reforma de baño en ${zoneName}?`, answer: 'Un baño estándar, manteniendo la distribución, se ejecuta en 5–6 días laborables. Con redistribución o ducha de obra puede necesitar algunos días más; entregamos el cronograma antes de empezar.' }
     ],
@@ -66,6 +67,7 @@ const serviceConfig = {
       'Encimera (cuarzo, gran formato, etc.) según uso.',
       'Electrodomésticos (según alcance pactado).'
     ],
+    priceRange: 'Como referencia de mercado 2026, una cocina completa estándar (8–10 m²) con mobiliario de gama media se mueve entre <strong>8.000 y 14.000 € sin IVA</strong>, sin electrodomésticos; una cocina pequeña lineal entre 6.000 y 10.000 €, y una abierta al salón o con isla entre 15.000 y 25.000 €. Renovar solo mobiliario y encimera ronda los 4.000 – 8.000 €.',
     priceFactors: [
       'Alcance: solo mobiliario y encimera, cocina completa o cocina abierta al salón.',
       'Metros lineales de mueble y tipo de distribución (lineal, L, U, isla).',
@@ -74,7 +76,7 @@ const serviceConfig = {
       'Electrodomésticos: gama, integrables o no, aportados por nosotros o por ti.'
     ],
     faqs: [
-      { question: `¿Cuánto cuesta reformar una cocina en ${zoneName}?`, answer: 'Depende del alcance (solo mobiliario y encimera, cocina completa o cocina abierta al salón), de los metros, del estado de las instalaciones y del mobiliario, encimera y electrodomésticos elegidos. Tras la visita técnica entregamos diseño sobre plano y presupuesto cerrado por partidas.' },
+      { question: `¿Cuánto cuesta reformar una cocina en ${zoneName}?`, answer: `Como referencia de mercado 2026, una cocina completa estándar (8–10 m²) con mobiliario de gama media se mueve entre 8.000 y 14.000 € sin IVA y sin electrodomésticos; renovar solo mobiliario y encimera ronda los 4.000 – 8.000 €, y una cocina abierta al salón o con isla, los 15.000 – 25.000 €. El punto exacto depende de los metros, del estado de las instalaciones y del mobiliario, encimera y electrodomésticos elegidos. Tras la visita técnica en ${zoneName} entregamos diseño sobre plano y presupuesto cerrado por partidas.` },
       { question: '¿Incluye los electrodomésticos?', answer: 'Depende del alcance pactado. Lo definimos por escrito en el presupuesto para que sepas qué entra y qué no.' },
       { question: `¿Cómo empezamos una cocina en ${zoneName}?`, answer: 'Con una visita técnica: medimos, revisamos instalaciones y definimos alcance y materiales. Después te enviamos el presupuesto por partidas.' }
     ],
@@ -94,6 +96,7 @@ const serviceConfig = {
       'Cocina y baños con acabados de calidad.',
       'Pruebas antes de cerrar y entrega documentada con garantía por partidas.'
     ],
+    priceRange: 'Como referencia de mercado 2026, una reforma integral con calidades medias se sitúa entre <strong>550 y 800 € por m² sin IVA</strong> (unos 44.000 – 64.000 € en un piso de 80 m²); con calidades altas, entre 800 y 1.100 €/m², y una actualización que conserva las instalaciones, entre 350 y 550 €/m².',
     priceFactors: [
       'Superficie y estado de partida de la vivienda.',
       'Alcance: qué se renueva y qué se conserva.',
@@ -104,7 +107,7 @@ const serviceConfig = {
     faqs: [
       { question: `¿Qué incluye una reforma integral en ${zoneName}?`, answer: 'Distribución, instalaciones, revestimientos, carpintería y acabados. Definimos el alcance por escrito antes de empezar, para que sepas exactamente qué incluye cada partida.' },
       { question: `¿Cuánto tarda una reforma integral en ${zoneName}?`, answer: 'Depende del metraje y del alcance. Tras la visita técnica entregamos un cronograma por fases con plazos realistas.' },
-      { question: `¿Dais el precio sin visitar la vivienda en ${zoneName}?`, answer: 'No. Para dar un presupuesto real necesitamos mediciones y diagnóstico. Tras la visita entregamos un presupuesto cerrado por partidas y un cronograma con fechas.' }
+      { question: `¿Cuánto cuesta una reforma integral en ${zoneName}?`, answer: `Como referencia de mercado 2026, una reforma integral con calidades medias se sitúa entre 550 y 800 € por m² sin IVA (unos 44.000 – 64.000 € en un piso de 80 m²); con calidades altas, entre 800 y 1.100 €/m². Para dar un precio real necesitamos mediciones y diagnóstico: tras la visita en ${zoneName} entregamos un presupuesto cerrado por partidas y un cronograma con fechas.` }
     ],
     schemaType: 'Home Remodeling',
   }
@@ -162,12 +165,13 @@ const description = `${serviceConfig.lead} Visita técnica sin compromiso y pres
           {serviceConfig.includes.map((item) => <li>{item}</li>)}
         </ul>
 
-        <h2>Cuánto cuesta: de qué depende el precio</h2>
-        <p>No publicamos precios genéricos porque no hay dos obras iguales: el precio depende del tamaño, de si hay que renovar fontanería y electricidad, de la cerámica, sanitarios y mobiliario elegidos y de si se mantiene o no la distribución. Lo que sí garantizamos es un <strong>presupuesto cerrado por partidas</strong>, con materiales especificados e IVA desglosado, entregado en pocos días tras la visita técnica sin compromiso en {zoneName}.</p>
+        <h2>Cuánto cuesta: precios orientativos y de qué depende</h2>
+        <p set:html={serviceConfig.priceRange} />
+        <p>Son horquillas para situarte, no un presupuesto: dentro de cada una, el precio depende del tamaño, de si hay que renovar fontanería y electricidad, de la cerámica, sanitarios y mobiliario elegidos y de si se mantiene o no la distribución. Lo que sí garantizamos es un <strong>presupuesto cerrado por partidas</strong>, con materiales especificados e IVA desglosado, entregado en pocos días tras la visita técnica sin compromiso en {zoneName}.</p>
         <ul>
           {serviceConfig.priceFactors.map((item) => <li>{item}</li>)}
         </ul>
-        <p class="price-note">* IVA del 10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto y en materiales aportados por el cliente. Se confirma con visita técnica y mediciones reales.</p>
+        <p class="price-note">* Precios orientativos de mercado 2026, sin IVA: 10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto y en materiales aportados por el cliente. Se confirman con visita técnica y mediciones reales.</p>
 
         <h2>Cómo trabajamos en {zoneName}</h2>
         <p>Seguimos el <a href="/metodo-remodelat/">Método RemodelaT</a> en 10 etapas: diagnóstico técnico, presupuesto por partidas, ejecución supervisada con equipo propio, pruebas antes de cerrar y entrega documentada con garantía por escrito.</p>

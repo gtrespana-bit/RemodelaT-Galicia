@@ -138,7 +138,14 @@ import ServicePage from '../../components/ServicePage.astro';
     { title: "Acabados, pintura y entrega", duration: "Fase 8", text: "Pintura, mecanismos, iluminación, remates. Revisión contigo punto por punto, limpieza final y entrega documentada con garantía por escrito." },
   ]}
   priceTitle="Cuánto cuesta una reforma integral en A Coruña"
-  priceIntro="En una reforma integral cada vivienda es un proyecto distinto, y un precio por metro cuadrado o un 'desde' solo sirve para llevarse sorpresas después. Lo que te ofrecemos es un presupuesto cerrado y por partidas, elaborado sobre planos y mediciones reales, que puedas comparar partida a partida."
+  priceIntro="Una reforma integral se mueve en una horquilla amplia según el estado de partida y las calidades. Estas son las referencias de mercado en A Coruña, sin IVA, para que te sitúes antes de la visita técnica."
+  priceRows={[
+    ["Actualización (suelos, pintura, puertas, baño o cocina; instalaciones que se conservan)", "350 – 550 €/m²"],
+    ["Reforma integral con calidades medias", "550 – 800 €/m²"],
+    ["Reforma integral con calidades altas", "800 – 1.100 €/m²"],
+    ["Piso de 80 m², integral con calidades medias", "44.000 – 64.000 €"],
+    ["Piso de 100 m², integral con calidades medias", "55.000 – 80.000 €"],
+  ]}
   priceFactors={[
     "<strong>Superficie y estado de partida.</strong> No es lo mismo actualizar un piso de los 90 que vaciar uno de los 60 con tuberías de plomo e instalación sin tierra.",
     "<strong>Alcance.</strong> Qué se renueva y qué se conserva: instalaciones, distribución, carpintería exterior, suelos, baños, cocina.",
@@ -153,6 +160,7 @@ import ServicePage from '../../components/ServicePage.astro';
     "<strong>Cronograma por fases con fechas</strong>, entregado junto con el presupuesto.",
     "<strong>Precio cerrado.</strong> Solo cambia si cambia el alcance; cualquier imprevisto se documenta, se valora y se aprueba por escrito antes de ejecutarse.",
   ]}
+  priceNote="* Precios orientativos de mercado 2026, sin IVA (10 % en obra de renovación de vivienda que cumple los requisitos). Se confirman con visita técnica, mediciones reales y presupuesto cerrado por partidas."
   problemsTitle="Lo que suele salir mal en una reforma integral (y cómo lo evitamos)"
   problemsIntro="Los problemas de las integrales casi nunca son de materiales: son de planificación, de orden y de comunicación."
   problems={[
@@ -174,7 +182,7 @@ import ServicePage from '../../components/ServicePage.astro';
     { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
   ]}
   faqs={[
-    { question: "¿Cuánto cuesta una reforma integral en A Coruña?", answer: "Depende de la superficie, del estado de partida, del alcance (qué se renueva y qué se conserva), del número de baños, de si hay cambios estructurales y de la gama de materiales. Por eso no publicamos un precio por metro cuadrado ni un 'desde'. Tras la visita técnica y el diseño te entregamos un presupuesto cerrado por partidas, con mediciones y materiales especificados." },
+    { question: "¿Cuánto cuesta una reforma integral en A Coruña?", answer: "Como referencia de mercado 2026, una reforma integral con calidades medias se sitúa entre 550 y 800 € por m² sin IVA: unos 44.000 – 64.000 € en un piso de 80 m² y 55.000 – 80.000 € en uno de 100 m². Con calidades altas la horquilla sube a 800 – 1.100 €/m², y una actualización que conserva las instalaciones baja a 350 – 550 €/m². Superficie, estado de partida, número de baños, cambios estructurales y gama de materiales mueven la cifra dentro de esas horquillas. El presupuesto se cierra por partidas tras la visita técnica." },
     { question: "¿Cuánto dura una reforma integral?", answer: "Depende de los metros, del alcance y de los plazos de suministro de elementos como ventanas, cocina o puertas. Tras la visita y el diseño entregamos un cronograma por fases con fechas, y lo cumplimos: cada fase se cierra y se comprueba antes de abrir la siguiente." },
     { question: "¿Puedo vivir en la casa durante la obra?", answer: "En una reforma integral no lo recomendamos: se corta el agua y la luz por fases, hay polvo y ruido, y la obra avanza más despacio si hay que mantener habitable una parte. Si no hay alternativa, organizamos la obra por zonas, pero el plazo se alarga." },
     { question: "¿Necesito arquitecto?", answer: "Si la reforma no toca estructura ni fachada, normalmente basta con una comunicación previa o licencia de obra menor y no hace falta proyecto de arquitecto. Si se abren muros de carga, se modifica la fachada o el edificio está protegido, es obligatorio proyecto técnico y dirección de obra. Te lo indicamos en la visita y coordinamos con el técnico si hace falta." },

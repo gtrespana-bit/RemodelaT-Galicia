@@ -1,24 +1,44 @@
 ---
-title: "Cuánto cuesta reformar una cocina en A Coruña: de qué depende el precio"
-excerpt: "Reformar una cocina en A Coruña no tiene precio único: depende del alcance, los metros, las instalaciones, el mobiliario y la encimera. Cómo se forma."
+title: "Cuánto cuesta reformar una cocina en A Coruña: precios orientativos 2026"
+excerpt: "Precios orientativos para reformar una cocina en A Coruña en 2026: horquillas por tamaño y alcance (sin IVA), qué partidas pesan más y cuánto dura la obra."
 date: 2026-08-27
 category: "Precios"
 image: "/images/cocina-800.webp"
-readTime: "6 min"
+readTime: "7 min"
 author: "RemodelaT Coruña"
 ---
 
-La cocina es la estancia con más instalaciones por metro cuadrado y la que más partidas distintas reúne en una reforma: albañilería, fontanería, electricidad, extracción, revestimientos, mobiliario, encimera y electrodomésticos. Por eso la horquilla de precios es enorme y **una cifra genérica no te sirve de nada**: cambiar muebles y encimera sobre unas instalaciones correctas no tiene nada que ver con abrir la cocina al salón con todo nuevo.
+La cocina es la estancia con más instalaciones por metro cuadrado y la que más partidas distintas reúne en una reforma: albañilería, fontanería, electricidad, extracción, revestimientos, mobiliario, encimera y electrodomésticos. Por eso la horquilla de precios es amplia: cambiar muebles y encimera sobre unas instalaciones correctas no tiene nada que ver con abrir la cocina al salón con todo nuevo. Aun así, se puede orientar. Estas son las **horquillas de referencia con las que trabajamos en A Coruña y su área metropolitana**.
 
-Lo útil es entender **qué forma el precio**, para saber qué estás comparando cuando recibas presupuestos.
+## Precios orientativos de una reforma de cocina en A Coruña (2026)
 
-## Los siete factores que determinan el precio
+Horquillas de mercado para una **cocina completa** (desmontaje, instalaciones nuevas de la zona, revestimientos, mobiliario, encimera y montaje), con mobiliario y encimera de gama media y **sin electrodomésticos**. Precios **sin IVA**.
+
+| Tipo de cocina | Superficie | Precio orientativo (sin IVA) |
+| --- | --- | --- |
+| Cocina pequeña, lineal | 5 – 7 m² | 6.000 – 10.000 € |
+| Cocina estándar de piso, en L | 8 – 10 m² | 8.000 – 14.000 € |
+| Cocina grande, en U o con península | 11 – 14 m² | 12.000 – 20.000 € |
+| Cocina abierta al salón o con isla | más de 14 m² | 15.000 – 25.000 € |
+
+Según el alcance de la obra:
+
+| Alcance | Precio orientativo (sin IVA) |
+| --- | --- |
+| Renovar solo mobiliario y encimera (se conservan suelo, alicatado e instalaciones) | 4.000 – 8.000 € |
+| Cocina completa manteniendo la distribución | 8.000 – 14.000 € |
+| Cocina abierta al salón (demolición de tabique, remates, extracción e iluminación nuevas) | 12.000 – 22.000 € |
+| Electrodomésticos de gama media (horno, placa, campana, frigorífico y lavavajillas) | 2.000 – 4.500 € adicionales |
+
+Son cifras para situarte, no un presupuesto. El mobiliario es la partida que más mueve el total: la misma cocina de 9 m² puede costar 9.000 € con frentes laminados y herrajes de serie o 16.000 € con lacado, muebles hasta el techo, columnas y encimera porcelánica. Por eso el presupuesto real sale de la visita técnica, con **diseño sobre plano y precio cerrado por partidas**.
+
+## Los siete factores que mueven el precio dentro de la horquilla
 
 ### 1. El alcance
 
-- **Renovar mobiliario y encimera.** Se aprovechan suelo, alicatado e instalaciones. Es la opción más económica y la más rápida.
-- **Cocina completa.** Desmontaje, instalaciones nuevas, revestimientos, mobiliario, encimera y montaje de electrodomésticos.
-- **Cocina abierta al salón.** Todo lo anterior más demolición del tabique, remates de suelo y techo entre las dos estancias, extracción resuelta y, normalmente, iluminación nueva en ambas.
+- **Renovar mobiliario y encimera** (4.000 – 8.000 €). Se aprovechan suelo, alicatado e instalaciones. Es la opción más económica y la más rápida.
+- **Cocina completa** (8.000 – 14.000 € en una cocina estándar). Desmontaje, instalaciones nuevas, revestimientos, mobiliario, encimera y montaje de electrodomésticos.
+- **Cocina abierta al salón** (12.000 – 22.000 €). Todo lo anterior más demolición del tabique, remates de suelo y techo entre las dos estancias, extracción resuelta y, normalmente, iluminación nueva en ambas.
 
 ### 2. Los metros y la distribución
 
@@ -26,19 +46,19 @@ Una cocina lineal de 6 m² y una en U o con isla de 15 m² no llevan los mismos 
 
 ### 3. El estado de las instalaciones
 
-Si fontanería, electricidad y extracción están bien, se aprovechan. Si hay que renovarlas (habitual en cocinas anteriores a los 90), o mover tomas para la nueva distribución, la partida crece. Es dinero bien invertido: son las instalaciones que quedarán ocultas detrás de los muebles durante los próximos 20 años.
+Si fontanería, electricidad y extracción están bien, se aprovechan. Si hay que renovarlas (habitual en cocinas anteriores a los 90), o mover tomas para la nueva distribución, la partida crece: entre 1.500 y 3.500 € según puntos de agua, circuitos y extracción. Es dinero bien invertido: son las instalaciones que quedarán ocultas detrás de los muebles durante los próximos 20 años.
 
 ### 4. El mobiliario
 
-Es, con diferencia, la partida más variable. Frentes laminados, lacados o de madera; herrajes de serie o con freno y extracción total; muebles hasta el techo o con rellano; columnas para horno y despensa extraíble. Dos cocinas de los mismos metros pueden tener presupuestos de mobiliario muy distintos, y las dos pueden ser correctas: depende de lo que quieras y de cuánto vayas a usarla.
+Es, con diferencia, la partida más variable. Frentes laminados, lacados o de madera; herrajes de serie o con freno y extracción total; muebles hasta el techo o con rellano; columnas para horno y despensa extraíble. En una cocina estándar el mobiliario va desde unos 3.000 € en gama media hasta 8.000 – 12.000 € en lacado o madera a medida. Dos cocinas de los mismos metros pueden tener presupuestos de mobiliario muy distintos, y las dos pueden ser correctas: depende de lo que quieras y de cuánto vayas a usarla.
 
 ### 5. La encimera
 
-Laminado, cuarzo compacto, porcelánico de gran formato o granito natural, en orden aproximado de precio. Influyen también el espesor, el número de piezas y si el frente entre encimera y muebles altos va en el mismo material.
+Laminado (300 – 700 €), cuarzo compacto (1.200 – 2.500 €), porcelánico de gran formato o granito natural (1.800 – 3.500 €), para una cocina estándar de 3 – 4 metros lineales. Influyen también el espesor, el número de piezas y si el frente entre encimera y muebles altos va en el mismo material.
 
 ### 6. Los electrodomésticos
 
-Gama, marca, integrables o de libre instalación. Y quién los aporta: si los suministra la empresa dentro de la obra pueden ir al 10 % de IVA; si los compras por tu cuenta, al 21 %.
+Gama, marca, integrables o de libre instalación: un conjunto de gama media ronda los 2.000 – 4.500 €, y uno de gama alta supera con facilidad los 6.000 €. Y quién los aporta: si los suministra la empresa dentro de la obra pueden ir al 10 % de IVA; si los compras por tu cuenta, al 21 %.
 
 ### 7. Los revestimientos
 
@@ -68,4 +88,6 @@ Una cocina se ve espectacular con el mobiliario terminado. Pero si detrás hay m
 
 En RemodelaT Coruña coordinamos instalaciones y acabados desde el principio, con un único interlocutor y garantía por escrito. Puedes ver cómo trabajamos en [Reforma de cocina](/servicios/reforma-cocina/) y en nuestros [proyectos documentados](/proyectos/).
 
-¿Quieres saber cuánto costaría tu cocina? [Solicita una visita técnica sin compromiso](/contacto/) o envíanos por WhatsApp unas fotos y las medidas aproximadas.
+¿Quieres saber en qué punto de la horquilla está tu cocina? [Solicita una visita técnica sin compromiso](/contacto/) o envíanos por WhatsApp unas fotos y las medidas aproximadas.
+
+*Precios orientativos de mercado en A Coruña y área metropolitana, 2026, sin IVA. No constituyen oferta vinculante: el presupuesto se emite tras la visita técnica y las mediciones reales.*
