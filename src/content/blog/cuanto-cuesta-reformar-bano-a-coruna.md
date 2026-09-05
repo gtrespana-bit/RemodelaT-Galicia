@@ -12,42 +12,45 @@ Es la primera pregunta que nos hacen, y la respuesta honesta es que **no existe 
 
 ## Precios orientativos de una reforma de baño en A Coruña (2026)
 
-Horquillas de mercado para una **reforma completa** (demolición, fontanería y electricidad de la zona, impermeabilización, alicatado y solado, sanitarios, grifería, mueble y mampara), con materiales de gama media. Precios **sin IVA**.
+Horquillas de mercado en A Coruña y área metropolitana, con **materiales estándar o de gama media** y **sin IVA**. La parte baja corresponde a baños que mantienen la distribución y con instalaciones aprovechables; la alta, a instalaciones nuevas, gran formato y sanitarios de más gama.
 
 | Tipo de baño | Superficie | Precio orientativo (sin IVA) |
 | --- | --- | --- |
-| Aseo o baño pequeño | 2 – 3 m² | 3.500 – 5.500 € |
-| Baño estándar de piso | 4 – 5 m² | 5.000 – 8.000 € |
-| Baño amplio | 6 – 8 m² | 7.000 – 11.000 € |
-| Baño grande o principal con doble lavabo | más de 8 m² | 9.000 – 15.000 € |
+| Aseo o baño pequeño, reforma completa | 2 – 3 m² | 2.500 – 4.500 € |
+| Baño estándar de piso, reforma completa | 4 – 5 m² | 3.500 – 6.500 € |
+| Baño amplio, reforma completa | 6 – 8 m² | 5.000 – 9.000 € |
+| Baño grande o de gama alta (gran formato, sanitarios suspendidos, ducha de obra) | más de 8 m² | desde 8.000 € |
 
 Y si la obra es más acotada:
 
 | Intervención | Precio orientativo (sin IVA) |
 | --- | --- |
-| Cambio de bañera por ducha (plato, mampara y alicatado de la zona) | 1.800 – 3.500 € |
-| Renovación de acabados sin tocar instalaciones (cerámica, sanitarios, grifería y mueble) | 3.000 – 5.000 € |
-| Reforma completa con redistribución o ducha de obra | desde 7.000 € |
+| Renovar el baño sin obra (pintar azulejos o vinilo, sanitarios, grifería y mueble) | 1.200 – 2.500 € |
+| Cambio de bañera por ducha (plato, mampara y alicatado de la zona) | 1.200 – 2.500 € |
+| Renovación de acabados sin tocar instalaciones (cerámica, sanitarios, grifería y mueble) | 2.500 – 4.000 € |
+| Reforma completa con redistribución o ducha de obra | desde 5.000 € |
 
-Son cifras orientativas para situarte, no un presupuesto: el precio real de tu baño sale de una visita técnica con mediciones y de un **presupuesto cerrado por partidas**, que te entregamos en 2–3 días. Un baño de 4 m² con instalaciones en buen estado y cerámica nacional se queda en la parte baja de su horquilla; el mismo baño con tuberías de plomo, inodoro suspendido y porcelánico rectificado de gran formato se va a la parte alta.
+Son cifras para situarte, no un presupuesto: el precio real de tu baño sale de una visita técnica con mediciones y de un **presupuesto cerrado por partidas**, que te entregamos en 2–3 días. Un baño de 4 m² con instalaciones en buen estado y cerámica nacional se queda en la parte baja de su horquilla; el mismo baño con tuberías de plomo, inodoro suspendido y porcelánico rectificado de gran formato se va a la parte alta.
+
+Como referencia externa, los portales Habitissimo y Cronoshare sitúan en 2026 el precio medio de una reforma de baño en España en torno a 3.000 – 3.500 €, y en A Coruña la mayoría de presupuestos completos entre 3.000 y 7.000 €; nuestras horquillas son coherentes con esos datos.
 
 ## Los seis factores que mueven el precio dentro de la horquilla
 
 ### 1. El tamaño y la distribución
 
-Un baño de 3 m² manteniendo la posición de inodoro, lavabo y ducha requiere menos cerámica, menos mano de obra y menos fontanería que uno de 6 m² donde se reubican los sanitarios. Mover el inodoro, por ejemplo, implica desplazar el desagüe, lo que puede exigir recrecer el suelo o intervenir en la bajante: es lo que separa un baño de 5.000 € de uno de 8.000 € con los mismos metros.
+Un baño de 3 m² manteniendo la posición de inodoro, lavabo y ducha requiere menos cerámica, menos mano de obra y menos fontanería que uno de 6 m² donde se reubican los sanitarios. Mover el inodoro, por ejemplo, implica desplazar el desagüe, lo que puede exigir recrecer el suelo o intervenir en la bajante: es lo que separa un baño de 3.500 € de uno de 6.000 € con los mismos metros.
 
 ### 2. El alcance real de la obra
 
 Hay tres niveles habituales:
 
-- **Renovación de acabados** (3.000 – 5.000 €). Se cambia cerámica, sanitarios, grifería y mueble sobre unas instalaciones que están bien. Es la opción más económica.
-- **Reforma completa** (5.000 – 8.000 € en un baño estándar). Demolición hasta el ladrillo, fontanería y electricidad nuevas, impermeabilización, revestimientos y sanitarios. Es lo habitual en baños anteriores a los años 90.
-- **Reforma con redistribución** (desde 7.000 €). Todo lo anterior más cambio de posición de sanitarios, ducha de obra o ampliación tomando espacio de un armario o pasillo.
+- **Renovación de acabados** (2.500 – 4.000 €). Se cambia cerámica, sanitarios, grifería y mueble sobre unas instalaciones que están bien. Es la opción más económica.
+- **Reforma completa** (3.500 – 6.500 € en un baño estándar). Demolición hasta el ladrillo, fontanería y electricidad nuevas, impermeabilización, revestimientos y sanitarios. Es lo habitual en baños anteriores a los años 90.
+- **Reforma con redistribución** (desde 5.000 €). Todo lo anterior más cambio de posición de sanitarios, ducha de obra o ampliación tomando espacio de un armario o pasillo.
 
 ### 3. El estado de la fontanería y la electricidad
 
-Si las tuberías son de hierro o plomo, o la instalación eléctrica no tiene toma de tierra, hay que renovarlas: es el momento más barato de hacerlo, con las paredes abiertas, y suele suponer entre 800 y 1.800 € de la partida. Si están en buen estado, se aprovechan y el presupuesto baja. En los pisos antiguos del centro de A Coruña casi siempre hay que renovar; en viviendas de los 2000 en Oleiros o Culleredo, muchas veces no.
+Si las tuberías son de hierro o plomo, o la instalación eléctrica no tiene toma de tierra, hay que renovarlas: es el momento más barato de hacerlo, con las paredes abiertas, y suele suponer entre 600 y 1.500 € de la partida. Si están en buen estado, se aprovechan y el presupuesto baja. En los pisos antiguos del centro de A Coruña casi siempre hay que renovar; en viviendas de los 2000 en Oleiros o Culleredo, muchas veces no.
 
 ### 4. La cerámica y los materiales
 
@@ -55,7 +58,7 @@ Un porcelánico nacional de formato medio (15 – 30 €/m²) y un gran formato 
 
 ### 5. Sanitarios, grifería y mueble
 
-Inodoro convencional o suspendido con cisterna empotrada (que requiere bastidor y tabique técnico); grifería monomando estándar o termostática empotrada; mueble de serie o a medida; espejo simple o con LED y antivaho. El conjunto de sanitarios, grifería y mueble se mueve entre 900 € en gama media y más de 3.000 € en gama alta, y el presupuesto por partidas te permite ver exactamente cuánto aporta cada elección.
+Inodoro convencional o suspendido con cisterna empotrada (que requiere bastidor y tabique técnico); grifería monomando estándar o termostática empotrada; mueble de serie o a medida; espejo simple o con LED y antivaho. El conjunto de sanitarios, grifería y mueble se mueve entre 700 € en gama estándar y más de 2.500 € en gama alta, y el presupuesto por partidas te permite ver exactamente cuánto aporta cada elección.
 
 ### 6. Los extras
 
