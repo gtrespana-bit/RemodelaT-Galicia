@@ -7,16 +7,16 @@ import ProjectQuickNav from '../../components/ProjectQuickNav.astro';
 import ProjectPhaseGallery from '../../components/ProjectPhaseGallery.astro';
 
 const project = {
-  title: 'Cocina de Lujo en España',
-  kicker: 'Obra previa en España · Cocinas de alto estándar',
-  location: 'Chalet residencial · España',
+  title: 'Cocina de Lujo Reubicada en Zona de Día',
+  kicker: 'Cocinas de alto estándar',
+  location: 'Chalet residencial',
   excerpt:
     'Reubicación de cocina cerrada a la zona día: instalaciones renovadas, suelo epóxico blanco, muebles lineales con estante flotante y equipos Siemens.',
   heroImage: '/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp',
 };
 
 const heroFacts = [
-  { label: 'Ubicación', value: 'España' },
+  { label: 'Tipo de vivienda', value: 'Chalet residencial' },
   { label: 'Duración', value: '2 semanas y media' },
   { label: 'Intervención', value: 'Reubicación integral' },
   { label: 'Suelo', value: 'Epoxi blanco continuo' },
@@ -34,7 +34,7 @@ const quickNavItems = [
 ];
 
 const whatsappText =
-  'Hola, quiero una valoración técnica para una cocina como la del chalet en España.';
+  'Hola, quiero una valoración técnica para una cocina como la del chalet.';
 const whatsappHref = waLink(whatsappText);
 
 const stats = [
@@ -48,7 +48,7 @@ const stats = [
 const resultadoShowcase = [
   {
     src: '/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp',
-    alt: 'Cocina lineal terminada con muebles bajos blancos, estantería flotante y frigorífico Siemens en un chalet en España',
+    alt: 'Cocina lineal terminada con muebles bajos blancos, estantería flotante y frigorífico Siemens en un chalet',
     badge: 'Cocina lineal',
     title: 'Una sola línea de mobiliario bajo, coronada por luz oculta',
     caption:
@@ -56,7 +56,7 @@ const resultadoShowcase = [
   },
   {
     src: '/images/proyectos/cocina-reubicada-zona-dia/resultado-final-comedor-abierto.webp',
-    alt: 'Zona día unificada con suelo epóxico blanco continuo, comedor y cocina abierta en un chalet en España',
+    alt: 'Zona día unificada con suelo epóxico blanco continuo, comedor y cocina abierta en un chalet',
     badge: 'Zona día unificada',
     title: 'Cocina, comedor y salón leídos como un solo espacio',
     caption:
@@ -257,7 +257,7 @@ const phases = [
     images: [
       {
         src: '/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp',
-        alt: 'Cocina de lujo terminada en España con muebles bajos, estantería iluminada y equipos Siemens',
+        alt: 'Cocina de lujo terminada con muebles bajos, estantería iluminada y equipos Siemens',
         caption: 'La cocina entregada: línea de muebles bajos en blanco, estantería iluminada y frigorífico Siemens de 90 cm.',
         badge: 'Entrega',
         orientation: 'landscape',
@@ -304,7 +304,7 @@ const icons = {
 };
 
 const specs = [
-  { label: 'Ubicación', value: 'Chalet residencial en España' },
+  { label: 'Tipo de vivienda', value: 'Chalet residencial' },
   { label: 'Duración de obra', value: '2 semanas y media de ejecución' },
   { label: 'Intervención', value: 'Reubicación integral de la cocina a la zona día' },
   { label: 'Estado inicial', value: 'Cocina cerrada e independiente, con acceso por puerta doble' },
@@ -349,7 +349,7 @@ const galleryPhases = [
 const gallery = [
   {
     src: '/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp',
-    alt: 'Cocina lineal terminada en blanco con estantería flotante iluminada y frigorífico Siemens en España',
+    alt: 'Cocina lineal terminada en blanco con estantería flotante iluminada y frigorífico Siemens',
     title: 'Composición lineal terminada',
     caption: 'Muebles bajos en blanco, estantería flotante con luz oculta y la frigorífico Siemens de 90 cm cerrando la línea.',
     category: 'resultado',
@@ -359,7 +359,7 @@ const gallery = [
   },
   {
     src: '/images/proyectos/cocina-reubicada-zona-dia/resultado-final-comedor-abierto.webp',
-    alt: 'Comedor y cocina abiertos con suelo epóxico blanco continuo en un chalet en España',
+    alt: 'Comedor y cocina abiertos con suelo epóxico blanco continuo en un chalet',
     title: 'La zona día unificada',
     caption: 'El epoxi blanco continuo conecta cocina, comedor y salón en una única lectura llena de luz.',
     category: 'resultado',
@@ -389,7 +389,7 @@ const gallery = [
   },
   {
     src: '/images/proyectos/cocina-reubicada-zona-dia/montaje-estante-flotante-lateral.webp',
-    alt: 'Vista lateral de la cocina lineal en montaje con el ventanal al fondo en España',
+    alt: 'Vista lateral de la cocina lineal en montaje con el ventanal al fondo',
     title: 'La línea baja frente al ventanal',
     caption: 'Sin muebles altos: toda la composición queda por debajo de la línea de vista y deja respirar al ventanal.',
     category: 'montaje',
@@ -511,7 +511,7 @@ const gallery = [
 ---
 
 <BaseLayout
-  title="Cocina de Lujo en España | RemodelaT"
+  title="Cocina de Lujo Reubicada | RemodelaT"
   description={project.excerpt}
   image={project.heroImage}
   activePage="proyectos"
@@ -523,7 +523,7 @@ const gallery = [
   <header class="gu-hero">
     <img
       src={project.heroImage}
-      alt="Cocina de lujo terminada en un chalet en España: línea de muebles bajos blancos, estantería flotante iluminada y suelo epóxico continuo"
+      alt="Cocina de lujo terminada en un chalet: línea de muebles bajos blancos, estantería flotante iluminada y suelo epóxico continuo"
       class="gu-hero-img"
       fetchpriority="high"
       loading="eager"
@@ -532,7 +532,7 @@ const gallery = [
     <div class="gu-hero-overlay" aria-hidden="true"></div>
     <div class="container gu-hero-content">
       <a href="/proyectos" class="gu-back" data-hero="0">← Volver a proyectos</a>
-      <span class="gu-eyebrow" data-hero="1">Obra previa en España · Cocinas de alto estándar · Diario de obra</span>
+      <span class="gu-eyebrow" data-hero="1">Cocinas de alto estándar · Diario de obra</span>
       <h1 data-hero="2">{project.title}</h1>
       <p class="gu-lead" data-hero="3">{project.excerpt}</p>
 
@@ -577,7 +577,7 @@ const gallery = [
       <span class="gu-sep">/</span>
       <a href="/proyectos">Proyectos</a>
       <span class="gu-sep">/</span>
-      <span class="gu-current">Cocina de Lujo en España</span>
+      <span class="gu-current">Cocina de Lujo Reubicada en Zona de Día</span>
     </div>
   </nav>
 
@@ -683,7 +683,7 @@ const gallery = [
         Donde antes terminaba el comedor y empezaba una puerta doble,
         hoy hay una sola estancia llena de luz.
       </blockquote>
-      <cite>Diario de obra · Chalet en España</cite>
+      <cite>Diario de obra · Chalet</cite>
     </div>
   </section>
 
