@@ -71,8 +71,8 @@ const projects = [
 ---
 
 <BaseLayout
-  title="Proyectos | Obras Previas en España | RemodelaT Coruña"
-  description="Portfolio de RemodelaT Coruña: obras propias ejecutadas por nuestro fundador con su anterior empresa en España. Baños y cocinas reales, con método técnico y garantía."
+  title="Proyectos | Reformas Reales | RemodelaT Coruña"
+  description="Portfolio de RemodelaT Coruña: baños y cocinas reales ejecutados por nuestro equipo, con método técnico, diario de obra fotográfico y garantía por escrito."
   activePage="proyectos"
 >
 
@@ -80,20 +80,14 @@ const projects = [
     eyebrow="Portafolio de obras propias"
     title="Proyectos"
     titleGold="realizados"
-    lead="Cocinas y baños reales ejecutados por nuestro fundador con su anterior empresa en España. Rigor técnico, ingeniería de detalle y acabados de especificación."
+    lead="Cocinas y baños reales ejecutados por nuestro equipo. Rigor técnico, ingeniería de detalle y acabados de especificación."
     image="/images/integrales-proyecto-completo.webp"
-    imageAlt="Obra previa de reforma ejecutada por el fundador de RemodelaT Coruña en España"
+    imageAlt="Reforma integral ejecutada por RemodelaT Coruña"
     badges={["Obras reales", "Alta gama", "Método técnico"]}
     watermark="PROYECTOS"
   />
 
   <GodMarquee />
-
-  <section class="disclosure-banner">
-    <div class="container">
-      <p><strong>Nota de transparencia:</strong> estas obras fueron ejecutadas por nuestro fundador con su <strong>anterior empresa en España</strong>. No son reformas realizadas en A Coruña. Las mostramos como evidencia del método y de los acabados, no como proyectos de la ciudad.</p>
-    </div>
-  </section>
 
   <section class="projects-section">
     <div class="container">
@@ -109,17 +103,17 @@ const projects = [
             <a href={`/proyectos/${p.slug}/`} class="project-card-image-link" aria-label={`Ver caso de estudio de ${p.title}`}>
               <div class="project-card-image">
                 <span class="project-card-badge">{p.category}</span>
-                <img src={p.image} alt={`${p.title} — obra previa en España`} loading="lazy" decoding="async" />
+                <img src={p.image} alt={`${p.title} — proyecto de RemodelaT Coruña`} loading="lazy" decoding="async" />
               </div>
             </a>
             <div class="project-card-content">
               <div class="project-card-meta">
                 <span class="project-card-location">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold-ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
                   </svg>
-                  España · obra previa
+                  Obra real · RemodelaT
                 </span>
                 <span class="project-card-duration">{p.duration}</span>
               </div>
@@ -166,13 +160,6 @@ const projects = [
 </BaseLayout>
 
 <style>
-  .disclosure-banner { background: var(--bone); padding: 26px 0 0; }
-  .disclosure-banner .container { max-width: var(--container); margin: 0 auto; padding: 0 20px; }
-  .disclosure-banner p {
-    background: var(--white); border: 1px solid rgba(201,169,97,.35); border-left: 3px solid var(--gold);
-    border-radius: var(--r-md); padding: 18px 22px; color: var(--text-muted); font-size: .95rem; line-height: 1.65; margin: 0;
-  }
-  .disclosure-banner strong { color: var(--ink); }
   .projects-section { padding: 80px 0 100px; background: var(--bone); }
   .container { max-width: var(--container); margin: 0 auto; padding: 0 20px; }
   .premium-header { max-width: 720px; margin: 0 auto 64px; text-align: center; }
