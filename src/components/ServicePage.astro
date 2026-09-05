@@ -72,9 +72,10 @@ interface Props {
   /** Precios. */
   priceTitle?: string;
   priceIntro?: string;
-  priceRows: [string, string][];
+  priceRows?: [string, string][];
   priceFactors?: string[];
-  priceNote: string;
+  priceMethod?: string[];
+  priceNote?: string;
   /** Problemas habituales y cómo se resuelven. */
   problemsTitle?: string;
   problemsIntro?: string;
@@ -103,7 +104,7 @@ const {
   topics = [],
   includesTitle = 'Qué incluye', includesIntro, includes,
   processTitle = 'Cómo trabajamos, paso a paso', processIntro, phases = [],
-  priceTitle = 'Precios orientativos (sin IVA)', priceIntro, priceRows, priceFactors = [], priceNote,
+  priceTitle = 'Cuánto cuesta: depende de tu proyecto', priceIntro, priceRows = [], priceFactors = [], priceMethod = [], priceNote,
   problemsTitle = 'Problemas habituales y cómo los resolvemos', problemsIntro, problems = [],
   relatedProjects = [], relatedGuides = [],
   faqs, zoneService,
@@ -119,7 +120,7 @@ const sections = [
   ...(topics.length ? [{ id: 'detalle', label: 'En detalle' }] : []),
   { id: 'que-incluye', label: 'Qué incluye' },
   ...(phases.length ? [{ id: 'proceso', label: 'Proceso' }] : []),
-  ...(priceRows.length ? [{ id: 'precios', label: 'Precios' }] : []),
+  ...((priceRows.length || priceFactors.length) ? [{ id: 'presupuesto', label: 'Presupuesto' }] : []),
   ...(problems.length ? [{ id: 'problemas', label: 'Errores que evitamos' }] : []),
   ...(relatedProjects.length ? [{ id: 'proyectos', label: 'Obras reales' }] : []),
   { id: 'faq', label: 'Preguntas' },
@@ -312,34 +313,44 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
     </section>
   )}
 
-  <!-- ============ PRECIOS ============ -->
-  {priceRows.length > 0 && (
-    <section class="svc-section svc-prices" id="precios">
+  <!-- ============ PRESUPUESTO ============ -->
+  {(priceRows.length > 0 || priceFactors.length > 0) && (
+    <section class="svc-section svc-prices" id="presupuesto">
       <div class="svc-reading">
         <header class="svc-header">
-          <span class="eyebrow-god on-light">Inversión</span>
+          <span class="eyebrow-god on-light">Presupuesto</span>
           <h2>{priceTitle}</h2>
           {priceIntro && <p class="svc-header-text">{priceIntro}</p>}
         </header>
-        <div class="svc-table-wrap">
-          <table class="svc-table">
-            <thead><tr><th>Alcance</th><th>Precio orientativo</th></tr></thead>
-            <tbody>
-              {priceRows.map(([label, price]) => (
-                <tr><td>{label}</td><td class="svc-price">{price}</td></tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p class="svc-price-note">{priceNote}</p>
+        {priceRows.length > 0 && (
+          <div class="svc-table-wrap">
+            <table class="svc-table">
+              <thead><tr><th>Alcance</th><th>Precio orientativo</th></tr></thead>
+              <tbody>
+                {priceRows.map(([label, price]) => (
+                  <tr><td>{label}</td><td class="svc-price">{price}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
         {priceFactors.length > 0 && (
           <div class="svc-factors">
-            <h3>Qué hace variar el precio</h3>
+            <h3>Qué determina el precio</h3>
             <ul class="svc-checks">
               {priceFactors.map((f) => <li set:html={f} />)}
             </ul>
           </div>
         )}
+        {priceMethod.length > 0 && (
+          <div class="svc-factors svc-factors--method">
+            <h3>Cómo te damos el precio</h3>
+            <ul class="svc-checks">
+              {priceMethod.map((f) => <li set:html={f} />)}
+            </ul>
+          </div>
+        )}
+        {priceNote && <p class="svc-price-note">{priceNote}</p>}
       </div>
     </section>
   )}
@@ -641,7 +652,9 @@ const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un
   .svc-table tbody tr:nth-child(even) td { background: var(--bone); }
   .svc-price { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--ink); white-space: nowrap; }
   .svc-price-note { text-align: center; font-size: .88rem; color: var(--text-muted); margin: 16px auto 0; max-width: 60ch; }
-  .svc-factors { margin-top: 44px; padding: 32px 36px; background: var(--bone); border-radius: var(--r-god); border-left: 3px solid var(--gold); }
+  .svc-factors { margin-top: 28px; padding: 32px 36px; background: var(--bone); border-radius: var(--r-god); border-left: 3px solid var(--gold); }
+  .svc-table-wrap + .svc-factors { margin-top: 44px; }
+  .svc-factors--method { background: var(--white); border: 1px solid var(--sand); border-left: 3px solid var(--ink); }
   .svc-factors h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
   .svc-factors .svc-checks { margin-top: 14px; }
 

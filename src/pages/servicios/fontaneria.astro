@@ -16,8 +16,8 @@ import ServicePage from '../../components/ServicePage.astro';
   watermark="AGUA"
   crumb="Fontanería"
   highlights={[
-    { value: "1–2", label: "Semanas para una vivienda" },
-    { value: "10 bar", label: "Prueba de presión antes de cerrar" },
+    { value: "24 h", label: "Prueba de presión antes de cerrar" }, 
+    { value: "10 bar", label: "Presión de prueba de la red nueva" },
     { value: "1", label: "Llave de corte por estancia" },
     { value: "50", label: "Años de vida útil del multicapa" },
   ]}
@@ -128,21 +128,20 @@ import ServicePage from '../../components/ServicePage.astro';
     "<strong>Tapado de rozas</strong> o coordinación con el resto de la reforma, limpieza y entrega con garantía por escrito.",
   ]}
   processTitle="Cómo renovamos la fontanería"
-  processIntro="La renovación completa de una vivienda de 80–100 m² se resuelve en 1–2 semanas. En una reforma de baño o cocina, la fontanería se integra en la primera fase de obra."
+  processIntro="En una reforma de baño o cocina, la fontanería ocupa los dos primeros días de obra. La renovación completa de una vivienda depende del número de puntos de agua y de los recorridos: te entregamos el cronograma tras la visita."
   phases={[
     { title: "Visita técnica y diagnóstico", duration: "Antes de la obra", text: "Comprobamos material y estado de tuberías, presión de red, caudal en los grifos, desagües y bajante. Detectamos plomo, hierro obstruido o soldaduras dudosas." },
-    { title: "Diseño de la instalación y presupuesto", duration: "3–5 días", text: "Trazado de recorridos, diámetros, ubicación de llaves y producción de agua caliente. Presupuesto por partidas con materiales especificados." },
-    { title: "Corte, desmontaje y rozas", duration: "Día 1–3", text: "Corte de suministro, retirada de la instalación antigua, apertura de rozas con protección de la vivienda. Suministro provisional a un punto si sigues viviendo en casa." },
-    { title: "Instalación nueva", duration: "Día 3–7", text: "Tendido de multicapa o PEX, colector y llaves, aislamiento de agua caliente, red de desagües en PVC insonorizado, tomas de aparatos." },
-    { title: "Prueba de presión y estanqueidad", duration: "Día 7", text: "Red presurizada a 10 bar durante 24 horas y prueba de desagües con agua. Documentado con fotografías antes de tapar una sola roza." },
-    { title: "Cierre, aparatos y entrega", duration: "Día 8–10", text: "Tapado de rozas, instalación de sanitarios, grifería y aparatos, comprobación de cada punto de agua y entrega con garantía y esquema de llaves de corte." },
+    { title: "Diseño de la instalación y presupuesto", duration: "2–3 días", text: "Trazado de recorridos, diámetros, ubicación de llaves y producción de agua caliente. Presupuesto por partidas con materiales especificados." },
+    { title: "Corte, desmontaje y rozas", duration: "Paso 1", text: "Corte de suministro, retirada de la instalación antigua, apertura de rozas con protección de la vivienda. Suministro provisional a un punto si sigues viviendo en casa." },
+    { title: "Instalación nueva", duration: "Paso 2", text: "Tendido de multicapa o PEX, colector y llaves, aislamiento de agua caliente, red de desagües en PVC insonorizado, tomas de aparatos." },
+    { title: "Prueba de presión y estanqueidad", duration: "Paso 3", text: "Red presurizada a 10 bar durante 24 horas y prueba de desagües con agua. Documentado con fotografías antes de tapar una sola roza." },
+    { title: "Cierre, aparatos y entrega", duration: "Paso 4", text: "Tapado de rozas, instalación de sanitarios, grifería y aparatos, comprobación de cada punto de agua y entrega con garantía y esquema de llaves de corte." },
   ]}
   priceTitle="Cuánto cuesta la fontanería en A Coruña"
   priceIntro="El precio depende del alcance (vivienda completa, baño, cocina), del número de puntos de agua, de la producción de agua caliente y de si hay que tapar y pintar. Se cierra por partidas tras la visita."
   priceRows={[
     ["Renovación completa de fontanería de vivienda (agua fría, caliente y desagües)", "A valorar en visita"],
-    ["Fontanería de baño en reforma (incluida en la reforma de baño desde 5.800 €)", "A valorar en visita"],
-    ["Fontanería de cocina en reforma (incluida en la reforma de cocina desde 5.000 €)", "A valorar en visita"],
+    ["Fontanería de baño o cocina dentro de su reforma", "Incluida en el presupuesto de la reforma"],
     ["Sustitución de termo, calentador o instalación de aerotermia", "A valorar en visita"],
   ]}
   priceFactors={[
@@ -175,7 +174,7 @@ import ServicePage from '../../components/ServicePage.astro';
   ]}
   faqs={[
     { question: "¿Cuánto cuesta renovar la fontanería de un piso en A Coruña?", answer: "Depende del número de puntos de agua, del sistema elegido (multicapa o PEX con colector), de la producción de agua caliente y de si hay que tapar y pintar rozas. Lo valoramos en visita técnica y te entregamos un presupuesto por partidas con materiales especificados." },
-    { question: "¿Cuánto tarda renovar la fontanería completa?", answer: "En una vivienda de 80–100 m², entre 1 y 2 semanas, incluyendo la prueba de presión de 24 horas antes de cerrar. Si se hace dentro de una reforma de baño o cocina, la fontanería ocupa los primeros días de obra." },
+    { question: "¿Cuánto tarda renovar la fontanería completa?", answer: "Dentro de una reforma de baño o cocina, la fontanería ocupa los dos primeros días de obra. En una renovación completa de vivienda el plazo depende del número de puntos de agua y de los recorridos; siempre incluye la prueba de presión de 24 horas antes de cerrar, y te entregamos el cronograma tras la visita." },
     { question: "¿Multicapa o PEX? ¿Cuál es mejor?", answer: "Ambos son excelentes y duran más de 50 años. El multicapa es rígido, se mantiene recto y va muy bien en recorridos vistos o con muchas derivaciones. El PEX con colector permite tuberías continuas sin uniones ocultas, ideal en reformas integrales. Elegimos según el trazado y el tipo de obra." },
     { question: "¿Hay que abrir todas las paredes?", answer: "Se abren rozas por donde discurren las nuevas tuberías, normalmente en baños, cocina y el pasillo que los une. Cuando hay falso techo se aprovecha para reducir rozas. En una reforma integral todo queda integrado en la obra." },
     { question: "¿Podré seguir viviendo en casa?", answer: "Sí, con cortes de agua programados. Dejamos cada día un punto de agua operativo y organizamos el trabajo por zonas. En una renovación completa, los días de rozas son los más molestos por el polvo." },

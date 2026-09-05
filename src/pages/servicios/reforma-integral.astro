@@ -7,7 +7,7 @@ import ServicePage from '../../components/ServicePage.astro';
   title="Reforma Integral"
   titleGold="en A Coruña"
   seoTitle="Reforma Integral en A Coruña | Pisos y Casas | RemodelaT"
-  description="Reforma integral de pisos y casas en A Coruña: un único interlocutor, presupuesto por partidas, instalaciones nuevas y entrega con garantía."
+  description="Reforma integral de pisos y casas en A Coruña: un único interlocutor, presupuesto por partidas, instalaciones nuevas, cronograma por fases y entrega con garantía."
   eyebrow="Servicios · Reforma integral"
   lead="Un único interlocutor que coordina todos los oficios, un presupuesto cerrado por partidas y una entrega documentada. Así se reforma una vivienda entera sin sobresaltos."
   image="/images/integrales-800.webp"
@@ -16,8 +16,8 @@ import ServicePage from '../../components/ServicePage.astro';
   watermark="INTEGRAL"
   crumb="Reforma Integral"
   highlights={[
-    { value: "36.000 €", label: "Piso de 100 m² desde (sin IVA)" },
-    { value: "1–3", label: "Meses de obra" },
+    { value: "100 %", label: "Instalaciones probadas antes de cerrar" },
+    { value: "1", label: "Cronograma por fases, entregado antes de empezar" },
     { value: "1", label: "Único interlocutor" },
     { value: "10", label: "Etapas del método" },
   ]}
@@ -126,32 +126,33 @@ import ServicePage from '../../components/ServicePage.astro';
     "<strong>Suelos, pintura y acabados</strong>, limpieza final de obra y entrega documentada con garantía por partidas.",
   ]}
   processTitle="Las fases de una reforma integral"
-  processIntro="Una integral de un piso de 90–110 m² suele durar entre 8 y 12 semanas de obra, más el tiempo previo de diseño y permisos. Este es el recorrido habitual:"
+  processIntro="La duración depende de los metros, del alcance y de los plazos de suministro (ventanas, cocina, puertas). Por eso no damos un plazo genérico: tras la visita y el diseño entregamos un cronograma por fases con fechas, y lo cumplimos. Este es el recorrido:"
   phases={[
-    { title: "Diagnóstico y levantamiento", duration: "Semana 0", text: "Visita técnica en profundidad: estado de instalaciones, muros de carga, humedades, carpinterías, altura libre. Levantamiento de planos del estado actual." },
-    { title: "Diseño, especificación y presupuesto", duration: "2–3 semanas", text: "Propuesta de distribución, selección de materiales con referencias concretas y presupuesto por partidas. Cronograma con hitos. Nada empieza sin tu aprobación por escrito." },
-    { title: "Permisos y preparación", duration: "Según ayuntamiento", text: "Tramitación de comunicación previa o licencia, aviso a la comunidad, pedido de materiales con plazo largo (ventanas, mobiliario de cocina, puertas)." },
-    { title: "Demolición", duration: "Semana 1–2", text: "Protección de portal, ascensor y escalera. Demolición controlada, retirada de instalaciones antiguas y escombros a contenedor autorizado." },
-    { title: "Instalaciones", duration: "Semana 2–4", text: "Saneamiento, fontanería, electricidad, calefacción y preinstalaciones. Prueba de presión y de continuidad documentadas antes de cerrar una sola roza." },
-    { title: "Albañilería y tabiquería", duration: "Semana 4–6", text: "Nueva distribución, falsos techos, impermeabilización de baños con prueba de estanqueidad, recrecidos y nivelación de suelos." },
-    { title: "Revestimientos y carpinterías", duration: "Semana 6–9", text: "Alicatados, solados, ventanas, puertas, armarios y mobiliario de cocina. Encimeras y sanitarios." },
-    { title: "Acabados, pintura y entrega", duration: "Semana 9–12", text: "Pintura, mecanismos, iluminación, remates. Revisión contigo punto por punto, limpieza final y entrega documentada con garantía por escrito." },
+    { title: "Diagnóstico y levantamiento", duration: "Fase 1", text: "Visita técnica en profundidad: estado de instalaciones, muros de carga, humedades, carpinterías, altura libre. Levantamiento de planos del estado actual." },
+    { title: "Diseño, especificación y presupuesto", duration: "Fase 2", text: "Propuesta de distribución, selección de materiales con referencias concretas y presupuesto por partidas. Cronograma con hitos y fechas. Nada empieza sin tu aprobación por escrito." },
+    { title: "Permisos y preparación", duration: "Fase 3", text: "Tramitación de comunicación previa o licencia, aviso a la comunidad, pedido de materiales con plazo largo (ventanas, mobiliario de cocina, puertas) para que la obra no se detenga." },
+    { title: "Demolición", duration: "Fase 4", text: "Protección de portal, ascensor y escalera. Demolición controlada, retirada de instalaciones antiguas y escombros a contenedor autorizado." },
+    { title: "Instalaciones", duration: "Fase 5", text: "Saneamiento, fontanería, electricidad, calefacción y preinstalaciones. Prueba de presión y de continuidad documentadas antes de cerrar una sola roza." },
+    { title: "Albañilería y tabiquería", duration: "Fase 6", text: "Nueva distribución, falsos techos, impermeabilización de baños con prueba de estanqueidad, recrecidos y nivelación de suelos." },
+    { title: "Revestimientos y carpinterías", duration: "Fase 7", text: "Alicatados, solados, ventanas, puertas, armarios y mobiliario de cocina. Encimeras y sanitarios." },
+    { title: "Acabados, pintura y entrega", duration: "Fase 8", text: "Pintura, mecanismos, iluminación, remates. Revisión contigo punto por punto, limpieza final y entrega documentada con garantía por escrito." },
   ]}
   priceTitle="Cuánto cuesta una reforma integral en A Coruña"
-  priceIntro="Referencia de mercado 2026 para un piso de unos 100 m² con calidades medias-altas. El presupuesto real depende del estado de partida, del alcance y de los materiales, y se cierra tras la visita técnica y el diseño."
-  priceRows={[
-    ["Reforma integral de piso de ~100 m² (instalaciones, distribución, baños, cocina, suelos, carpintería y pintura)", "36.000 – 39.000 €"],
-    ["Reforma integral de casa o chalet", "A valorar en visita"],
-    ["Reforma integral orientada a alquiler o venta", "A valorar en visita"],
-  ]}
+  priceIntro="En una reforma integral cada vivienda es un proyecto distinto, y un precio por metro cuadrado o un 'desde' solo sirve para llevarse sorpresas después. Lo que te ofrecemos es un presupuesto cerrado y por partidas, elaborado sobre planos y mediciones reales, que puedas comparar partida a partida."
   priceFactors={[
-    "<strong>Superficie y estado de partida.</strong> No es lo mismo actualizar un piso de los 90 que vaciar uno de los 60 con tuberías de plomo.",
+    "<strong>Superficie y estado de partida.</strong> No es lo mismo actualizar un piso de los 90 que vaciar uno de los 60 con tuberías de plomo e instalación sin tierra.",
+    "<strong>Alcance.</strong> Qué se renueva y qué se conserva: instalaciones, distribución, carpintería exterior, suelos, baños, cocina.",
     "<strong>Número de baños y tamaño de la cocina.</strong> Son las estancias con mayor coste por metro cuadrado.",
     "<strong>Cambios estructurales.</strong> Abrir muros de carga exige proyecto, dirección de obra y refuerzos metálicos.",
-    "<strong>Carpintería exterior.</strong> Sustituir ventanas por unas con rotura de puente térmico es una partida importante, pero se amortiza en confort y energía.",
-    "<strong>Gama de materiales.</strong> Suelos, puertas, mobiliario de cocina y sanitarios marcan la horquilla entre calidades medias y altas.",
+    "<strong>Carpintería exterior y aislamiento.</strong> Ventanas con rotura de puente térmico y aislamiento son partidas importantes que se amortizan en confort y energía.",
+    "<strong>Gama de materiales.</strong> Suelos, puertas, mobiliario de cocina, sanitarios y grifería marcan la diferencia entre calidades medias y altas.",
   ]}
-  priceNote="* Precios orientativos, sin IVA (10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto de supuestos y en materiales o mobiliario suministrados por separado). Se confirman con visita técnica, diseño y mediciones reales."
+  priceMethod={[
+    "<strong>Visita técnica sin compromiso</strong> con levantamiento del estado actual.",
+    "<strong>Diseño y presupuesto por partidas</strong> con mediciones, materiales especificados y precios unitarios, e IVA desglosado (10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto).",
+    "<strong>Cronograma por fases con fechas</strong>, entregado junto con el presupuesto.",
+    "<strong>Precio cerrado.</strong> Solo cambia si cambia el alcance; cualquier imprevisto se documenta, se valora y se aprueba por escrito antes de ejecutarse.",
+  ]}
   problemsTitle="Lo que suele salir mal en una reforma integral (y cómo lo evitamos)"
   problemsIntro="Los problemas de las integrales casi nunca son de materiales: son de planificación, de orden y de comunicación."
   problems={[
@@ -173,8 +174,8 @@ import ServicePage from '../../components/ServicePage.astro';
     { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
   ]}
   faqs={[
-    { question: "¿Cuánto cuesta una reforma integral en A Coruña?", answer: "Como referencia de mercado 2026, la reforma integral de un piso de unos 100 m² con calidades medias-altas se sitúa entre 36.000 y 39.000 € sin IVA. Superficie, estado de partida, número de baños, cambios estructurales y gama de materiales hacen variar la cifra. El presupuesto se cierra por partidas tras la visita técnica y el diseño." },
-    { question: "¿Cuánto dura una reforma integral?", answer: "La obra de un piso de 90–110 m² suele durar entre 8 y 12 semanas. A eso se suman las 2–3 semanas de diseño y presupuesto y el tiempo de tramitación de permisos, que depende del ayuntamiento. Entregamos un cronograma con hitos antes de empezar." },
+    { question: "¿Cuánto cuesta una reforma integral en A Coruña?", answer: "Depende de la superficie, del estado de partida, del alcance (qué se renueva y qué se conserva), del número de baños, de si hay cambios estructurales y de la gama de materiales. Por eso no publicamos un precio por metro cuadrado ni un 'desde'. Tras la visita técnica y el diseño te entregamos un presupuesto cerrado por partidas, con mediciones y materiales especificados." },
+    { question: "¿Cuánto dura una reforma integral?", answer: "Depende de los metros, del alcance y de los plazos de suministro de elementos como ventanas, cocina o puertas. Tras la visita y el diseño entregamos un cronograma por fases con fechas, y lo cumplimos: cada fase se cierra y se comprueba antes de abrir la siguiente." },
     { question: "¿Puedo vivir en la casa durante la obra?", answer: "En una reforma integral no lo recomendamos: se corta el agua y la luz por fases, hay polvo y ruido, y la obra avanza más despacio si hay que mantener habitable una parte. Si no hay alternativa, organizamos la obra por zonas, pero el plazo se alarga." },
     { question: "¿Necesito arquitecto?", answer: "Si la reforma no toca estructura ni fachada, normalmente basta con una comunicación previa o licencia de obra menor y no hace falta proyecto de arquitecto. Si se abren muros de carga, se modifica la fachada o el edificio está protegido, es obligatorio proyecto técnico y dirección de obra. Te lo indicamos en la visita y coordinamos con el técnico si hace falta." },
     { question: "¿Qué pasa si aparecen imprevistos?", answer: "En viviendas antiguas pueden aparecer: una bajante en mal estado, un forjado que hay que reforzar. Cuando ocurre, lo documentamos con fotografías, te presentamos la solución con su coste y solo se ejecuta con tu aprobación por escrito. Nunca un extra sin explicación previa." },

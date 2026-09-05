@@ -19,20 +19,23 @@ const formatZone = (str: string) => {
 
 const zoneNameFormatted = formatZone(zone);
 
-// Precios orientativos (€, sin IVA) — bandas de mercado 2026.
+// Propuesta por servicio (sin cifras: el precio depende de tamaño, instalaciones y materiales).
 const pricing = {
   cocina: {
-    price: '5.000 €',
+    price: 'Obra en 5–8 días',
+    priceSub: 'presupuesto cerrado por partidas',
     title: 'Reforma de Cocina',
     items: ['Distribución y mobiliario a medida', 'Encimeras e iluminación técnica', 'Fontanería y electricidad de la zona', 'Garantía por escrito']
   },
   bano: {
-    price: '5.800 €',
+    price: 'Obra en 5–6 días',
+    priceSub: 'presupuesto cerrado por partidas',
     title: 'Reforma de Baño',
     items: ['Desmontaje y demolición', 'Impermeabilización total', 'Sanitarios y grifería', 'Garantía por escrito']
   },
   integral: {
-    price: '29.000 €',
+    price: 'Único interlocutor',
+    priceSub: 'presupuesto cerrado por partidas',
     title: 'Reforma Integral',
     items: ['Diagnóstico técnico', 'Fontanería y electricidad', 'Revestimientos y acabados', 'Supervisión continua']
   }
@@ -45,9 +48,9 @@ const whatsappUrl = waLink(whatsappMessage);
 
 <aside class="zone-aside-card" data-zone-aside>
   <div class="aside-price-box">
-    <span class="price-label">Desde (sin IVA)</span>
+    <span class="price-label">Visita técnica sin compromiso</span>
     <span class="price-amount">{pricing.price}</span>
-    <span class="price-currency">orientativo · sin IVA</span>
+    <span class="price-currency">{pricing.priceSub}</span>
   </div>
   
   <div class="aside-content">
@@ -127,7 +130,7 @@ const whatsappUrl = waLink(whatsappMessage);
   
   .price-amount {
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 1.85rem;
     color: var(--gold);
     line-height: 1;
     font-weight: 500;

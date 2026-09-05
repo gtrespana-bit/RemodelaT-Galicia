@@ -16,7 +16,7 @@ import ServicePage from '../../components/ServicePage.astro';
   watermark="VIVIENDA"
   crumb="Reforma de Vivienda"
   highlights={[
-    { value: "36.000 €", label: "Piso de 100 m² desde (sin IVA)" },
+    { value: "3", label: "Tipos de vivienda: pisos, casas y adosados" },
     { value: "10", label: "Municipios del área metropolitana" },
     { value: "1", label: "Único interlocutor" },
     { value: "100 %", label: "Instalaciones probadas antes de cerrar" },
@@ -122,31 +122,31 @@ import ServicePage from '../../components/ServicePage.astro';
     "<strong>Gestión</strong>: permisos, comunicación con la comunidad, residuos, limpieza final y entrega documentada con garantía.",
   ]}
   processTitle="Cómo trabajamos una reforma de vivienda"
-  processIntro="El plazo depende del alcance: de 2–3 semanas en una reforma parcial a 8–12 semanas en una completa. El método es siempre el mismo:"
+  processIntro="El plazo depende del alcance: unos días en una reforma parcial (un baño estándar se ejecuta en 5–6 días; una cocina, en 5–8), y varias fases encadenadas en una reforma completa. Tras la visita te entregamos el cronograma con fechas. El método es siempre el mismo:"
   phases={[
-    { title: "Visita técnica y diagnóstico", duration: "Semana 0", text: "Recorremos la vivienda contigo, revisamos instalaciones, humedades, carpinterías y estructura, y entendemos qué quieres conseguir y con qué presupuesto." },
-    { title: "Propuesta de alcance y presupuesto", duration: "1–3 semanas", text: "Te proponemos qué hacer y en qué orden, con alternativas si las hay. Presupuesto por partidas, materiales especificados y cronograma." },
-    { title: "Permisos y acopios", duration: "Según alcance", text: "Comunicación previa o licencia, aviso a la comunidad, pedido de materiales con plazo (ventanas, cocina, puertas)." },
-    { title: "Ejecución por fases", duration: "2–12 semanas", text: "Demolición, instalaciones, albañilería, revestimientos, carpinterías y acabados, cada fase cerrada y comprobada antes de abrir la siguiente. Informes de avance regulares." },
-    { title: "Pruebas y control de acabados", duration: "Antes de la entrega", text: "Pruebas de presión, continuidad y estanqueidad documentadas. Revisión de acabados punto por punto." },
-    { title: "Entrega documentada", duration: "Último día", text: "Limpieza final, planos de instalaciones, certificados, garantías de fabricante y nuestra garantía por partidas por escrito." },
+    { title: "Visita técnica y diagnóstico", duration: "Fase 1", text: "Recorremos la vivienda contigo, revisamos instalaciones, humedades, carpinterías y estructura, y entendemos qué quieres conseguir y con qué presupuesto." },
+    { title: "Propuesta de alcance y presupuesto", duration: "Fase 2", text: "Te proponemos qué hacer y en qué orden, con alternativas si las hay. Presupuesto por partidas, materiales especificados y cronograma con fechas." },
+    { title: "Permisos y acopios", duration: "Fase 3", text: "Comunicación previa o licencia, aviso a la comunidad, pedido de materiales con plazo (ventanas, cocina, puertas) para que la obra no se detenga." },
+    { title: "Ejecución por fases", duration: "Fase 4", text: "Demolición, instalaciones, albañilería, revestimientos, carpinterías y acabados, cada fase cerrada y comprobada antes de abrir la siguiente. Informes de avance regulares." },
+    { title: "Pruebas y control de acabados", duration: "Fase 5", text: "Pruebas de presión, continuidad y estanqueidad documentadas. Revisión de acabados punto por punto." },
+    { title: "Entrega documentada", duration: "Fase 6", text: "Limpieza final, planos de instalaciones, certificados, garantías de fabricante y nuestra garantía por partidas por escrito." },
   ]}
   priceTitle="Cuánto cuesta reformar una vivienda en A Coruña"
-  priceIntro="Referencias de mercado 2026. Una reforma de vivienda puede ir de una actualización parcial a una integral; el presupuesto se cierra por partidas tras la visita técnica."
-  priceRows={[
-    ["Reforma integral de piso de ~100 m²", "36.000 – 39.000 €"],
-    ["Reforma de baño completo", "5.800 – 6.400 €"],
-    ["Reforma de cocina completa", "5.000 – 6.000 €"],
-    ["Reforma parcial (instalaciones, suelos, ventanas, pintura) o casa / adosado", "A valorar en visita"],
-  ]}
+  priceIntro="Una reforma de vivienda puede ir desde renovar un baño hasta vaciar un piso entero, así que un precio genérico no te diría nada útil. Lo que hacemos es proponerte el alcance que tu vivienda necesita (ni más ni menos) y presupuestarlo por partidas, para que decidas con datos y puedas escalonar la inversión si lo prefieres."
   priceFactors={[
-    "<strong>Alcance.</strong> Qué sistemas y estancias se renuevan y cuáles se conservan.",
+    "<strong>Alcance.</strong> Qué sistemas y estancias se renuevan y cuáles se conservan; reforma parcial por fases o completa.",
     "<strong>Estado de partida.</strong> Instalaciones, humedades y estructura condicionan la obra oculta.",
     "<strong>Tipo de vivienda.</strong> Piso con comunidad y ascensor pequeño frente a casa con acceso directo.",
     "<strong>Envolvente.</strong> Ventanas y aislamiento son partidas relevantes, con retorno en confort y energía.",
-    "<strong>Gama de materiales</strong> en suelos, carpinterías, cocina y baños.",
+    "<strong>Baños y cocina.</strong> Su tamaño, si se renuevan las instalaciones, y la cerámica, sanitarios y mobiliario elegidos.",
+    "<strong>Gama de materiales</strong> en suelos, carpinterías y acabados.",
   ]}
-  priceNote="* Precios orientativos, sin IVA (10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto de supuestos y en materiales o mobiliario suministrados por separado). Se confirman con visita técnica y mediciones reales."
+  priceMethod={[
+    "<strong>Visita técnica sin compromiso</strong> en A Coruña y área metropolitana.",
+    "<strong>Propuesta de alcance con alternativas</strong>: qué hacer ahora, qué puede esperar y qué no debe esperar.",
+    "<strong>Presupuesto por partidas</strong> con materiales especificados, precios unitarios e IVA desglosado (10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto).",
+    "<strong>Precio cerrado.</strong> Solo cambia si cambia el alcance, y siempre por escrito antes de ejecutar.",
+  ]}
   problemsTitle="Problemas frecuentes en viviendas de A Coruña"
   problemsIntro="Lo que más nos encontramos al diagnosticar pisos y casas en la zona, y cómo lo resolvemos."
   problems={[
@@ -168,7 +168,7 @@ import ServicePage from '../../components/ServicePage.astro';
     { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
   ]}
   faqs={[
-    { question: "¿Cuánto cuesta reformar una vivienda en A Coruña?", answer: "Depende del alcance. Como referencias de mercado 2026: un baño completo 5.800–6.400 €, una cocina completa 5.000–6.000 € y una reforma integral de un piso de unos 100 m² entre 36.000 y 39.000 €, todo sin IVA. Las reformas parciales y las casas se valoran en visita técnica con presupuesto por partidas." },
+    { question: "¿Cuánto cuesta reformar una vivienda en A Coruña?", answer: "Depende del alcance (qué se renueva y qué se conserva), del estado de partida, del tipo de vivienda y de la gama de materiales. Un baño pequeño renovando acabados y una reforma completa de un piso están en extremos muy distintos, por eso no publicamos precios genéricos. Tras la visita técnica te proponemos el alcance adecuado y un presupuesto cerrado por partidas." },
     { question: "¿Hacéis reformas parciales o solo integrales?", answer: "Las dos. Muchas viviendas necesitan solo renovar instalaciones, baños, cocina, suelos o ventanas. Te proponemos el alcance que tiene sentido para tu caso y, si lo prefieres, un plan por fases para escalonar la inversión." },
     { question: "¿Puedo seguir viviendo en casa durante la reforma?", answer: "En reformas parciales, normalmente sí, organizando la obra por zonas. En una reforma completa no lo recomendamos: se cortan suministros por fases y hay polvo y ruido continuos. Lo hablamos en la visita y planificamos según tu situación." },
     { question: "¿Trabajáis en casas y adosados fuera de la ciudad?", answer: "Sí. Cubrimos A Coruña y los municipios de Oleiros, Culleredo, Cambre, Arteixo, Sada, Bergondo, Betanzos, Carral y Abegondo, tanto en pisos como en viviendas unifamiliares." },
