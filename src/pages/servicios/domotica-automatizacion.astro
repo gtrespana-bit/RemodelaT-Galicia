@@ -4,36 +4,187 @@ import ServicePage from '../../components/ServicePage.astro';
 
 <ServicePage
   slug="domotica-automatizacion"
-  title="Domótica"
-  titleGold="y Automatización"
-  description="Domótica y automatización en reformas de A Coruña: iluminación, climatización, seguridad y motorización integradas en la obra."
+  title="Domótica y Automatización"
+  titleGold="en A Coruña"
+  seoTitle="Domótica en A Coruña | Iluminación, Persianas y Clima"
+  description="Domótica para viviendas en A Coruña: iluminación por escenas, persianas motorizadas, clima y seguridad, integrada en la reforma. Sencilla y fiable."
   eyebrow="Servicios · Domótica"
-  lead="Iluminación, climatización, seguridad y motorización integradas desde la obra, sin parches."
+  lead="Luz, persianas, clima y seguridad controlados desde el móvil, la voz o un interruptor de siempre. Domótica integrada en la reforma, sencilla de usar y que funciona aunque se caiga internet."
   image="/images/electricidad-domotica.webp"
-  imageAlt="Domótica y automatización integrada en una reforma de A Coruña"
-  badges={["Integrada en obra", "Instalación limpia", "Control centralizado"]}
-  watermark="DOMÓTICA"
+  imageAlt="Panel de control domótico en la pared de un salón para gestionar iluminación, persianas y clima"
+  badges={["Iluminación por escenas", "Persianas y clima", "Integrada en la reforma"]}
+  watermark="SMART"
   crumb="Domótica y Automatización"
+  highlights={[
+    { value: "4", label: "Sistemas: luz, persianas, clima, seguridad" },
+    { value: "0", label: "Cuotas mensuales en sistemas locales" },
+    { value: "20–30 %", label: "Ahorro energético posible en clima" },
+    { value: "1–2", label: "Semanas integrada en la reforma" },
+  ]}
+  introTitle="La domótica útil es la que no se nota"
   intro={[
-    "La domótica bien hecha se integra durante la reforma, no se parchea después. Automatizamos iluminación, climatización, seguridad y motorización con una instalación limpia y centralizada.",
-    "Definimos contigo qué automatizar en función del uso real, para no pagar por funciones que no vas a tocar."
+    "Durante años la domótica fue sinónimo de sistemas caros, complejos y que dejaban de funcionar cuando la empresa que los instaló desaparecía. Hoy es otra cosa: tecnología madura, estándares abiertos y precios razonables que permiten que una vivienda normal tenga iluminación por escenas, persianas que se bajan solas al anochecer, calefacción que se enciende antes de que llegues y avisos en el móvil si hay una fuga de agua o humo.",
+    "La condición es que <strong>se diseñe desde la reforma</strong>, no como un añadido posterior. Con las paredes abiertas es el momento de llevar neutro a todas las cajas de mecanismos, pasar tubos para persianas y sensores, ubicar el cuadro domótico y dejar cableado de red donde hará falta. Después, todo es más caro, más visible y menos fiable.",
+    "Nuestro enfoque es <strong>práctico y a prueba de futuro</strong>: sistemas que funcionan en local (sin depender de la nube ni de cuotas), que se manejan también con interruptores normales para quien no quiere usar el móvil, y que se instalan con la misma rigurosidad que el resto de la <a href=\"/servicios/instalacion-electrica/\">instalación eléctrica</a>. Sin gadgets: soluciones que resuelven cosas concretas del día a día.",
   ]}
+  introFigure={{
+    src: "/images/electricidad-domotica.webp",
+    alt: "Pantalla táctil de control domótico empotrada en pared mostrando escenas de iluminación y temperatura",
+    caption: "Panel de control en el recibidor: escenas de salida y llegada, clima y persianas de toda la casa.",
+  }}
+  galleryTitle="Lo que la domótica hace por ti cada día"
+  galleryText="Iluminación, persianas, clima y seguridad. Cuatro sistemas que, bien integrados, hacen la casa más cómoda, más segura y más eficiente."
+  gallery={[
+    { src: "/images/electricidad-iluminacion-led.webp", alt: "Salón con iluminación LED regulable en distintas escenas", caption: "Escenas de iluminación" },
+    { src: "/images/cocina-iluminacion-capas.webp", alt: "Cocina con iluminación por capas controlada de forma independiente", caption: "Luz de tarea y ambiente por zonas" },
+    { src: "/images/electricidad-enchufes-usb.webp", alt: "Mecanismo de pared con tomas USB y pulsador inteligente", caption: "Mecanismos inteligentes de aspecto tradicional" },
+  ]}
+  topics={[
+    {
+      title: "Iluminación por escenas: la casa que se adapta al momento",
+      paragraphs: [
+        "Es la aplicación más inmediata y la que más se usa. En lugar de encender y apagar puntos de luz uno a uno, defines <strong>escenas</strong>: 'cena' (colgantes de la mesa al 60 %, resto apagado), 'cine' (luz indirecta al 20 %), 'lectura', 'limpieza' (todo al 100 %), 'noche' (balizas de pasillo al mínimo). Cada escena se activa desde un pulsador, el móvil, la voz o un horario.",
+        "Con reguladores adecuados a LED y luminarias de calidad, la iluminación domótica no solo es más cómoda: es más eficiente, porque la luz está donde y cuando hace falta, y alarga la vida de las lámparas.",
+      ],
+      bullets: [
+        "Pulsadores de escena en cada estancia con aspecto de mecanismo tradicional (Simon, Niessen, Jung).",
+        "Regulación de intensidad y temperatura de color (luz cálida por la noche, neutra por el día).",
+        "Detectores de presencia en pasillos, baños y vestidores con nivel nocturno.",
+        "Simulación de presencia cuando estás fuera y apagado general al salir de casa.",
+      ],
+      figure: {
+        src: "/images/electricidad-iluminacion-led.webp",
+        alt: "Salón con iluminación LED en varias capas configurada en una escena cálida y regulada",
+        caption: "Una escena 'noche': indirecta al 20 %, colgantes al 40 %, general apagada. Un solo gesto.",
+      },
+      quote: "La mejor domótica es la que tu madre usa sin manual: un pulsador, una escena, y funciona siempre.",
+    },
+    {
+      title: "Persianas, clima y agua caliente: confort y ahorro",
+      paragraphs: [
+        "Las <strong>persianas motorizadas</strong> son la segunda aplicación más valorada: se bajan solas al anochecer y en verano cuando da el sol, se suben al amanecer en los días laborables y se cierran todas de golpe cuando sales de casa. En A Coruña, además, protegen las ventanas en los temporales sin que tengas que estar en casa.",
+        "En <strong>clima</strong>, los termostatos inteligentes por zonas permiten calentar solo las estancias que se usan, programar por horarios, anticipar el encendido según la temperatura exterior y apagar todo cuando la última persona sale. Con calefacción por radiadores, suelo radiante o aerotermia, el ahorro típico está entre el 20 y el 30 %. Y el <strong>termo eléctrico</strong> programado calienta el agua en las horas más baratas de la tarifa.",
+      ],
+      bullets: [
+        "Motores de persiana silenciosos con pulsador local y control centralizado.",
+        "Termostatos por zona con sensor de ventana abierta (corta la calefacción si ventilas).",
+        "Control de aire acondicionado y aerotermia integrado en la misma app.",
+        "Programación del termo y de tomas de gran consumo según tarifa horaria.",
+      ],
+      figure: {
+        src: "/images/electricidad-proyecto-terminado.webp",
+        alt: "Salón terminado con iluminación integrada, persianas motorizadas y control centralizado",
+        caption: "Persianas, luz y clima en un mismo sistema: la casa reacciona al horario y al tiempo.",
+      },
+    },
+    {
+      title: "Seguridad y avisos: saber qué pasa en casa",
+      paragraphs: [
+        "La domótica también protege la vivienda. Sensores de <strong>inundación</strong> bajo el fregadero, el lavavajillas y en el baño avisan al móvil y pueden cerrar una electroválvula general de agua antes de que la fuga llegue al vecino. Detectores de <strong>humo</strong> y <strong>CO</strong> conectados, sensores de <strong>apertura</strong> en puerta y ventanas, y <strong>cámaras</strong> con grabación local completan un sistema que no sustituye a una alarma profesional, pero que da tranquilidad real.",
+        "Todo ello con avisos en el móvil, registro de eventos y escenas automáticas: si salta el sensor de humo, se encienden todas las luces y se suben las persianas para facilitar la evacuación.",
+      ],
+      bullets: [
+        "Electroválvula de corte de agua automática ante fuga detectada.",
+        "Detectores de humo y CO interconectados con aviso al móvil.",
+        "Sensores de apertura y presencia con escenas de alerta y simulación de presencia.",
+        "Videoportero IP para abrir y ver quién llama desde el móvil.",
+      ],
+      figure: {
+        src: "/images/electricidad-cuadro-detalle.webp",
+        alt: "Cuadro eléctrico con módulos de automatización y protecciones ordenados y etiquetados",
+        caption: "Módulos domóticos en el cuadro eléctrico: actuadores de luz, persianas y clima centralizados.",
+      },
+    },
+    {
+      title: "Qué sistema elegir: cableado, inalámbrico o mixto",
+      paragraphs: [
+        "No hay un sistema mejor para todos. Depende del tipo de reforma, del tamaño de la vivienda y de cuánto quieres poder ampliar en el futuro. Te asesoramos con un criterio: <strong>estándares abiertos, funcionamiento local y compatibilidad con varios fabricantes</strong>, para que nunca dependas de una única marca ni de que un servidor externo siga activo.",
+      ],
+      bullets: [
+        "<strong>Sistema cableado (KNX)</strong> para reformas integrales y viviendas grandes: máxima fiabilidad, todos los actuadores centralizados en el cuadro, estándar internacional con cientos de fabricantes. La opción más robusta y duradera.",
+        "<strong>Sistema inalámbrico (Zigbee / Thread / Matter)</strong> para reformas parciales y pisos: módulos detrás de los mecanismos existentes, sin cablear de nuevo, con un controlador local en casa. Muy buena relación coste-prestaciones.",
+        "<strong>Sistema mixto</strong>: cableado en lo que se abre en la reforma (luz, persianas, clima) e inalámbrico para lo que se añade después (sensores, enchufes, cámaras).",
+        "<strong>Control por voz</strong> (Alexa, Google, Siri) como complemento, nunca como único medio: siempre queda el pulsador de pared.",
+      ],
+      figure: {
+        src: "/images/electricidad-cableado-estructurado.webp",
+        alt: "Cableado de red y bus domótico ordenado en canalizaciones durante una reforma",
+        caption: "Cableado de bus y red durante la reforma: la base para un sistema que dure décadas.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye un proyecto de domótica"
+  includesIntro="Diseñamos la domótica junto con la instalación eléctrica de la reforma. Estas son las partidas habituales:"
   includes={[
-    "Automatización de iluminación.",
-    "Control de climatización.",
-    "Seguridad y sensores.",
-    "Motorización de persianas y toldos.",
-    "Control centralizado (app o panel).",
-    "Integración durante la obra."
+    "<strong>Estudio de necesidades</strong>: qué quieres controlar, desde dónde y con qué automatismos, por estancia.",
+    "<strong>Diseño del sistema</strong>: cableado, inalámbrico o mixto; ubicación de controlador, actuadores, sensores y pulsadores.",
+    "<strong>Preinstalación</strong> durante la reforma: neutro en todas las cajas, tubos para persianas y sensores, cableado de bus y red.",
+    "<strong>Iluminación por escenas</strong> con reguladores compatibles con LED y pulsadores de escena.",
+    "<strong>Persianas motorizadas</strong> con control local y centralizado.",
+    "<strong>Clima por zonas</strong>: termostatos inteligentes, control de aire acondicionado, aerotermia y termo.",
+    "<strong>Seguridad</strong>: sensores de inundación con electroválvula, humo, CO, apertura y videoportero IP.",
+    "<strong>Configuración, escenas y formación</strong>: dejamos el sistema funcionando, con las escenas definidas contigo, y te enseñamos a usarlo y modificarlo.",
+    "<strong>Documentación</strong> del sistema y garantía por escrito.",
   ]}
+  processTitle="Cómo integramos la domótica en tu reforma"
+  processIntro="Integrada en una reforma, la domótica añade 1–2 semanas al trabajo eléctrico y de configuración. En una vivienda ya reformada, un sistema inalámbrico se instala en pocos días."
+  phases={[
+    { title: "Entrevista de necesidades", duration: "Antes de la obra", text: "Hablamos de cómo vives: horarios, quién usa la casa, qué te molesta hoy (persianas, luces encendidas, frío al llegar). De ahí salen las funciones útiles, no del catálogo." },
+    { title: "Diseño del sistema y presupuesto", duration: "1 semana", text: "Elección de tecnología, plano de puntos y sensores, escenas previstas y presupuesto por partidas con equipos especificados." },
+    { title: "Preinstalación en obra", duration: "Con la electricidad", text: "Neutro en cajas, tubos y cableado de bus, cuadro con espacio para actuadores, ubicación de sensores. Se hace con la instalación eléctrica, cuando las paredes están abiertas." },
+    { title: "Instalación de equipos", duration: "Fase de acabados", text: "Actuadores, reguladores, motores de persiana, termostatos, sensores y pulsadores, una vez pintado y con la iluminación colocada." },
+    { title: "Configuración y escenas", duration: "2–3 días", text: "Programación del sistema, creación de escenas y automatismos, integración con voz si se desea. Pruebas de cada función." },
+    { title: "Formación y entrega", duration: "Último día", text: "Te enseñamos a usar y modificar el sistema, entregamos la documentación y ajustamos las escenas tras las primeras semanas de uso si hace falta." },
+  ]}
+  priceTitle="Cuánto cuesta la domótica en A Coruña"
+  priceIntro="El precio depende del número de puntos controlados, de la tecnología (cableada o inalámbrica) y de los sistemas incluidos. Se cierra por partidas tras el estudio de necesidades."
   priceRows={[
-    ["Domótica y automatización (según alcance)", "A valorar en visita"]
+    ["Iluminación por escenas en vivienda (reguladores, pulsadores y controlador)", "A valorar en visita"],
+    ["Persianas motorizadas con control centralizado", "A valorar en visita"],
+    ["Clima por zonas y control de agua caliente", "A valorar en visita"],
+    ["Sistema completo KNX en reforma integral", "A valorar en visita"],
   ]}
-  priceNote="* Presupuesto por partidas tras la visita técnica (sin IVA)."
+  priceFactors={[
+    "<strong>Número de puntos controlados.</strong> Cada circuito de luz, persiana o zona de clima requiere su actuador.",
+    "<strong>Tecnología.</strong> KNX cableado es más costoso pero más robusto; inalámbrico es más económico y flexible.",
+    "<strong>Sistemas incluidos.</strong> Solo iluminación, o iluminación más persianas, clima y seguridad.",
+    "<strong>Integración en reforma o instalación posterior.</strong> En reforma, la preinstalación es mucho más barata.",
+    "<strong>Gama de mecanismos y pantallas</strong> de control.",
+  ]}
+  priceNote="* Precios sin IVA (10 % en obra de renovación de vivienda que cumple los requisitos; 21 % en equipos suministrados por separado). Se confirman con estudio de necesidades y visita técnica."
+  problemsTitle="Los errores más comunes en domótica doméstica"
+  problemsIntro="Lo que hace que muchas instalaciones domóticas acaben desconectadas, y cómo lo evitamos."
+  problems={[
+    { title: "Depender de la nube", problem: "Sistemas que dejan de funcionar cuando falla internet o cuando el fabricante cierra el servicio. Las luces no se encienden porque un servidor está caído.", solution: "Controlador local en casa con estándares abiertos (KNX, Zigbee, Thread/Matter). Internet solo para el acceso remoto, nunca para el funcionamiento básico." },
+    { title: "Sin interruptores de pared", problem: "Todo por app y voz. Las visitas no saben encender la luz y la familia se harta en una semana.", solution: "Pulsadores de pared en cada estancia con aspecto tradicional. El móvil y la voz son un complemento, no el único mando." },
+    { title: "Sin neutro en las cajas", problem: "Instalación eléctrica antigua sin neutro en los interruptores: muchos módulos inteligentes no se pueden instalar.", solution: "Neutro en todas las cajas de mecanismos durante la reforma. Es lo primero que dejamos previsto." },
+    { title: "Reguladores que hacen parpadear el LED", problem: "Dimmers de la época halógena con lámparas LED: parpadeo, zumbido y lámparas que mueren pronto.", solution: "Reguladores específicos para LED (corte de fase trasero, DALI o 0–10 V) compatibles con las luminarias elegidas." },
+    { title: "Añadirlo al final", problem: "Domótica planteada cuando la obra está pintada: cables vistos, módulos donde caben, funciones limitadas.", solution: "Diseño desde el principio junto con la instalación eléctrica. Preinstalación completa aunque los equipos se pongan más adelante." },
+    { title: "Demasiadas funciones que nadie usa", problem: "Sistemas con cientos de escenas y automatismos que nadie recuerda ni entiende.", solution: "Pocas escenas, bien pensadas, que resuelven cosas concretas del día a día. Se amplían después si hacen falta." },
+  ]}
+  relatedProjects={[
+    { slug: "cocina-reubicada-zona-dia", title: "Cocina reubicada con estante LED", image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp", tag: "Iluminación integrada" },
+    { slug: "bano-secundario-compacto", title: "Baño secundario compacto", image: "/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp", tag: "Espejo LED antivaho" },
+    { slug: "cocina-en-chalet", title: "Cocina en chalet", image: "/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp", tag: "Vivienda unifamiliar" },
+  ]}
+  relatedGuides={[
+    { title: "Instalación eléctrica", url: "/servicios/instalacion-electrica/" },
+    { title: "Reforma integral", url: "/servicios/reforma-integral/" },
+    { title: "Cuánto cuesta reformar un piso en A Coruña", url: "/blog/cuanto-cuesta-reformar-piso-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Qué puedo automatizar?", answer: "Iluminación, climatización, persianas, toldos y seguridad, controlados desde app o panel, según el alcance." },
-    { question: "¿Se integra con la reforma?", answer: "Sí. Lo preparamos durante la obra para que la instalación quede limpia y centralizada." }
+    { question: "¿Cuánto cuesta domotizar una vivienda en A Coruña?", answer: "Depende del número de puntos controlados, de la tecnología y de los sistemas que incluyas. Un sistema inalámbrico de iluminación por escenas en un piso es muy asequible; un sistema KNX completo en una reforma integral es una inversión mayor pero para décadas. Lo valoramos tras el estudio de necesidades, con presupuesto por partidas." },
+    { question: "¿Funciona si se cae internet?", answer: "Sí, en los sistemas que instalamos. Funcionan en local, con un controlador en casa: luces, persianas, clima y escenas siguen operativos sin conexión. Internet solo hace falta para controlar la casa desde fuera o para el control por voz." },
+    { question: "¿Tiene cuotas mensuales?", answer: "No. Los sistemas locales con estándares abiertos no tienen suscripción. Solo algunos servicios opcionales (grabación de cámaras en la nube, por ejemplo) pueden tenerla, y siempre son prescindibles." },
+    { question: "¿Es complicado de usar?", answer: "No debería serlo. Dejamos pulsadores de pared normales en cada estancia, escenas con nombres claros y la app configurada. Enseñamos a toda la familia a usarlo y ajustamos las escenas tras las primeras semanas." },
+    { question: "¿Se puede instalar sin obra en un piso ya reformado?", answer: "Sí, con sistemas inalámbricos: módulos detrás de los mecanismos existentes (si hay neutro), enchufes inteligentes, termostatos y sensores. Persianas motorizadas requieren llevar alimentación al cajón. Lo estudiamos en la visita." },
+    { question: "¿Qué pasa si el fabricante desaparece?", answer: "Por eso trabajamos con estándares abiertos (KNX, Zigbee, Thread/Matter) y no con sistemas propietarios cerrados. Cualquier instalador puede mantenerlos y los equipos de distintas marcas son compatibles entre sí." },
+    { question: "¿Se puede ampliar en el futuro?", answer: "Sí. Diseñamos el sistema para crecer: dejamos preinstalación en la reforma aunque los equipos se añadan más adelante, y elegimos tecnologías que permiten incorporar sensores, cámaras o zonas nuevas sin rehacer nada." },
+    { question: "¿Ahorra energía de verdad?", answer: "En clima, el control por zonas y horarios suele reducir el consumo entre un 20 y un 30 %. En iluminación, el apagado automático y la regulación ahorran algo, pero la mayor ventaja es el confort. En persianas, la gestión solar reduce la necesidad de calefacción en invierno y de refrigeración en verano." },
   ]}
+  ctaTitle="¿Quieres una casa que se adapte a ti?"
+  ctaText="Cuéntanos cómo vives y qué te gustaría automatizar. Estudio de necesidades sin compromiso en A Coruña y área metropolitana, y una propuesta clara, sin gadgets innecesarios."
+  whatsappText="Hola, quiero información sobre domótica para mi vivienda en A Coruña"
   schemaName="Domótica y Automatización en A Coruña"
   schemaType="Home Automation"
 />

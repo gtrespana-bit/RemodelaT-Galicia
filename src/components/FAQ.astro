@@ -31,7 +31,7 @@ const faqSchema = {
 
 <!-- FAQ Section -->
 <section class="faq-section">
-  <h2 class="faq-section-title">{title}</h2>
+  {title && <h2 class="faq-section-title">{title}</h2>}
   {items.map(item => (
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">

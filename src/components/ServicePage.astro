@@ -1,17 +1,46 @@
 ---
+/**
+ * ServicePage — plantilla editorial de las páginas de servicio (/servicios/x/).
+ *
+ * Diseño: columna de lectura centrada (720–780 px) con cabeceras de sección
+ * centradas, imágenes editoriales a ancho completo, bloques temáticos con
+ * figura, proceso por fases, tabla de precios, errores comunes, proyectos
+ * reales relacionados, FAQ amplia y zonas de trabajo. Todo el contenido llega
+ * por props desde cada página de /servicios/*.astro.
+ */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GodHero from './GodHero.astro';
 import GodMarquee from './GodMarquee.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import FAQ from './FAQ.astro';
 import ServiceSchema from './ServiceSchema.astro';
+import { corunaZones, zoneNames } from '../data/zone-slugs';
+import { waLink } from '../data/brand';
 
-interface FaqItem { question: string; answer: string; }
+export interface FaqItem { question: string; answer: string; }
+export interface Figure { src: string; alt: string; caption?: string; }
+export interface Topic {
+  /** Título de la sección (h2). */
+  title: string;
+  /** Párrafos. Admiten <strong>, <em> y <a href="/ruta/"> sencillos. */
+  paragraphs: string[];
+  /** Lista de puntos opcional (admiten <strong>). */
+  bullets?: string[];
+  /** Imagen editorial opcional que acompaña a la sección. */
+  figure?: Figure;
+  /** Cita destacada opcional al final de la sección. */
+  quote?: string;
+}
+export interface Phase { title: string; duration?: string; text: string; }
+export interface Problem { title: string; problem: string; solution: string; }
+export interface RelatedProject { slug: string; title: string; image: string; tag: string; }
+export interface Highlight { label: string; value: string; }
 
 interface Props {
   slug: string;
   title: string;
   titleGold: string;
+  seoTitle?: string;
   description: string;
   eyebrow: string;
   lead: string;
@@ -20,28 +49,88 @@ interface Props {
   badges?: string[];
   watermark: string;
   crumb: string;
+  /** Cifras clave del servicio (3–4). */
+  highlights?: Highlight[];
+  /** Introducción editorial (2–4 párrafos) + imagen de apertura. */
+  introTitle?: string;
   intro: string[];
+  introFigure?: Figure;
+  /** Galería de referencias visuales (3 imágenes: 1 grande + 2 pequeñas). */
+  gallery?: Figure[];
+  galleryTitle?: string;
+  galleryText?: string;
+  /** Secciones temáticas largas. */
+  topics: Topic[];
+  /** Qué incluye. */
   includesTitle?: string;
+  includesIntro?: string;
   includes: string[];
+  /** Proceso por fases. */
+  processTitle?: string;
+  processIntro?: string;
+  phases?: Phase[];
+  /** Precios. */
   priceTitle?: string;
   priceIntro?: string;
   priceRows: [string, string][];
+  priceFactors?: string[];
   priceNote: string;
+  /** Problemas habituales y cómo se resuelven. */
+  problemsTitle?: string;
+  problemsIntro?: string;
+  problems?: Problem[];
+  /** Proyectos reales relacionados (obras previas en España). */
+  relatedProjects?: RelatedProject[];
+  /** Guías del blog relacionadas. */
+  relatedGuides?: { title: string; url: string }[];
+  /** FAQ (5–8 preguntas). */
   faqs: FaqItem[];
+  /** Zonas: prefijo de las páginas de zona ('bano' | 'cocina' | 'integral'), si existen. */
+  zoneService?: 'bano' | 'cocina' | 'integral';
+  /** CTA final. */
+  ctaTitle?: string;
+  ctaText?: string;
+  whatsappText?: string;
   schemaName: string;
   schemaType: string;
 }
 
 const {
-  slug, title, titleGold, description, eyebrow, lead, image, imageAlt,
-  badges = [], watermark, crumb, intro, includesTitle = 'Qué incluye', includes,
-  priceTitle = 'Precios orientativos', priceIntro, priceRows, priceNote, faqs,
+  slug, title, titleGold, seoTitle, description, eyebrow, lead, image, imageAlt,
+  badges = [], watermark, crumb, highlights = [],
+  introTitle, intro, introFigure,
+  gallery = [], galleryTitle = 'Referencias visuales', galleryText,
+  topics = [],
+  includesTitle = 'Qué incluye', includesIntro, includes,
+  processTitle = 'Cómo trabajamos, paso a paso', processIntro, phases = [],
+  priceTitle = 'Precios orientativos (sin IVA)', priceIntro, priceRows, priceFactors = [], priceNote,
+  problemsTitle = 'Problemas habituales y cómo los resolvemos', problemsIntro, problems = [],
+  relatedProjects = [], relatedGuides = [],
+  faqs, zoneService,
+  ctaTitle, ctaText, whatsappText,
   schemaName, schemaType,
 } = Astro.props;
+
+const pageTitle = seoTitle ?? `${title} ${titleGold} | RemodelaT Coruña`;
+const waHref = waLink(whatsappText ?? `Hola, quiero información sobre ${crumb.toLowerCase()} en A Coruña`);
+
+const sections = [
+  { id: 'introduccion', label: 'El servicio' },
+  ...(topics.length ? [{ id: 'detalle', label: 'En detalle' }] : []),
+  { id: 'que-incluye', label: 'Qué incluye' },
+  ...(phases.length ? [{ id: 'proceso', label: 'Proceso' }] : []),
+  ...(priceRows.length ? [{ id: 'precios', label: 'Precios' }] : []),
+  ...(problems.length ? [{ id: 'problemas', label: 'Errores que evitamos' }] : []),
+  ...(relatedProjects.length ? [{ id: 'proyectos', label: 'Obras reales' }] : []),
+  { id: 'faq', label: 'Preguntas' },
+];
+
+const ctaHeadline = ctaTitle ?? `¿Empezamos con tu ${crumb.toLowerCase()}?`;
+const ctaCopy = ctaText ?? 'Cuéntanos tu proyecto en A Coruña y te enviamos un presupuesto por partidas, claro y cerrado.';
 ---
 
 <BaseLayout
-  title={title}
+  title={pageTitle}
   description={description}
   image={image}
   activePage="servicios"
@@ -55,6 +144,8 @@ const {
     imageAlt={imageAlt}
     badges={badges}
     watermark={watermark}
+    backLink={{ href: '/servicios/', label: 'Todos los servicios' }}
+    align="center"
   />
 
   <GodMarquee />
@@ -65,47 +156,280 @@ const {
     { name: crumb, url: `/servicios/${slug}/` }
   ]} />
 
-  <section class="article-section">
-    <div class="container article-layout">
-      <div class="article-body">
-        {intro.map((p) => <p>{p}</p>)}
+  <!-- Índice de la página -->
+  <nav class="svc-toc" aria-label="Contenido de esta página">
+    <div class="svc-toc-inner">
+      <span class="svc-toc-label">En esta página</span>
+      <ul>
+        {sections.map((s) => <li><a href={`#${s.id}`}>{s.label}</a></li>)}
+      </ul>
+    </div>
+  </nav>
 
-        <h2>{includesTitle}</h2>
-        <ul>
-          {includes.map((i) => <li>{i}</li>)}
-        </ul>
+  {highlights.length > 0 && (
+    <section class="svc-highlights" aria-label="Datos clave del servicio">
+      <dl class="svc-highlights-grid">
+        {highlights.map((h) => (
+          <div class="svc-highlight">
+            <dd>{h.value}</dd>
+            <dt>{h.label}</dt>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )}
 
-        {priceRows.length > 0 && (
-          <>
-            <h2>{priceTitle}</h2>
-            {priceIntro && <p>{priceIntro}</p>}
-            <table>
-              <thead><tr><th>Alcance</th><th>Precio orientativo</th></tr></thead>
-              <tbody>
-                {priceRows.map(([label, price]) => (
-                  <tr><td>{label}</td><td>{price}</td></tr>
-                ))}
-              </tbody>
-            </table>
-            <p class="price-note">{priceNote}</p>
-          </>
-        )}
-
-        <h2>Cómo trabajamos</h2>
-        <p>Seguimos el <a href="/metodo-remodelat/">Método RemodelaT</a> en 10 etapas: diagnóstico técnico, presupuesto por partidas, ejecución supervisada, pruebas antes de cerrar y entrega documentada con garantía por escrito.</p>
+  <!-- ============ INTRODUCCIÓN ============ -->
+  <section class="svc-section svc-intro" id="introduccion">
+    <div class="svc-reading">
+      <header class="svc-header">
+        <span class="eyebrow-god on-light">El servicio</span>
+        <h2>{introTitle ?? `${crumb} en A Coruña, bien hecha y documentada`}</h2>
+      </header>
+      <div class="svc-prose svc-prose-dropcap">
+        {intro.map((p) => <p set:html={p} />)}
       </div>
+    </div>
+    {introFigure && (
+      <figure class="svc-figure svc-figure-wide">
+        <img src={introFigure.src} alt={introFigure.alt} loading="lazy" decoding="async" />
+        {introFigure.caption && <figcaption>{introFigure.caption}</figcaption>}
+      </figure>
+    )}
+  </section>
+
+  {gallery.length >= 3 && (
+    <section class="svc-section svc-gallery-section" aria-label={galleryTitle}>
+      <div class="svc-reading">
+        <header class="svc-header">
+          <span class="eyebrow-god on-light">Inspiración</span>
+          <h2>{galleryTitle}</h2>
+          {galleryText && <p class="svc-header-text">{galleryText}</p>}
+        </header>
+      </div>
+      <div class="svc-gallery">
+        <figure class="svc-gallery-item large">
+          <img src={gallery[0].src} alt={gallery[0].alt} loading="lazy" decoding="async" />
+          {gallery[0].caption && <figcaption>{gallery[0].caption}</figcaption>}
+        </figure>
+        <figure class="svc-gallery-item">
+          <img src={gallery[1].src} alt={gallery[1].alt} loading="lazy" decoding="async" />
+          {gallery[1].caption && <figcaption>{gallery[1].caption}</figcaption>}
+        </figure>
+        <figure class="svc-gallery-item">
+          <img src={gallery[2].src} alt={gallery[2].alt} loading="lazy" decoding="async" />
+          {gallery[2].caption && <figcaption>{gallery[2].caption}</figcaption>}
+        </figure>
+      </div>
+    </section>
+  )}
+
+  <!-- ============ SECCIONES TEMÁTICAS ============ -->
+  {topics.length > 0 && (
+    <section class="svc-section svc-topics" id="detalle">
+      <div class="svc-reading">
+        <header class="svc-header">
+          <span class="eyebrow-god on-light">En detalle</span>
+          <h2>Lo que marca la diferencia en {crumb.toLowerCase()}</h2>
+        </header>
+      </div>
+      {topics.map((t, i) => (
+        <article class="svc-topic">
+          <div class="svc-reading">
+            <span class="svc-topic-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{t.title}</h3>
+            <div class="svc-prose">
+              {t.paragraphs.map((p) => <p set:html={p} />)}
+              {t.bullets && t.bullets.length > 0 && (
+                <ul class="svc-checks">
+                  {t.bullets.map((b) => <li set:html={b} />)}
+                </ul>
+              )}
+            </div>
+          </div>
+          {t.figure && (
+            <figure class="svc-figure">
+              <img src={t.figure.src} alt={t.figure.alt} loading="lazy" decoding="async" />
+              {t.figure.caption && <figcaption>{t.figure.caption}</figcaption>}
+            </figure>
+          )}
+          {t.quote && (
+            <div class="svc-reading">
+              <blockquote class="svc-quote"><p>{t.quote}</p></blockquote>
+            </div>
+          )}
+        </article>
+      ))}
+    </section>
+  )}
+
+  <!-- ============ QUÉ INCLUYE ============ -->
+  <section class="svc-section svc-includes" id="que-incluye">
+    <div class="svc-reading">
+      <header class="svc-header">
+        <span class="eyebrow-god on-light">Alcance</span>
+        <h2>{includesTitle}</h2>
+        {includesIntro && <p class="svc-header-text">{includesIntro}</p>}
+      </header>
+    </div>
+    <ul class="svc-includes-grid">
+      {includes.map((i) => (
+        <li class="svc-include">
+          <span class="svc-include-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span set:html={i} />
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- ============ PROCESO ============ -->
+  {phases.length > 0 && (
+    <section class="svc-section svc-process" id="proceso">
+      <div class="svc-reading">
+        <header class="svc-header on-dark">
+          <span class="eyebrow-god">Método RemodelaT</span>
+          <h2>{processTitle}</h2>
+          {processIntro && <p class="svc-header-text">{processIntro}</p>}
+        </header>
+      </div>
+      <ol class="svc-phases">
+        {phases.map((ph, i) => (
+          <li class="svc-phase">
+            <span class="svc-phase-num">{String(i + 1).padStart(2, '0')}</span>
+            <div class="svc-phase-body">
+              <h3>{ph.title}</h3>
+              {ph.duration && <span class="svc-phase-duration">{ph.duration}</span>}
+              <p set:html={ph.text} />
+            </div>
+          </li>
+        ))}
+      </ol>
+      <div class="svc-process-link">
+        <a href="/metodo-remodelat/" class="btn-premium btn-outline-premium"><span class="btn-content">Ver el método completo</span><span class="btn-arrow">→</span></a>
+      </div>
+    </section>
+  )}
+
+  <!-- ============ PRECIOS ============ -->
+  {priceRows.length > 0 && (
+    <section class="svc-section svc-prices" id="precios">
+      <div class="svc-reading">
+        <header class="svc-header">
+          <span class="eyebrow-god on-light">Inversión</span>
+          <h2>{priceTitle}</h2>
+          {priceIntro && <p class="svc-header-text">{priceIntro}</p>}
+        </header>
+        <div class="svc-table-wrap">
+          <table class="svc-table">
+            <thead><tr><th>Alcance</th><th>Precio orientativo</th></tr></thead>
+            <tbody>
+              {priceRows.map(([label, price]) => (
+                <tr><td>{label}</td><td class="svc-price">{price}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="svc-price-note">{priceNote}</p>
+        {priceFactors.length > 0 && (
+          <div class="svc-factors">
+            <h3>Qué hace variar el precio</h3>
+            <ul class="svc-checks">
+              {priceFactors.map((f) => <li set:html={f} />)}
+            </ul>
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  <!-- ============ PROBLEMAS HABITUALES ============ -->
+  {problems.length > 0 && (
+    <section class="svc-section svc-problems" id="problemas">
+      <div class="svc-reading">
+        <header class="svc-header">
+          <span class="eyebrow-god on-light">Experiencia en obra</span>
+          <h2>{problemsTitle}</h2>
+          {problemsIntro && <p class="svc-header-text">{problemsIntro}</p>}
+        </header>
+      </div>
+      <div class="svc-problems-grid">
+        {problems.map((p) => (
+          <article class="svc-problem">
+            <h3>{p.title}</h3>
+            <p><span class="svc-problem-label">El problema</span>{p.problem}</p>
+            <p><span class="svc-problem-label is-solution">Cómo lo resolvemos</span>{p.solution}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- ============ PROYECTOS REALES ============ -->
+  {relatedProjects.length > 0 && (
+    <section class="svc-section svc-projects" id="proyectos">
+      <div class="svc-reading">
+        <header class="svc-header">
+          <span class="eyebrow-god on-light">Obras reales</span>
+          <h2>Casos documentados paso a paso</h2>
+          <p class="svc-header-text">Obras previas ejecutadas por nuestro fundador en España, con fotografías reales de cada fase. Así trabajamos también en A Coruña.</p>
+        </header>
+      </div>
+      <div class="svc-projects-grid">
+        {relatedProjects.map((p) => (
+          <a href={`/proyectos/${p.slug}/`} class="svc-project-card">
+            <div class="svc-project-img">
+              <img src={p.image} alt={p.title} loading="lazy" decoding="async" />
+              <span class="svc-project-tag">{p.tag}</span>
+            </div>
+            <div class="svc-project-body">
+              <h3>{p.title}</h3>
+              <span class="svc-project-link">Ver el caso completo <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="svc-process-link">
+        <a href="/proyectos/" class="btn-premium btn-outline-premium on-light"><span class="btn-content">Ver todos los proyectos</span><span class="btn-arrow">→</span></a>
+      </div>
+    </section>
+  )}
+
+  <!-- ============ FAQ ============ -->
+  <section class="svc-section svc-faq" id="faq">
+    <div class="svc-reading">
+      <header class="svc-header">
+        <span class="eyebrow-god on-light">Preguntas frecuentes</span>
+        <h2>Resolvemos tus dudas sobre {crumb.toLowerCase()}</h2>
+      </header>
+      <FAQ items={faqs} title="" />
+      {relatedGuides.length > 0 && (
+        <div class="svc-guides">
+          <span class="svc-guides-label">Guías relacionadas</span>
+          <ul>
+            {relatedGuides.map((g) => <li><a href={g.url}>{g.title}</a></li>)}
+          </ul>
+        </div>
+      )}
     </div>
   </section>
 
-  <div class="premium-divider"><i></i></div>
-
-  <section class="section bg-light">
-    <div class="container container-narrow">
-      <div class="section-header" data-reveal>
-        <span class="eyebrow-god on-light">FAQ</span>
-        <h2>Preguntas frecuentes</h2>
+  <!-- ============ ZONAS ============ -->
+  <section class="svc-section svc-zones" aria-label="Zonas de trabajo">
+    <div class="svc-reading">
+      <header class="svc-header">
+        <span class="eyebrow-god on-light">Zona de trabajo</span>
+        <h2>A Coruña y área metropolitana</h2>
+        <p class="svc-header-text">Trabajamos en la ciudad de A Coruña y en los municipios de su área metropolitana, con el mismo método y la misma garantía por escrito.</p>
+      </header>
+      <div class="svc-zone-chips">
+        {corunaZones.map((z) => (
+          zoneService
+            ? <a href={`/reforma-${zoneService}-${z}/`}>{zoneNames[z]}</a>
+            : <span>{zoneNames[z]}</span>
+        ))}
       </div>
-      <FAQ items={faqs} />
     </div>
   </section>
 
@@ -119,21 +443,305 @@ const {
   <section class="god-cta">
     <div class="cta-wrapper">
       <span class="eyebrow-god">Presupuesto por partidas</span>
-      <h2 class="cta-title">¿Empezamos con tu {crumb.toLowerCase()}?</h2>
-      <p class="cta-text">Cuéntanos tu proyecto en A Coruña y te enviamos un presupuesto por partidas, claro y cerrado.</p>
-      <a href="/contacto/" class="btn-premium btn-primary-premium"><span class="btn-content">Solicitar presupuesto</span><span class="btn-arrow">→</span></a>
+      <h2 class="cta-title">{ctaHeadline}</h2>
+      <p class="cta-text">{ctaCopy}</p>
+      <div class="svc-cta-actions">
+        <a href="/contacto/" class="btn-premium btn-primary-premium"><span class="btn-content">Solicitar presupuesto</span><span class="btn-arrow">→</span></a>
+        <a href={waHref} class="btn-premium btn-outline-premium" target="_blank" rel="noopener"><span class="btn-content">WhatsApp</span><span class="btn-arrow">→</span></a>
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 24px; }
-  .price-note { font-size: .85rem; color: var(--text-muted); margin-top: 10px; }
-  table { width: 100%; max-width: 100%; margin: 1.5rem 0; border-collapse: collapse; font-size: 1rem; box-shadow: var(--e-1); border-radius: var(--r-md); overflow: hidden; }
-  thead { background: var(--ink); color: var(--gold-light); }
-  th { padding: 1rem 1.5rem; text-align: left; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
-  tbody tr { border-bottom: 1px solid rgba(0,0,0,0.08); }
-  tbody tr:last-child { border-bottom: none; }
-  td { padding: 1rem 1.5rem; color: var(--text); font-size: 0.95rem; line-height: 1.5; }
-  tbody tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+  /* ---------- Sistema de lectura centrado ---------- */
+  .svc-reading { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  .svc-section { padding: clamp(64px, 8vw, 110px) 0; }
+  .svc-section + .svc-section { padding-top: 0; }
+
+  .svc-header { text-align: center; margin: 0 auto 40px; }
+  .svc-header .eyebrow-god { margin-bottom: 18px; }
+  .svc-header h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: var(--track-tight);
+    color: var(--ink);
+    margin: 0 auto;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .svc-header-text {
+    color: var(--text-muted);
+    font-size: 1.08rem;
+    line-height: 1.75;
+    margin: 18px auto 0;
+    max-width: 62ch;
+    text-wrap: pretty;
+  }
+  .svc-header.on-dark h2 { color: var(--white); }
+  .svc-header.on-dark .svc-header-text { color: rgba(255,255,255,.72); }
+
+  /* Eyebrow centrado: la línea decorativa va a ambos lados */
+  .svc-header .eyebrow-god { justify-content: center; }
+  .svc-header .eyebrow-god::after {
+    content: ""; display: block; width: 28px; height: 1px; background: currentColor; opacity: .9;
+  }
+
+  /* ---------- Prosa ---------- */
+  .svc-prose { font-size: 1.13rem; line-height: 1.85; color: var(--text); text-wrap: pretty; }
+  .svc-prose p { margin-bottom: 1.35rem; }
+  .svc-prose p:last-child { margin-bottom: 0; }
+  .svc-prose :global(strong) { font-weight: 700; color: var(--ink-soft); }
+  .svc-prose :global(a) { color: var(--gold-ink-strong); border-bottom: 1px solid rgba(138,109,31,.45); transition: border-color var(--dur-fast) var(--ease-out); }
+  .svc-prose :global(a:hover) { border-bottom-color: var(--gold-ink-strong); }
+  .svc-prose-dropcap > p:first-of-type::first-letter {
+    font-family: var(--font-serif); font-size: 4.4rem; font-weight: 600; float: left;
+    line-height: .78; margin: 8px .14em 0 0; color: var(--gold-ink);
+  }
+
+  .svc-checks { list-style: none; margin: 1.4rem 0 0; padding: 0; display: grid; gap: 12px; }
+  .svc-checks li { position: relative; padding-left: 30px; font-size: 1.05rem; line-height: 1.7; color: var(--text); }
+  .svc-checks li::before {
+    content: ""; position: absolute; left: 0; top: .62em; width: 16px; height: 1px; background: var(--gold-ink);
+  }
+  .svc-checks :global(strong) { color: var(--ink-soft); }
+
+  .svc-quote {
+    margin: 40px auto 0; padding: 28px 32px; text-align: center;
+    border-top: 1px solid rgba(201,169,97,.35); border-bottom: 1px solid rgba(201,169,97,.35);
+  }
+  .svc-quote p { font-family: var(--font-serif); font-size: clamp(1.35rem, 2.4vw, 1.7rem); line-height: 1.4; color: var(--ink); font-style: italic; margin: 0; text-wrap: balance; }
+
+  /* ---------- Figuras ---------- */
+  .svc-figure { max-width: 1080px; margin: 48px auto 0; padding: 0 24px; }
+  .svc-figure img {
+    width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+    border-radius: var(--r-god); box-shadow: var(--e-3);
+  }
+  .svc-figure figcaption { text-align: center; color: var(--text-muted); font-size: .9rem; margin-top: 14px; font-style: italic; }
+  .svc-figure-wide { margin-top: 56px; }
+
+  /* ---------- Índice ---------- */
+  .svc-toc { max-width: 1200px; margin: 6px auto 0; padding: 0 clamp(20px, 4vw, 48px); }
+  .svc-toc-inner {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 14px;
+    padding: 14px 18px; border: 1px solid rgba(201,169,97,.25); border-radius: var(--r-god);
+    background: var(--bone);
+  }
+  .svc-toc-label { font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); margin-right: 6px; }
+  .svc-toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .svc-toc a {
+    display: inline-flex; align-items: center; min-height: 34px; padding: 4px 14px; border-radius: var(--r-full);
+    background: var(--white); border: 1px solid rgba(201,169,97,.22); color: var(--text);
+    font-size: .78rem; font-weight: 700; letter-spacing: .04em;
+    transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  }
+  .svc-toc a:hover { color: var(--gold-ink-strong); border-color: rgba(201,169,97,.55); transform: translateY(-1px); }
+
+  /* ---------- Cifras clave ---------- */
+  .svc-highlights { max-width: 1080px; margin: 44px auto 0; padding: 0 24px; }
+  .svc-highlights-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin: 0;
+    border: 1px solid rgba(201,169,97,.25); border-radius: var(--r-god); overflow: hidden;
+    background: var(--ink); box-shadow: var(--e-2);
+  }
+  .svc-highlight { padding: 30px 18px 26px; text-align: center; border-right: 1px solid rgba(201,169,97,.18); }
+  .svc-highlight:last-child { border-right: 0; }
+  .svc-highlight dd { margin: 0 0 8px; font-family: var(--font-serif); font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 500; line-height: 1; color: var(--gold); }
+  .svc-highlight dt { color: rgba(255,255,255,.7); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; line-height: 1.5; }
+
+  /* ---------- Intro ---------- */
+  .svc-intro { padding-top: clamp(64px, 8vw, 100px); background: var(--white); }
+
+  /* ---------- Galería ---------- */
+  .svc-gallery-section { background: var(--white); }
+  .svc-gallery {
+    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px;
+  }
+  .svc-gallery-item { position: relative; margin: 0; border-radius: var(--r-god); overflow: hidden; box-shadow: var(--e-1); background: var(--sand); aspect-ratio: 4 / 3; }
+  .svc-gallery-item.large { grid-row: 1 / span 2; aspect-ratio: auto; min-height: 100%; }
+  .svc-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--dur-god) var(--ease-god); }
+  .svc-gallery-item:hover img { transform: scale(1.04); }
+  .svc-gallery-item figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 14px; color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .02em;
+    background: linear-gradient(to top, rgba(11,28,43,.85), transparent);
+  }
+
+  /* ---------- Temas ---------- */
+  .svc-topics { background: var(--bone); padding-top: clamp(64px, 8vw, 110px) !important; }
+  .svc-topic { padding: 0 0 clamp(48px, 6vw, 80px); text-align: center; }
+  .svc-topic:last-child { padding-bottom: 0; }
+  .svc-topic-num { display: block; font-family: var(--font-serif); font-size: 1.1rem; letter-spacing: .18em; color: var(--gold-ink); margin-bottom: 12px; }
+  .svc-topic h3 {
+    font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.15rem); font-weight: 500; line-height: 1.15;
+    letter-spacing: var(--track-tight); color: var(--ink); margin: 0 auto 22px; max-width: 26ch; text-wrap: balance;
+  }
+  .svc-topic .svc-prose { text-align: left; }
+  .svc-topic .svc-checks { text-align: left; }
+  .svc-topic .svc-figure { margin-top: 40px; }
+
+  /* ---------- Qué incluye ---------- */
+  .svc-includes { background: var(--white); padding-top: clamp(64px, 8vw, 110px) !important; }
+  .svc-includes-grid {
+    list-style: none; margin: 0 auto; padding: 0 24px; max-width: 1080px;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+  }
+  .svc-include {
+    display: flex; gap: 16px; align-items: flex-start; padding: 22px 24px;
+    background: var(--white); border: 1px solid var(--sand); border-radius: var(--r-md); box-shadow: var(--e-1);
+    font-size: 1.02rem; line-height: 1.65; color: var(--text);
+    transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+  }
+  .svc-include:hover { transform: translateY(-3px); box-shadow: var(--e-2); border-color: rgba(201,169,97,.4); }
+  .svc-include-icon {
+    flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(201,169,97,.16); color: var(--gold-ink-strong); margin-top: 2px;
+  }
+  .svc-include-icon svg { width: 15px; height: 15px; }
+  .svc-include :global(strong) { color: var(--ink-soft); }
+
+  /* ---------- Proceso ---------- */
+  .svc-process {
+    background:
+      radial-gradient(circle at 50% 0%, rgba(201,169,97,.16), transparent 55%),
+      var(--ink);
+    padding-top: clamp(64px, 8vw, 110px) !important;
+    border-top: var(--hairline); border-bottom: var(--hairline);
+  }
+  .svc-phases {
+    list-style: none; margin: 0 auto; padding: 0 24px; max-width: 900px;
+    display: grid; gap: 14px; counter-reset: phase;
+  }
+  .svc-phase {
+    display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: start;
+    padding: 26px 28px; border-radius: var(--r-god);
+    background: rgba(255,255,255,.035); border: 1px solid rgba(201,169,97,.18);
+    transition: border-color var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out);
+  }
+  .svc-phase:hover { border-color: rgba(201,169,97,.42); background: rgba(255,255,255,.055); }
+  .svc-phase-num { font-family: var(--font-serif); font-size: 2.2rem; line-height: 1; color: var(--gold); font-weight: 500; padding-top: 2px; }
+  .svc-phase-body h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--white); margin: 0 0 6px; letter-spacing: -.01em; }
+  .svc-phase-duration { display: inline-block; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 10px; }
+  .svc-phase-body p { margin: 0; color: rgba(255,255,255,.76); font-size: 1rem; line-height: 1.72; }
+  .svc-phase-body :global(strong) { color: var(--white); font-weight: 600; }
+  .svc-process-link { display: flex; justify-content: center; margin-top: 44px; padding: 0 24px; }
+
+  /* ---------- Precios ---------- */
+  .svc-prices { background: var(--white); padding-top: clamp(64px, 8vw, 110px) !important; }
+  .svc-table-wrap { border-radius: var(--r-god); overflow: hidden; box-shadow: var(--e-2); border: 1px solid var(--sand); }
+  .svc-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .svc-table thead { background: var(--ink); color: var(--gold-light); }
+  .svc-table th { padding: 16px 24px; text-align: left; font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; }
+  .svc-table th:last-child, .svc-table td:last-child { text-align: right; }
+  .svc-table td { padding: 18px 24px; border-bottom: 1px solid var(--sand); color: var(--text); line-height: 1.5; }
+  .svc-table tbody tr:last-child td { border-bottom: 0; }
+  .svc-table tbody tr:nth-child(even) td { background: var(--bone); }
+  .svc-price { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--ink); white-space: nowrap; }
+  .svc-price-note { text-align: center; font-size: .88rem; color: var(--text-muted); margin: 16px auto 0; max-width: 60ch; }
+  .svc-factors { margin-top: 44px; padding: 32px 36px; background: var(--bone); border-radius: var(--r-god); border-left: 3px solid var(--gold); }
+  .svc-factors h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
+  .svc-factors .svc-checks { margin-top: 14px; }
+
+  /* ---------- Problemas ---------- */
+  .svc-problems { background: var(--bone); padding-top: clamp(64px, 8vw, 110px) !important; }
+  .svc-problems-grid {
+    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;
+  }
+  .svc-problem { background: var(--white); border: 1px solid var(--sand); border-radius: var(--r-god); padding: 30px 30px 26px; box-shadow: var(--e-1); }
+  .svc-problem h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--ink); margin: 0 0 16px; line-height: 1.2; }
+  .svc-problem p { margin: 0 0 14px; color: var(--text); font-size: .98rem; line-height: 1.7; }
+  .svc-problem p:last-child { margin-bottom: 0; }
+  .svc-problem-label { display: block; font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+  .svc-problem-label.is-solution { color: var(--gold-ink-strong); }
+
+  /* ---------- Proyectos ---------- */
+  .svc-projects { background: var(--white); padding-top: clamp(64px, 8vw, 110px) !important; }
+  .svc-projects-grid {
+    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;
+  }
+  .svc-project-card {
+    display: flex; flex-direction: column; border-radius: var(--r-god); overflow: hidden; background: var(--white);
+    border: 1px solid var(--sand); box-shadow: var(--e-1);
+    transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+  }
+  .svc-project-card:hover { transform: translateY(-6px); box-shadow: var(--e-3); border-color: rgba(201,169,97,.42); }
+  .svc-project-img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--ink); }
+  .svc-project-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--dur-god) var(--ease-god); }
+  .svc-project-card:hover .svc-project-img img { transform: scale(1.05); }
+  .svc-project-tag {
+    position: absolute; left: 14px; bottom: 14px; background: rgba(201,169,97,.94); color: var(--ink);
+    border-radius: var(--r-full); padding: 5px 11px; font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em;
+  }
+  .svc-project-body { padding: 20px 22px 22px; text-align: center; }
+  .svc-project-body h3 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: var(--ink); margin: 0 0 10px; line-height: 1.25; }
+  .svc-project-link { color: var(--gold-ink-strong); font-weight: 700; font-size: .82rem; letter-spacing: .04em; }
+
+  /* ---------- FAQ ---------- */
+  .svc-faq { background: var(--bone); padding-top: clamp(64px, 8vw, 110px) !important; }
+  .svc-faq :global(.faq-section) { padding: 0; max-width: none; }
+  .svc-faq :global(.faq-section-title) { display: none; }
+  .svc-faq :global(.faq-item) { background: var(--white); border: 1px solid var(--sand); border-radius: var(--r-md); margin-bottom: 10px; padding: 0 22px; }
+  .svc-faq :global(.faq-question) { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; padding: 20px 0; color: var(--ink); }
+  .svc-faq :global(.faq-answer p) { font-size: 1rem; }
+  .svc-guides { margin-top: 40px; text-align: center; }
+  .svc-guides-label { display: block; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); margin-bottom: 14px; }
+  .svc-guides ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .svc-guides a {
+    display: inline-flex; align-items: center; padding: 10px 18px; border-radius: var(--r-full); background: var(--white);
+    border: 1px solid rgba(201,169,97,.3); color: var(--text); font-size: .9rem; font-weight: 600;
+    transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  }
+  .svc-guides a:hover { color: var(--gold-ink-strong); border-color: var(--gold); }
+
+  /* ---------- Zonas ---------- */
+  .svc-zones { background: var(--white); padding-top: clamp(64px, 8vw, 110px) !important; }
+  .svc-zone-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .svc-zone-chips a, .svc-zone-chips span {
+    display: inline-flex; align-items: center; padding: 11px 18px; border-radius: var(--r-full);
+    border: 1px solid rgba(201,169,97,.3); background: var(--bone); color: var(--gold-ink-strong);
+    font-weight: 700; font-size: .88rem;
+    transition: background var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+  }
+  .svc-zone-chips a:hover { background: var(--gold); color: var(--ink); transform: translateY(-2px); }
+
+  /* ---------- CTA ---------- */
+  .svc-cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+  .btn-outline-premium.on-light { color: var(--ink); border-color: rgba(15,34,51,.28); backdrop-filter: none; }
+  .btn-outline-premium.on-light:hover { color: var(--gold-ink-strong); border-color: var(--gold); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .svc-includes-grid, .svc-problems-grid { grid-template-columns: 1fr; }
+    .svc-projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .svc-gallery { grid-template-columns: 1fr; grid-template-rows: none; }
+    .svc-gallery-item.large { grid-row: auto; aspect-ratio: 4 / 3; }
+  }
+  @media (max-width: 640px) {
+    .svc-reading { padding: 0 20px; }
+    .svc-prose { font-size: 1.05rem; line-height: 1.8; }
+    .svc-prose-dropcap > p:first-of-type::first-letter { font-size: 3.6rem; }
+    .svc-figure { padding: 0 20px; margin-top: 36px; }
+    .svc-figure img { aspect-ratio: 4 / 3; border-radius: var(--r-md); }
+    .svc-highlights { padding: 0 20px; margin-top: 32px; }
+    .svc-highlights-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .svc-highlight { border-right: 0; border-bottom: 1px solid rgba(201,169,97,.18); }
+    .svc-highlight:nth-child(odd) { border-right: 1px solid rgba(201,169,97,.18); }
+    .svc-highlight:nth-last-child(-n+2) { border-bottom: 0; }
+    .svc-toc-inner { justify-content: flex-start; padding: 12px 14px; }
+    .svc-toc ul { justify-content: flex-start; }
+    .svc-projects-grid { grid-template-columns: 1fr; }
+    .svc-phase { grid-template-columns: 1fr; gap: 8px; padding: 22px 20px; }
+    .svc-phase-num { font-size: 1.6rem; }
+    .svc-includes-grid, .svc-problems-grid, .svc-gallery, .svc-phases { padding: 0 20px; }
+    .svc-table th, .svc-table td { padding: 14px 16px; }
+    .svc-price { font-size: 1.15rem; white-space: normal; }
+    .svc-factors { padding: 24px 22px; }
+    .svc-quote { padding: 22px 6px; }
+    .svc-cta-actions { flex-direction: column; align-items: center; width: 100%; }
+  }
 </style>

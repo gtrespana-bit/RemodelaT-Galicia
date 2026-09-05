@@ -5,35 +5,192 @@ import ServicePage from '../../components/ServicePage.astro';
 <ServicePage
   slug="instalacion-electrica"
   title="Instalación Eléctrica"
-  titleGold="e Iluminación"
-  description="Instalación eléctrica e iluminación en reformas de A Coruña: cuadros, cableado, protecciones y preparación para domótica."
+  titleGold="en A Coruña"
+  seoTitle="Instalación Eléctrica en A Coruña | RemodelaT"
+  description="Renovación de instalaciones eléctricas en A Coruña: cuadro nuevo, circuitos, toma de tierra, iluminación LED y certificado de instalador (REBT)."
   eyebrow="Servicios · Electricidad"
-  lead="Cuadros, cableado, iluminación LED, protecciones y preparación para domótica dentro de proyectos de reforma."
+  lead="Cuadro nuevo, circuitos independientes, toma de tierra y certificado de instalador autorizado. La instalación eléctrica que una vivienda de hoy necesita, ejecutada según el REBT."
   image="/images/electricidad-800.webp"
-  imageAlt="Instalación eléctrica e iluminación en una reforma de A Coruña"
-  badges={["Protecciones dimensionadas", "Iluminación técnica", "Preparación domótica"]}
-  watermark="ELECTRICIDAD"
+  imageAlt="Electricista instalando un cuadro eléctrico nuevo con protecciones en una vivienda de A Coruña"
+  badges={["Según REBT", "Certificado de instalación", "Cuadro y circuitos nuevos"]}
+  watermark="ELÉCTRICA"
   crumb="Instalación Eléctrica"
+  highlights={[
+    { value: "1–2", label: "Semanas para una vivienda" },
+    { value: "5+", label: "Circuitos independientes mínimos" },
+    { value: "30 mA", label: "Protección diferencial" },
+    { value: "CIE", label: "Certificado de instalador autorizado" },
+  ]}
+  introTitle="La instalación eléctrica es la que más ha envejecido en las viviendas de A Coruña"
   intro={[
-    "Dentro de una reforma, la electricidad es la partida que más afecta a la seguridad y al día a día: cuadro, circuitos, puntos de luz y protecciones bien dimensionadas.",
-    "Ejecutamos la instalación con prueba de funcionamiento antes de cerrar, dejando la vivienda preparada para iluminación técnica y, si lo deseas, domótica."
+    "Una vivienda de los años 70 se diseñó para una nevera, una televisión y unas cuantas bombillas. Hoy la misma vivienda alimenta inducción, horno, lavavajillas, lavadora, secadora, aire acondicionado, un ordenador por persona y una docena de cargadores. Las instalaciones antiguas, con dos circuitos, cables de 1,5 mm² y sin toma de tierra, no están preparadas para ello. Por eso saltan los plomos, se calientan los enchufes y, en el peor de los casos, se producen incendios de origen eléctrico.",
+    "En A Coruña el problema es especialmente frecuente: buena parte del parque residencial del centro, Os Mallos, Agra do Orzán, Monte Alto o Los Castros es anterior a 1980, y muchas viviendas conservan instalaciones originales o parcheadas durante décadas por distintos electricistas. Cuadros con fusibles, sin diferencial, cableado con aislamiento de tela o goma degradada y empalmes en cajas sin tapa son hallazgos habituales en nuestras visitas.",
+    "Renovar la instalación eléctrica es la inversión de seguridad más importante en una reforma, y el momento ideal para hacerlo es cuando se abren rozas para otros trabajos. Ejecutamos instalaciones completas según el <strong>Reglamento Electrotécnico de Baja Tensión (REBT)</strong>, con <strong>certificado de instalador autorizado</strong> para legalizarla ante la compañía distribuidora, y con el <a href=\"/metodo-remodelat/\">Método RemodelaT</a>: pruebas de continuidad y aislamiento antes de cerrar una sola roza.",
   ]}
+  introFigure={{
+    src: "/images/electricidad-cuadro-detalle.webp",
+    alt: "Cuadro eléctrico de vivienda nuevo con interruptor general, diferenciales y magnetotérmicos por circuito etiquetados",
+    caption: "Cuadro nuevo con IGA, diferenciales por zonas y magnetotérmicos por circuito, todos etiquetados.",
+  }}
+  galleryTitle="Lo que hay detrás de una instalación bien hecha"
+  galleryText="Cuadro, cableado, mecanismos e iluminación: cada parte cuenta para una instalación segura y cómoda."
+  gallery={[
+    { src: "/images/electricidad-cableado-estructurado.webp", alt: "Cableado eléctrico y de datos ordenado en canalizaciones antes de cerrar", caption: "Canalización y cableado ordenados" },
+    { src: "/images/electricidad-enchufes-usb.webp", alt: "Mecanismo de pared con enchufe y tomas de carga USB", caption: "Mecanismos con carga USB" },
+    { src: "/images/electricidad-iluminacion-led.webp", alt: "Salón con iluminación LED empotrada y tiras de luz indirecta", caption: "Iluminación LED por escenas" },
+  ]}
+  topics={[
+    {
+      title: "Señales de que tu instalación necesita renovarse",
+      paragraphs: [
+        "No hace falta ser electricista para detectar una instalación agotada. Si reconoces varias de estas situaciones en tu vivienda, es momento de actuar:",
+      ],
+      bullets: [
+        "<strong>Saltan las protecciones</strong> al conectar dos electrodomésticos a la vez (horno y lavadora, por ejemplo).",
+        "<strong>Enchufes o interruptores calientes</strong>, con marcas de quemado o que huelen a plástico.",
+        "<strong>No hay toma de tierra</strong>: enchufes de dos orificios sin contactos laterales, o calambres al tocar la lavadora o el grifo.",
+        "<strong>Cuadro con fusibles</strong> o con un solo interruptor general, sin diferencial ni magnetotérmicos por circuito.",
+        "<strong>Cables con aislamiento de tela</strong>, goma cuarteada o de colores no normalizados en las cajas de registro.",
+        "<strong>Luces que parpadean</strong> al arrancar un electrodoméstico, señal de sección insuficiente o conexiones flojas.",
+        "<strong>Potencia contratada insuficiente</strong> que no se puede aumentar porque la instalación no lo permite (sin boletín actualizado).",
+      ],
+      figure: {
+        src: "/images/electricidad.webp",
+        alt: "Electricista trabajando en el cuadro eléctrico de una vivienda durante una renovación de la instalación",
+        caption: "Un diferencial de 30 mA corta la corriente en milisegundos ante una fuga: es la protección de las personas.",
+      },
+    },
+    {
+      title: "Qué incluye una renovación eléctrica completa según el REBT",
+      paragraphs: [
+        "Una instalación nueva no es solo cambiar el cuadro. Es un sistema completo, dimensionado para la vivienda y sus usos, que empieza en la caja general de protección del edificio y termina en cada punto de luz y cada enchufe.",
+      ],
+      bullets: [
+        "<strong>Derivación individual</strong> nueva desde la centralización de contadores si la existente es insuficiente (habitual en edificios antiguos).",
+        "<strong>Cuadro general</strong> con interruptor general automático (IGA), protección contra sobretensiones, diferenciales de 30 mA por zonas y magnetotérmicos por circuito, todo etiquetado.",
+        "<strong>Circuitos independientes</strong> según grado de electrificación: iluminación, tomas generales, cocina y horno, lavadora/lavavajillas/termo, baño y cocina, más circuitos adicionales para aire acondicionado, secadora, calefacción o cargador de vehículo eléctrico.",
+        "<strong>Cableado nuevo</strong> de cobre libre de halógenos, con secciones de 1,5 / 2,5 / 4 / 6 mm² según circuito, bajo tubo corrugado empotrado o en canal.",
+        "<strong>Toma de tierra</strong> conectada a todos los puntos y verificada con medición de resistencia.",
+        "<strong>Cajas de registro y mecanismos</strong> nuevos a las alturas normativas, con protección infantil donde se pide.",
+        "<strong>Certificado de instalación eléctrica (CIE)</strong> emitido por instalador autorizado, registrado en Industria, que permite contratar la potencia real que necesitas.",
+      ],
+      figure: {
+        src: "/images/electricidad-cableado-estructurado.webp",
+        alt: "Tubos corrugados y cableado eléctrico nuevo distribuidos ordenadamente por techo y paredes antes de cerrar",
+        caption: "Canalizaciones nuevas antes de cerrar: cada circuito por su tubo, identificado y probado.",
+      },
+      quote: "La electricidad no se ve. Por eso la única forma de saber que está bien hecha es probarla antes de cerrar la pared.",
+    },
+    {
+      title: "Iluminación LED: menos consumo, mejor luz",
+      paragraphs: [
+        "Renovar la instalación es la oportunidad de diseñar la iluminación de la vivienda en lugar de heredar un punto de luz en el centro de cada techo. Trabajamos la luz en capas (general, de tarea, ambiental y decorativa) con tecnología LED de calidad, que consume hasta un 80 % menos que la halógena y dura 25.000–50.000 horas.",
+        "Definimos juntos la <strong>temperatura de color</strong> por estancia (cálida 2.700–3.000 K en dormitorios y salón, neutra 3.500–4.000 K en cocina y baño), el <strong>índice de reproducción cromática</strong> (CRI ≥ 90 donde la fidelidad del color importa) y la <strong>regulación</strong> (dimmers, conmutadas, cruzamientos) para que la casa cambie de ambiente con un gesto.",
+      ],
+      bullets: [
+        "Downlights empotrados en falso techo, con óptica antideslumbramiento.",
+        "Tiras LED en perfil de aluminio: bajo muebles de cocina, en cabeceros, escaleras y falsos techos.",
+        "Detectores de presencia en pasillos, vestidores y baños.",
+        "Reguladores compatibles con LED (los antiguos hacen parpadear las lámparas).",
+      ],
+      figure: {
+        src: "/images/electricidad-iluminacion-led.webp",
+        alt: "Salón con iluminación LED empotrada, luz indirecta en el falso techo y ambiente cálido",
+        caption: "Luz general empotrada e indirecta regulable: dos capas que transforman el salón.",
+      },
+    },
+    {
+      title: "Mecanismos, tomas y preparación para el futuro",
+      paragraphs: [
+        "El número y la posición de los enchufes es lo primero que el usuario nota tras una reforma. Diseñamos la distribución de tomas por estancia según el uso real: junto a la cama a ambos lados y con USB, en la encimera de la cocina cada 60–90 cm, en el salón donde va a estar el televisor y el sofá, en el escritorio con tomas de datos.",
+        "Y dejamos la instalación preparada para lo que viene: <strong>preinstalación de cargador de vehículo eléctrico</strong> en garajes, <strong>circuito dedicado para aire acondicionado o aerotermia</strong>, <strong>tubos vacíos para datos</strong> (red Ethernet hasta el despacho y el salón) y <strong>base para domótica</strong> con neutro en todas las cajas de mecanismos.",
+      ],
+      bullets: [
+        "Mecanismos de gama media-alta (Simon, Niessen, Schneider, Jung) en el acabado que elijas.",
+        "Tomas con carga USB-A/USB-C en dormitorios, cocina y salón.",
+        "Conmutadas y cruzamientos en pasillos, escaleras y dormitorios.",
+        "Preinstalación de persianas motorizadas y toldos.",
+      ],
+      figure: {
+        src: "/images/electricidad-enchufes-usb.webp",
+        alt: "Mecanismo de pared moderno con enchufe schuko y dos puertos de carga USB",
+        caption: "Tomas con USB integrado: menos cargadores, más orden.",
+      },
+    },
+  ]}
+  includesTitle="Qué incluye la renovación eléctrica de una vivienda"
+  includesIntro="Definimos el alcance por escrito tras la visita técnica. En una renovación completa, estas son las partidas habituales:"
   includes={[
-    "Cuadro eléctrico y protecciones dimensionadas.",
-    "Cableado y circuitos identificados.",
-    "Puntos de luz, enchufes y tomas.",
-    "Iluminación LED funcional y ambiental.",
-    "Preparación para domótica (bajo demanda).",
-    "Prueba de funcionamiento antes de cerrar."
+    "<strong>Estudio de necesidades</strong>: potencia, número de circuitos, distribución de puntos de luz y tomas por estancia.",
+    "<strong>Derivación individual</strong> nueva si la existente es insuficiente, coordinada con la comunidad.",
+    "<strong>Cuadro general</strong> con IGA, protector de sobretensiones, diferenciales y magnetotérmicos por circuito, etiquetado.",
+    "<strong>Circuitos independientes</strong> según grado de electrificación y cableado libre de halógenos bajo tubo.",
+    "<strong>Toma de tierra</strong> en todos los puntos, verificada con medición.",
+    "<strong>Mecanismos y tomas</strong> nuevos, incluidas tomas USB y conmutaciones.",
+    "<strong>Iluminación LED</strong> según diseño: empotrados, tiras, detectores y regulación.",
+    "<strong>Rozas, tapado y pintura</strong> de las zonas afectadas, o coordinación con el resto de la reforma.",
+    "<strong>Pruebas</strong> de continuidad, aislamiento y disparo de diferenciales, y <strong>certificado de instalación (CIE)</strong>.",
   ]}
+  processTitle="Cómo renovamos la instalación eléctrica"
+  processIntro="Una vivienda de 80–100 m² se resuelve en 1–2 semanas de trabajo eléctrico, más el tapado de rozas y la pintura si no forma parte de una reforma mayor."
+  phases={[
+    { title: "Visita técnica y diagnóstico", duration: "Antes de la obra", text: "Revisamos el cuadro, la derivación individual, el estado del cableado y la toma de tierra. Definimos contigo los puntos de luz y tomas de cada estancia." },
+    { title: "Proyecto de la instalación y presupuesto", duration: "3–5 días", text: "Esquema unifilar del cuadro, número de circuitos, plano de puntos y presupuesto por partidas con mecanismos e iluminación especificados." },
+    { title: "Rozas y canalizaciones", duration: "Día 1–4", text: "Apertura de rozas, colocación de tubos corrugados y cajas de registro y mecanismos. Protección de la vivienda y limpieza diaria del polvo." },
+    { title: "Cableado y cuadro", duration: "Día 4–7", text: "Tendido de conductores por circuito, conexionado de cajas, montaje del cuadro con protecciones y conexión de la toma de tierra." },
+    { title: "Pruebas antes de cerrar", duration: "Día 7", text: "Continuidad de cada circuito, resistencia de aislamiento, medición de tierra y disparo de diferenciales. Documentado con fotografías antes de tapar una sola roza." },
+    { title: "Tapado, mecanismos e iluminación", duration: "Día 8–10", text: "Tapado de rozas, colocación de mecanismos, luminarias y detectores. Pintura de las zonas afectadas si está incluida." },
+    { title: "Certificado y entrega", duration: "Último día", text: "Emisión del certificado de instalación eléctrica por instalador autorizado, tramitación ante Industria y la distribuidora, entrega de esquema del cuadro y garantía." },
+  ]}
+  priceTitle="Cuánto cuesta renovar la instalación eléctrica en A Coruña"
+  priceIntro="El precio depende de los metros, del número de circuitos y puntos, de si hay que renovar la derivación individual y del acabado de mecanismos e iluminación. Se cierra por partidas tras la visita."
   priceRows={[
-    ["Instalación eléctrica (según vivienda y alcance)", "A valorar en visita"]
+    ["Renovación eléctrica completa de vivienda (cuadro, circuitos, cableado, mecanismos, CIE)", "A valorar en visita"],
+    ["Sustitución de cuadro eléctrico con protecciones nuevas", "A valorar en visita"],
+    ["Instalación eléctrica de baño o cocina en reforma", "A valorar en visita"],
+    ["Proyecto de iluminación LED e instalación", "A valorar en visita"],
   ]}
-  priceNote="* Presupuesto por partidas tras la visita técnica (sin IVA)."
+  priceFactors={[
+    "<strong>Superficie y número de puntos.</strong> Cada punto de luz, toma o conmutación suma canalización, cable y mecanismo.",
+    "<strong>Grado de electrificación.</strong> Básica (5 circuitos) o elevada (hasta 12 circuitos) según potencia y equipos.",
+    "<strong>Derivación individual.</strong> Renovarla desde el contador es una partida relevante en edificios antiguos.",
+    "<strong>Rozas y tapado.</strong> Si la renovación no coincide con otra reforma, hay que abrir, tapar y pintar.",
+    "<strong>Mecanismos e iluminación.</strong> Gama y cantidad de luminarias, reguladores y detectores.",
+  ]}
+  priceNote="* Precios sin IVA (10 % en obra de renovación de vivienda que cumple los requisitos; 21 % en material suministrado por separado). Se confirman con visita técnica y mediciones reales."
+  problemsTitle="Los problemas eléctricos más frecuentes en viviendas de A Coruña"
+  problemsIntro="Lo que encontramos en las visitas técnicas y cómo lo resolvemos."
+  problems={[
+    { title: "Sin toma de tierra", problem: "Instalaciones anteriores a los 80 sin conductor de protección. Cualquier fuga en un electrodoméstico se descarga a través de quien lo toca.", solution: "Instalación de conductor de tierra a todos los puntos, conexión a la red de tierra del edificio y medición de resistencia documentada." },
+    { title: "Cuadro sin diferencial", problem: "Cuadro con fusibles o un solo automático. Sin diferencial no hay protección contra contactos indirectos.", solution: "Cuadro nuevo con IGA, protector de sobretensiones, diferenciales de 30 mA por zonas y magnetotérmicos por circuito." },
+    { title: "Dos circuitos para toda la casa", problem: "Luz y enchufes de toda la vivienda en un par de circuitos de 1,5 mm². Los cables se calientan y las protecciones saltan.", solution: "Mínimo cinco circuitos independientes con secciones adecuadas: iluminación, tomas, cocina/horno, lavadora/lavavajillas/termo, baño/cocina." },
+    { title: "Empalmes ocultos y cajas sin tapa", problem: "Décadas de parches: empalmes con cinta dentro de falsos techos, cajas de registro sin tapa detrás de armarios.", solution: "Cableado nuevo de extremo a extremo, empalmes solo en cajas de registro accesibles con bornas y tapa." },
+    { title: "No se puede aumentar la potencia", problem: "La distribuidora no autoriza más potencia porque el boletín es antiguo o la derivación individual no lo permite.", solution: "Renovación de la derivación individual si es necesaria y emisión de CIE nuevo por instalador autorizado para contratar la potencia real." },
+    { title: "Iluminación pobre y mal repartida", problem: "Un punto central por estancia, sin luz de tarea en cocina ni lectura en dormitorios, con halógenos que consumen y calientan.", solution: "Diseño de iluminación LED por capas con temperatura de color adecuada, regulación y detectores donde aportan." },
+  ]}
+  relatedProjects={[
+    { slug: "cocina-reubicada-zona-dia", title: "Cocina reubicada con instalación nueva", image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp", tag: "Estante LED y circuitos" },
+    { slug: "bano-secundario-compacto", title: "Baño secundario compacto", image: "/images/proyectos/bano-secundario-compacto/bano-finalizado-mueble-inodoro.webp", tag: "Espejo LED antivaho" },
+    { slug: "cocina-en-chalet", title: "Cocina en chalet", image: "/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp", tag: "Electrodomésticos TEKA" },
+  ]}
+  relatedGuides={[
+    { title: "Domótica y automatización", url: "/servicios/domotica-automatizacion/" },
+    { title: "Cuánto cuesta reformar un piso en A Coruña", url: "/blog/cuanto-cuesta-reformar-piso-a-coruna/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Incluís el cuadro eléctrico?", answer: "Sí. Renovamos el cuadro y dimensionamos protecciones según los circuitos y consumos reales." },
-    { question: "¿Dejáis la vivienda preparada para domótica?", answer: "Sí, como opción. Preparamos la instalación para automatización básica de iluminación y climatización." }
+    { question: "¿Cuánto cuesta renovar la instalación eléctrica de un piso en A Coruña?", answer: "Depende de los metros, del número de circuitos y puntos, de si hay que renovar la derivación individual y de la gama de mecanismos e iluminación. Lo valoramos en visita técnica y te entregamos un presupuesto por partidas con todo especificado." },
+    { question: "¿Cuánto tarda?", answer: "El trabajo eléctrico de una vivienda de 80–100 m² suele durar 1–2 semanas. Si no forma parte de una reforma mayor, hay que sumar el tapado de rozas y la pintura de las zonas afectadas." },
+    { question: "¿Es obligatorio renovar la instalación si la casa es antigua?", answer: "No existe obligación general de renovar, pero sí de que la instalación sea segura. Si quieres aumentar la potencia contratada, la distribuidora exigirá un certificado de instalación actualizado, que solo se puede emitir si la instalación cumple el REBT vigente. Y en una reforma, el momento de hacerlo es cuando las paredes están abiertas." },
+    { question: "¿Qué es el boletín eléctrico o CIE?", answer: "El Certificado de Instalación Eléctrica es el documento que emite un instalador autorizado tras ejecutar o revisar una instalación, registrado en Industria. Acredita que cumple la normativa y es imprescindible para contratar o modificar la potencia. Lo emitimos y tramitamos al terminar la obra." },
+    { question: "¿Cuántos circuitos necesita mi vivienda?", answer: "Para electrificación básica (hasta 5.750 W), el REBT exige un mínimo de cinco circuitos: iluminación, tomas de uso general, cocina y horno, lavadora/lavavajillas/termo, y tomas de baño y cocina. Con aire acondicionado, secadora, calefacción eléctrica o más de 160 m² se pasa a electrificación elevada, con circuitos adicionales." },
+    { question: "¿Puedo quedarme en casa durante la obra?", answer: "Sí, aunque habrá cortes de suministro programados y polvo durante las rozas. Organizamos el trabajo por zonas y dejamos cada día circuitos provisionales para lo esencial." },
+    { question: "¿Tenéis que abrir todas las paredes?", answer: "Para una renovación completa, sí se abren rozas en las paredes por donde discurren los nuevos tubos. Se puede reducir usando falsos techos, canaletas o aprovechando tubos existentes en buen estado, pero con límites. En una reforma integral, todo esto queda integrado." },
+    { question: "¿Instaláis cargadores para coche eléctrico?", answer: "Sí: circuito dedicado desde el cuadro de la vivienda o desde la centralización, con protecciones específicas y, en garajes comunitarios, según el procedimiento establecido. Lo dejamos preinstalado si aún no tienes el vehículo." },
   ]}
+  ctaTitle="¿Tu instalación eléctrica necesita una revisión?"
+  ctaText="Cuéntanos qué síntomas notas o qué reforma tienes en mente. Visita técnica sin compromiso en A Coruña y área metropolitana, y presupuesto por partidas con certificado incluido."
+  whatsappText="Hola, quiero presupuesto para renovar la instalación eléctrica de mi vivienda en A Coruña"
   schemaName="Instalación Eléctrica en A Coruña"
   schemaType="Electrical Installation"
 />

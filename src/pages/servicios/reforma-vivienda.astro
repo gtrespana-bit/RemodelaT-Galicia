@@ -5,38 +5,182 @@ import ServicePage from '../../components/ServicePage.astro';
 <ServicePage
   slug="reforma-vivienda"
   title="Reforma de Vivienda"
-  titleGold="(obra grande)"
-  description="Obra grande en A Coruña: reforma completa de pisos (~100 m²) con suelo, dos baños, cocina y puertas. Desde 36.000 € (sin IVA)."
-  eyebrow="Servicios · Obra grande"
-  lead="Reformas completas de pisos y casas para propietarios que buscan durabilidad y acabado superior, sin subcontratación."
+  titleGold="en A Coruña"
+  seoTitle="Reforma de Vivienda en A Coruña | RemodelaT Coruña"
+  description="Reforma de viviendas en A Coruña: pisos, casas y adosados. Instalaciones, distribución, suelos y acabados con presupuesto por partidas y garantía."
+  eyebrow="Servicios · Viviendas"
+  lead="Reformas parciales o completas de pisos, casas y adosados. Un plan claro, un presupuesto por partidas y una obra que se entrega cuando se prometió."
   image="/images/integrales-proyecto-completo.webp"
-  imageAlt="Reforma completa de vivienda en A Coruña"
-  badges={["Piso 100 m² desde 36.000 €", "Equipo propio", "Garantía por escrito"]}
+  imageAlt="Salón de una vivienda reformada en A Coruña con suelo de madera, cocina abierta y luz natural"
+  badges={["Pisos, casas y adosados", "Presupuesto por partidas", "Garantía por escrito"]}
   watermark="VIVIENDA"
   crumb="Reforma de Vivienda"
+  highlights={[
+    { value: "36.000 €", label: "Piso de 100 m² desde (sin IVA)" },
+    { value: "10", label: "Municipios del área metropolitana" },
+    { value: "1", label: "Único interlocutor" },
+    { value: "100 %", label: "Instalaciones probadas antes de cerrar" },
+  ]}
+  introTitle="Cada vivienda necesita una reforma distinta"
   intro={[
-    "La obra grande aborda el piso o la casa como un proyecto único: suelo, baños, cocina, puertas y acabados, coordinados por un único responsable técnico.",
-    "Es la opción para quien quiere renovar la vivienda de una vez, con presupuesto por partidas, cronograma por fases y control de acabados."
+    "No todas las viviendas necesitan una reforma integral. A veces el piso está bien distribuido pero las instalaciones han llegado al final de su vida; otras, la casa es sólida pero fría y húmeda porque las ventanas y el aislamiento son de otra época; otras, simplemente, la familia ha cambiado y la vivienda ya no encaja. Una reforma de vivienda bien planteada empieza por entender qué hace falta de verdad, y qué no.",
+    "En A Coruña y su área metropolitana trabajamos con tres tipos de vivienda muy distintos: <strong>pisos en edificios antiguos</strong> del centro y los barrios consolidados, con comunidades de propietarios, ascensores estrechos y normativa de edificios protegidos en algunas zonas; <strong>casas unifamiliares</strong> en Oleiros, Sada, Bergondo o Abegondo, donde el problema suele ser la humedad, el aislamiento y las cubiertas; y <strong>adosados</strong> de los años 90 y 2000 en Culleredo, Cambre o Arteixo, con distribuciones en tres plantas que piden actualizarse.",
+    "Nuestro trabajo consiste en diagnosticar, proponer el alcance justo (ni más ni menos de lo que la vivienda necesita), presupuestarlo por partidas y ejecutarlo con el <a href=\"/metodo-remodelat/\">Método RemodelaT</a>: instalaciones probadas antes de cerrar, control de acabados y entrega documentada con garantía.",
   ]}
+  introFigure={{
+    src: "/images/integrales-despues.webp",
+    alt: "Salón comedor reformado con cocina abierta, suelo de madera y grandes ventanales",
+    caption: "Salón y cocina unidos, suelo continuo y carpinterías nuevas: tres intervenciones que transforman cualquier piso.",
+  }}
+  galleryTitle="Lo que cambia una reforma de vivienda"
+  galleryText="Espacios, materiales y soluciones que aplicamos según el tipo de vivienda y el objetivo de la reforma."
+  gallery={[
+    { src: "/images/integrales-proyecto-completo.webp", alt: "Vivienda reformada con salón luminoso y cocina abierta", caption: "Concepto abierto y luz natural" },
+    { src: "/images/suelo-madera.webp", alt: "Suelo de madera natural instalado en una vivienda reformada", caption: "Suelos continuos en toda la vivienda" },
+    { src: "/images/bano-terminado-final.webp", alt: "Baño reformado con ducha de obra y mueble suspendido", caption: "Baños renovados" },
+  ]}
+  topics={[
+    {
+      title: "Reforma parcial o reforma completa: cómo decidir",
+      paragraphs: [
+        "La primera decisión es el alcance. Una <strong>reforma parcial</strong> actúa sobre estancias o sistemas concretos (baños, cocina, suelos, ventanas, electricidad) y permite escalonar la inversión y seguir viviendo en la casa. Una <strong>reforma completa</strong> renueva todo a la vez, cuesta más pero sale más económica por metro cuadrado, evita molestias repetidas y da un resultado coherente.",
+        "Nuestra recomendación depende del estado de las instalaciones y de tus planes. Si la electricidad no tiene toma de tierra o las tuberías son de plomo, hay que renovarlas y aprovechar para hacer el resto; parchear sale caro. Si la vivienda tiene instalaciones correctas, una reforma por fases (primero baños y cocina, después suelos y pintura) es perfectamente razonable.",
+      ],
+      bullets: [
+        "<strong>Prioridad 1 – seguridad e instalaciones:</strong> electricidad, fontanería, saneamiento, gas si lo hay.",
+        "<strong>Prioridad 2 – envolvente y confort:</strong> ventanas, aislamiento, humedades, calefacción.",
+        "<strong>Prioridad 3 – zonas húmedas:</strong> baños y cocina, donde la reforma aporta más valor de uso.",
+        "<strong>Prioridad 4 – distribución y acabados:</strong> tabiques, suelos, puertas, pintura, iluminación.",
+      ],
+      figure: {
+        src: "/images/integrales-plano-diseno.webp",
+        alt: "Planos de una vivienda con muestras de materiales sobre la mesa durante la fase de diseño",
+        caption: "El diseño define prioridades: qué se hace ahora, qué puede esperar y qué no debe esperar.",
+      },
+    },
+    {
+      title: "Pisos en edificios antiguos de A Coruña",
+      paragraphs: [
+        "Reformar un piso en el centro de A Coruña tiene sus particularidades. Las alturas libres generosas y las galerías acristaladas de la Marina o la calle Real son un patrimonio que conviene conservar; las instalaciones, en cambio, casi siempre hay que renovarlas por completo. Los edificios protegidos exigen respetar fachadas y, a veces, elementos interiores, y cualquier intervención en la galería requiere licencia específica.",
+        "También hay que gestionar bien la convivencia: escaleras estrechas, ascensores pequeños, vecinos mayores. Protegemos portal y zonas comunes, avisamos a la comunidad antes de empezar y organizamos las subidas de material y bajadas de escombro para molestar lo menos posible. Es tan parte de la reforma como el alicatado.",
+      ],
+      bullets: [
+        "Renovación eléctrica completa con toma de tierra y cuadro nuevo; boletín del instalador para actualizar la potencia.",
+        "Sustitución de tuberías de plomo o hierro por multicapa; revisión de la bajante comunitaria antes de cerrar.",
+        "Tratamiento de humedades por capilaridad o condensación, muy frecuentes en bajos y primeras plantas.",
+        "Recuperación de elementos originales cuando aportan valor: suelos hidráulicos, molduras, carpinterías de madera restauradas.",
+      ],
+      figure: {
+        src: "/images/integrales-instalaciones.webp",
+        alt: "Instalaciones nuevas de electricidad y fontanería a la vista antes de cerrar tabiques",
+        caption: "En un piso antiguo, lo que no se ve es lo que más importa renovar.",
+      },
+      quote: "Un piso de 1960 con instalaciones de 2026 es una casa nueva con la mejor ubicación de la ciudad.",
+    },
+    {
+      title: "Casas y adosados en el área metropolitana",
+      paragraphs: [
+        "En las viviendas unifamiliares de Oleiros, Sada, Culleredo, Cambre o Arteixo la reforma se enfrenta a otros retos. El principal, en nuestro clima, es la <strong>humedad</strong>: cubiertas con filtraciones, muros de sótano sin drenaje, condensaciones en dormitorios orientados al norte. El segundo es el <strong>confort térmico</strong>: casas de los 80 y 90 con carpinterías de aluminio sin rotura de puente térmico y aislamiento escaso, caras de calentar.",
+        "La buena noticia es que una casa ofrece más libertad que un piso: sin comunidad de propietarios, con acceso directo para el material y la posibilidad de actuar sobre la envolvente completa. Una reforma bien orientada puede reducir de forma muy notable el consumo energético y eliminar las humedades de raíz.",
+      ],
+      bullets: [
+        "Impermeabilización de cubiertas y terrazas, canalones y drenajes perimetrales.",
+        "Ventanas con rotura de puente térmico y doble acristalamiento bajo emisivo; aislamiento de fachada por el interior o SATE por el exterior.",
+        "Redistribución de plantas en adosados: cocina abierta en la planta baja, baño en suite en la principal, bajo cubierta habitable.",
+        "Instalaciones de calefacción eficientes (aerotermia, suelo radiante) cuando la reforma lo permite.",
+      ],
+      figure: {
+        src: "/images/arquitectura-600.webp",
+        alt: "Vista exterior de una vivienda unifamiliar moderna con grandes ventanales",
+        caption: "En una casa, la envolvente (cubierta, fachada y ventanas) decide el confort y la factura energética.",
+      },
+    },
+    {
+      title: "Reformar para alquilar o vender",
+      paragraphs: [
+        "Cuando la vivienda no es para vivir en ella sino para rentabilizarla, el enfoque cambia: cada euro invertido tiene que devolverse en renta o en precio de venta. Diseñamos estas reformas con materiales resistentes y de mantenimiento sencillo, distribuciones que maximizan dormitorios útiles y acabados neutros que gustan a la mayoría de inquilinos y compradores.",
+        "En A Coruña, con una demanda de alquiler fuerte y un parque envejecido, una vivienda reformada con instalaciones nuevas y certificado energético mejorado se alquila antes, a mejor precio y con menos incidencias. Te ayudamos a definir el alcance que tiene sentido para tu objetivo, sin sobreinvertir.",
+      ],
+      figure: {
+        src: "/images/integrales-acabados.webp",
+        alt: "Detalle de acabados neutros de una vivienda reformada: puerta lacada blanca, suelo laminado y pared lisa",
+        caption: "Acabados neutros y resistentes: la fórmula que funciona para alquiler y venta.",
+      },
+    },
+  ]}
+  includesTitle="Qué podemos incluir en tu reforma de vivienda"
+  includesIntro="El alcance se adapta a cada caso. Estas son las partidas que combinamos según lo que la vivienda necesita:"
   includes={[
-    "Suelo completo de la vivienda.",
-    "Reforma de baños (hasta dos, según alcance).",
-    "Reforma de cocina.",
-    "Puertas de paso y carpintería.",
-    "Instalaciones: fontanería, electricidad e iluminación.",
-    "Pintura y acabados."
+    "<strong>Diagnóstico y diseño</strong>: visita técnica, planos, propuesta de alcance y especificación de materiales.",
+    "<strong>Instalaciones</strong>: electricidad con certificado, fontanería y saneamiento, calefacción y agua caliente, telecomunicaciones.",
+    "<strong>Baños y cocina</strong> completos, con impermeabilización probada y mobiliario a medida.",
+    "<strong>Distribución</strong>: demolición y nueva tabiquería, falsos techos, aislamiento acústico entre estancias.",
+    "<strong>Envolvente</strong>: ventanas con rotura de puente térmico, aislamiento térmico, tratamiento de humedades.",
+    "<strong>Suelos</strong>: porcelánico, laminado, vinílico o madera, con nivelación del soporte.",
+    "<strong>Carpintería interior</strong>: puertas, armarios empotrados, vestidores, rodapiés.",
+    "<strong>Pintura y acabados</strong>, iluminación, mecanismos y domótica básica.",
+    "<strong>Gestión</strong>: permisos, comunicación con la comunidad, residuos, limpieza final y entrega documentada con garantía.",
   ]}
-  priceTitle="Precios orientativos (sin IVA)"
-  priceIntro="Bandas de referencia de mercado 2026. El presupuesto final sale de la visita técnica y las mediciones reales."
+  processTitle="Cómo trabajamos una reforma de vivienda"
+  processIntro="El plazo depende del alcance: de 2–3 semanas en una reforma parcial a 8–12 semanas en una completa. El método es siempre el mismo:"
+  phases={[
+    { title: "Visita técnica y diagnóstico", duration: "Semana 0", text: "Recorremos la vivienda contigo, revisamos instalaciones, humedades, carpinterías y estructura, y entendemos qué quieres conseguir y con qué presupuesto." },
+    { title: "Propuesta de alcance y presupuesto", duration: "1–3 semanas", text: "Te proponemos qué hacer y en qué orden, con alternativas si las hay. Presupuesto por partidas, materiales especificados y cronograma." },
+    { title: "Permisos y acopios", duration: "Según alcance", text: "Comunicación previa o licencia, aviso a la comunidad, pedido de materiales con plazo (ventanas, cocina, puertas)." },
+    { title: "Ejecución por fases", duration: "2–12 semanas", text: "Demolición, instalaciones, albañilería, revestimientos, carpinterías y acabados, cada fase cerrada y comprobada antes de abrir la siguiente. Informes de avance regulares." },
+    { title: "Pruebas y control de acabados", duration: "Antes de la entrega", text: "Pruebas de presión, continuidad y estanqueidad documentadas. Revisión de acabados punto por punto." },
+    { title: "Entrega documentada", duration: "Último día", text: "Limpieza final, planos de instalaciones, certificados, garantías de fabricante y nuestra garantía por partidas por escrito." },
+  ]}
+  priceTitle="Cuánto cuesta reformar una vivienda en A Coruña"
+  priceIntro="Referencias de mercado 2026. Una reforma de vivienda puede ir de una actualización parcial a una integral; el presupuesto se cierra por partidas tras la visita técnica."
   priceRows={[
-    ["Obra grande · piso ~100 m² (suelo + 2 baños + cocina + puertas)", "36.000 – 39.000 €"]
+    ["Reforma integral de piso de ~100 m²", "36.000 – 39.000 €"],
+    ["Reforma de baño completo", "5.800 – 6.400 €"],
+    ["Reforma de cocina completa", "5.000 – 6.000 €"],
+    ["Reforma parcial (instalaciones, suelos, ventanas, pintura) o casa / adosado", "A valorar en visita"],
   ]}
-  priceNote="* Orientativos, sin IVA (10 % o 21 % según tipo de obra). Se confirman con visita técnica y mediciones reales."
+  priceFactors={[
+    "<strong>Alcance.</strong> Qué sistemas y estancias se renuevan y cuáles se conservan.",
+    "<strong>Estado de partida.</strong> Instalaciones, humedades y estructura condicionan la obra oculta.",
+    "<strong>Tipo de vivienda.</strong> Piso con comunidad y ascensor pequeño frente a casa con acceso directo.",
+    "<strong>Envolvente.</strong> Ventanas y aislamiento son partidas relevantes, con retorno en confort y energía.",
+    "<strong>Gama de materiales</strong> en suelos, carpinterías, cocina y baños.",
+  ]}
+  priceNote="* Precios orientativos, sin IVA (10 % en obras de renovación de vivienda que cumplen los requisitos; 21 % en el resto de supuestos y en materiales o mobiliario suministrados por separado). Se confirman con visita técnica y mediciones reales."
+  problemsTitle="Problemas frecuentes en viviendas de A Coruña"
+  problemsIntro="Lo que más nos encontramos al diagnosticar pisos y casas en la zona, y cómo lo resolvemos."
+  problems={[
+    { title: "Humedad y moho recurrentes", problem: "Manchas en esquinas y detrás de armarios, olor a humedad, pintura que se levanta cada invierno.", solution: "Diagnóstico del origen (capilaridad, filtración o condensación) y solución específica: drenaje, impermeabilización, aislamiento y ventilación. No sirve pintar encima." },
+    { title: "Instalación eléctrica sin toma de tierra", problem: "Cuadro con fusibles o sin diferencial, cables de sección insuficiente, enchufes que se calientan. Un riesgo real de incendio y electrocución.", solution: "Renovación completa según REBT con cuadro nuevo, circuitos independientes, toma de tierra y certificado de instalador autorizado." },
+    { title: "Casa fría y cara de calentar", problem: "Ventanas de aluminio sin rotura de puente térmico, muros sin aislamiento, calefacción antigua. Facturas altas y confort bajo.", solution: "Ventanas con RPT y doble acristalamiento bajo emisivo, aislamiento de fachada y cubierta, y sistema de calefacción eficiente." },
+    { title: "Distribución con pasillos y estancias ciegas", problem: "Pisos con pasillo largo, cocina cerrada al fondo y salón que no recibe luz.", solution: "Redistribución que acorta el pasillo, abre la cocina y lleva la luz natural más adentro, respetando los muros de carga." },
+    { title: "Reformas anteriores mal ejecutadas", problem: "Suelos flotantes sobre baldosas sueltas, tabiques sin aislamiento, instalaciones parcheadas por varios oficios sin criterio.", solution: "Diagnóstico honesto de lo que se puede aprovechar y lo que hay que rehacer, y ejecución con un único responsable." },
+    { title: "Obras que no terminan", problem: "Empresas que abren varias obras a la vez y desaparecen semanas. La vivienda queda inhabitable indefinidamente.", solution: "Cronograma por fases, equipo asignado a tu obra e informes de avance. Sabes siempre en qué punto está y cuándo termina." },
+  ]}
+  relatedProjects={[
+    { slug: "cocina-reubicada-zona-dia", title: "Cocina reubicada en la zona de día", image: "/images/proyectos/cocina-reubicada-zona-dia/resultado-final-cocina-lineal.webp", tag: "Redistribución" },
+    { slug: "bano-principal-y-aseo-adaptado", title: "Baño principal y aseo adaptado", image: "/images/proyectos/bano-principal-y-aseo-adaptado/bano-principal-finalizado-1.webp", tag: "Dos baños" },
+    { slug: "cocina-en-chalet", title: "Cocina en chalet", image: "/images/proyectos/cocina-en-chalet/cocina-finalizada-3.webp", tag: "Vivienda unifamiliar" },
+  ]}
+  relatedGuides={[
+    { title: "Cuánto cuesta reformar un piso en A Coruña", url: "/blog/cuanto-cuesta-reformar-piso-a-coruna/" },
+    { title: "Licencias y permisos para reformar en A Coruña", url: "/blog/licencias-y-permisos-reforma-a-coruna/" },
+    { title: "IVA del 10 % o del 21 % en reformas", url: "/blog/iva-reformas-10-21-a-coruna/" },
+  ]}
   faqs={[
-    { question: "¿Qué diferencia una obra grande de una reforma integral?", answer: "La obra grande cubre el paquete completo de renovación de un piso de ~100 m²: suelo, baños, cocina y puertas. La integral añade redistribución y cambios de distribución según proyecto." },
-    { question: "¿Trabajáis en pisos y en casas?", answer: "Sí. Reformamos pisos, áticos y casas en A Coruña y su área metropolitana." },
-    { question: "¿Cómo se organiza el pago?", answer: "Por hitos: entrada al firmar, pagos parciales por fases y pago final tras la entrega. Se acuerda por escrito." }
+    { question: "¿Cuánto cuesta reformar una vivienda en A Coruña?", answer: "Depende del alcance. Como referencias de mercado 2026: un baño completo 5.800–6.400 €, una cocina completa 5.000–6.000 € y una reforma integral de un piso de unos 100 m² entre 36.000 y 39.000 €, todo sin IVA. Las reformas parciales y las casas se valoran en visita técnica con presupuesto por partidas." },
+    { question: "¿Hacéis reformas parciales o solo integrales?", answer: "Las dos. Muchas viviendas necesitan solo renovar instalaciones, baños, cocina, suelos o ventanas. Te proponemos el alcance que tiene sentido para tu caso y, si lo prefieres, un plan por fases para escalonar la inversión." },
+    { question: "¿Puedo seguir viviendo en casa durante la reforma?", answer: "En reformas parciales, normalmente sí, organizando la obra por zonas. En una reforma completa no lo recomendamos: se cortan suministros por fases y hay polvo y ruido continuos. Lo hablamos en la visita y planificamos según tu situación." },
+    { question: "¿Trabajáis en casas y adosados fuera de la ciudad?", answer: "Sí. Cubrimos A Coruña y los municipios de Oleiros, Culleredo, Cambre, Arteixo, Sada, Bergondo, Betanzos, Carral y Abegondo, tanto en pisos como en viviendas unifamiliares." },
+    { question: "¿Qué permisos necesito?", answer: "Para reformas que no afectan a estructura ni fachada, comunicación previa o licencia de obra menor en el ayuntamiento. Si se modifican muros de carga, fachada, cubierta o el edificio está protegido, hace falta proyecto técnico y licencia de obra mayor. Te orientamos y, si hace falta, coordinamos con arquitecto o aparejador." },
+    { question: "¿Cómo se controla que el presupuesto no se dispare?", answer: "Con un presupuesto por partidas, con mediciones y materiales especificados, que solo cambia si cambia el alcance. Cualquier imprevisto se documenta, se valora y se aprueba por escrito antes de ejecutarse." },
+    { question: "¿Qué garantía tiene la reforma?", answer: "Entregamos garantía por escrito, detallada por partidas, además de las garantías de fabricante de materiales y equipos y los certificados de instalaciones. Y una entrega documentada con planos y fotografías de lo que queda oculto." },
+    { question: "¿Podéis mejorar el certificado energético?", answer: "Sí. Ventanas con rotura de puente térmico, aislamiento de fachada y cubierta, iluminación LED y sistemas de calefacción eficientes mejoran la calificación energética de la vivienda, algo que cuenta tanto para vivir en ella como para alquilarla o venderla." },
   ]}
-  schemaName="Reforma de Vivienda (obra grande) en A Coruña"
+  zoneService="integral"
+  ctaTitle="¿Tu vivienda necesita una reforma?"
+  ctaText="Cuéntanos qué tipo de vivienda tienes y qué te gustaría mejorar. Visita técnica sin compromiso en A Coruña y área metropolitana, y una propuesta de alcance con presupuesto por partidas."
+  whatsappText="Hola, quiero información sobre una reforma de vivienda en A Coruña"
+  schemaName="Reforma de Vivienda en A Coruña"
   schemaType="Home Remodeling"
 />
